@@ -17,10 +17,15 @@ namespace VisualGPSS
         private Point cursorPosition => new Point
             (pictureBox.PointToClient(Cursor.Position).X,
              pictureBox.PointToClient(Cursor.Position).Y);
+        private Graphics graphics;
+        private List<IVisualElement> Elements = new List<IVisualElement>();
 
         public Main()
         {
             InitializeComponent();
+            IVisualElement V = new VisualBlock(35, 50, new Point(100, 100),
+                Color.SandyBrown, Color.White, ForeColor, Font);
+            Elements.Add(V);
         }
 
         private void settingsButton_MouseEnter(object sender, EventArgs e)
@@ -56,6 +61,18 @@ namespace VisualGPSS
         private void pictureBox_Click(object sender, EventArgs e)
         {;
             MessageBox.Show(cursorPosition.ToString());
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Refresh();
+        }
+
+        private void pictureBox_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics graphics = e.Graphics;
+            foreach (IVisualElement element in Elements)
+                element.Draw(graphics);
         }
     }
 }

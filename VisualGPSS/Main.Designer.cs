@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.propertyGrid = new System.Windows.Forms.PropertyGrid();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.toolBox = new System.Windows.Forms.GroupBox();
@@ -43,6 +44,7 @@
             this.запускСимуляцииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsButton = new System.Windows.Forms.Label();
             this.helpButton = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +68,7 @@
             this.pictureBox.TabIndex = 2;
             this.pictureBox.TabStop = false;
             this.pictureBox.Click += new System.EventHandler(this.pictureBox_Click);
+            this.pictureBox.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox_Paint);
             // 
             // toolBox
             // 
@@ -192,6 +195,12 @@
             this.helpButton.MouseEnter += new System.EventHandler(this.helpButton_MouseEnter);
             this.helpButton.MouseLeave += new System.EventHandler(this.helpButton_MouseLeave);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,6 +239,7 @@
         private System.Windows.Forms.ToolStripMenuItem сохранитьКакИзображениеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem запускСимуляцииToolStripMenuItem;
         private System.Windows.Forms.PropertyGrid propertyGrid;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

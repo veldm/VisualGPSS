@@ -10,6 +10,10 @@ namespace VisualGPSS
     interface IVisualElement
     {
         bool IsClicked(Point clickPoint);
+        bool IsVerticalTouching(Point clickPoint);
+        bool IsHorizontalTouching(Point clickPoint);
+        bool IsLeftDiagonalTouching(Point clickPoint);
+        bool IsRightDiagonalTouching(Point clickPoint);
         void Draw(Graphics graphics);
         void getProperties();
     }
@@ -60,7 +64,7 @@ namespace VisualGPSS
             graphics.FillRectangle(brush, _x, _y, width - 14, heigth - 27);
 
             brush = new SolidBrush(fontColor);
-            graphics.DrawString("", font, brush, new Point(center.X - width / 2, center.Y - heigth / 2));
+            graphics.DrawString("1111", font, brush, new Point(center.X - width / 2, center.Y - heigth / 2));
         }
 
         public void getProperties()
@@ -70,6 +74,22 @@ namespace VisualGPSS
 
         public bool IsClicked(Point clickPoint) => 
             (clickPoint.X > center.X - width / 2 && clickPoint.X < center.X + width / 2)
+            && (clickPoint.Y > center.Y - heigth / 2 && clickPoint.Y < center.Y + heigth / 2);        
+
+        public bool IsVerticalTouching(Point clickPoint) =>
+            (clickPoint.X == center.X - width / 2 || clickPoint.X == center.X + width / 2)
             && (clickPoint.Y > center.Y - heigth / 2 && clickPoint.Y < center.Y + heigth / 2);
+
+        public bool IsHorizontalTouching(Point clickPoint) =>
+            (clickPoint.X > center.X - width / 2 && clickPoint.X < center.X + width / 2)
+            && (clickPoint.Y == center.Y - heigth / 2 || clickPoint.Y == center.Y + heigth / 2);
+
+        public bool IsLeftDiagonalTouching(Point clickPoint) =>
+            (clickPoint.X == center.X - width / 2 && clickPoint.Y == center.Y - heigth / 2)
+            || (clickPoint.X == center.X + width / 2 && clickPoint.Y == center.Y + heigth / 2);
+
+        public bool IsRightDiagonalTouching(Point clickPoint) =>
+            (clickPoint.X == center.X + width / 2 && clickPoint.Y == center.Y - heigth / 2)
+            || (clickPoint.X == center.X - width / 2 && clickPoint.Y == center.Y + heigth / 2);
     }
 }

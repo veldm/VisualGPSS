@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VisualGPSS
 {
-    public partial class Element : Form
+    public partial class AtomaryElement : Form
     {
-        public Element()
+        public AtomaryElement()
         {
             InitializeComponent();
         }

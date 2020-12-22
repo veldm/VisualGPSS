@@ -1,6 +1,6 @@
 ﻿namespace VisualGPSS
 {
-    partial class Element
+    partial class AtomaryElement
     {
         /// <summary>
         /// Required designer variable.

@@ -60,6 +60,12 @@ namespace VisualGPSS
                         resizedBlock.center.Y + corr : resizedBlock.center.Y - corr;
                 }
             }
+            else if (moving.isGoing && activeElement is VisualBlock)
+            {
+                VisualBlock block = (VisualBlock)activeElement;
+                block.center.X = cursorPosition.X + moving.xc;
+                block.center.Y = cursorPosition.Y + moving.yc;
+            }
             else foreach (IVisualElement element in Elements)
                 {
                     if (element.IsClicked(cursorPosition))

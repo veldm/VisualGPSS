@@ -73,6 +73,7 @@ namespace VisualGPSS
                         Cursor.Current = Cursors.Hand;
                         activeElement = element;
                         resizedBlock = null;
+                        pictureBox.ContextMenuStrip = BlockOrElementCMS;
                     }
                     else if (element.IsVerticalTouching(cursorPosition))
                     {
@@ -102,8 +103,31 @@ namespace VisualGPSS
                     {
                         Cursor.Current = Cursors.Default;
                         activeElement = resizedBlock = null;
+                        pictureBox.ContextMenuStrip = FieldCMS;
                     }
                 }
+        }
+
+        private void pictureBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            foreach (IVisualElement element in Elements)
+            {
+                if (element.IsClicked(cursorPosition)) Cursor.Current = Cursors.Hand;
+                else if (element.IsVerticalTouching(cursorPosition)) Cursor.Current = Cursors.SizeWE;
+                else if (element.IsHorizontalTouching(cursorPosition)) Cursor.Current = Cursors.SizeNS;
+                else if (element.IsRightDiagonalTouching(cursorPosition)) Cursor.Current = Cursors.SizeNESW;
+                else if (element.IsLeftDiagonalTouching(cursorPosition)) Cursor.Current = Cursors.SizeNWSE;
+                else Cursor.Current = Cursors.Default;
+            }
+            if (resizedBlock is not null) resizing = true;
+            if (activeElement is VisualBlock and not null) moving = (true, 
+                    ((VisualBlock)activeElement).center.X - cursorPosition.X,
+                    ((VisualBlock)activeElement).center.Y - cursorPosition.Y);
+        }
+
+        private void pictureBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            resizing = moving.isGoing = false;
         }
         #endregion Drag, Drop, Resize
 
@@ -156,28 +180,29 @@ namespace VisualGPSS
         {
             MessageBox.Show("Справка");
         }
+
         #endregion Help & Settings
 
-        private void pictureBox_MouseDown(object sender, MouseEventArgs e)
+        #region Цвета меню
+        private void файлToolStripMenuItem_DropDownOpening(object sender, EventArgs e)
         {
-            foreach (IVisualElement element in Elements)
-            {
-                if (element.IsClicked(cursorPosition)) Cursor.Current = Cursors.Hand;
-                else if (element.IsVerticalTouching(cursorPosition)) Cursor.Current = Cursors.SizeWE;
-                else if (element.IsHorizontalTouching(cursorPosition)) Cursor.Current = Cursors.SizeNS;
-                else if (element.IsRightDiagonalTouching(cursorPosition)) Cursor.Current = Cursors.SizeNESW;
-                else if (element.IsLeftDiagonalTouching(cursorPosition)) Cursor.Current = Cursors.SizeNWSE;
-                else Cursor.Current = Cursors.Default;
-            }
-            if (resizedBlock is not null) resizing = true;
-            if (activeElement is VisualBlock and not null) moving = (true, 
-                    ((VisualBlock)activeElement).center.X - cursorPosition.X,
-                    ((VisualBlock)activeElement).center.Y - cursorPosition.Y);
+            файлToolStripMenuItem.ForeColor = Color.Black;
         }
 
-        private void pictureBox_MouseUp(object sender, MouseEventArgs e)
+        private void файлToolStripMenuItem_DropDownClosed(object sender, EventArgs e)
         {
-            resizing = moving.isGoing = false;
+            файлToolStripMenuItem.ForeColor = Color.White;
         }
+
+        private void средстваToolStripMenuItem_DropDownOpening(object sender, EventArgs e)
+        {
+            средстваToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void средстваToolStripMenuItem_DropDownClosed(object sender, EventArgs e)
+        {
+            средстваToolStripMenuItem.ForeColor = Color.White;
+        }
+        #endregion Цвета меню
     }
 }

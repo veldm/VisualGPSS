@@ -78,6 +78,9 @@
       <DependentUpon>Transfer.cs</DependentUpon>
     </Compile>
     <Compile Include="VisualElements.cs" />
+    <EmbeddedResource Include="AtomaryElement.resx">
+      <DependentUpon>AtomaryElement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +110,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open_256_icon-icons.com_76002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diskette_save_saveas_1514.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_file_disk_open_searsh_loading_clipboard_1513.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\downloadoutline_110860.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print_icon-icons.com_73705.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1491253396-5document-image_82883.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VisualGPSS_Label.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_delete_exit_1577.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documentediting_editdocuments_text_documentedi_2820.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-computer-icons-git-branching-clip-art-fork-git-5b4d48a3433994.1724267915317915232754.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_insert_1193.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

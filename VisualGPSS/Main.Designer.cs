@@ -53,10 +53,11 @@
             this.элементToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.блокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DrawingContainer = new System.Windows.Forms.Panel();
+            this.mEndLabel = new System.Windows.Forms.Label();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.ToolBox = new System.Windows.Forms.Panel();
             this.LabelPictureBox = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip.SuspendLayout();
             this.BlockOrElementCMS.SuspendLayout();
             this.FieldCMS.SuspendLayout();
@@ -94,21 +95,21 @@
             this.открытьToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.открытьToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.open_256_icon_icons_com_76002;
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.открытьToolStripMenuItem.Text = "Открыть";
             // 
             // сохранитьToolStripMenuItem
             // 
             this.сохранитьToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.save_file_disk_open_searsh_loading_clipboard_1513;
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
             // 
             // сохранитьКакToolStripMenuItem
             // 
             this.сохранитьКакToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.diskette_save_saveas_1514;
             this.сохранитьКакToolStripMenuItem.Name = "сохранитьКакToolStripMenuItem";
-            this.сохранитьКакToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.сохранитьКакToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.сохранитьКакToolStripMenuItem.Text = "Сохранить как";
             // 
             // menuStrip
@@ -160,6 +161,7 @@
             this.сохранитьКакИзображениеToolStripMenuItem.Name = "сохранитьКакИзображениеToolStripMenuItem";
             this.сохранитьКакИзображениеToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
             this.сохранитьКакИзображениеToolStripMenuItem.Text = "Сохранить как изображение";
+            this.сохранитьКакИзображениеToolStripMenuItem.Click += new System.EventHandler(this.сохранитьКакИзображениеToolStripMenuItem_Click);
             // 
             // запускСимуляцииToolStripMenuItem
             // 
@@ -280,12 +282,21 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DrawingContainer.AutoScroll = true;
-            this.DrawingContainer.Controls.Add(this.label1);
+            this.DrawingContainer.Controls.Add(this.mEndLabel);
             this.DrawingContainer.Controls.Add(this.pictureBox);
             this.DrawingContainer.Location = new System.Drawing.Point(218, 76);
             this.DrawingContainer.Name = "DrawingContainer";
             this.DrawingContainer.Size = new System.Drawing.Size(810, 682);
             this.DrawingContainer.TabIndex = 9;
+            // 
+            // mEndLabel
+            // 
+            this.mEndLabel.AutoSize = true;
+            this.mEndLabel.BackColor = System.Drawing.Color.Transparent;
+            this.mEndLabel.Location = new System.Drawing.Point(3510, 2480);
+            this.mEndLabel.Name = "mEndLabel";
+            this.mEndLabel.Size = new System.Drawing.Size(0, 13);
+            this.mEndLabel.TabIndex = 3;
             // 
             // pictureBox
             // 
@@ -297,7 +308,7 @@
             this.pictureBox.ContextMenuStrip = this.BlockOrElementCMS;
             this.pictureBox.Location = new System.Drawing.Point(3, 3);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(6210, 4291);
+            this.pictureBox.Size = new System.Drawing.Size(3510, 2480);
             this.pictureBox.TabIndex = 2;
             this.pictureBox.TabStop = false;
             this.pictureBox.Click += new System.EventHandler(this.pictureBox_Click);
@@ -324,14 +335,10 @@
             this.LabelPictureBox.TabIndex = 11;
             this.LabelPictureBox.TabStop = false;
             // 
-            // label1
+            // saveFileDialog1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(3510, 2480);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 3;
+            this.saveFileDialog1.Filter = "Image Files(*.BMP)|*.BMP|Image Files(*.JPG)|*.JPG|Image Files(*.GIF)|*.GIF|Image " +
+    "Files(*.PNG)|*.PNG|All files (*.*)|*.*";
             // 
             // Main
             // 
@@ -389,7 +396,8 @@
         private System.Windows.Forms.Panel DrawingContainer;
         private System.Windows.Forms.Panel ToolBox;
         private System.Windows.Forms.PictureBox LabelPictureBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label mEndLabel;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 

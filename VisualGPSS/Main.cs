@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,10 +26,10 @@ namespace VisualGPSS
 
         public Main()
         {
-            InitializeComponent();
+            InitializeComponent(); 
             IVisualElement V = new VisualBlock(35, 50, new Point(100, 100),
                 Color.SandyBrown, Color.White, ForeColor, Font);
-            Elements.Add(V);
+            Elements.Add(V);            
         }
 
         #region Drag, Drop, Resize
@@ -144,7 +145,11 @@ namespace VisualGPSS
         
         private void pictureBox_Paint(object sender, PaintEventArgs e)
         {
-            Graphics graphics = e.Graphics;
+            if (pictureBox.Image is not null) pictureBox.Image.Dispose();
+            //GC.Collect();
+            //Bitmap bitmap = new Bitmap(3510, 2480);
+            //pictureBox.Image = bitmap;
+            Graphics graphics = /*Graphics.FromImage(bitmap);*/e.Graphics;
             foreach (IVisualElement element in Elements)
                 element.Draw(graphics);
         }
@@ -204,5 +209,14 @@ namespace VisualGPSS
             средстваToolStripMenuItem.ForeColor = Color.White;
         }
         #endregion Цвета меню
+
+        private void сохранитьКакИзображениеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Bitmap bitmap = new Bitmap(3510, 2480);
+            pictureBox.DrawToBitmap(bitmap, new Rectangle(0, 0, 3510, 2480));
+            bitmap.Save("buf.png");
+            bitmap.Dispose();
+            GC.Collect();
+        }
     }
 }

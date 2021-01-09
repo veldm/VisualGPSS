@@ -12,7 +12,7 @@
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>9.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -44,8 +44,10 @@
   <ItemGroup>
     <Compile Include="Block\Block.cs" />
     <Compile Include="Block\BlockType.cs" />
+    <Compile Include="Block\Validator.cs" />
     <Compile Include="Comand\Comand.cs" />
     <Compile Include="Comand\ComandType.cs" />
+    <Compile Include="Comand\Validator.cs" />
     <Compile Include="Operator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

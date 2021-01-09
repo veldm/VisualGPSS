@@ -10,6 +10,7 @@ namespace GPSS
     {
         private BlockType type;
 
+        #region Свойства
         public BlockType Type { get => type; set => type = value; }
 
         public new string Name { get => Enum.GetName(typeof(BlockType), type); }
@@ -19,7 +20,9 @@ namespace GPSS
         /// </summary>
         /// <returns></returns>
         public override string Code => throw new NotImplementedException();
+        #endregion
 
+        #region Методы
         public override bool Validate()
         {
             throw new NotImplementedException();
@@ -29,5 +32,6 @@ namespace GPSS
         {
             return Enum.GetName(typeof(BlockType), type);
         }
+        #endregion Методы
     }
 }

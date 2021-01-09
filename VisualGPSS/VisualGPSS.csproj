@@ -144,5 +144,11 @@
   <ItemGroup>
     <None Include="Resources\add_insert_1193.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GPSS\GPSS.csproj">
+      <Project>{7ac7734a-84d9-4b0d-bbf0-55c3a6a96129}</Project>
+      <Name>GPSS</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -24,12 +24,23 @@ namespace VisualGPSS
         private bool resizing;
         private (bool isGoing, int xc, int yc) moving;
 
-        public Main()
+        public Main(string openFileName)
         {
-            InitializeComponent(); 
-            IVisualElement V = new VisualBlock(135, 80, new Point(100, 100),
-                Color.SandyBrown, Color.White, ForeColor, Font);
-            Elements.Add(V);            
+            InitializeComponent();
+            if (openFileName is null)
+            {
+                // Шаблон по умолчанию
+                IVisualElement V = new VisualBlock(135, 80, new Point(100, 100),
+                    Color.SandyBrown, Color.White, ForeColor, Font);
+                Elements.Add(V);
+            }
+            else
+            {
+                IVisualElement V = new VisualBlock(135, 80, new Point(100, 100),
+                    Color.SandyBrown, Color.White, ForeColor, Font);
+                Elements.Add(V);
+                MessageBox.Show(openFileName);
+            }
         }
 
         #region Drag, Drop, Resize

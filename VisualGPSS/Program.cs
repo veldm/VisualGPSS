@@ -12,11 +12,15 @@ namespace VisualGPSS
         /// Главная точка входа для приложения.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
+            string openFileName = null;
+            if (args.Length > 0)
+                if (args[0].Substring(args[0].Length - 4) == ".vgs")
+                    openFileName = args[0];
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            Application.Run(new Main(openFileName));
         }
     }
 }

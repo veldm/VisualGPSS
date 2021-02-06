@@ -27,7 +27,7 @@ namespace VisualGPSS
         public Main()
         {
             InitializeComponent(); 
-            IVisualElement V = new VisualBlock(35, 50, new Point(100, 100),
+            IVisualElement V = new VisualBlock(135, 80, new Point(100, 100),
                 Color.SandyBrown, Color.White, ForeColor, Font);
             Elements.Add(V);            
         }

@@ -165,5 +165,8 @@
   <ItemGroup>
     <None Include="Resources\5.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-brand-symbol-font-utilities-terminal-5ab0990dc46a48.967186211582152295780451.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

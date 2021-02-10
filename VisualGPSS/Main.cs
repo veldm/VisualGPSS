@@ -151,7 +151,7 @@ namespace VisualGPSS
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Refresh();
+            pictureBox.Refresh();
         }
         
         private void pictureBox_Paint(object sender, PaintEventArgs e)

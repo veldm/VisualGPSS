@@ -173,6 +173,17 @@ namespace VisualGPSS.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap kisspng_brand_symbol_font_utilities_terminal_5ab0990dc46a48_96718621158215229578045 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-brand-symbol-font-utilities-terminal-5ab0990dc46a48.967186211582152295780" +
+                        "45", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap kisspng_computer_icons_git_branching_clip_art_fork_git_5b4d48a3433994_1724267915317915232754 {
             get {
                 object obj = ResourceManager.GetObject("kisspng-computer-icons-git-branching-clip-art-fork-git-5b4d48a3433994.17242679153" +

@@ -23,6 +23,7 @@ namespace VisualGPSS
         private VisualBlock resizedBlock;
         private bool resizing;
         private (bool isGoing, int xc, int yc) moving;
+        private GPSS.Operator creatingOperator;
 
         public Main(string openFileName)
         {
@@ -113,7 +114,8 @@ namespace VisualGPSS
                     }
                     else
                     {
-                        Cursor.Current = Cursors.Default;
+                        Cursor.Current = Cursor.Current == Cursors.Cross ?
+                            Cursors.Cross : Cursors.Default;
                         activeElement = resizedBlock = null;
                         pictureBox.ContextMenuStrip = FieldCMS;
                     }
@@ -228,6 +230,25 @@ namespace VisualGPSS
             bitmap.Save("buf.png");
             bitmap.Dispose();
             GC.Collect();
+        }
+
+        private void ToolBoxItemClicked(object sender, EventArgs e)
+        {
+            Control control = (Control)sender;
+            if (creatingOperator is not null)
+            {
+                Cursor = Cursors.Default;
+                LabelPictureBox.Focus();
+                creatingOperator = null;
+            }
+            else
+            {
+                Cursor = Cursors.Cross;
+                creatingOperator = control.Name switch
+                {
+                    _ => new GPSS.Block(),
+                };
+            }
         }
     }
 }

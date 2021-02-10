@@ -43,22 +43,25 @@
             this.DrawingContainer = new System.Windows.Forms.Panel();
             this.mEndLabel = new System.Windows.Forms.Label();
             this.ToolBox = new System.Windows.Forms.Panel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.LabelPictureBox = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.command_TBButton = new System.Windows.Forms.Button();
+            this.transferUncon_TBButton = new System.Windows.Forms.Button();
+            this.transferPick_TBButton = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.TransferV_TBButton = new System.Windows.Forms.Button();
+            this.transferBoth_TBButton = new System.Windows.Forms.Button();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -77,9 +80,9 @@
             this.FieldCMS.SuspendLayout();
             this.DrawingContainer.SuspendLayout();
             this.ToolBox.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LabelPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
@@ -243,14 +246,42 @@
             this.ToolBox.Size = new System.Drawing.Size(200, 682);
             this.ToolBox.TabIndex = 10;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.Controls.Add(this.button3);
+            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.button6);
+            this.groupBox3.Controls.Add(this.button7);
+            this.groupBox3.Controls.Add(this.button8);
+            this.groupBox3.Controls.Add(this.button9);
+            this.groupBox3.Controls.Add(this.button10);
+            this.groupBox3.Location = new System.Drawing.Point(7, 7);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(169, 385);
+            this.groupBox3.TabIndex = 6;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Блоки";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.command_TBButton);
+            this.groupBox2.Location = new System.Drawing.Point(7, 398);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(169, 109);
+            this.groupBox2.TabIndex = 6;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Команды";
+            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.transferUncon_TBButton);
+            this.groupBox1.Controls.Add(this.transferPick_TBButton);
             this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Location = new System.Drawing.Point(7, 422);
+            this.groupBox1.Controls.Add(this.TransferV_TBButton);
+            this.groupBox1.Controls.Add(this.transferBoth_TBButton);
+            this.groupBox1.Location = new System.Drawing.Point(7, 513);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(169, 295);
             this.groupBox1.TabIndex = 5;
@@ -262,30 +293,6 @@
             this.saveFileDialog1.Filter = "Image Files(*.BMP)|*.BMP|Image Files(*.JPG)|*.JPG|Image Files(*.GIF)|*.GIF|Image " +
     "Files(*.PNG)|*.PNG|All files (*.*)|*.*";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.button11);
-            this.groupBox2.Location = new System.Drawing.Point(7, 308);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(169, 109);
-            this.groupBox2.TabIndex = 6;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Команды";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.button6);
-            this.groupBox3.Controls.Add(this.button7);
-            this.groupBox3.Controls.Add(this.button8);
-            this.groupBox3.Controls.Add(this.button9);
-            this.groupBox3.Controls.Add(this.button10);
-            this.groupBox3.Location = new System.Drawing.Point(7, 7);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(169, 295);
-            this.groupBox3.TabIndex = 6;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Блоки";
-            // 
             // LabelPictureBox
             // 
             this.LabelPictureBox.BackColor = System.Drawing.Color.Transparent;
@@ -296,101 +303,148 @@
             this.LabelPictureBox.TabIndex = 11;
             this.LabelPictureBox.TabStop = false;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.BackgroundImage = global::VisualGPSS.Properties.Resources._4115235_exit_logout_sign_out_114030;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(93, 28);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(70, 70);
+            this.button2.TabIndex = 7;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.ToolBoxItemClicked);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.BackgroundImage = global::VisualGPSS.Properties.Resources.creation_date_sort_icon_155568;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(9, 28);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(70, 70);
+            this.button3.TabIndex = 6;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.ToolBoxItemClicked);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.BackgroundImage = global::VisualGPSS.Properties.Resources._353443_clock_stopwatch_timer_watch_107503;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(93, 123);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(70, 70);
+            this.button1.TabIndex = 5;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.ToolBoxItemClicked);
+            // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.BackgroundImage = global::VisualGPSS.Properties.Resources._5;
+            this.button6.BackColor = System.Drawing.Color.White;
+            this.button6.BackgroundImage = global::VisualGPSS.Properties.Resources.Pustoy_block;
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(10, 30);
+            this.button6.Location = new System.Drawing.Point(9, 123);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(70, 70);
             this.button6.TabIndex = 4;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.BackgroundImage = global::VisualGPSS.Properties.Resources._1;
+            this.button7.BackColor = System.Drawing.Color.White;
+            this.button7.BackgroundImage = global::VisualGPSS.Properties.Resources._file_upload_90117;
             this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(10, 210);
+            this.button7.Location = new System.Drawing.Point(9, 303);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(70, 70);
             this.button7.TabIndex = 0;
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
             // button8
             // 
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.BackgroundImage = global::VisualGPSS.Properties.Resources._4;
+            this.button8.BackColor = System.Drawing.Color.White;
+            this.button8.BackgroundImage = global::VisualGPSS.Properties.Resources._file_download_90117;
             this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(94, 210);
+            this.button8.Location = new System.Drawing.Point(93, 303);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(70, 70);
             this.button8.TabIndex = 3;
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
             // button9
             // 
-            this.button9.BackColor = System.Drawing.Color.Transparent;
-            this.button9.BackgroundImage = global::VisualGPSS.Properties.Resources._3;
+            this.button9.BackColor = System.Drawing.Color.White;
+            this.button9.BackgroundImage = global::VisualGPSS.Properties.Resources.download_info_icon_icons1;
             this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(10, 122);
+            this.button9.Location = new System.Drawing.Point(9, 215);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(70, 70);
             this.button9.TabIndex = 2;
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
             // button10
             // 
-            this.button10.BackColor = System.Drawing.Color.Transparent;
-            this.button10.BackgroundImage = global::VisualGPSS.Properties.Resources._2;
+            this.button10.BackColor = System.Drawing.Color.White;
+            this.button10.BackgroundImage = global::VisualGPSS.Properties.Resources.stop_upload_button_icon_icons_com_71328;
             this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(94, 122);
+            this.button10.Location = new System.Drawing.Point(93, 215);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(70, 70);
             this.button10.TabIndex = 1;
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
-            // button11
+            // command_TBButton
             // 
-            this.button11.BackColor = System.Drawing.Color.Transparent;
-            this.button11.BackgroundImage = global::VisualGPSS.Properties.Resources.kisspng_brand_symbol_font_utilities_terminal_5ab0990dc46a48_96718621158215229578045;
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Location = new System.Drawing.Point(10, 27);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(70, 70);
-            this.button11.TabIndex = 5;
-            this.button11.UseVisualStyleBackColor = false;
+            this.command_TBButton.BackColor = System.Drawing.Color.Transparent;
+            this.command_TBButton.BackgroundImage = global::VisualGPSS.Properties.Resources.kisspng_brand_symbol_font_utilities_terminal_5ab0990dc46a48_96718621158215229578045;
+            this.command_TBButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.command_TBButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.command_TBButton.Location = new System.Drawing.Point(10, 27);
+            this.command_TBButton.Name = "command_TBButton";
+            this.command_TBButton.Size = new System.Drawing.Size(70, 70);
+            this.command_TBButton.TabIndex = 5;
+            this.command_TBButton.UseVisualStyleBackColor = false;
+            this.command_TBButton.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
-            // button5
+            // transferUncon_TBButton
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.BackgroundImage = global::VisualGPSS.Properties.Resources._5;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(10, 30);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(70, 70);
-            this.button5.TabIndex = 4;
-            this.button5.UseVisualStyleBackColor = false;
+            this.transferUncon_TBButton.BackColor = System.Drawing.Color.Transparent;
+            this.transferUncon_TBButton.BackgroundImage = global::VisualGPSS.Properties.Resources._5;
+            this.transferUncon_TBButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.transferUncon_TBButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.transferUncon_TBButton.Location = new System.Drawing.Point(10, 30);
+            this.transferUncon_TBButton.Name = "transferUncon_TBButton";
+            this.transferUncon_TBButton.Size = new System.Drawing.Size(70, 70);
+            this.transferUncon_TBButton.TabIndex = 4;
+            this.transferUncon_TBButton.UseVisualStyleBackColor = false;
+            this.transferUncon_TBButton.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
-            // button1
+            // transferPick_TBButton
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::VisualGPSS.Properties.Resources._1;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(10, 210);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(70, 70);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = false;
+            this.transferPick_TBButton.BackColor = System.Drawing.Color.Transparent;
+            this.transferPick_TBButton.BackgroundImage = global::VisualGPSS.Properties.Resources._1;
+            this.transferPick_TBButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.transferPick_TBButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.transferPick_TBButton.Location = new System.Drawing.Point(10, 210);
+            this.transferPick_TBButton.Name = "transferPick_TBButton";
+            this.transferPick_TBButton.Size = new System.Drawing.Size(70, 70);
+            this.transferPick_TBButton.TabIndex = 0;
+            this.transferPick_TBButton.UseVisualStyleBackColor = false;
+            this.transferPick_TBButton.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
             // button4
             // 
@@ -403,30 +457,33 @@
             this.button4.Size = new System.Drawing.Size(70, 70);
             this.button4.TabIndex = 3;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
-            // button3
+            // TransferV_TBButton
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = global::VisualGPSS.Properties.Resources._3;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(10, 122);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(70, 70);
-            this.button3.TabIndex = 2;
-            this.button3.UseVisualStyleBackColor = false;
+            this.TransferV_TBButton.BackColor = System.Drawing.Color.Transparent;
+            this.TransferV_TBButton.BackgroundImage = global::VisualGPSS.Properties.Resources._3;
+            this.TransferV_TBButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.TransferV_TBButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TransferV_TBButton.Location = new System.Drawing.Point(10, 122);
+            this.TransferV_TBButton.Name = "TransferV_TBButton";
+            this.TransferV_TBButton.Size = new System.Drawing.Size(70, 70);
+            this.TransferV_TBButton.TabIndex = 2;
+            this.TransferV_TBButton.UseVisualStyleBackColor = false;
+            this.TransferV_TBButton.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
-            // button2
+            // transferBoth_TBButton
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::VisualGPSS.Properties.Resources._2;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(94, 122);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(70, 70);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = false;
+            this.transferBoth_TBButton.BackColor = System.Drawing.Color.Transparent;
+            this.transferBoth_TBButton.BackgroundImage = global::VisualGPSS.Properties.Resources._2;
+            this.transferBoth_TBButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.transferBoth_TBButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.transferBoth_TBButton.Location = new System.Drawing.Point(94, 122);
+            this.transferBoth_TBButton.Name = "transferBoth_TBButton";
+            this.transferBoth_TBButton.Size = new System.Drawing.Size(70, 70);
+            this.transferBoth_TBButton.TabIndex = 1;
+            this.transferBoth_TBButton.UseVisualStyleBackColor = false;
+            this.transferBoth_TBButton.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
             // pictureBox
             // 
@@ -438,7 +495,7 @@
             this.pictureBox.ContextMenuStrip = this.BlockOrElementCMS;
             this.pictureBox.Location = new System.Drawing.Point(3, 3);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(8910, 6102);
+            this.pictureBox.Size = new System.Drawing.Size(22410, 15157);
             this.pictureBox.TabIndex = 2;
             this.pictureBox.TabStop = false;
             this.pictureBox.Click += new System.EventHandler(this.pictureBox_Click);
@@ -557,9 +614,9 @@
             this.DrawingContainer.ResumeLayout(false);
             this.DrawingContainer.PerformLayout();
             this.ToolBox.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LabelPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
@@ -597,11 +654,11 @@
         private System.Windows.Forms.PictureBox LabelPictureBox;
         private System.Windows.Forms.Label mEndLabel;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button transferPick_TBButton;
+        private System.Windows.Forms.Button transferBoth_TBButton;
+        private System.Windows.Forms.Button TransferV_TBButton;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button transferUncon_TBButton;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button6;
@@ -610,7 +667,10 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button command_TBButton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
 

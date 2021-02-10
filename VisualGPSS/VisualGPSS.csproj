@@ -168,5 +168,32 @@
   <ItemGroup>
     <None Include="Resources\kisspng-brand-symbol-font-utilities-terminal-5ab0990dc46a48.967186211582152295780451.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pustoy_block.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\353443-clock-stopwatch-timer-watch_107503.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-info_icon-icons.com_71678.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-info_icon-icons.com_716781.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop-upload-button_icon-icons.com_71328.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\-file-upload_90117.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\-file-download_90117.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\creation_date_sort_icon_155568.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4115235-exit-logout-sign-out_114030.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

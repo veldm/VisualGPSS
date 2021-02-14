@@ -18,8 +18,8 @@ namespace VisualGPSS
         private Point cursorPosition => new Point
             (pictureBox.PointToClient(Cursor.Position).X,
              pictureBox.PointToClient(Cursor.Position).Y);
-        private List<IVisualElement> Elements = new List<IVisualElement>();
-        private IVisualElement activeElement;
+        private List<VisualElement> Elements = new List<VisualElement>();
+        private VisualElement activeElement;
         private VisualBlock resizedBlock;
         private bool resizing;
         private (bool isGoing, int xc, int yc) moving;
@@ -31,13 +31,13 @@ namespace VisualGPSS
             if (openFileName is null)
             {
                 // Шаблон по умолчанию
-                IVisualElement V = new VisualBlock(135, 80, new Point(100, 100),
+                VisualElement V = new VisualBlock(135, 80, new Point(100, 100),
                     Color.SandyBrown, Color.White, ForeColor, Font);
                 Elements.Add(V);
             }
             else
             {
-                IVisualElement V = new VisualBlock(135, 80, new Point(100, 100),
+                VisualElement V = new VisualBlock(135, 80, new Point(100, 100),
                     Color.SandyBrown, Color.White, ForeColor, Font);
                 Elements.Add(V);
                 MessageBox.Show(openFileName);
@@ -79,7 +79,7 @@ namespace VisualGPSS
                 block.center.X = cursorPosition.X + moving.xc;
                 block.center.Y = cursorPosition.Y + moving.yc;
             }
-            else foreach (IVisualElement element in Elements)
+            else foreach (VisualElement element in Elements)
                 {
                     if (element.IsClicked(cursorPosition))
                     {
@@ -124,7 +124,7 @@ namespace VisualGPSS
 
         private void pictureBox_MouseDown(object sender, MouseEventArgs e)
         {
-            foreach (IVisualElement element in Elements)
+            foreach (VisualElement element in Elements)
             {
                 if (element.IsClicked(cursorPosition)) Cursor.Current = Cursors.Hand;
                 else if (element.IsVerticalTouching(cursorPosition)) Cursor.Current = Cursors.SizeWE;
@@ -163,7 +163,7 @@ namespace VisualGPSS
             //Bitmap bitmap = new Bitmap(3510, 2480);
             //pictureBox.Image = bitmap;
             Graphics graphics = /*Graphics.FromImage(bitmap);*/e.Graphics;
-            foreach (IVisualElement element in Elements)
+            foreach (VisualElement element in Elements)
                 element.Draw(graphics);
         }
         #endregion Отрисовка

@@ -8,18 +8,19 @@ using GPSS;
 
 namespace VisualGPSS
 {
-    interface IVisualElement
+    abstract class VisualElement
     {
-        bool IsClicked(Point clickPoint);
-        bool IsVerticalTouching(Point clickPoint);
-        bool IsHorizontalTouching(Point clickPoint);
-        bool IsLeftDiagonalTouching(Point clickPoint);
-        bool IsRightDiagonalTouching(Point clickPoint);
-        void Draw(Graphics graphics);
-        void getProperties();
+        public Operator essence;
+        public abstract bool IsClicked(Point clickPoint);
+        public abstract bool IsVerticalTouching(Point clickPoint);
+        public abstract bool IsHorizontalTouching(Point clickPoint);
+        public abstract bool IsLeftDiagonalTouching(Point clickPoint);
+        public abstract bool IsRightDiagonalTouching(Point clickPoint);
+        public abstract void Draw(Graphics graphics);
+        public abstract void getProperties();
     }
 
-    class VisualBlock : IVisualElement    
+    class VisualBlock : VisualElement    
     {
         public int width;
         public int heigth;
@@ -45,7 +46,7 @@ namespace VisualGPSS
             this.font = font;
         }
 
-        public void Draw(Graphics graphics)
+        public override void Draw(Graphics graphics)
         {
             SolidBrush brush = new SolidBrush(mainColor);
             //Point[] vertexes =
@@ -68,29 +69,109 @@ namespace VisualGPSS
             graphics.DrawString("1111", font, brush, new Point(center.X - width / 2, center.Y - heigth / 2));
         }
 
-        public void getProperties()
+        public override void getProperties()
         {
             throw new NotImplementedException();
         }
 
-        public bool IsClicked(Point clickPoint) => 
+        public override bool IsClicked(Point clickPoint) => 
             (clickPoint.X > center.X - width / 2 && clickPoint.X < center.X + width / 2)
-            && (clickPoint.Y > center.Y - heigth / 2 && clickPoint.Y < center.Y + heigth / 2);        
+            && (clickPoint.Y > center.Y - heigth / 2 && clickPoint.Y < center.Y + heigth / 2);
 
-        public bool IsVerticalTouching(Point clickPoint) =>
+        public override bool IsVerticalTouching(Point clickPoint) =>
             (clickPoint.X == center.X - width / 2 || clickPoint.X == center.X + width / 2)
             && (clickPoint.Y > center.Y - heigth / 2 && clickPoint.Y < center.Y + heigth / 2);
 
-        public bool IsHorizontalTouching(Point clickPoint) =>
+        public override bool IsHorizontalTouching(Point clickPoint) =>
             (clickPoint.X > center.X - width / 2 && clickPoint.X < center.X + width / 2)
             && (clickPoint.Y == center.Y - heigth / 2 || clickPoint.Y == center.Y + heigth / 2);
 
-        public bool IsLeftDiagonalTouching(Point clickPoint) =>
+        public override bool IsLeftDiagonalTouching(Point clickPoint) =>
             (clickPoint.X == center.X - width / 2 && clickPoint.Y == center.Y - heigth / 2)
             || (clickPoint.X == center.X + width / 2 && clickPoint.Y == center.Y + heigth / 2);
 
-        public bool IsRightDiagonalTouching(Point clickPoint) =>
+        public override bool IsRightDiagonalTouching(Point clickPoint) =>
             (clickPoint.X == center.X + width / 2 && clickPoint.Y == center.Y - heigth / 2)
             || (clickPoint.X == center.X - width / 2 && clickPoint.Y == center.Y + heigth / 2);
+    }
+
+    class VisualTransfer : VisualElement
+    {
+        public GPSS.Block Transfer
+        {
+            get => (GPSS.Block)essence;
+            set => essence = value;
+        }
+
+        private VisualBlock startBlock;
+
+
+
+        public override void Draw(Graphics graphics)
+        {
+            switch (Transfer.Type)
+            {
+                case GPSS.Block.BlockType.TRANSFER_UNCON:
+                    //
+                    break;
+                case GPSS.Block.BlockType.TRANSFER_ALL:
+                    //
+                    break;
+                case GPSS.Block.BlockType.TRANSFER_BOTH:
+                    //
+                    break;
+                case GPSS.Block.BlockType.TRANSFER_PICK:
+                    //
+                    break;
+                case GPSS.Block.BlockType.TRANSFER_VARIABLE:
+                    //
+                    break;
+                default:
+                    throw new Exception("Несоответствие типов");
+            }
+
+            void unconDraw()
+            {
+                
+            }
+
+            void allDraw()
+            {
+
+            }
+
+            void bothDraw()
+            {
+
+            }
+
+            void pickDraw()
+            {
+
+            }
+
+            void variableDraw()
+            {
+
+            }
+        }
+
+        public override void getProperties()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool IsClicked(Point clickPoint)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool IsHorizontalTouching(Point clickPoint) => false;
+
+        public override bool IsLeftDiagonalTouching(Point clickPoint) => false;
+
+        public override bool IsRightDiagonalTouching(Point clickPoint) => false;
+
+        public override bool IsVerticalTouching(Point clickPoint) => false;
     }
 }

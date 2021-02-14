@@ -67,7 +67,7 @@ namespace GPSS
             /// <summary>
             /// 
             /// </summary>
-            TRANSFER_V,
+            TRANSFER_VARIABLE,
 
             /// <summary>
             /// 

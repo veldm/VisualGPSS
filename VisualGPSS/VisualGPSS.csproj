@@ -77,7 +77,6 @@
     <Compile Include="Transfer.Designer.cs">
       <DependentUpon>Transfer.cs</DependentUpon>
     </Compile>
-    <Compile Include="VisualElements.cs" />
     <EmbeddedResource Include="AtomaryElement.resx">
       <DependentUpon>AtomaryElement.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,6 +93,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Transfer.resx">
+      <DependentUpon>Transfer.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -145,6 +147,10 @@
     <None Include="Resources\add_insert_1193.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GPSS.Visualiztion\GPSS.Visualiztion.csproj">
+      <Project>{5eec445f-f5f1-4152-90bc-e8bae37c363f}</Project>
+      <Name>GPSS.Visualiztion</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GPSS\GPSS.csproj">
       <Project>{7ac7734a-84d9-4b0d-bbf0-55c3a6a96129}</Project>
       <Name>GPSS</Name>
@@ -194,6 +200,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\4115235-exit-logout-sign-out_114030.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linegraphsymbol_120645.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diskette_save_saveas_15141.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

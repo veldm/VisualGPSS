@@ -203,6 +203,16 @@ namespace VisualGPSS.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap diskette_save_saveas_15141 {
+            get {
+                object obj = ResourceManager.GetObject("diskette_save_saveas_15141", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap documentediting_editdocuments_text_documentedi_2820 {
             get {
                 object obj = ResourceManager.GetObject("documentediting_editdocuments_text_documentedi_2820", resourceCulture);
@@ -258,6 +268,16 @@ namespace VisualGPSS.Properties {
             get {
                 object obj = ResourceManager.GetObject("kisspng-computer-icons-git-branching-clip-art-fork-git-5b4d48a3433994.17242679153" +
                         "17915232754", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap linegraphsymbol_120645 {
+            get {
+                object obj = ResourceManager.GetObject("linegraphsymbol_120645", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

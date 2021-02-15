@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace VisualGPSS
+namespace GPSS.Visualiztion
 {
     public class VisualBlock : VisualElement    
     {

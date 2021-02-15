@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GPSS.Visualiztion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ namespace VisualGPSS
 {
     public partial class Transfer : MaterialSkin.Controls.MaterialForm
     {
-        public Transfer(VisualTransfer transfer)
+        public Transfer(VisualTransfer transfer, VisualGPSS_Schema schema)
         {
             InitializeComponent();
             TypeCB.SelectedIndex = ((GPSS.Block)transfer.essence).Type switch
@@ -24,11 +25,30 @@ namespace VisualGPSS
                 GPSS.Block.BlockType.TRANSFER_PICK => 4,
                 _ => throw new NotImplementedException(),
             };
+            comboBox1.Items.AddRange(schema.Labels.ToArray());
+            comboBox2.Items.AddRange(schema.Labels.ToArray());
         }
 
         private void TypeCB_SelectedIndexChanged(object sender, EventArgs e)
         {
+            switch (TypeCB.SelectedIndex)
+            {
+                case 0:
 
+                    break;
+                case 1:
+
+                    break;
+                case 2:
+
+                    break;
+                case 3:
+
+                    break;
+                case 4:
+
+                    break;
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using MaterialSkin;
+﻿using GPSS.Visualiztion;
+using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,7 @@ namespace VisualGPSS
         private bool resizing;
         private (bool isGoing, int xc, int yc) moving;
         private GPSS.Operator creatingOperator;
+        public GPSS.Visualiztion.VisualGPSS_Schema schema;
 
         public Main(string openFileName)
         {
@@ -249,6 +251,26 @@ namespace VisualGPSS
                     _ => new GPSS.Block(),
                 };
             }
+        }
+
+        private void CreateBlock(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void CreateTransfer(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void CreateCommand(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void RefreshSchema()
+        {
+            
         }
     }
 }

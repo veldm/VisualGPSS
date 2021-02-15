@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using GPSS;
 
-namespace VisualGPSS
+namespace GPSS.Visualiztion
 {
     public abstract class VisualElement
     {

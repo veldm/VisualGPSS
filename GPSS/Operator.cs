@@ -45,7 +45,7 @@ namespace GPSS
         {
             get
             {
-                string result = $"{Name} {(label is null or "" ? string.Empty : label)}";
+                string result = $"{(label is null or "" ? string.Empty : label)} {Name}";
                 for (int i = 0; i < arguments.Length - 1; i++)
                     result += $"{arguments[i]}, ";
                 result += comment is null or "" ? "" : $"; {comment}";

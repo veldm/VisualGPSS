@@ -16,16 +16,23 @@ namespace VisualGPSS
 {
     public partial class Main : MaterialForm
     {
-        private Point cursorPosition => new Point
-            (pictureBox.PointToClient(Cursor.Position).X,
-             pictureBox.PointToClient(Cursor.Position).Y);
-        private List<VisualElement> Elements = new List<VisualElement>();
+        #region Поля
+        private Point CursorPosition => new Point()
+        { 
+            X = pictureBox.PointToClient(Cursor.Position).X,
+            Y = pictureBox.PointToClient(Cursor.Position).Y
+        };
+
         private VisualElement activeElement;
         private VisualBlock resizedBlock;
         private bool resizing;
         private (bool isGoing, int xc, int yc) moving;
-        private GPSS.Operator creatingOperator;
-        public GPSS.Visualiztion.VisualGPSS_Schema schema;
+
+        private delegate void Creator(string type);
+        private (Creator method, string parameter)? creatingOperator;
+
+        public VisualGPSS_Schema schema = new VisualGPSS_Schema();
+        #endregion Поля
 
         public Main(string openFileName)
         {
@@ -35,13 +42,13 @@ namespace VisualGPSS
                 // Шаблон по умолчанию
                 VisualElement V = new VisualBlock(135, 80, new Point(100, 100),
                     Color.SandyBrown, Color.White, ForeColor, Font);
-                Elements.Add(V);
+                schema.Elements.Add(V);
             }
             else
             {
                 VisualElement V = new VisualBlock(135, 80, new Point(100, 100),
                     Color.SandyBrown, Color.White, ForeColor, Font);
-                Elements.Add(V);
+                schema.Elements.Add(V);
                 MessageBox.Show(openFileName);
             }
         }
@@ -61,54 +68,54 @@ namespace VisualGPSS
 
                 void xResize()
                 {
-                    int corr = Math.Abs(resizedBlock.center.X - cursorPosition.X) - resizedBlock.width / 2;
-                    resizedBlock.width = Math.Abs(resizedBlock.center.X - cursorPosition.X) * 2;
-                    resizedBlock.center.X = resizedBlock.center.X < cursorPosition.X ?
+                    int corr = Math.Abs(resizedBlock.center.X - CursorPosition.X) - resizedBlock.width / 2;
+                    resizedBlock.width = Math.Abs(resizedBlock.center.X - CursorPosition.X) * 2;
+                    resizedBlock.center.X = resizedBlock.center.X < CursorPosition.X ?
                         resizedBlock.center.X + corr : resizedBlock.center.X - corr;
                 }
 
                 void yResize()
                 {
-                    int corr = Math.Abs(resizedBlock.center.Y - cursorPosition.Y) - resizedBlock.heigth / 2;
-                    resizedBlock.heigth = Math.Abs(resizedBlock.center.Y - cursorPosition.Y) * 2;
-                    resizedBlock.center.Y = resizedBlock.center.Y < cursorPosition.Y ?
+                    int corr = Math.Abs(resizedBlock.center.Y - CursorPosition.Y) - resizedBlock.heigth / 2;
+                    resizedBlock.heigth = Math.Abs(resizedBlock.center.Y - CursorPosition.Y) * 2;
+                    resizedBlock.center.Y = resizedBlock.center.Y < CursorPosition.Y ?
                         resizedBlock.center.Y + corr : resizedBlock.center.Y - corr;
                 }
             }
             else if (moving.isGoing && activeElement is VisualBlock)
             {
                 VisualBlock block = (VisualBlock)activeElement;
-                block.center.X = cursorPosition.X + moving.xc;
-                block.center.Y = cursorPosition.Y + moving.yc;
+                block.center.X = CursorPosition.X + moving.xc;
+                block.center.Y = CursorPosition.Y + moving.yc;
             }
-            else foreach (VisualElement element in Elements)
+            else foreach (VisualElement element in schema.Elements)
                 {
-                    if (element.IsClicked(cursorPosition))
+                    if (element.IsClicked(CursorPosition))
                     {
                         Cursor.Current = Cursors.Hand;
                         activeElement = element;
                         resizedBlock = null;
                         pictureBox.ContextMenuStrip = BlockOrElementCMS;
                     }
-                    else if (element.IsVerticalTouching(cursorPosition))
+                    else if (element.IsVerticalTouching(CursorPosition))
                     {
                         Cursor.Current = Cursors.SizeWE;
                         resizedBlock = element is VisualBlock block ? block : null;
                         activeElement = null;
                     }
-                    else if (element.IsHorizontalTouching(cursorPosition))
+                    else if (element.IsHorizontalTouching(CursorPosition))
                     {
                         Cursor.Current = Cursors.SizeNS;
                         resizedBlock = element is VisualBlock block ? block : null;
                         activeElement = null;
                     }
-                    else if (element.IsRightDiagonalTouching(cursorPosition))
+                    else if (element.IsRightDiagonalTouching(CursorPosition))
                     {
                         Cursor.Current = Cursors.SizeNESW;
                         resizedBlock = element is VisualBlock block ? block : null;
                         activeElement = null;
                     }
-                    else if (element.IsLeftDiagonalTouching(cursorPosition))
+                    else if (element.IsLeftDiagonalTouching(CursorPosition))
                     {
                         Cursor.Current = Cursors.SizeNWSE;
                         resizedBlock = element is VisualBlock block ? block : null;
@@ -126,25 +133,28 @@ namespace VisualGPSS
 
         private void pictureBox_MouseDown(object sender, MouseEventArgs e)
         {
-            foreach (VisualElement element in Elements)
+            foreach (VisualElement element in schema.Elements)
             {
-                if (element.IsClicked(cursorPosition)) Cursor.Current = Cursors.Hand;
-                else if (element.IsVerticalTouching(cursorPosition)) Cursor.Current = Cursors.SizeWE;
-                else if (element.IsHorizontalTouching(cursorPosition)) Cursor.Current = Cursors.SizeNS;
-                else if (element.IsRightDiagonalTouching(cursorPosition)) Cursor.Current = Cursors.SizeNESW;
-                else if (element.IsLeftDiagonalTouching(cursorPosition)) Cursor.Current = Cursors.SizeNWSE;
+                if (element.IsClicked(CursorPosition)) Cursor.Current = Cursors.Hand;
+                else if (element.IsVerticalTouching(CursorPosition)) Cursor.Current = Cursors.SizeWE;
+                else if (element.IsHorizontalTouching(CursorPosition)) Cursor.Current = Cursors.SizeNS;
+                else if (element.IsRightDiagonalTouching(CursorPosition)) Cursor.Current = Cursors.SizeNESW;
+                else if (element.IsLeftDiagonalTouching(CursorPosition)) Cursor.Current = Cursors.SizeNWSE;
                 else Cursor.Current = Cursors.Default;
             }
             if (resizedBlock is not null) resizing = true;
             if (activeElement is VisualBlock and not null) moving = (true, 
-                    ((VisualBlock)activeElement).center.X - cursorPosition.X,
-                    ((VisualBlock)activeElement).center.Y - cursorPosition.Y);
+                    ((VisualBlock)activeElement).center.X - CursorPosition.X,
+                    ((VisualBlock)activeElement).center.Y - CursorPosition.Y);
         }
 
         private void pictureBox_MouseUp(object sender, MouseEventArgs e)
         {
             resizing = moving.isGoing = false;
+            if (creatingOperator is not null)
+                creatingOperator.Value.method.Invoke(creatingOperator.Value.parameter);
         }
+
         #endregion Drag, Drop, Resize
 
         #region Отрисовка
@@ -164,13 +174,14 @@ namespace VisualGPSS
             //GC.Collect();
             //Bitmap bitmap = new Bitmap(3510, 2480);
             //pictureBox.Image = bitmap;
-            Graphics graphics = /*Graphics.FromImage(bitmap);*/e.Graphics;
-            foreach (VisualElement element in Elements)
-                element.Draw(graphics);
+            Graphics graphics = e.Graphics; /*Graphics.FromImage(bitmap);*/
+            //foreach (VisualElement element in Elements)
+            //    element.Draw(graphics);
+            schema.Draw(graphics);
         }
         #endregion Отрисовка
         
-        #region Help & Settings
+        #region Фичи
         private void settingsButton_MouseEnter(object sender, EventArgs e)
         {
             settingsButton.ForeColor = Color.LightBlue;
@@ -201,7 +212,16 @@ namespace VisualGPSS
             MessageBox.Show("Справка");
         }
 
-        #endregion Help & Settings
+        private void сохранитьКакИзображениеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Bitmap bitmap = new Bitmap(3510, 2480);
+            pictureBox.DrawToBitmap(bitmap, new Rectangle(0, 0, 3510, 2480));
+            bitmap.Save("buf.png");
+            bitmap.Dispose();
+            GC.Collect();
+        }
+
+        #endregion Фичи
 
         #region Цвета меню
         private void файлToolStripMenuItem_DropDownOpening(object sender, EventArgs e)
@@ -223,16 +243,9 @@ namespace VisualGPSS
         {
             средстваToolStripMenuItem.ForeColor = Color.White;
         }
-        #endregion Цвета меню
+        #endregion Цвета меню        
 
-        private void сохранитьКакИзображениеToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Bitmap bitmap = new Bitmap(3510, 2480);
-            pictureBox.DrawToBitmap(bitmap, new Rectangle(0, 0, 3510, 2480));
-            bitmap.Save("buf.png");
-            bitmap.Dispose();
-            GC.Collect();
-        }
+        #region Создание операторов и обновление схемы
 
         private void ToolBoxItemClicked(object sender, EventArgs e)
         {
@@ -248,22 +261,22 @@ namespace VisualGPSS
                 Cursor = Cursors.Cross;
                 creatingOperator = control.Name switch
                 {
-                    _ => new GPSS.Block(),
+                    _ => null
                 };
             }
         }
 
-        private void CreateBlock(object sender, EventArgs e)
+        private void CreateBlock(string type)
         {
             
         }
 
-        private void CreateTransfer(object sender, EventArgs e)
+        private void CreateTransfer(string type)
         {
             
         }
 
-        private void CreateCommand(object sender, EventArgs e)
+        private void CreateCommand(string type)
         {
             
         }
@@ -273,6 +286,23 @@ namespace VisualGPSS
             schema.Elements.Sort(new Comparison<VisualElement>((e1, e2)
                 => e1.number.CompareTo(e2.number)));
 
+            foreach (VisualElement element in schema.Elements.Where
+                (element => element is VisualTransfer))
+            {
+                int index1 = schema.Elements.IndexOf(element);
+                int index2 = schema.Elements.IndexOf(((VisualTransfer)element).StartBlock);
+                if (index2 != index1 - 1)
+                {
+                    VisualElement buf = schema.Elements[index1 - 1];
+                    schema.Elements[index1 - 1] = ((VisualTransfer)element).StartBlock;
+                    schema.Elements[index2] = buf;
+                }
+            }
+
+            for (int i = 0; i < schema.Elements.Count; i++)
+                schema.Elements[i].number = (uint)i;
         }
+
+        #endregion Создание операторов и обновление схемы
     }
 }

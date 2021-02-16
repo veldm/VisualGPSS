@@ -10,6 +10,7 @@ namespace GPSS.Visualiztion
             get => (GPSS.Block)essence;
             set => essence = value;
         }
+        public VisualBlock StartBlock { get => startBlock; }
 
         private VisualBlock startBlock;
         private VisualBlock block1;
@@ -42,8 +43,8 @@ namespace GPSS.Visualiztion
 
             void unconDraw()
             {
-                Point start = new Point(startBlock.center.X,
-                    startBlock.center.Y - startBlock.heigth / 2);
+                Point start = new Point(StartBlock.center.X,
+                    StartBlock.center.Y - StartBlock.heigth / 2);
                 Point destination = new Point(this.block1.center.X,
                     this.block1.center.Y + this.block1.heigth / 2);
                 graphics.DrawLine(new Pen(Color.DarkBlue, 3), start, destination);

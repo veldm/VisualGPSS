@@ -7,7 +7,6 @@ namespace GPSS.Visualiztion
     {
         public int width;
         public int heigth;
-        public Point center;
 
         public Color mainColor;
         public Color blockColor;
@@ -52,7 +51,7 @@ namespace GPSS.Visualiztion
             graphics.DrawString("1111", font, brush, new Point(center.X - width / 2, center.Y - heigth / 2));
         }
 
-        public override void getProperties()
+        public override void GetProperties()
         {
             throw new NotImplementedException();
         }

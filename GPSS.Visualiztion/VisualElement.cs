@@ -10,14 +10,15 @@ namespace GPSS.Visualiztion
     public abstract class VisualElement
     {
         public Operator essence;
-
         public uint number;
+        public Point center;
+
         public abstract bool IsClicked(Point clickPoint);
         public abstract bool IsVerticalTouching(Point clickPoint);
         public abstract bool IsHorizontalTouching(Point clickPoint);
         public abstract bool IsLeftDiagonalTouching(Point clickPoint);
         public abstract bool IsRightDiagonalTouching(Point clickPoint);
         public abstract void Draw(Graphics graphics);
-        public abstract void getProperties();
+        public abstract void GetProperties();
     }
 }

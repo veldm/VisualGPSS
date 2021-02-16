@@ -270,7 +270,9 @@ namespace VisualGPSS
 
         private void RefreshSchema()
         {
-            
+            schema.Elements.Sort(new Comparison<VisualElement>((e1, e2)
+                => e1.number.CompareTo(e2.number)));
+
         }
     }
 }

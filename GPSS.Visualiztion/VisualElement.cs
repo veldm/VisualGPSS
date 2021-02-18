@@ -15,6 +15,7 @@ namespace GPSS.Visualiztion
         public Color mainColor;
         public Color fontColor;
         public Font font;
+        public VisualGPSS_Schema parentSchema;
 
         public abstract bool IsClicked(Point clickPoint);
         public abstract bool IsVerticalTouching(Point clickPoint);

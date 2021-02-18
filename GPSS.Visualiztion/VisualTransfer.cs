@@ -51,7 +51,13 @@ namespace GPSS.Visualiztion
 
             void allDraw()
             {
-                
+                (Point pivot1, Point pivot2) = bothDraw();
+                Pen pen = new Pen(Color.DarkBlue, 3);
+                for (int i = (int)block1.number + (int)digit; i <= block2.number; i += (int)digit)
+                {                    
+                    Point point = new Point(center.Y, parentSchema.Elements[i].center.X);
+                    graphics.DrawLine(pen, pivot1, point);
+                }
             }
 
             (Point pivot1, Point pivot2) bothDraw()
@@ -85,7 +91,13 @@ namespace GPSS.Visualiztion
 
             void pickDraw()
             {
-
+                (Point pivot1, Point pivot2) = bothDraw();
+                Pen pen = new Pen(Color.DarkBlue, 3);
+                for (int i = (int)block1.number + 1; i <= block2.number; i++)
+                {
+                    Point point = new Point(center.Y, parentSchema.Elements[i].center.X);
+                    graphics.DrawLine(pen, pivot1, point);
+                }
             }
 
             void variableDraw()

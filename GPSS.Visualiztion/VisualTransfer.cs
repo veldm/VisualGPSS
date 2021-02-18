@@ -10,12 +10,11 @@ namespace GPSS.Visualiztion
             get => (GPSS.Block)essence;
             set => essence = value;
         }
-        public VisualBlock StartBlock { get => startBlock; }
+        public VisualBlock StartBlock { get; }
 
-        private VisualBlock startBlock;
         private VisualBlock block1;
         private VisualBlock block2;
-        private uint digit;
+        private double digit;
 
 
         public override void Draw(Graphics graphics)
@@ -26,16 +25,16 @@ namespace GPSS.Visualiztion
                     unconDraw();
                     break;
                 case GPSS.Block.BlockType.TRANSFER_ALL:
-                    //
+                    allDraw();
                     break;
                 case GPSS.Block.BlockType.TRANSFER_BOTH:
-                    //
+                    bothDraw();
                     break;
                 case GPSS.Block.BlockType.TRANSFER_PICK:
-                    //
+                    pickDraw();
                     break;
                 case GPSS.Block.BlockType.TRANSFER_VARIABLE:
-                    //
+                    variableDraw();
                     break;
                 default:
                     throw new Exception("Несоответствие типов");
@@ -45,19 +44,43 @@ namespace GPSS.Visualiztion
             {
                 Point start = new Point(StartBlock.center.X,
                     StartBlock.center.Y - StartBlock.heigth / 2);
-                Point destination = new Point(this.block1.center.X,
-                    this.block1.center.Y + this.block1.heigth / 2);
+                Point destination = new Point(block1.center.X,
+                    block1.center.Y + block1.heigth / 2);
                 graphics.DrawLine(new Pen(Color.DarkBlue, 3), start, destination);
             }
 
             void allDraw()
             {
-
+                
             }
 
-            void bothDraw()
+            (Point pivot1, Point pivot2) bothDraw()
             {
+                int cY = StartBlock.center.Y + (Math.Min(block1.center.Y, block2.center.Y)
+                    - StartBlock.center.Y) / 2;
+                int cX = StartBlock.center.X;
+                center = new Point(cX, cY);
 
+                Point pivot1 = new Point(block1.center.X, center.Y);
+                Point pivot2 = new Point(block1.center.X, center.Y);
+
+                Pen pen = new Pen(Color.DarkBlue, 3);
+                graphics.DrawLine(pen, StartBlock.center, center);
+                graphics.DrawLine(pen, center, pivot1);
+                graphics.DrawLine(pen, center, pivot2);
+                graphics.DrawLine(pen, pivot1, block1.center);
+                graphics.DrawLine(pen, pivot2, block2.center);
+
+                Point rp1 = new Point(center.X + 60, center.Y);
+                Point rp2 = new Point(center.X - 60, center.Y);
+                Point rp3 = new Point(center.X, center.Y + 30);
+                Point rp4 = new Point(center.X, center.Y - 30);
+                Point[] points = { rp1, rp2, rp3, rp4 };
+                Brush brush = new SolidBrush(Color.SandyBrown);
+                graphics.FillPolygon(brush, points);
+                graphics.DrawPolygon(pen, points);
+
+                return (pivot1, pivot2);
             }
 
             void pickDraw()
@@ -67,7 +90,12 @@ namespace GPSS.Visualiztion
 
             void variableDraw()
             {
-
+                (Point pivot1, Point pivot2) = bothDraw();
+                double v1 = digit;
+                double v2 = 1 - v1;
+                Brush brush = new SolidBrush(Color.DarkBlue);
+                graphics.DrawString(v1.ToString(), font, brush, x: pivot1.X, y: pivot1.Y - 15);
+                graphics.DrawString(v2.ToString(), font, brush, x: pivot2.X, y: pivot2.Y - 15);
             }
         }
 

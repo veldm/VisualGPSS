@@ -12,6 +12,9 @@ namespace GPSS.Visualiztion
         public Operator essence;
         public uint number;
         public Point center;
+        public Color mainColor;
+        public Color fontColor;
+        public Font font;
 
         public abstract bool IsClicked(Point clickPoint);
         public abstract bool IsVerticalTouching(Point clickPoint);

@@ -9,27 +9,24 @@ namespace GPSS.Visualiztion
 {
     public partial class VisualGPSS_Schema
     {
-        private readonly List<string> labels;
-        private readonly List<VisualElement> elements;
-
-        public List<string> Labels { get => labels; }
-        public List<VisualElement> Elements { get => elements; }
+        public List<string> Labels { get; }
+        public List<VisualElement> Elements { get; }
 
         public VisualGPSS_Schema(List<string> labels, List<VisualElement> elements)
         {
-            this.labels = labels ?? throw new ArgumentNullException(nameof(labels));
-            this.elements = elements ?? throw new ArgumentNullException(nameof(elements));
+            Labels = labels ?? throw new ArgumentNullException(nameof(labels));
+            Elements = elements ?? throw new ArgumentNullException(nameof(elements));
         }
 
         public VisualGPSS_Schema()
         {
-            labels = new List<string>();
-            elements = new List<VisualElement>();
+            Labels = new List<string>();
+            Elements = new List<VisualElement>();
         }
 
         public void Draw(Graphics graphics)
         {
-            for (int i = 0; i < Elements.Count; i++)
+            for (int i = 0; i < Elements.Count - 1; i++)
                 if (Elements[i] is not VisualTransfer && Elements[i + 1] is not VisualTransfer)
                     graphics.DrawLine(new Pen(Color.DarkBlue, 3),
                         Elements[i].center, Elements[i + 1].center);

@@ -8,11 +8,7 @@ namespace GPSS.Visualiztion
         public int width;
         public int heigth;
 
-        public Color mainColor;
         public Color blockColor;
-
-        public Color fontColor;
-        public Font font;
 
         public VisualBlock(int width, int heigth, Point center, Color mainColor,
             Color blockColor, Color fontColor, Font font)
@@ -48,7 +44,7 @@ namespace GPSS.Visualiztion
             graphics.FillRectangle(brush, _x, _y, width - 14, heigth - 27);
 
             brush = new SolidBrush(fontColor);
-            graphics.DrawString("1111", font, brush, new Point(center.X - width / 2, center.Y - heigth / 2));
+            graphics.DrawString(/*essence.Label is null ? "" : essence.Label*/"1111", font, brush, new Point(center.X - width / 2 + 3, center.Y - heigth / 2 + 3));
         }
 
         public override void GetProperties()

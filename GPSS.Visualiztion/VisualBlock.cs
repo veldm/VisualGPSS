@@ -17,16 +17,16 @@ namespace GPSS.Visualiztion
             this.heigth = heigth;
             this.center = center;
 
-            this.mainColor = mainColor;
+            this.MainColor = mainColor;
             this.blockColor = blockColor;
 
-            this.fontColor = fontColor;
-            this.font = font;
+            this.FontColor = fontColor;
+            this.Font = font;
         }
 
         public override void Draw(Graphics graphics)
         {
-            SolidBrush brush = new SolidBrush(mainColor);
+            SolidBrush brush = new SolidBrush(MainColor);
             //Point[] vertexes =
             //{
             //    new Point(center.X + width / 2, center.Y + heigth / 2),
@@ -43,8 +43,8 @@ namespace GPSS.Visualiztion
             _y = center.Y - (heigth / 2 - 20);
             graphics.FillRectangle(brush, _x, _y, width - 14, heigth - 27);
 
-            brush = new SolidBrush(fontColor);
-            graphics.DrawString(/*essence.Label is null ? "" : essence.Label*/"1111", font, brush, new Point(center.X - width / 2 + 3, center.Y - heigth / 2 + 3));
+            brush = new SolidBrush(FontColor);
+            graphics.DrawString(/*essence.Label is null ? "" : essence.Label*/"1111", Font, brush, new Point(center.X - width / 2 + 3, center.Y - heigth / 2 + 3));
         }
 
         public override void GetProperties()

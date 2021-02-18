@@ -31,12 +31,13 @@ namespace VisualGPSS
         private delegate void Creator(string type);
         private (Creator method, string parameter)? creatingOperator;
 
-        public VisualGPSS_Schema schema = new VisualGPSS_Schema();
+        public VisualGPSS_Schema schema;
         #endregion Поля
 
         public Main(string openFileName)
         {
             InitializeComponent();
+            schema = new VisualGPSS_Schema(Font, ForeColor, pictureBox.BackColor);
             if (openFileName is null)
             {
                 // Шаблон по умолчанию
@@ -146,6 +147,11 @@ namespace VisualGPSS
             if (activeElement is VisualBlock and not null) moving = (true, 
                     ((VisualBlock)activeElement).center.X - CursorPosition.X,
                     ((VisualBlock)activeElement).center.Y - CursorPosition.Y);
+            propertyGrid.SelectedObject = (activeElement is null) switch
+            {
+                false => activeElement,
+                true => schema
+            };
         }
 
         private void pictureBox_MouseUp(object sender, MouseEventArgs e)

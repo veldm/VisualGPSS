@@ -12,10 +12,14 @@ namespace GPSS.Visualiztion
         public Operator essence;
         public uint number;
         public Point center;
-        public Color mainColor;
-        public Color fontColor;
-        public Font font;
+        private Color mainColor;
+        private Color fontColor;
+        private Font font;
         public VisualGPSS_Schema parentSchema;
+        
+        public Color MainColor { get => mainColor; set => mainColor = value; }
+        public Color FontColor { get => fontColor; set => fontColor = value; }
+        public Font Font { get => font; set => font = value; }
 
         public abstract bool IsClicked(Point clickPoint);
         public abstract bool IsVerticalTouching(Point clickPoint);

@@ -106,8 +106,8 @@ namespace GPSS.Visualiztion
                 double v1 = digit;
                 double v2 = 1 - v1;
                 Brush brush = new SolidBrush(Color.DarkBlue);
-                graphics.DrawString(v1.ToString(), font, brush, x: pivot1.X, y: pivot1.Y - 15);
-                graphics.DrawString(v2.ToString(), font, brush, x: pivot2.X, y: pivot2.Y - 15);
+                graphics.DrawString(v1.ToString(), Font, brush, x: pivot1.X, y: pivot1.Y - 15);
+                graphics.DrawString(v2.ToString(), Font, brush, x: pivot2.X, y: pivot2.Y - 15);
             }
         }
 

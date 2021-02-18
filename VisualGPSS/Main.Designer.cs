@@ -117,21 +117,21 @@
             this.открытьToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.открытьToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.open_256_icon_icons_com_76002;
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.открытьToolStripMenuItem.Text = "Открыть";
             // 
             // сохранитьToolStripMenuItem
             // 
             this.сохранитьToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.save_file_disk_open_searsh_loading_clipboard_1513;
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
             // 
             // сохранитьКакToolStripMenuItem
             // 
             this.сохранитьКакToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.diskette_save_saveas_1514;
             this.сохранитьКакToolStripMenuItem.Name = "сохранитьКакToolStripMenuItem";
-            this.сохранитьКакToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.сохранитьКакToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.сохранитьКакToolStripMenuItem.Text = "Сохранить как";
             // 
             // menuStrip
@@ -202,7 +202,7 @@
             this.settingsButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.settingsButton.Location = new System.Drawing.Point(942, 25);
             this.settingsButton.Name = "settingsButton";
-            this.settingsButton.Size = new System.Drawing.Size(55, 37);
+            this.settingsButton.Size = new System.Drawing.Size(38, 37);
             this.settingsButton.TabIndex = 5;
             this.settingsButton.Text = "⚙";
             this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
@@ -239,7 +239,7 @@
             this.редактироватьToolStripMenuItem1,
             this.добавитьВетвлениеToolStripMenuItem});
             this.BlockOrElementCMS.Name = "BlockOrElementCMS";
-            this.BlockOrElementCMS.Size = new System.Drawing.Size(230, 98);
+            this.BlockOrElementCMS.Size = new System.Drawing.Size(230, 76);
             // 
             // удалитьToolStripMenuItem
             // 
@@ -330,7 +330,7 @@
             this.pictureBox.ContextMenuStrip = this.BlockOrElementCMS;
             this.pictureBox.Location = new System.Drawing.Point(3, 3);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(25110, 16968);
+            this.pictureBox.Size = new System.Drawing.Size(27810, 18779);
             this.pictureBox.TabIndex = 2;
             this.pictureBox.TabStop = false;
             this.pictureBox.Click += new System.EventHandler(this.pictureBox_Click);
@@ -350,7 +350,7 @@
             this.ToolBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ToolBox.Location = new System.Drawing.Point(12, 76);
             this.ToolBox.Name = "ToolBox";
-            this.ToolBox.Size = new System.Drawing.Size(200, 682);
+            this.ToolBox.Size = new System.Drawing.Size(200, 307);
             this.ToolBox.TabIndex = 10;
             // 
             // groupBox3

@@ -25,8 +25,8 @@ namespace VisualGPSS
                 GPSS.Block.BlockType.TRANSFER_PICK => 4,
                 _ => throw new NotImplementedException(),
             };
-            comboBox1.Items.AddRange(schema.Labels.ToArray());
-            comboBox2.Items.AddRange(schema.Labels.ToArray());
+            comboBox1.Items.AddRange(schema.LabelsList.ToArray());
+            comboBox2.Items.AddRange(schema.LabelsList.ToArray());
         }
 
         private void TypeCB_SelectedIndexChanged(object sender, EventArgs e)
@@ -34,7 +34,11 @@ namespace VisualGPSS
             switch (TypeCB.SelectedIndex)
             {
                 case 0:
-
+                    CheckBox1.Enabled =
+                        Label2.Enabled = CheckBox2.Enabled = comboBox2.Enabled =
+                        Label3.Enabled = CheckBox3.Enabled = TextBox.Enabled = false;
+                    Label2.Text = Label3.Text = "";
+                    comboBox1.SelectedIndex = 0;
                     break;
                 case 1:
 

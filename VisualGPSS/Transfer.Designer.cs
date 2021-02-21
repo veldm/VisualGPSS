@@ -64,6 +64,8 @@
             // 
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Следующий блок (default)"});
             this.comboBox1.Location = new System.Drawing.Point(172, 134);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(164, 28);
@@ -73,7 +75,7 @@
             // 
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(172, 183);
+            this.comboBox2.Location = new System.Drawing.Point(172, 187);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(164, 28);
             this.comboBox2.TabIndex = 3;
@@ -83,7 +85,7 @@
             this.CheckBox2.AutoSize = true;
             this.CheckBox2.Depth = 0;
             this.CheckBox2.Font = new System.Drawing.Font("Roboto", 10F);
-            this.CheckBox2.Location = new System.Drawing.Point(128, 182);
+            this.CheckBox2.Location = new System.Drawing.Point(128, 186);
             this.CheckBox2.Margin = new System.Windows.Forms.Padding(0);
             this.CheckBox2.MouseLocation = new System.Drawing.Point(-1, -1);
             this.CheckBox2.MouseState = MaterialSkin.MouseState.HOVER;
@@ -99,7 +101,7 @@
             this.CheckBox3.AutoSize = true;
             this.CheckBox3.Depth = 0;
             this.CheckBox3.Font = new System.Drawing.Font("Roboto", 10F);
-            this.CheckBox3.Location = new System.Drawing.Point(128, 236);
+            this.CheckBox3.Location = new System.Drawing.Point(128, 240);
             this.CheckBox3.Margin = new System.Windows.Forms.Padding(0);
             this.CheckBox3.MouseLocation = new System.Drawing.Point(-1, -1);
             this.CheckBox3.MouseState = MaterialSkin.MouseState.HOVER;
@@ -130,7 +132,7 @@
             this.Label2.Depth = 0;
             this.Label2.Font = new System.Drawing.Font("Roboto", 11F);
             this.Label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Label2.Location = new System.Drawing.Point(12, 188);
+            this.Label2.Location = new System.Drawing.Point(12, 192);
             this.Label2.MouseState = MaterialSkin.MouseState.HOVER;
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(87, 19);
@@ -143,7 +145,7 @@
             this.Label3.Depth = 0;
             this.Label3.Font = new System.Drawing.Font("Roboto", 11F);
             this.Label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Label3.Location = new System.Drawing.Point(12, 242);
+            this.Label3.Location = new System.Drawing.Point(12, 246);
             this.Label3.MouseState = MaterialSkin.MouseState.HOVER;
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(92, 19);
@@ -155,7 +157,7 @@
             this.SaveButton.AutoSize = true;
             this.SaveButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.SaveButton.Depth = 0;
-            this.SaveButton.Location = new System.Drawing.Point(243, 285);
+            this.SaveButton.Location = new System.Drawing.Point(243, 289);
             this.SaveButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.SaveButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.SaveButton.Name = "SaveButton";
@@ -170,7 +172,7 @@
             this.Cancelbutton.AutoSize = true;
             this.Cancelbutton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Cancelbutton.Depth = 0;
-            this.Cancelbutton.Location = new System.Drawing.Point(121, 285);
+            this.Cancelbutton.Location = new System.Drawing.Point(121, 289);
             this.Cancelbutton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Cancelbutton.MouseState = MaterialSkin.MouseState.HOVER;
             this.Cancelbutton.Name = "Cancelbutton";
@@ -186,7 +188,7 @@
             this.DeleteButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.DeleteButton.Depth = 0;
             this.DeleteButton.ForeColor = System.Drawing.Color.Red;
-            this.DeleteButton.Location = new System.Drawing.Point(12, 285);
+            this.DeleteButton.Location = new System.Drawing.Point(12, 289);
             this.DeleteButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.DeleteButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.DeleteButton.Name = "DeleteButton";
@@ -218,14 +220,14 @@
             this.propertyGrid.LineColor = System.Drawing.SystemColors.Desktop;
             this.propertyGrid.Location = new System.Drawing.Point(355, 82);
             this.propertyGrid.Name = "propertyGrid";
-            this.propertyGrid.Size = new System.Drawing.Size(215, 239);
+            this.propertyGrid.Size = new System.Drawing.Size(182, 243);
             this.propertyGrid.TabIndex = 15;
             // 
             // TextBox
             // 
             this.TextBox.Depth = 0;
             this.TextBox.Hint = "";
-            this.TextBox.Location = new System.Drawing.Point(172, 240);
+            this.TextBox.Location = new System.Drawing.Point(172, 244);
             this.TextBox.MouseState = MaterialSkin.MouseState.HOVER;
             this.TextBox.Name = "TextBox";
             this.TextBox.PasswordChar = '\0';
@@ -241,7 +243,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(582, 344);
+            this.ClientSize = new System.Drawing.Size(549, 344);
             this.Controls.Add(this.TextBox);
             this.Controls.Add(this.propertyGrid);
             this.Controls.Add(this.TypeCB);

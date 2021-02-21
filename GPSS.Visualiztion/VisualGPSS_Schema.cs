@@ -11,7 +11,7 @@ namespace GPSS.Visualiztion
     public partial class VisualGPSS_Schema
     {
         #region Поля
-        private readonly List<string> labels;
+        private readonly Dictionary<string, VisualElement> labels;
         private readonly List<VisualElement> elements;
         private Font defaultFont;
         private Color defaultFontColor;
@@ -22,7 +22,13 @@ namespace GPSS.Visualiztion
 
         #region Свойства
         [Browsable(false)]
-        public List<string> Labels => labels;
+        public Dictionary<string, VisualElement> Labels => labels;
+
+        [Browsable(false)]
+        public List<string> LabelsList => Labels.Keys.ToList();
+
+        [Browsable(false)]
+        public List<VisualElement> ElementsWithLabelsList => Labels.Values.ToList();
 
         [Browsable(false)]
         public List<VisualElement> Elements => elements;
@@ -43,15 +49,16 @@ namespace GPSS.Visualiztion
         [Browsable(true), DisplayName("Цвет линий по умолчанию")]
         public Color DefaultElementsLinesColor
         { get => defaultLinesColor; set => defaultLinesColor = value; }
+
         #endregion Свойства
-        
+
         public VisualGPSS_Schema(Font font, Color fontColor, Color backgroundColor)
         {
-            this.DefaultFont = font ?? throw new ArgumentNullException(nameof(font));
-            this.DefaultFontColor = fontColor;
-            this.BackgroundColor = backgroundColor;
+            DefaultFont = font ?? throw new ArgumentNullException(nameof(font));
+            DefaultFontColor = fontColor;
+            BackgroundColor = backgroundColor;
 
-            labels = new List<string>();
+            labels = new Dictionary<string, VisualElement>();
             elements = new List<VisualElement>();
         }
 

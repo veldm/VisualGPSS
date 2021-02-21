@@ -10,6 +10,11 @@ namespace GPSS
     {
         private ComandType type;
 
+        public Comand(string label, string[] arguments, string comment)
+            : base(label, arguments, comment)
+        {
+        }
+
         #region Свойства
         public ComandType Type { get => type; set => type = value; }
 

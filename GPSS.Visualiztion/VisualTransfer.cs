@@ -5,21 +5,23 @@ namespace GPSS.Visualiztion
 {
     public class VisualTransfer : VisualElement
     {
-        public GPSS.Block Transfer
-        {
-            get => (GPSS.Block)essence;
-            set => essence = value;
-        }
-        public VisualBlock StartBlock { get; }
-
         private VisualBlock block1;
         private VisualBlock block2;
         private double digit;
+        private readonly VisualBlock startBlock;
 
-        public VisualTransfer(VisualBlock block1, VisualBlock block2, double digit, 
-            Operator essence, uint number, Point center, VisualGPSS_Schema parentSchema)
-            : base(essence, number, center, parentSchema)
+        public Block Transfer
         {
+            get => (Block)essence;
+            set => essence = value;
+        }
+        public VisualBlock StartBlock => startBlock;        
+
+        public VisualTransfer(VisualBlock startBlock, VisualBlock block1, VisualBlock block2,
+            double digit, Operator essence, uint number, Point center,
+            VisualGPSS_Schema parentSchema) : base(essence, number, center, parentSchema)
+        {
+            this.startBlock = startBlock ?? throw new ArgumentNullException(nameof(startBlock));
             this.block1 = block1 ?? throw new ArgumentNullException(nameof(block1));
             this.block2 = block2 ?? throw new ArgumentNullException(nameof(block2));
             this.digit = digit;
@@ -62,7 +64,7 @@ namespace GPSS.Visualiztion
                 (Point pivot1, Point pivot2) = bothDraw();
                 Pen pen = new Pen(Color.DarkBlue, 3);
                 for (int i = (int)block1.number + (int)digit; i <= block2.number; i += (int)digit)
-                {                    
+                {
                     Point point = new Point(center.Y, parentSchema.Elements[i].center.X);
                     graphics.DrawLine(pen, pivot1, point);
                 }

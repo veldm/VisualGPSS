@@ -15,7 +15,8 @@ namespace GPSS.Visualiztion
         public VisualBlock(Operator essence, uint number, Point center,
             VisualGPSS_Schema parentSchema) : base(essence, number, center, parentSchema)
         {
-            width = 
+            width = 135;
+            heigth = 80;
         }
 
         public override void Draw(Graphics graphics)

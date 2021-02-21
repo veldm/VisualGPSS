@@ -70,18 +70,39 @@ namespace GPSS.Visualiztion
                 element is not VisualTransfer)) element.Draw(graphics);
         }
 
-        public void AddBlock(int number, string type, string label, string[] args, string comment)
+        public void AddBlock(uint number, Point center, string type,
+            string label, string[] args, string comment)
         {
             Block.BlockType blockType = (Block.BlockType)Enum.Parse(typeof(Block.BlockType), type);
             Block block = new Block(label, args, comment, blockType);
 
             if (blockType.IsFuncBlock())
             {
-
+                VisualBlock visualBlock = new VisualBlock(block, number, center, this);
+                Elements.Insert((int)number, visualBlock);
             }
             else
             {
+                throw new ArgumentException(nameof(block));
+            }
+        }
 
+        public void AddTransfer(string type, VisualBlock startBlock, VisualBlock block1,
+            VisualBlock block2, int digit, string label, string[] args, string comment)        
+        {
+            Block.BlockType blockType = (Block.BlockType)Enum.Parse(typeof(Block.BlockType), type);
+            Block block = new Block(label, args, comment, blockType);
+
+            if (blockType.IsTransfer())
+            {
+                uint number = startBlock.number + 1;
+                VisualTransfer visualTransfer = new VisualTransfer(startBlock, block1, block2, digit,
+                    block, number, new Point(), this);
+                Elements.Insert((int)number, visualTransfer);
+            }
+            else
+            {
+                throw new ArgumentException(nameof(block));
             }
         }
         #endregion Методы

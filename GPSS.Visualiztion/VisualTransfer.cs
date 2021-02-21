@@ -16,6 +16,14 @@ namespace GPSS.Visualiztion
         private VisualBlock block2;
         private double digit;
 
+        public VisualTransfer(VisualBlock block1, VisualBlock block2, double digit, 
+            Operator essence, uint number, Point center, VisualGPSS_Schema parentSchema)
+            : base(essence, number, center, parentSchema)
+        {
+            this.block1 = block1 ?? throw new ArgumentNullException(nameof(block1));
+            this.block2 = block2 ?? throw new ArgumentNullException(nameof(block2));
+            this.digit = digit;
+        }
 
         public override void Draw(Graphics graphics)
         {

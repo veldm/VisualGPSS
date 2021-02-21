@@ -22,6 +22,9 @@ namespace GPSS
         public override string Code => throw new NotImplementedException();
         #endregion
 
+        public Block(string label, string[] arguments, string comment, BlockType type)
+            : base (label, arguments, comment) { this.type = type; }
+
         #region Методы
         public override bool Validate()
         {

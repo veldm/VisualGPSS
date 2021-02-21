@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Drawing;
 
 namespace GPSS.Visualiztion
@@ -8,20 +9,13 @@ namespace GPSS.Visualiztion
         public int width;
         public int heigth;
 
-        public Color blockColor;
+        [Browsable(true), DisplayName("Цвет текстового поля")]
+        public Color BlockColor { get; set; }
 
-        public VisualBlock(int width, int heigth, Point center, Color mainColor,
-            Color blockColor, Color fontColor, Font font)
+        public VisualBlock(Operator essence, uint number, Point center,
+            VisualGPSS_Schema parentSchema) : base(essence, number, center, parentSchema)
         {
-            this.width = width;
-            this.heigth = heigth;
-            this.center = center;
-
-            this.MainColor = mainColor;
-            this.blockColor = blockColor;
-
-            this.FontColor = fontColor;
-            this.Font = font;
+            width = 
         }
 
         public override void Draw(Graphics graphics)
@@ -38,7 +32,7 @@ namespace GPSS.Visualiztion
             int _y = center.Y - heigth / 2;
             graphics.FillRectangle(brush, _x, _y, width, heigth);
 
-            brush = new SolidBrush(blockColor);
+            brush = new SolidBrush(BlockColor);
             _x = center.X - (width / 2 - 7);
             _y = center.Y - (heigth / 2 - 20);
             graphics.FillRectangle(brush, _x, _y, width - 14, heigth - 27);

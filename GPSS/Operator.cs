@@ -54,6 +54,13 @@ namespace GPSS
         }
         #endregion Свойства
 
+        protected Operator(string label, string[] arguments, string comment)
+        {
+            this.label = label ?? throw new ArgumentNullException(nameof(label));
+            this.arguments = arguments ?? throw new ArgumentNullException(nameof(label));
+            this.comment = comment ?? throw new ArgumentNullException(nameof(label));
+        }
+
         #region Методы
         /// <summary>
         /// Проверяет корректность и совместимость параметров

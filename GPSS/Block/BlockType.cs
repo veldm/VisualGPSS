@@ -8,7 +8,7 @@ namespace GPSS
 {
     public partial class Block : Operator
     {
-        public enum BlockType
+        public enum BlockType : int
         {
             /// <summary>
             /// Определяет точку входа транзакций в модель вместе
@@ -170,4 +170,14 @@ namespace GPSS
             MATCH
         }
     }
+
+    public static class BlockTypeExtensions
+    {
+        public static bool IsTransfer(this Block.BlockType blockType)
+            => (int)blockType < 8 || (int)blockType > 13;
+
+        public static bool IsFuncBlock(this Block.BlockType blockType)
+            => ! blockType.IsTransfer();
+    }
+
 }

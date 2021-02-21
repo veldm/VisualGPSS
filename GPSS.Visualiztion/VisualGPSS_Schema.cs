@@ -10,35 +10,52 @@ namespace GPSS.Visualiztion
 {
     public partial class VisualGPSS_Schema
     {
-        private Font font;
-        private Color fontColor;
+        #region Поля
+        private readonly List<string> labels;
+        private readonly List<VisualElement> elements;
+        private Font defaultFont;
+        private Color defaultFontColor;
         private Color backgroundColor;
+        private Color defaultElementsColor;
+        private Color defaultLinesColor;
+        #endregion Поля
+
+        #region Свойства
+        [Browsable(false)]
+        public List<string> Labels => labels;
 
         [Browsable(false)]
-        public List<string> Labels { get; }
-
-        [Browsable(false)]
-        public List<VisualElement> Elements { get; }
+        public List<VisualElement> Elements => elements;
 
         [Browsable(true), DisplayName("Шрифт")]
-        public Font Font { get => font; set => font = value; }
+        public Font DefaultFont { get => defaultFont; set => defaultFont = value; }
 
         [Browsable(true), DisplayName("Цвет шрифта")]
-        public Color FontColor { get => fontColor; set => fontColor = value; }
+        public Color DefaultFontColor { get => defaultFontColor; set => defaultFontColor = value; }
 
         [Browsable(true), DisplayName("Цвет фона")]
         public Color BackgroundColor { get => backgroundColor; set => backgroundColor = value; }
 
+        [Browsable(true), DisplayName("Цвет тела блока по умолчанию")]
+        public Color DefaultElementsColor
+        { get => defaultElementsColor; set => defaultElementsColor = value; }
+
+        [Browsable(true), DisplayName("Цвет линий по умолчанию")]
+        public Color DefaultElementsLinesColor
+        { get => defaultLinesColor; set => defaultLinesColor = value; }
+        #endregion Свойства
+        
         public VisualGPSS_Schema(Font font, Color fontColor, Color backgroundColor)
         {
-            this.Font = font ?? throw new ArgumentNullException(nameof(font));
-            this.FontColor = fontColor;
+            this.DefaultFont = font ?? throw new ArgumentNullException(nameof(font));
+            this.DefaultFontColor = fontColor;
             this.BackgroundColor = backgroundColor;
 
-            Labels = new List<string>();
-            Elements = new List<VisualElement>();
+            labels = new List<string>();
+            elements = new List<VisualElement>();
         }
 
+        #region Методы
         public void Draw(Graphics graphics)
         {
             for (int i = 0; i < Elements.Count - 1; i++)
@@ -52,5 +69,21 @@ namespace GPSS.Visualiztion
             foreach (VisualElement element in Elements.Where(element =>
                 element is not VisualTransfer)) element.Draw(graphics);
         }
+
+        public void AddBlock(int number, string type, string label, string[] args, string comment)
+        {
+            Block.BlockType blockType = (Block.BlockType)Enum.Parse(typeof(Block.BlockType), type);
+            Block block = new Block(label, args, comment, blockType);
+
+            if (blockType.IsFuncBlock())
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+        #endregion Методы
     }
 }

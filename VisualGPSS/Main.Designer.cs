@@ -228,7 +228,7 @@
             // timer
             // 
             this.timer.Enabled = true;
-            this.timer.Interval = 1;
+            this.timer.Interval = 300;
             this.timer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // BlockOrElementCMS
@@ -330,7 +330,7 @@
             this.pictureBox.ContextMenuStrip = this.BlockOrElementCMS;
             this.pictureBox.Location = new System.Drawing.Point(3, 3);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(27810, 18779);
+            this.pictureBox.Size = new System.Drawing.Size(30510, 20590);
             this.pictureBox.TabIndex = 2;
             this.pictureBox.TabStop = false;
             this.pictureBox.Click += new System.EventHandler(this.pictureBox_Click);

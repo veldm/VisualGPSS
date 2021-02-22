@@ -174,7 +174,7 @@ namespace GPSS
     public static class BlockTypeExtensions
     {
         public static bool IsTransfer(this Block.BlockType blockType)
-            => (int)blockType < 8 || (int)blockType > 13;
+            => (int)blockType > 8 && (int)blockType < 14;
 
         public static bool IsFuncBlock(this Block.BlockType blockType)
             => ! blockType.IsTransfer();

@@ -52,11 +52,14 @@ namespace GPSS.Visualiztion
 
         #endregion Свойства
 
-        public VisualGPSS_Schema(Font font, Color fontColor, Color backgroundColor)
+        public VisualGPSS_Schema(Font font, Color fontColor, Color backgroundColor,
+            Color defaultElementsColor, Color defaultLinesColor)
         {
             DefaultFont = font ?? throw new ArgumentNullException(nameof(font));
             DefaultFontColor = fontColor;
             BackgroundColor = backgroundColor;
+            this.defaultElementsColor = defaultElementsColor;
+            this.defaultLinesColor = defaultLinesColor;
 
             labels = new Dictionary<string, VisualElement>();
             elements = new List<VisualElement>();
@@ -137,5 +140,19 @@ namespace GPSS.Visualiztion
                 Elements[i].number = (uint)i;
         }
         #endregion Методы
+
+        public static VisualGPSS_Schema getDefaultSchema(Font font, Color fontColor,
+            Color backgroundColor, Color defaultElementsColor, Color defaultLinesColor)
+        {
+            VisualGPSS_Schema schema = new VisualGPSS_Schema(font, fontColor, backgroundColor,
+                defaultElementsColor, defaultLinesColor);
+
+            string[] args = { "10.0", "1.0" };            
+            schema.AddBlock(0, new Point(100, 50), "GENERATE", null, args, null);
+            args = new string[] { "1" };
+            schema.AddBlock(1, new Point(100, 250), "TERMINATE", null, args, null);
+
+            return schema;
+        }
     }
 }

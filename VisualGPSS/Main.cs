@@ -34,23 +34,23 @@ namespace VisualGPSS
         public VisualGPSS_Schema schema;
         #endregion Поля
 
-        public Main(string openFileName)
+        public Main(string openFileName = null)
         {
             InitializeComponent();
-            schema = new VisualGPSS_Schema(Font, ForeColor, pictureBox.BackColor);
             if (openFileName is null)
             {
                 // Шаблон по умолчанию
-                VisualElement V = new VisualBlock(135, 80, new Point(100, 100),
-                    Color.SandyBrown, Color.White, ForeColor, Font);
-                schema.Elements.Add(V);
+                schema = VisualGPSS_Schema.getDefaultSchema(Font, Color.Black,
+                    pictureBox.BackColor, Color.SandyBrown, Color.DarkBlue);
             }
             else
             {
-                VisualElement V = new VisualBlock(135, 80, new Point(100, 100),
-                    Color.SandyBrown, Color.White, ForeColor, Font);
-                schema.Elements.Add(V);
-                MessageBox.Show(openFileName);
+                schema = VisualGPSS_Schema.Deserialize(openFileName);
+
+                //VisualElement V = new VisualBlock(135, 80, new Point(100, 100),
+                //    Color.SandyBrown, Color.White, ForeColor, Font);
+                //schema.Elements.Add(V);
+                //MessageBox.Show(openFileName);
             }
         }
 
@@ -144,9 +144,13 @@ namespace VisualGPSS
                 else Cursor.Current = Cursors.Default;
             }
             if (resizedBlock is not null) resizing = true;
-            if (activeElement is VisualBlock and not null) moving = (true, 
+            if (activeElement is VisualBlock and not null)
+            {
+                moving = (true,
                     ((VisualBlock)activeElement).center.X - CursorPosition.X,
                     ((VisualBlock)activeElement).center.Y - CursorPosition.Y);
+                timer.Interval = 1;
+            }
             propertyGrid.SelectedObject = (activeElement is null) switch
             {
                 false => activeElement,
@@ -157,6 +161,7 @@ namespace VisualGPSS
         private void pictureBox_MouseUp(object sender, MouseEventArgs e)
         {
             resizing = moving.isGoing = false;
+            timer.Interval = 300;
             if (creatingOperator is not null)
                 creatingOperator.Value.method.Invoke(creatingOperator.Value.parameter, Cursor.Position);
         }

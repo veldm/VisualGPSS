@@ -17,6 +17,7 @@ namespace GPSS.Visualiztion
         {
             width = 135;
             heigth = 80;
+            BlockColor = Color.White;
         }
 
         public override void Draw(Graphics graphics)
@@ -39,7 +40,10 @@ namespace GPSS.Visualiztion
             graphics.FillRectangle(brush, _x, _y, width - 14, heigth - 27);
 
             brush = new SolidBrush(FontColor);
-            graphics.DrawString(/*essence.Label is null ? "" : essence.Label*/"1111", Font, brush, new Point(center.X - width / 2 + 3, center.Y - heigth / 2 + 3));
+            graphics.DrawString(essence.Label is null ? "" : essence.Label, Font, brush,
+                new Point(center.X - width / 2 + 3, center.Y - heigth / 2 + 3));
+            graphics.DrawString(number.ToString(), Font, brush,
+                new Point(center.X + width / 2 - 15, center.Y - heigth / 2 + 3));
         }
 
         public override void GetProperties()

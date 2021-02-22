@@ -20,7 +20,15 @@ namespace VisualGPSS
                     openFileName = args[0];
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main(openFileName));
+            try
+            {
+                Application.Run(new Main(openFileName));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Run(new Main());
+            }
         }
     }
 }

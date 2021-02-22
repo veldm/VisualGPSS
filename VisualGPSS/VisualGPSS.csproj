@@ -71,11 +71,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Transfer.cs">
+    <Compile Include="Subsidiary Forms\Transfer Form\Transfer.Create.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Transfer.Designer.cs">
+    <Compile Include="Subsidiary Forms\Transfer Form\Transfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subsidiary Forms\Transfer Form\Transfer.Designer.cs">
       <DependentUpon>Transfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subsidiary Forms\Transfer Form\Transfer.Edit.cs">
+      <SubType>Form</SubType>
     </Compile>
     <EmbeddedResource Include="AtomaryElement.resx">
       <DependentUpon>AtomaryElement.cs</DependentUpon>
@@ -93,7 +99,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Transfer.resx">
+    <EmbeddedResource Include="Subsidiary Forms\Transfer Form\Transfer.resx">
       <DependentUpon>Transfer.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -206,6 +212,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\diskette_save_saveas_15141.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Main Form\" />
+    <Folder Include="Subsidiary Forms\Block form\" />
+    <Folder Include="Subsidiary Forms\Command Form\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

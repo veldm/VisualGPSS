@@ -87,6 +87,7 @@ namespace GPSS.Visualiztion
             {
                 VisualBlock visualBlock = new VisualBlock(block, number, center, this);
                 Elements.Insert((int)number, visualBlock);
+                Refresh();
             }
             else
             {
@@ -106,11 +107,34 @@ namespace GPSS.Visualiztion
                 VisualTransfer visualTransfer = new VisualTransfer(startBlock, block1, block2, digit,
                     block, number, new Point(), this);
                 Elements.Insert((int)number, visualTransfer);
+                Refresh();
             }
             else
             {
                 throw new ArgumentException(nameof(block));
             }
+        }
+
+        public void Refresh()
+        {
+            Elements.Sort(new Comparison<VisualElement>((e1, e2)
+                => e1.number.CompareTo(e2.number)));
+
+            foreach (VisualElement element in Elements.Where
+                (element => element is VisualTransfer))
+            {
+                int index1 = Elements.IndexOf(element);
+                int index2 = Elements.IndexOf(((VisualTransfer)element).StartBlock);
+                if (index2 != index1 - 1)
+                {
+                    VisualElement buf = Elements[index1 - 1];
+                    Elements[index1 - 1] = ((VisualTransfer)element).StartBlock;
+                    Elements[index2] = buf;
+                }
+            }
+
+            for (int i = 0; i < Elements.Count; i++)
+                Elements[i].number = (uint)i;
         }
         #endregion Методы
     }

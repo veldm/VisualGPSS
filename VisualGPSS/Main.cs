@@ -28,7 +28,7 @@ namespace VisualGPSS
         private bool resizing;
         private (bool isGoing, int xc, int yc) moving;
 
-        private delegate void Creator(string type);
+        private delegate void Creator(string type, Point point);
         private (Creator method, string parameter)? creatingOperator;
 
         public VisualGPSS_Schema schema;
@@ -158,7 +158,7 @@ namespace VisualGPSS
         {
             resizing = moving.isGoing = false;
             if (creatingOperator is not null)
-                creatingOperator.Value.method.Invoke(creatingOperator.Value.parameter);
+                creatingOperator.Value.method.Invoke(creatingOperator.Value.parameter, Cursor.Position);
         }
 
         #endregion Drag, Drop, Resize
@@ -272,41 +272,14 @@ namespace VisualGPSS
             }
         }
 
-        private void CreateBlock(string type)
+        private void CreateBlock(string type, Point point)
         {
             
         }
 
-        private void CreateTransfer(string type)
+        private void CreateCommand(string type, Point point)
         {
             
-        }
-
-        private void CreateCommand(string type)
-        {
-            
-        }
-
-        private void RefreshSchema()
-        {
-            schema.Elements.Sort(new Comparison<VisualElement>((e1, e2)
-                => e1.number.CompareTo(e2.number)));
-
-            foreach (VisualElement element in schema.Elements.Where
-                (element => element is VisualTransfer))
-            {
-                int index1 = schema.Elements.IndexOf(element);
-                int index2 = schema.Elements.IndexOf(((VisualTransfer)element).StartBlock);
-                if (index2 != index1 - 1)
-                {
-                    VisualElement buf = schema.Elements[index1 - 1];
-                    schema.Elements[index1 - 1] = ((VisualTransfer)element).StartBlock;
-                    schema.Elements[index2] = buf;
-                }
-            }
-
-            for (int i = 0; i < schema.Elements.Count; i++)
-                schema.Elements[i].number = (uint)i;
         }
 
         #endregion Создание операторов и обновление схемы

@@ -152,7 +152,7 @@
       <Name>GPSS.Visualiztion</Name>
     </ProjectReference>
     <ProjectReference Include="..\GPSS\GPSS.csproj">
-      <Project>{7ac7734a-84d9-4b0d-bbf0-55c3a6a96129}</Project>
+      <Project>{7AC7734A-84D9-4B0D-BBF0-55C3A6A96129}</Project>
       <Name>GPSS</Name>
     </ProjectReference>
   </ItemGroup>

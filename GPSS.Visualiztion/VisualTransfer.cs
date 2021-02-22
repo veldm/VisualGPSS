@@ -15,16 +15,20 @@ namespace GPSS.Visualiztion
             get => (Block)essence;
             set => essence = value;
         }
-        public VisualBlock StartBlock => startBlock;        
+        public VisualBlock StartBlock => startBlock;
+
+        public VisualBlock Block1 { get => block1; set => block1 = value; }
+        public VisualBlock Block2 { get => block2; set => block2 = value; }
+        public double Digit { get => digit; set => digit = value; }
 
         public VisualTransfer(VisualBlock startBlock, VisualBlock block1, VisualBlock block2,
             double digit, Operator essence, uint number, Point center,
             VisualGPSS_Schema parentSchema) : base(essence, number, center, parentSchema)
         {
             this.startBlock = startBlock ?? throw new ArgumentNullException(nameof(startBlock));
-            this.block1 = block1 ?? throw new ArgumentNullException(nameof(block1));
-            this.block2 = block2 ?? throw new ArgumentNullException(nameof(block2));
-            this.digit = digit;
+            this.Block1 = block1 ?? throw new ArgumentNullException(nameof(block1));
+            this.Block2 = block2 ?? throw new ArgumentNullException(nameof(block2));
+            this.Digit = digit;
         }
 
         public override void Draw(Graphics graphics)
@@ -54,8 +58,8 @@ namespace GPSS.Visualiztion
             {
                 Point start = new Point(StartBlock.center.X,
                     StartBlock.center.Y - StartBlock.heigth / 2);
-                Point destination = new Point(block1.center.X,
-                    block1.center.Y + block1.heigth / 2);
+                Point destination = new Point(Block1.center.X,
+                    Block1.center.Y + Block1.heigth / 2);
                 graphics.DrawLine(new Pen(Color.DarkBlue, 3), start, destination);
             }
 
@@ -63,7 +67,7 @@ namespace GPSS.Visualiztion
             {
                 (Point pivot1, Point pivot2) = bothDraw();
                 Pen pen = new Pen(Color.DarkBlue, 3);
-                for (int i = (int)block1.number + (int)digit; i <= block2.number; i += (int)digit)
+                for (int i = (int)Block1.number + (int)Digit; i <= Block2.number; i += (int)Digit)
                 {
                     Point point = new Point(center.Y, parentSchema.Elements[i].center.X);
                     graphics.DrawLine(pen, pivot1, point);
@@ -72,20 +76,20 @@ namespace GPSS.Visualiztion
 
             (Point pivot1, Point pivot2) bothDraw()
             {
-                int cY = StartBlock.center.Y + (Math.Min(block1.center.Y, block2.center.Y)
+                int cY = StartBlock.center.Y + (Math.Min(Block1.center.Y, Block2.center.Y)
                     - StartBlock.center.Y) / 2;
                 int cX = StartBlock.center.X;
                 center = new Point(cX, cY);
 
-                Point pivot1 = new Point(block1.center.X, center.Y);
-                Point pivot2 = new Point(block1.center.X, center.Y);
+                Point pivot1 = new Point(Block1.center.X, center.Y);
+                Point pivot2 = new Point(Block1.center.X, center.Y);
 
                 Pen pen = new Pen(Color.DarkBlue, 3);
                 graphics.DrawLine(pen, StartBlock.center, center);
                 graphics.DrawLine(pen, center, pivot1);
                 graphics.DrawLine(pen, center, pivot2);
-                graphics.DrawLine(pen, pivot1, block1.center);
-                graphics.DrawLine(pen, pivot2, block2.center);
+                graphics.DrawLine(pen, pivot1, Block1.center);
+                graphics.DrawLine(pen, pivot2, Block2.center);
 
                 Point rp1 = new Point(center.X + 60, center.Y);
                 Point rp2 = new Point(center.X - 60, center.Y);
@@ -103,7 +107,7 @@ namespace GPSS.Visualiztion
             {
                 (Point pivot1, Point pivot2) = bothDraw();
                 Pen pen = new Pen(Color.DarkBlue, 3);
-                for (int i = (int)block1.number + 1; i <= block2.number; i++)
+                for (int i = (int)Block1.number + 1; i <= Block2.number; i++)
                 {
                     Point point = new Point(center.Y, parentSchema.Elements[i].center.X);
                     graphics.DrawLine(pen, pivot1, point);
@@ -113,7 +117,7 @@ namespace GPSS.Visualiztion
             void variableDraw()
             {
                 (Point pivot1, Point pivot2) = bothDraw();
-                double v1 = digit;
+                double v1 = Digit;
                 double v2 = 1 - v1;
                 Brush brush = new SolidBrush(Color.DarkBlue);
                 graphics.DrawString(v1.ToString(), Font, brush, x: pivot1.X, y: pivot1.Y - 15);

@@ -13,8 +13,6 @@ namespace GPSS
         #region Свойства
         public BlockType Type { get => type; set => type = value; }
 
-        public new string Name { get => Enum.GetName(typeof(BlockType), type); }
-
         /// <summary>
         /// Переопределение <see cref="Operator.Code"/> для блоков со сложной сигнатурой
         /// </summary>

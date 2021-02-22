@@ -28,11 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.CheckBox1 = new MaterialSkin.Controls.MaterialCheckBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.CheckBox2 = new MaterialSkin.Controls.MaterialCheckBox();
-            this.CheckBox3 = new MaterialSkin.Controls.MaterialCheckBox();
             this.Label1 = new MaterialSkin.Controls.MaterialLabel();
             this.Label2 = new MaterialSkin.Controls.MaterialLabel();
             this.Label3 = new MaterialSkin.Controls.MaterialLabel();
@@ -42,23 +39,9 @@
             this.TypeCB = new System.Windows.Forms.ComboBox();
             this.propertyGrid = new System.Windows.Forms.PropertyGrid();
             this.TextBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.LabelTextBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.SuspendLayout();
-            // 
-            // CheckBox1
-            // 
-            this.CheckBox1.AutoSize = true;
-            this.CheckBox1.Depth = 0;
-            this.CheckBox1.Font = new System.Drawing.Font("Roboto", 10F);
-            this.CheckBox1.Location = new System.Drawing.Point(128, 133);
-            this.CheckBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.CheckBox1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.CheckBox1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.CheckBox1.Name = "CheckBox1";
-            this.CheckBox1.Ripple = true;
-            this.CheckBox1.Size = new System.Drawing.Size(30, 30);
-            this.CheckBox1.TabIndex = 0;
-            this.CheckBox1.Text = " ";
-            this.CheckBox1.UseVisualStyleBackColor = true;
             // 
             // comboBox1
             // 
@@ -66,51 +49,19 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Следующий блок (default)"});
-            this.comboBox1.Location = new System.Drawing.Point(172, 134);
+            this.comboBox1.Location = new System.Drawing.Point(124, 179);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(164, 28);
+            this.comboBox1.Size = new System.Drawing.Size(215, 28);
             this.comboBox1.TabIndex = 1;
             // 
             // comboBox2
             // 
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(172, 187);
+            this.comboBox2.Location = new System.Drawing.Point(124, 232);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(164, 28);
+            this.comboBox2.Size = new System.Drawing.Size(215, 28);
             this.comboBox2.TabIndex = 3;
-            // 
-            // CheckBox2
-            // 
-            this.CheckBox2.AutoSize = true;
-            this.CheckBox2.Depth = 0;
-            this.CheckBox2.Font = new System.Drawing.Font("Roboto", 10F);
-            this.CheckBox2.Location = new System.Drawing.Point(128, 186);
-            this.CheckBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.CheckBox2.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.CheckBox2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.CheckBox2.Name = "CheckBox2";
-            this.CheckBox2.Ripple = true;
-            this.CheckBox2.Size = new System.Drawing.Size(30, 30);
-            this.CheckBox2.TabIndex = 2;
-            this.CheckBox2.Text = " ";
-            this.CheckBox2.UseVisualStyleBackColor = true;
-            // 
-            // CheckBox3
-            // 
-            this.CheckBox3.AutoSize = true;
-            this.CheckBox3.Depth = 0;
-            this.CheckBox3.Font = new System.Drawing.Font("Roboto", 10F);
-            this.CheckBox3.Location = new System.Drawing.Point(128, 240);
-            this.CheckBox3.Margin = new System.Windows.Forms.Padding(0);
-            this.CheckBox3.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.CheckBox3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.CheckBox3.Name = "CheckBox3";
-            this.CheckBox3.Ripple = true;
-            this.CheckBox3.Size = new System.Drawing.Size(30, 30);
-            this.CheckBox3.TabIndex = 4;
-            this.CheckBox3.Text = " ";
-            this.CheckBox3.UseVisualStyleBackColor = true;
             // 
             // Label1
             // 
@@ -118,7 +69,7 @@
             this.Label1.Depth = 0;
             this.Label1.Font = new System.Drawing.Font("Roboto", 11F);
             this.Label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Label1.Location = new System.Drawing.Point(12, 139);
+            this.Label1.Location = new System.Drawing.Point(15, 184);
             this.Label1.MouseState = MaterialSkin.MouseState.HOVER;
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(87, 19);
@@ -132,7 +83,7 @@
             this.Label2.Depth = 0;
             this.Label2.Font = new System.Drawing.Font("Roboto", 11F);
             this.Label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Label2.Location = new System.Drawing.Point(12, 192);
+            this.Label2.Location = new System.Drawing.Point(15, 237);
             this.Label2.MouseState = MaterialSkin.MouseState.HOVER;
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(87, 19);
@@ -145,7 +96,7 @@
             this.Label3.Depth = 0;
             this.Label3.Font = new System.Drawing.Font("Roboto", 11F);
             this.Label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Label3.Location = new System.Drawing.Point(12, 246);
+            this.Label3.Location = new System.Drawing.Point(15, 291);
             this.Label3.MouseState = MaterialSkin.MouseState.HOVER;
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(92, 19);
@@ -157,7 +108,7 @@
             this.SaveButton.AutoSize = true;
             this.SaveButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.SaveButton.Depth = 0;
-            this.SaveButton.Location = new System.Drawing.Point(243, 289);
+            this.SaveButton.Location = new System.Drawing.Point(246, 334);
             this.SaveButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.SaveButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.SaveButton.Name = "SaveButton";
@@ -172,7 +123,7 @@
             this.Cancelbutton.AutoSize = true;
             this.Cancelbutton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Cancelbutton.Depth = 0;
-            this.Cancelbutton.Location = new System.Drawing.Point(121, 289);
+            this.Cancelbutton.Location = new System.Drawing.Point(124, 334);
             this.Cancelbutton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Cancelbutton.MouseState = MaterialSkin.MouseState.HOVER;
             this.Cancelbutton.Name = "Cancelbutton";
@@ -188,7 +139,7 @@
             this.DeleteButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.DeleteButton.Depth = 0;
             this.DeleteButton.ForeColor = System.Drawing.Color.Red;
-            this.DeleteButton.Location = new System.Drawing.Point(12, 289);
+            this.DeleteButton.Location = new System.Drawing.Point(15, 334);
             this.DeleteButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.DeleteButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.DeleteButton.Name = "DeleteButton";
@@ -208,7 +159,7 @@
             "TRANSFER VAR",
             "TRANSFER ALL",
             "TRANSFER PICK"});
-            this.TypeCB.Location = new System.Drawing.Point(15, 82);
+            this.TypeCB.Location = new System.Drawing.Point(18, 127);
             this.TypeCB.Name = "TypeCB";
             this.TypeCB.Size = new System.Drawing.Size(321, 28);
             this.TypeCB.TabIndex = 14;
@@ -220,44 +171,71 @@
             this.propertyGrid.LineColor = System.Drawing.SystemColors.Desktop;
             this.propertyGrid.Location = new System.Drawing.Point(355, 82);
             this.propertyGrid.Name = "propertyGrid";
-            this.propertyGrid.Size = new System.Drawing.Size(182, 243);
+            this.propertyGrid.Size = new System.Drawing.Size(182, 288);
             this.propertyGrid.TabIndex = 15;
             // 
             // TextBox
             // 
             this.TextBox.Depth = 0;
             this.TextBox.Hint = "";
-            this.TextBox.Location = new System.Drawing.Point(172, 244);
+            this.TextBox.Location = new System.Drawing.Point(124, 289);
             this.TextBox.MouseState = MaterialSkin.MouseState.HOVER;
             this.TextBox.Name = "TextBox";
             this.TextBox.PasswordChar = '\0';
             this.TextBox.SelectedText = "";
             this.TextBox.SelectionLength = 0;
             this.TextBox.SelectionStart = 0;
-            this.TextBox.Size = new System.Drawing.Size(164, 23);
+            this.TextBox.Size = new System.Drawing.Size(215, 23);
             this.TextBox.TabIndex = 16;
             this.TextBox.UseSystemPasswordChar = false;
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(15, 84);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(60, 19);
+            this.materialLabel1.TabIndex = 8;
+            this.materialLabel1.Text = "МЕТКА";
+            // 
+            // LabelTextBox
+            // 
+            this.LabelTextBox.Depth = 0;
+            this.LabelTextBox.Hint = "";
+            this.LabelTextBox.Location = new System.Drawing.Point(81, 82);
+            this.LabelTextBox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.LabelTextBox.Name = "LabelTextBox";
+            this.LabelTextBox.PasswordChar = '\0';
+            this.LabelTextBox.SelectedText = "";
+            this.LabelTextBox.SelectionLength = 0;
+            this.LabelTextBox.SelectionStart = 0;
+            this.LabelTextBox.Size = new System.Drawing.Size(258, 23);
+            this.LabelTextBox.TabIndex = 16;
+            this.LabelTextBox.UseSystemPasswordChar = false;
             // 
             // Transfer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(549, 344);
+            this.ClientSize = new System.Drawing.Size(549, 387);
+            this.Controls.Add(this.LabelTextBox);
             this.Controls.Add(this.TextBox);
             this.Controls.Add(this.propertyGrid);
             this.Controls.Add(this.TypeCB);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.Cancelbutton);
+            this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.Label3);
             this.Controls.Add(this.Label2);
             this.Controls.Add(this.Label1);
-            this.Controls.Add(this.CheckBox3);
             this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.CheckBox2);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.CheckBox1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Transfer";
@@ -270,12 +248,8 @@
         }
 
         #endregion
-
-        private MaterialSkin.Controls.MaterialCheckBox CheckBox1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
-        private MaterialSkin.Controls.MaterialCheckBox CheckBox2;
-        private MaterialSkin.Controls.MaterialCheckBox CheckBox3;
         private MaterialSkin.Controls.MaterialLabel Label1;
         private MaterialSkin.Controls.MaterialLabel Label2;
         private MaterialSkin.Controls.MaterialLabel Label3;
@@ -285,5 +259,7 @@
         private System.Windows.Forms.ComboBox TypeCB;
         private System.Windows.Forms.PropertyGrid propertyGrid;
         private MaterialSkin.Controls.MaterialSingleLineTextField TextBox;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField LabelTextBox;
     }
 }

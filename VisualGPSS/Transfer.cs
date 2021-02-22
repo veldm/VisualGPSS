@@ -39,6 +39,7 @@ namespace VisualGPSS
             comboBox2.Items.AddRange(schema.LabelsList.ToArray());
             DeleteButton.Enabled = true;
             SaveButton.Click += SaveChanges;
+            propertyGrid.SelectedObject = transfer;
         }
 
         /// <summary>
@@ -214,6 +215,17 @@ namespace VisualGPSS
                         transfer.essence.Arguments[1] = label2;
                         break;
                 }
+
+                if (transfer.essence.Label != LabelTextBox.Text)                
+                {
+                    if (schema.Labels.TryGetValue(LabelTextBox.Text, out VisualElement visualElement))
+                        throw new Exception($"Метка {LabelTextBox.Text} уже занята" +
+                        $" блоком {visualElement.essence.Name}");
+                    else transfer.essence.Label = LabelTextBox.Text;
+                }
+
+                if (transfer.essence.Comment != CommentTextbox.Text)
+                    transfer.essence.Comment = CommentTextbox.Text;
             }
             catch (Exception ex)
             {
@@ -223,10 +235,10 @@ namespace VisualGPSS
 
         private void CreateNewTransfer(object sender, EventArgs e)
         {
-            string labelSelf, typeString, label1, label2;
-            VisualElement Block1, Block2;
-            double Digit;
+            string labelSelf, typeString, label1, label2, comment;
             string[] arguments = new string[3];
+            VisualElement Block1 = null, Block2 = null;
+            double Digit = 0;
 
             try
             {
@@ -326,13 +338,20 @@ namespace VisualGPSS
                 foreach (string item in args) if (item is null) args.Remove(item);
                 arguments = args.ToArray();
 
+                typeString = transfer.essence.Name;
 
+                comment = CommentTextbox.Text;
+
+                schema.AddTransfer(typeString, startBlock, (VisualBlock)Block1, (VisualBlock)Block2, Digit, labelSelf, arguments, comment);
+
+                propertyGrid.SelectedObject = schema.Elements[(int)startBlock.number + 1];
+                SaveButton.Click -= CreateNewTransfer;
+                SaveButton.Click += SaveChanges;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Ошибка", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
     }
 }

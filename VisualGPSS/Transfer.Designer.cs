@@ -41,6 +41,12 @@
             this.TextBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.LabelTextBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.CommentTextbox = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -49,18 +55,18 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Следующий блок (default)"});
-            this.comboBox1.Location = new System.Drawing.Point(124, 179);
+            this.comboBox1.Location = new System.Drawing.Point(112, 17);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(215, 28);
+            this.comboBox1.Size = new System.Drawing.Size(290, 28);
             this.comboBox1.TabIndex = 1;
             // 
             // comboBox2
             // 
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(124, 232);
+            this.comboBox2.Location = new System.Drawing.Point(112, 70);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(215, 28);
+            this.comboBox2.Size = new System.Drawing.Size(290, 28);
             this.comboBox2.TabIndex = 3;
             // 
             // Label1
@@ -69,7 +75,7 @@
             this.Label1.Depth = 0;
             this.Label1.Font = new System.Drawing.Font("Roboto", 11F);
             this.Label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Label1.Location = new System.Drawing.Point(15, 184);
+            this.Label1.Location = new System.Drawing.Point(11, 21);
             this.Label1.MouseState = MaterialSkin.MouseState.HOVER;
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(87, 19);
@@ -83,7 +89,7 @@
             this.Label2.Depth = 0;
             this.Label2.Font = new System.Drawing.Font("Roboto", 11F);
             this.Label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Label2.Location = new System.Drawing.Point(15, 237);
+            this.Label2.Location = new System.Drawing.Point(11, 74);
             this.Label2.MouseState = MaterialSkin.MouseState.HOVER;
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(87, 19);
@@ -96,7 +102,7 @@
             this.Label3.Depth = 0;
             this.Label3.Font = new System.Drawing.Font("Roboto", 11F);
             this.Label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Label3.Location = new System.Drawing.Point(15, 291);
+            this.Label3.Location = new System.Drawing.Point(11, 128);
             this.Label3.MouseState = MaterialSkin.MouseState.HOVER;
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(92, 19);
@@ -108,7 +114,7 @@
             this.SaveButton.AutoSize = true;
             this.SaveButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.SaveButton.Depth = 0;
-            this.SaveButton.Location = new System.Drawing.Point(246, 334);
+            this.SaveButton.Location = new System.Drawing.Point(333, 412);
             this.SaveButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.SaveButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.SaveButton.Name = "SaveButton";
@@ -123,7 +129,7 @@
             this.Cancelbutton.AutoSize = true;
             this.Cancelbutton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Cancelbutton.Depth = 0;
-            this.Cancelbutton.Location = new System.Drawing.Point(124, 334);
+            this.Cancelbutton.Location = new System.Drawing.Point(164, 412);
             this.Cancelbutton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Cancelbutton.MouseState = MaterialSkin.MouseState.HOVER;
             this.Cancelbutton.Name = "Cancelbutton";
@@ -139,7 +145,7 @@
             this.DeleteButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.DeleteButton.Depth = 0;
             this.DeleteButton.ForeColor = System.Drawing.Color.Red;
-            this.DeleteButton.Location = new System.Drawing.Point(15, 334);
+            this.DeleteButton.Location = new System.Drawing.Point(13, 412);
             this.DeleteButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.DeleteButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.DeleteButton.Name = "DeleteButton";
@@ -159,9 +165,9 @@
             "TRANSFER VAR",
             "TRANSFER ALL",
             "TRANSFER PICK"});
-            this.TypeCB.Location = new System.Drawing.Point(18, 127);
+            this.TypeCB.Location = new System.Drawing.Point(14, 60);
             this.TypeCB.Name = "TypeCB";
-            this.TypeCB.Size = new System.Drawing.Size(321, 28);
+            this.TypeCB.Size = new System.Drawing.Size(391, 28);
             this.TypeCB.TabIndex = 14;
             this.TypeCB.Text = "TRANSFER";
             this.TypeCB.SelectedIndexChanged += new System.EventHandler(this.TypeCB_SelectedIndexChanged);
@@ -169,23 +175,23 @@
             // propertyGrid
             // 
             this.propertyGrid.LineColor = System.Drawing.SystemColors.Desktop;
-            this.propertyGrid.Location = new System.Drawing.Point(355, 82);
+            this.propertyGrid.Location = new System.Drawing.Point(443, 75);
             this.propertyGrid.Name = "propertyGrid";
-            this.propertyGrid.Size = new System.Drawing.Size(182, 288);
+            this.propertyGrid.Size = new System.Drawing.Size(182, 373);
             this.propertyGrid.TabIndex = 15;
             // 
             // TextBox
             // 
             this.TextBox.Depth = 0;
             this.TextBox.Hint = "";
-            this.TextBox.Location = new System.Drawing.Point(124, 289);
+            this.TextBox.Location = new System.Drawing.Point(112, 124);
             this.TextBox.MouseState = MaterialSkin.MouseState.HOVER;
             this.TextBox.Name = "TextBox";
             this.TextBox.PasswordChar = '\0';
             this.TextBox.SelectedText = "";
             this.TextBox.SelectionLength = 0;
             this.TextBox.SelectionStart = 0;
-            this.TextBox.Size = new System.Drawing.Size(215, 23);
+            this.TextBox.Size = new System.Drawing.Size(290, 23);
             this.TextBox.TabIndex = 16;
             this.TextBox.UseSystemPasswordChar = false;
             // 
@@ -195,7 +201,7 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(15, 84);
+            this.materialLabel1.Location = new System.Drawing.Point(7, 23);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(60, 19);
@@ -206,42 +212,94 @@
             // 
             this.LabelTextBox.Depth = 0;
             this.LabelTextBox.Hint = "";
-            this.LabelTextBox.Location = new System.Drawing.Point(81, 82);
+            this.LabelTextBox.Location = new System.Drawing.Point(77, 19);
             this.LabelTextBox.MouseState = MaterialSkin.MouseState.HOVER;
             this.LabelTextBox.Name = "LabelTextBox";
             this.LabelTextBox.PasswordChar = '\0';
             this.LabelTextBox.SelectedText = "";
             this.LabelTextBox.SelectionLength = 0;
             this.LabelTextBox.SelectionStart = 0;
-            this.LabelTextBox.Size = new System.Drawing.Size(258, 23);
+            this.LabelTextBox.Size = new System.Drawing.Size(328, 23);
             this.LabelTextBox.TabIndex = 16;
             this.LabelTextBox.UseSystemPasswordChar = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.CommentTextbox);
+            this.groupBox1.Controls.Add(this.materialLabel2);
+            this.groupBox1.Controls.Add(this.LabelTextBox);
+            this.groupBox1.Controls.Add(this.TypeCB);
+            this.groupBox1.Controls.Add(this.materialLabel1);
+            this.groupBox1.Location = new System.Drawing.Point(12, 75);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(411, 147);
+            this.groupBox1.TabIndex = 17;
+            this.groupBox1.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.Label3);
+            this.groupBox2.Controls.Add(this.Label2);
+            this.groupBox2.Controls.Add(this.TextBox);
+            this.groupBox2.Controls.Add(this.Label1);
+            this.groupBox2.Controls.Add(this.comboBox2);
+            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Location = new System.Drawing.Point(12, 228);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(414, 170);
+            this.groupBox2.TabIndex = 18;
+            this.groupBox2.TabStop = false;
+            // 
+            // CommentTextbox
+            // 
+            this.CommentTextbox.Depth = 0;
+            this.CommentTextbox.Hint = "";
+            this.CommentTextbox.Location = new System.Drawing.Point(142, 105);
+            this.CommentTextbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.CommentTextbox.Name = "CommentTextbox";
+            this.CommentTextbox.PasswordChar = '\0';
+            this.CommentTextbox.SelectedText = "";
+            this.CommentTextbox.SelectionLength = 0;
+            this.CommentTextbox.SelectionStart = 0;
+            this.CommentTextbox.Size = new System.Drawing.Size(263, 23);
+            this.CommentTextbox.TabIndex = 18;
+            this.CommentTextbox.UseSystemPasswordChar = false;
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel2.Location = new System.Drawing.Point(11, 109);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(125, 19);
+            this.materialLabel2.TabIndex = 17;
+            this.materialLabel2.Text = "КОММЕНТАРИЙ";
             // 
             // Transfer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(549, 387);
-            this.Controls.Add(this.LabelTextBox);
-            this.Controls.Add(this.TextBox);
+            this.ClientSize = new System.Drawing.Size(637, 460);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.propertyGrid);
-            this.Controls.Add(this.TypeCB);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.Cancelbutton);
-            this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.SaveButton);
-            this.Controls.Add(this.Label3);
-            this.Controls.Add(this.Label2);
-            this.Controls.Add(this.Label1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Transfer";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Редактор перенаправлений";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,5 +319,9 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField TextBox;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialSingleLineTextField LabelTextBox;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private MaterialSkin.Controls.MaterialSingleLineTextField CommentTextbox;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
     }
 }

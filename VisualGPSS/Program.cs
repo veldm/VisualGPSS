@@ -26,7 +26,7 @@ namespace VisualGPSS
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ошибка", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Run(new Main());
             }
         }

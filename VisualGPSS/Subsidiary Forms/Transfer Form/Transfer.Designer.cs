@@ -42,9 +42,10 @@
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.LabelTextBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.CommentTextbox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -165,11 +166,10 @@
             "TRANSFER VAR",
             "TRANSFER ALL",
             "TRANSFER PICK"});
-            this.TypeCB.Location = new System.Drawing.Point(14, 60);
+            this.TypeCB.Location = new System.Drawing.Point(80, 19);
             this.TypeCB.Name = "TypeCB";
-            this.TypeCB.Size = new System.Drawing.Size(391, 28);
+            this.TypeCB.Size = new System.Drawing.Size(325, 28);
             this.TypeCB.TabIndex = 14;
-            this.TypeCB.Text = "TRANSFER";
             this.TypeCB.SelectedIndexChanged += new System.EventHandler(this.TypeCB_SelectedIndexChanged);
             // 
             // propertyGrid
@@ -201,7 +201,7 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(7, 23);
+            this.materialLabel1.Location = new System.Drawing.Point(11, 69);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(60, 19);
@@ -212,43 +212,30 @@
             // 
             this.LabelTextBox.Depth = 0;
             this.LabelTextBox.Hint = "";
-            this.LabelTextBox.Location = new System.Drawing.Point(77, 19);
+            this.LabelTextBox.Location = new System.Drawing.Point(77, 65);
             this.LabelTextBox.MouseState = MaterialSkin.MouseState.HOVER;
             this.LabelTextBox.Name = "LabelTextBox";
             this.LabelTextBox.PasswordChar = '\0';
             this.LabelTextBox.SelectedText = "";
             this.LabelTextBox.SelectionLength = 0;
             this.LabelTextBox.SelectionStart = 0;
-            this.LabelTextBox.Size = new System.Drawing.Size(328, 23);
+            this.LabelTextBox.Size = new System.Drawing.Size(325, 23);
             this.LabelTextBox.TabIndex = 16;
             this.LabelTextBox.UseSystemPasswordChar = false;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.materialLabel3);
             this.groupBox1.Controls.Add(this.CommentTextbox);
             this.groupBox1.Controls.Add(this.materialLabel2);
             this.groupBox1.Controls.Add(this.LabelTextBox);
-            this.groupBox1.Controls.Add(this.TypeCB);
             this.groupBox1.Controls.Add(this.materialLabel1);
+            this.groupBox1.Controls.Add(this.TypeCB);
             this.groupBox1.Location = new System.Drawing.Point(12, 75);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(411, 147);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.Label3);
-            this.groupBox2.Controls.Add(this.Label2);
-            this.groupBox2.Controls.Add(this.TextBox);
-            this.groupBox2.Controls.Add(this.Label1);
-            this.groupBox2.Controls.Add(this.comboBox2);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 228);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(414, 170);
-            this.groupBox2.TabIndex = 18;
-            this.groupBox2.TabStop = false;
             // 
             // CommentTextbox
             // 
@@ -261,7 +248,7 @@
             this.CommentTextbox.SelectedText = "";
             this.CommentTextbox.SelectionLength = 0;
             this.CommentTextbox.SelectionStart = 0;
-            this.CommentTextbox.Size = new System.Drawing.Size(263, 23);
+            this.CommentTextbox.Size = new System.Drawing.Size(260, 23);
             this.CommentTextbox.TabIndex = 18;
             this.CommentTextbox.UseSystemPasswordChar = false;
             // 
@@ -277,6 +264,33 @@
             this.materialLabel2.Size = new System.Drawing.Size(125, 19);
             this.materialLabel2.TabIndex = 17;
             this.materialLabel2.Text = "КОММЕНТАРИЙ";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.Label3);
+            this.groupBox2.Controls.Add(this.Label2);
+            this.groupBox2.Controls.Add(this.TextBox);
+            this.groupBox2.Controls.Add(this.Label1);
+            this.groupBox2.Controls.Add(this.comboBox2);
+            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Location = new System.Drawing.Point(12, 228);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(414, 170);
+            this.groupBox2.TabIndex = 18;
+            this.groupBox2.TabStop = false;
+            // 
+            // materialLabel3
+            // 
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel3.Location = new System.Drawing.Point(14, 23);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(40, 19);
+            this.materialLabel3.TabIndex = 19;
+            this.materialLabel3.Text = "ТИП";
             // 
             // Transfer
             // 
@@ -295,6 +309,7 @@
             this.Name = "Transfer";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.Sizable = false;
             this.Text = "Редактор перенаправлений";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -323,5 +338,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private MaterialSkin.Controls.MaterialSingleLineTextField CommentTextbox;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialLabel materialLabel3;
     }
 }

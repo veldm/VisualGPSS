@@ -185,6 +185,12 @@ namespace VisualGPSS
                 false => activeElement,
                 true => schema
             };
+            if (Cursor.Current == Cursors.Cross)
+            {
+                Cursor.Current = Cursors.Default;
+                creatingOperator.Value.method.Invoke
+                    (creatingOperator.Value.parameter, CursorPosition);
+            }
         }
 
         private void pictureBox_MouseUp(object sender, MouseEventArgs e)
@@ -254,8 +260,29 @@ namespace VisualGPSS
 
         private void сохранитьКакИзображениеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Bitmap bitmap = new Bitmap(3510, 2480);
-            pictureBox.DrawToBitmap(bitmap, new Rectangle(0, 0, 3510, 2480));
+            int x, y,
+                minX = int.MaxValue, minY = int.MaxValue,
+                maxX = int.MinValue, maxY = int.MinValue;
+            foreach (VisualElement element in schema.Elements)
+            {
+                if (element is VisualBlock block)
+                {
+                    if (block.center.X + block.width / 2 > maxX)
+                        maxX = block.center.X + block.width / 2;
+                    if (block.center.X - block.width / 2 < minX)
+                        minX = block.center.X - block.width / 2;
+                    if (block.center.Y + block.heigth / 2 > maxY)
+                        maxY = block.center.Y + block.heigth / 2;
+                    if (block.center.Y - block.heigth / 2 < minY)
+                        minY = block.center.Y + block.heigth / 2;
+                }
+            }
+
+            x = maxX + minX;
+            y = maxY + minY;
+
+            Bitmap bitmap = new Bitmap(x, y);
+            pictureBox.DrawToBitmap(bitmap, new Rectangle(0, 0, x, y));
             bitmap.Save("buf.png");
             bitmap.Dispose();
             GC.Collect();
@@ -308,12 +335,14 @@ namespace VisualGPSS
 
         private void CreateBlock(string type, Point point)
         {
-            
+            Block block = new Block(schema, point, type);
+            block.Show();
         }
 
         private void CreateCommand(string type, Point point)
         {
-            
+            //Command command = new Command(schema, point, type);
+            //command.Show();
         }
 
         #endregion Создание операторов и обновление схемы

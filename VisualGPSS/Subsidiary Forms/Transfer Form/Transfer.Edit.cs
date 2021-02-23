@@ -19,6 +19,7 @@ namespace VisualGPSS
             InitializeComponent();
             transfer = _transfer;
             schema = transfer.parentSchema;
+
             TypeCB.SelectedIndex = ((GPSS.Block)transfer.essence).Type switch
             {
                 GPSS.Block.BlockType.TRANSFER_UNCON => 0,
@@ -28,6 +29,10 @@ namespace VisualGPSS
                 GPSS.Block.BlockType.TRANSFER_PICK => 4,
                 _ => throw new ArgumentException(nameof(transfer.essence)),
             };
+            if (comboBox1.Enabled) comboBox1.SelectedItem = transfer.Block1.essence.Label;
+            if (comboBox2.Enabled) comboBox2.SelectedItem = transfer.Block2.essence.Label;
+            if (TextBox.Enabled) TextBox.Text = transfer.Digit.ToString();
+
             comboBox1.Items.AddRange(schema.LabelsList.ToArray());
             comboBox2.Items.AddRange(schema.LabelsList.ToArray());
             DeleteButton.Enabled = true;
@@ -145,7 +150,7 @@ namespace VisualGPSS
                 {
                     if (schema.Labels.TryGetValue(LabelTextBox.Text, out VisualElement visualElement))
                         throw new Exception($"Метка {LabelTextBox.Text} уже занята" +
-                        $" блоком {visualElement.essence.Name}");
+                        $" блоком №{visualElement.number} ({visualElement.essence.Name})");
                     else transfer.essence.Label = LabelTextBox.Text;
                 }
 
@@ -154,7 +159,7 @@ namespace VisualGPSS
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ошибка", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

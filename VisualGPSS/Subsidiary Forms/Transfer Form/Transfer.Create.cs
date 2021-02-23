@@ -19,6 +19,8 @@ namespace VisualGPSS
             InitializeComponent();
             startBlock = _startBlock;
             schema = startBlock.parentSchema;
+            comboBox1.Items.AddRange(schema.LabelsList.ToArray());
+            comboBox2.Items.AddRange(schema.LabelsList.ToArray());
             DeleteButton.Enabled = false;
             TypeCB.SelectedIndex = 0;
             SaveButton.Click += CreateNewTransfer;
@@ -141,7 +143,7 @@ namespace VisualGPSS
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ошибка", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

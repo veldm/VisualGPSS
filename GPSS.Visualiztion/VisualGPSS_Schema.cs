@@ -139,6 +139,14 @@ namespace GPSS.Visualiztion
             for (int i = 0; i < Elements.Count; i++)
                 Elements[i].number = (uint)i;
         }
+
+        public void Remove(VisualElement visualElement)
+        {
+            Elements.Remove(visualElement);
+            if (visualElement.essence.Label is not null or "")
+                labels.Remove(visualElement.essence.Label);
+            Refresh();
+        }
         #endregion Методы
 
         public static VisualGPSS_Schema getDefaultSchema(Font font, Color fontColor,

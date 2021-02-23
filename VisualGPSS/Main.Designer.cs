@@ -227,8 +227,7 @@
             // 
             // timer
             // 
-            this.timer.Enabled = true;
-            this.timer.Interval = 300;
+            this.timer.Interval = 5;
             this.timer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // BlockOrElementCMS
@@ -247,6 +246,7 @@
             this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
             this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(229, 24);
             this.удалитьToolStripMenuItem.Text = "Удалить";
+            this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
             // 
             // редактироватьToolStripMenuItem1
             // 
@@ -330,7 +330,7 @@
             this.pictureBox.ContextMenuStrip = this.BlockOrElementCMS;
             this.pictureBox.Location = new System.Drawing.Point(3, 3);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(30510, 20590);
+            this.pictureBox.Size = new System.Drawing.Size(33210, 22401);
             this.pictureBox.TabIndex = 2;
             this.pictureBox.TabStop = false;
             this.pictureBox.Click += new System.EventHandler(this.pictureBox_Click);

@@ -45,9 +45,10 @@ namespace GPSS
         {
             get
             {
-                string result = $"{(label is null or "" ? string.Empty : label)} {Name}";
+                string result = $"{(label is null or "" ? string.Empty : label)} {Name} ";
                 for (int i = 0; i < arguments.Length - 1; i++)
-                    result += $"{arguments[i]}, ";
+                    result += $"{arguments[i]},";
+                result += arguments.Last();
                 result += comment is null or "" ? "" : $"; {comment}";
                 return result;
             }

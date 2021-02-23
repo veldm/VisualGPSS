@@ -54,7 +54,7 @@ namespace VisualGPSS
             }
         }
 
-        #region Drag, Drop, Resize
+        #region Мышь
         private void pictureBox_MouseMove(object sender, MouseEventArgs e)
         {
             if (resizing)
@@ -97,37 +97,42 @@ namespace VisualGPSS
                         activeElement = element;
                         resizedBlock = null;
                         pictureBox.ContextMenuStrip = BlockOrElementCMS;
+                        break;
                     }
                     else if (element.IsVerticalTouching(CursorPosition))
                     {
                         Cursor.Current = Cursors.SizeWE;
                         resizedBlock = element is VisualBlock block ? block : null;
                         activeElement = null;
+                        break;
                     }
                     else if (element.IsHorizontalTouching(CursorPosition))
                     {
                         Cursor.Current = Cursors.SizeNS;
                         resizedBlock = element is VisualBlock block ? block : null;
                         activeElement = null;
+                        break;
                     }
                     else if (element.IsRightDiagonalTouching(CursorPosition))
                     {
                         Cursor.Current = Cursors.SizeNESW;
                         resizedBlock = element is VisualBlock block ? block : null;
                         activeElement = null;
+                        break;
                     }
                     else if (element.IsLeftDiagonalTouching(CursorPosition))
                     {
                         Cursor.Current = Cursors.SizeNWSE;
                         resizedBlock = element is VisualBlock block ? block : null;
                         activeElement = null;
+                        break;
                     }
                     else
                     {
                         Cursor.Current = Cursor.Current == Cursors.Cross ?
                             Cursors.Cross : Cursors.Default;
                         activeElement = resizedBlock = null;
-                        pictureBox.ContextMenuStrip = FieldCMS;
+                        pictureBox.ContextMenuStrip = null;
                     }
                 }
         }
@@ -136,20 +141,44 @@ namespace VisualGPSS
         {
             foreach (VisualElement element in schema.Elements)
             {
-                if (element.IsClicked(CursorPosition)) Cursor.Current = Cursors.Hand;
-                else if (element.IsVerticalTouching(CursorPosition)) Cursor.Current = Cursors.SizeWE;
-                else if (element.IsHorizontalTouching(CursorPosition)) Cursor.Current = Cursors.SizeNS;
-                else if (element.IsRightDiagonalTouching(CursorPosition)) Cursor.Current = Cursors.SizeNESW;
-                else if (element.IsLeftDiagonalTouching(CursorPosition)) Cursor.Current = Cursors.SizeNWSE;
+                if (element.IsClicked(CursorPosition))
+                {
+                    Cursor.Current = Cursors.Hand;
+                    break;
+                }
+                else if (element.IsVerticalTouching(CursorPosition))
+                {
+                    Cursor.Current = Cursors.SizeWE;
+                    break;
+                }
+                else if (element.IsHorizontalTouching(CursorPosition))
+                {
+                    Cursor.Current = Cursors.SizeNS;
+                    break;
+                }
+                else if (element.IsRightDiagonalTouching(CursorPosition))
+                {
+                    Cursor.Current = Cursors.SizeNESW;
+                    break;
+                }
+                else if (element.IsLeftDiagonalTouching(CursorPosition))
+                {
+                    Cursor.Current = Cursors.SizeNWSE;
+                    break;
+                }
                 else Cursor.Current = Cursors.Default;
             }
-            if (resizedBlock is not null) resizing = true;
+            if (resizedBlock is not null)
+            {
+                resizing = true;
+                timer.Start();
+            }
             if (activeElement is VisualBlock and not null)
             {
                 moving = (true,
                     ((VisualBlock)activeElement).center.X - CursorPosition.X,
                     ((VisualBlock)activeElement).center.Y - CursorPosition.Y);
-                timer.Interval = 1;
+                timer.Start();
             }
             propertyGrid.SelectedObject = (activeElement is null) switch
             {
@@ -161,12 +190,12 @@ namespace VisualGPSS
         private void pictureBox_MouseUp(object sender, MouseEventArgs e)
         {
             resizing = moving.isGoing = false;
-            timer.Interval = 300;
+            timer.Stop();
             if (creatingOperator is not null)
                 creatingOperator.Value.method.Invoke(creatingOperator.Value.parameter, Cursor.Position);
         }
 
-        #endregion Drag, Drop, Resize
+        #endregion Мышь
 
         #region Отрисовка
         private void pictureBox_Click(object sender, EventArgs e)
@@ -288,5 +317,11 @@ namespace VisualGPSS
         }
 
         #endregion Создание операторов и обновление схемы
+
+        private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            schema.Remove(activeElement);
+            pictureBox.Refresh();
+        }
     }
 }

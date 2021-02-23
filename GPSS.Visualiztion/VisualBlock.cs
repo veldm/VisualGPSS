@@ -40,10 +40,18 @@ namespace GPSS.Visualiztion
             graphics.FillRectangle(brush, _x, _y, width - 14, heigth - 27);
 
             brush = new SolidBrush(FontColor);
-            graphics.DrawString(essence.Label is null ? "" : essence.Label, Font, brush,
+            int labelCharsCount = ((width - 6) / (int)Font.SizeInPoints) / 3;
+            string labelViev = essence.Label;
+            if (essence.Label is not null or "")
+            {
+                labelViev = essence.Label.Length < labelCharsCount ? essence.Label :
+                    essence.Label.Substring(0, labelCharsCount - 2) + "...";
+            }
+            graphics.DrawString(essence.Label is null ? "" : labelViev, Font, brush,
                 new Point(center.X - width / 2 + 3, center.Y - heigth / 2 + 3));
-            graphics.DrawString(number.ToString(), Font, brush,
-                new Point(center.X + width / 2 - 15, center.Y - heigth / 2 + 3));
+            graphics.DrawString((number + 1).ToString(), Font, brush,
+                new Point(center.X + width / 2 - 15, center.Y - heigth / 2 + 3));            
+            graphics.DrawString(essence.Code, Font, brush, _x + 3, _y + 3);
         }
 
         public override void GetProperties()

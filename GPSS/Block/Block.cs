@@ -17,7 +17,7 @@ namespace GPSS
         /// Переопределение <see cref="Operator.Code"/> для блоков со сложной сигнатурой
         /// </summary>
         /// <returns></returns>
-        public override string Code => throw new NotImplementedException();
+        //public override string Code => throw new NotImplementedException();
         #endregion
 
         public Block(string label, string[] arguments, string comment, BlockType type)

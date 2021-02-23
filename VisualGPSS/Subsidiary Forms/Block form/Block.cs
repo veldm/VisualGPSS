@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GPSS.Visualiztion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,14 @@ using System.Windows.Forms;
 
 namespace VisualGPSS
 {
-    public partial class Block : Form
+    public partial class Block : MaterialSkin.Controls.MaterialForm
     {
-        public Block()
+        private readonly VisualBlock visualBlock;
+
+        public Block(VisualBlock _visualBlock)
         {
             InitializeComponent();
+            visualBlock = _visualBlock;
         }
     }
 }

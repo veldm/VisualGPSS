@@ -51,10 +51,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Block.cs">
+    <Compile Include="Subsidiary Forms\Block form\Block.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Block.Designer.cs">
+    <Compile Include="Subsidiary Forms\Block form\Block.Designer.cs">
       <DependentUpon>Block.cs</DependentUpon>
     </Compile>
     <Compile Include="AtomaryElement.cs">
@@ -85,6 +85,9 @@
     </Compile>
     <EmbeddedResource Include="AtomaryElement.resx">
       <DependentUpon>AtomaryElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subsidiary Forms\Block form\Block.resx">
+      <DependentUpon>Block.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -215,7 +218,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Main Form\" />
-    <Folder Include="Subsidiary Forms\Block form\" />
     <Folder Include="Subsidiary Forms\Command Form\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

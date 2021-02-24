@@ -60,7 +60,10 @@ namespace GPSS.Visualiztion
                     StartBlock.center.Y - StartBlock.heigth / 2);
                 Point destination = new Point(Block1.center.X,
                     Block1.center.Y + Block1.heigth / 2);
-                graphics.DrawLine(new Pen(Color.DarkBlue, 3), start, destination);
+                lock(graphics)
+                {
+                    graphics.DrawLine(new Pen(Color.DarkBlue, 3), start, destination);
+                }
             }
 
             void allDraw()
@@ -70,7 +73,10 @@ namespace GPSS.Visualiztion
                 for (int i = (int)Block1.number + (int)Digit; i <= Block2.number; i += (int)Digit)
                 {
                     Point point = new Point(center.Y, parentSchema.Elements[i].center.X);
-                    graphics.DrawLine(pen, pivot1, point);
+                    lock(graphics)
+                    {
+                        graphics.DrawLine(pen, pivot1, point);
+                    }
                 }
             }
 
@@ -85,11 +91,14 @@ namespace GPSS.Visualiztion
                 Point pivot2 = new Point(Block1.center.X, center.Y);
 
                 Pen pen = new Pen(Color.DarkBlue, 3);
-                graphics.DrawLine(pen, StartBlock.center, center);
-                graphics.DrawLine(pen, center, pivot1);
-                graphics.DrawLine(pen, center, pivot2);
-                graphics.DrawLine(pen, pivot1, Block1.center);
-                graphics.DrawLine(pen, pivot2, Block2.center);
+                lock(graphics)
+                {
+                    graphics.DrawLine(pen, StartBlock.center, center);
+                    graphics.DrawLine(pen, center, pivot1);
+                    graphics.DrawLine(pen, center, pivot2);
+                    graphics.DrawLine(pen, pivot1, Block1.center);
+                    graphics.DrawLine(pen, pivot2, Block2.center);
+                }
 
                 Point rp1 = new Point(center.X + 60, center.Y);
                 Point rp2 = new Point(center.X - 60, center.Y);
@@ -97,8 +106,11 @@ namespace GPSS.Visualiztion
                 Point rp4 = new Point(center.X, center.Y - 30);
                 Point[] points = { rp1, rp2, rp3, rp4 };
                 Brush brush = new SolidBrush(Color.SandyBrown);
-                graphics.FillPolygon(brush, points);
-                graphics.DrawPolygon(pen, points);
+                lock(graphics)
+                {
+                    graphics.FillPolygon(brush, points);
+                    graphics.DrawPolygon(pen, points);
+                }
 
                 return (pivot1, pivot2);
             }
@@ -110,7 +122,10 @@ namespace GPSS.Visualiztion
                 for (int i = (int)Block1.number + 1; i <= Block2.number; i++)
                 {
                     Point point = new Point(center.Y, parentSchema.Elements[i].center.X);
-                    graphics.DrawLine(pen, pivot1, point);
+                    lock(graphics)
+                    {
+                        graphics.DrawLine(pen, pivot1, point);
+                    }
                 }
             }
 
@@ -120,8 +135,11 @@ namespace GPSS.Visualiztion
                 double v1 = Digit;
                 double v2 = 1 - v1;
                 Brush brush = new SolidBrush(Color.DarkBlue);
-                graphics.DrawString(v1.ToString(), Font, brush, x: pivot1.X, y: pivot1.Y - 15);
-                graphics.DrawString(v2.ToString(), Font, brush, x: pivot2.X, y: pivot2.Y - 15);
+                lock(graphics)
+                {
+                    graphics.DrawString(v1.ToString(), Font, brush, x: pivot1.X, y: pivot1.Y - 15);
+                    graphics.DrawString(v2.ToString(), Font, brush, x: pivot2.X, y: pivot2.Y - 15);
+                }
             }
         }
 

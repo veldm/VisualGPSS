@@ -32,31 +32,93 @@ namespace GPSS.Visualiztion
             //};
             int _x = center.X - width / 2;
             int _y = center.Y - heigth / 2;
-            graphics.FillRectangle(brush, _x, _y, width, heigth);
+            lock (graphics)
+            {
+                graphics.FillRectangle(brush, _x, _y, width, heigth);
+            }
 
             brush = new SolidBrush(BlockColor);
             _x = center.X - (width / 2 - 7);
             _y = center.Y - (heigth / 2 - 20);
-            graphics.FillRectangle(brush, _x, _y, width - 14, heigth - 27);
+            lock(graphics)
+            {
+                graphics.FillRectangle(brush, _x, _y, width - 14, heigth - 27);
+            }
 
             brush = new SolidBrush(FontColor);
-            int labelCharsCount = ((width - 6) / (int)Font.SizeInPoints) / 3;
+            int labelCharsCount = (int)(((width - 6) / Font.SizeInPoints) * 0.7);
             string labelViev = essence.Label;
             if (essence.Label is not null or "")
             {
                 labelViev = essence.Label.Length < labelCharsCount ? essence.Label :
                     essence.Label.Substring(0, labelCharsCount - 2) + "...";
             }
-            graphics.DrawString(essence.Label is null ? "" : labelViev, Font, brush,
-                new Point(center.X - width / 2 + 3, center.Y - heigth / 2 + 3));
-            graphics.DrawString((number + 1).ToString(), Font, brush,
-                new Point(center.X + width / 2 - 15, center.Y - heigth / 2 + 3));
-            string[] codeString = essence.Code.Split(';');
-            if (codeString.Length == 2)
-                graphics.DrawString($"{codeString[0]}\n{codeString[1]}",
-                    Font, brush, _x + 3, _y + 3);
-            else graphics.DrawString(essence.Code, Font, brush, _x + 3, _y + 3);
+            lock(graphics)
+            {
+                graphics.DrawString(essence.Label is null ? "" : labelViev, Font, brush,
+                    new Point(center.X - width / 2 + 3, center.Y - heigth / 2 + 3));
+            }
+            lock(graphics)
+            {
+                graphics.DrawString((number + 1).ToString(), Font, brush,
+                    new Point(center.X + width / 2 - 15, center.Y - heigth / 2 + 3));
+            }
+            //string[] codeString = essence.Code.Split(';');
+            //if (codeString.Length == 2)
+            //    graphics.DrawString($"{codeString[0]}\n{codeString[1]}",
+            //        Font, brush, _x + 3, _y + 3);
+            /*else*/
+            string codeString = CodeToDraw();
+            lock(graphics)
+            {
+                graphics.DrawString(codeString, Font, brush, _x + 3, _y + 3);
+            }
+            GC.Collect();
+
+            string CodeToDraw()
+            {
+                string body = essence.Name;
+                foreach (string argument in essence.Arguments)
+                    body += $" ,{argument}";
+                string bodyString = "";
+                foreach (char c in body)
+                {
+                    bodyString += c;
+                    lock(graphics)
+                    {
+                        if (graphics.MeasureString(bodyString, Font).Width > width - 14)
+                            bodyString += '\n';
+                        if (graphics.MeasureString(bodyString, Font).Height > heigth - 27)
+                            return bodyString;
+                    }
+                }
+
+                if (essence.Comment is not null or "")
+                {
+                    bodyString += '\n';
+                    lock(graphics)
+                    {
+                        if (graphics.MeasureString(bodyString, Font).Height + Font.Height > heigth - 27)
+                            return bodyString;
+                    }
+                    foreach (char c in essence.Comment)
+                    {
+                        bodyString += c;
+                        lock(graphics)
+                        {
+                            if (graphics.MeasureString(bodyString, Font).Width > width - 6)
+                                bodyString += '\n';
+                            if (graphics.MeasureString(bodyString, Font).Height > heigth - 27)
+                                return bodyString;
+                        }
+                    }
+                }
+
+                return bodyString;
+            }
         }
+
+        
 
         public override void GetProperties()
         {

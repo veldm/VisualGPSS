@@ -13,14 +13,16 @@ namespace VisualGPSS
 {
     public partial class Block : MaterialSkin.Controls.MaterialForm
     {
+        private readonly Main main;
         private VisualBlock visualBlock;
         private readonly Point point;
         private readonly VisualGPSS_Schema schema;
 
-        public Block(VisualBlock _visualBlock)
+        public Block(VisualBlock _visualBlock, Main _main)
         {
             InitializeComponent();
             visualBlock = _visualBlock;
+            main = _main;
             SaveButton.Click += SaveChanges;
 
             //TypeCB.SelectedIndex = visualBlock.essence.Name switch
@@ -42,19 +44,25 @@ namespace VisualGPSS
             CommentTextbox.Text = visualBlock.essence.Comment;
             for (int ii = 0; ii != visualBlock.parentSchema.Elements.Count; ii++)
                 numberComboBox.Items.Add(ii.ToString());
-            numberComboBox.SelectedItem = visualBlock.number.ToString();
+            numberComboBox.SelectedItem = (visualBlock.number + 1).ToString();
 
-            //if (TextBox1.Enabled) TextBox1.Text = visualBlock.essence.Arguments[0];
-            //if (TextBox2.Enabled) TextBox2.Text = visualBlock.essence.Arguments[1];
-            //if (TextBox3.Enabled) TextBox3.Text = visualBlock.essence.Arguments[2];
-            //if (TextBox4.Enabled) TextBox4.Text = visualBlock.essence.Arguments[3];
-            //if (TextBox5.Enabled) TextBox5.Text = visualBlock.essence.Arguments[4];
             int i = 0;
-            foreach (var control in from Control control in groupBox2.Controls
-                                    where control
-                                    is MaterialSkin.Controls.MaterialSingleLineTextField
-                                    select control)
-                    control.Text = visualBlock.essence.Arguments[i++];
+            if (TextBox1.Enabled) TextBox1.Text = i < visualBlock.essence.Arguments.Length ?
+                    visualBlock.essence.Arguments[i++] : "";
+            if (TextBox2.Enabled) TextBox2.Text = i < visualBlock.essence.Arguments.Length ?
+                    visualBlock.essence.Arguments[i++] : "";
+            if (TextBox3.Enabled) TextBox3.Text = i < visualBlock.essence.Arguments.Length ?
+                    visualBlock.essence.Arguments[i++] : "";
+            if (TextBox4.Enabled) TextBox4.Text = i < visualBlock.essence.Arguments.Length ?
+                    visualBlock.essence.Arguments[i++] : "";
+            if (TextBox5.Enabled) TextBox5.Text = i < visualBlock.essence.Arguments.Length ?
+                    visualBlock.essence.Arguments[i++] : "";
+            //int i = visualBlock.essence.Arguments.Length - 1;
+            //foreach (var control in from Control control in groupBox2.Controls
+            //                        where control
+            //                        is MaterialSkin.Controls.MaterialSingleLineTextField
+            //                        select control)
+            //    if (i >= 0) control.Text = visualBlock.essence.Arguments[i--];
 
             propertyGrid.SelectedObject = visualBlock;
             DeleteButton.Enabled = false;
@@ -78,12 +86,19 @@ namespace VisualGPSS
                 if (CommentTextbox.Text != visualBlock.essence.Comment)
                     visualBlock.essence.Comment = CommentTextbox.Text;
 
-                int i = 0;
+                //int i = 0;
+                List<string> args = new List<string>();
                 foreach (var control in from Control control in groupBox2.Controls
                                         where control
                                         is MaterialSkin.Controls.MaterialSingleLineTextField
                                         select control)
-                    visualBlock.essence.Arguments[i++] = control.Text;
+                    //visualBlock.essence.Arguments[i++] = control.Text;
+                    if (control.Text is not "")
+                        args.Add(control.Text);
+                visualBlock.essence.Arguments = args.ToArray();
+                visualBlock.parentSchema.Refresh();
+                main.graphicsRefresh(null, null);
+                GC.Collect();
             }
             catch (Exception ex)
             {
@@ -101,8 +116,8 @@ namespace VisualGPSS
                 TypeCB.SelectedIndex = TypeCB.Items.IndexOf(type);
             else TypeCB.SelectedIndex = 0;
 
-            for (int ii = 0; ii != schema.Elements.Count; ii++)
-                numberComboBox.Items.Add(ii.ToString());
+            for (int ii = 0; !(ii > schema.Elements.Count); ii++)
+                numberComboBox.Items.Add((ii + 1).ToString());
             numberComboBox.SelectedIndex = numberComboBox.Items.Count - 1;
 
             SaveButton.Click += CreateNewBlock;
@@ -116,18 +131,18 @@ namespace VisualGPSS
                 string type = TypeCB.Text;
                 string label = LabelTextBox.Text is "" ? null : LabelTextBox.Text;
                 List<string> arguments = new List<string>();
-                int i = 0;
                 foreach (var control in from Control control in groupBox2.Controls
                                         where control
                                         is MaterialSkin.Controls.MaterialSingleLineTextField
                                         select control)
                     arguments.Add(control.Text);
+                arguments.Reverse();
                 string[] args = arguments.ToArray();
                 string comment = CommentTextbox.Text is "" ? null : LabelTextBox.Text;
 
-                schema.AddBlock(number, point, type, label, args, comment);
+                schema.AddBlock(number - 1, point, type, label, args, comment);
 
-                visualBlock = (VisualBlock)schema.Elements[(int)number];
+                visualBlock = (VisualBlock)schema.Elements[(int)(number - 1)];
                 SaveButton.Click -= CreateNewBlock;
                 SaveButton.Click += SaveChanges;
                 propertyGrid.SelectedObject = visualBlock;
@@ -186,23 +201,23 @@ namespace VisualGPSS
             {
                 // 1
                 Label1.Text = s1;
-                TextBox1.Enabled = s1 is "";
+                TextBox1.Enabled = s1 is not "";
 
                 // 2
                 Label2.Text = s2;
-                TextBox2.Enabled = s2 is "";
+                TextBox2.Enabled = s2 is not "";
 
                 // 3
                 Label3.Text = s3;
-                TextBox3.Enabled = s3 is "";
+                TextBox3.Enabled = s3 is not "";
 
                 // 4
                 Label4.Text = s4;
-                TextBox4.Enabled = s4 is "";
+                TextBox4.Enabled = s4 is not "";
 
                 // 5
                 Label5.Text = s5;
-                TextBox5.Enabled = s5 is "";
+                TextBox5.Enabled = s5 is not "";
             }
         }
     }

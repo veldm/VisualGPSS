@@ -57,14 +57,14 @@
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.ToolBox = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.terminateButton = new System.Windows.Forms.Button();
+            this.generateButton = new System.Windows.Forms.Button();
+            this.seizeButton = new System.Windows.Forms.Button();
+            this.uncertainButton = new System.Windows.Forms.Button();
+            this.departButton = new System.Windows.Forms.Button();
+            this.queueButton = new System.Windows.Forms.Button();
+            this.enterButton = new System.Windows.Forms.Button();
+            this.leaveButton = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.command_TBButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -96,6 +96,7 @@
             this.propertyGrid.Size = new System.Drawing.Size(200, 369);
             this.propertyGrid.TabIndex = 1;
             this.propertyGrid.ViewBackColor = System.Drawing.SystemColors.ButtonFace;
+            this.propertyGrid.PropertyValueChanged += new System.Windows.Forms.PropertyValueChangedEventHandler(this.graphicsRefresh);
             // 
             // файлToolStripMenuItem
             // 
@@ -254,6 +255,7 @@
             this.редактироватьToolStripMenuItem1.Name = "редактироватьToolStripMenuItem1";
             this.редактироватьToolStripMenuItem1.Size = new System.Drawing.Size(229, 24);
             this.редактироватьToolStripMenuItem1.Text = "Редактировать";
+            this.редактироватьToolStripMenuItem1.Click += new System.EventHandler(this.EditElement);
             // 
             // добавитьВетвлениеToolStripMenuItem
             // 
@@ -330,11 +332,12 @@
             this.pictureBox.ContextMenuStrip = this.BlockOrElementCMS;
             this.pictureBox.Location = new System.Drawing.Point(3, 3);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(33210, 22401);
+            this.pictureBox.Size = new System.Drawing.Size(41310, 27834);
             this.pictureBox.TabIndex = 2;
             this.pictureBox.TabStop = false;
             this.pictureBox.Click += new System.EventHandler(this.pictureBox_Click);
             this.pictureBox.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox_Paint);
+            this.pictureBox.DoubleClick += new System.EventHandler(this.EditElement);
             this.pictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseDown);
             this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseMove);
             this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseUp);
@@ -356,14 +359,14 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.button6);
-            this.groupBox3.Controls.Add(this.button7);
-            this.groupBox3.Controls.Add(this.button8);
-            this.groupBox3.Controls.Add(this.button9);
-            this.groupBox3.Controls.Add(this.button10);
+            this.groupBox3.Controls.Add(this.terminateButton);
+            this.groupBox3.Controls.Add(this.generateButton);
+            this.groupBox3.Controls.Add(this.seizeButton);
+            this.groupBox3.Controls.Add(this.uncertainButton);
+            this.groupBox3.Controls.Add(this.departButton);
+            this.groupBox3.Controls.Add(this.queueButton);
+            this.groupBox3.Controls.Add(this.enterButton);
+            this.groupBox3.Controls.Add(this.leaveButton);
             this.groupBox3.Location = new System.Drawing.Point(7, 7);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(169, 385);
@@ -371,109 +374,109 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Блоки";
             // 
-            // button2
+            // terminateButton
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.BackgroundImage = global::VisualGPSS.Properties.Resources._4115235_exit_logout_sign_out_114030;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(93, 28);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(70, 70);
-            this.button2.TabIndex = 7;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.ToolBoxItemClicked);
+            this.terminateButton.BackColor = System.Drawing.Color.White;
+            this.terminateButton.BackgroundImage = global::VisualGPSS.Properties.Resources._4115235_exit_logout_sign_out_114030;
+            this.terminateButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.terminateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.terminateButton.Location = new System.Drawing.Point(93, 28);
+            this.terminateButton.Name = "terminateButton";
+            this.terminateButton.Size = new System.Drawing.Size(70, 70);
+            this.terminateButton.TabIndex = 7;
+            this.terminateButton.UseVisualStyleBackColor = false;
+            this.terminateButton.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
-            // button3
+            // generateButton
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.BackgroundImage = global::VisualGPSS.Properties.Resources.creation_date_sort_icon_155568;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(9, 28);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(70, 70);
-            this.button3.TabIndex = 6;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.ToolBoxItemClicked);
+            this.generateButton.BackColor = System.Drawing.Color.White;
+            this.generateButton.BackgroundImage = global::VisualGPSS.Properties.Resources.creation_date_sort_icon_155568;
+            this.generateButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.generateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.generateButton.Location = new System.Drawing.Point(9, 28);
+            this.generateButton.Name = "generateButton";
+            this.generateButton.Size = new System.Drawing.Size(70, 70);
+            this.generateButton.TabIndex = 6;
+            this.generateButton.UseVisualStyleBackColor = false;
+            this.generateButton.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
-            // button1
+            // seizeButton
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.BackgroundImage = global::VisualGPSS.Properties.Resources._353443_clock_stopwatch_timer_watch_107503;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(93, 123);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(70, 70);
-            this.button1.TabIndex = 5;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.ToolBoxItemClicked);
+            this.seizeButton.BackColor = System.Drawing.Color.White;
+            this.seizeButton.BackgroundImage = global::VisualGPSS.Properties.Resources._353443_clock_stopwatch_timer_watch_107503;
+            this.seizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.seizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.seizeButton.Location = new System.Drawing.Point(93, 123);
+            this.seizeButton.Name = "seizeButton";
+            this.seizeButton.Size = new System.Drawing.Size(70, 70);
+            this.seizeButton.TabIndex = 5;
+            this.seizeButton.UseVisualStyleBackColor = false;
+            this.seizeButton.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
-            // button6
+            // uncertainButton
             // 
-            this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.BackgroundImage = global::VisualGPSS.Properties.Resources.Pustoy_block;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(9, 123);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(70, 70);
-            this.button6.TabIndex = 4;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.ToolBoxItemClicked);
+            this.uncertainButton.BackColor = System.Drawing.Color.White;
+            this.uncertainButton.BackgroundImage = global::VisualGPSS.Properties.Resources.Pustoy_block;
+            this.uncertainButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.uncertainButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uncertainButton.Location = new System.Drawing.Point(9, 123);
+            this.uncertainButton.Name = "uncertainButton";
+            this.uncertainButton.Size = new System.Drawing.Size(70, 70);
+            this.uncertainButton.TabIndex = 4;
+            this.uncertainButton.UseVisualStyleBackColor = false;
+            this.uncertainButton.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
-            // button7
+            // departButton
             // 
-            this.button7.BackColor = System.Drawing.Color.White;
-            this.button7.BackgroundImage = global::VisualGPSS.Properties.Resources._file_upload_90117;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(9, 303);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(70, 70);
-            this.button7.TabIndex = 0;
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.ToolBoxItemClicked);
+            this.departButton.BackColor = System.Drawing.Color.White;
+            this.departButton.BackgroundImage = global::VisualGPSS.Properties.Resources._file_upload_90117;
+            this.departButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.departButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.departButton.Location = new System.Drawing.Point(93, 300);
+            this.departButton.Name = "departButton";
+            this.departButton.Size = new System.Drawing.Size(70, 70);
+            this.departButton.TabIndex = 0;
+            this.departButton.UseVisualStyleBackColor = false;
+            this.departButton.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
-            // button8
+            // queueButton
             // 
-            this.button8.BackColor = System.Drawing.Color.White;
-            this.button8.BackgroundImage = global::VisualGPSS.Properties.Resources._file_download_90117;
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(93, 303);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(70, 70);
-            this.button8.TabIndex = 3;
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.ToolBoxItemClicked);
+            this.queueButton.BackColor = System.Drawing.Color.White;
+            this.queueButton.BackgroundImage = global::VisualGPSS.Properties.Resources._file_download_90117;
+            this.queueButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.queueButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.queueButton.Location = new System.Drawing.Point(10, 300);
+            this.queueButton.Name = "queueButton";
+            this.queueButton.Size = new System.Drawing.Size(70, 70);
+            this.queueButton.TabIndex = 3;
+            this.queueButton.UseVisualStyleBackColor = false;
+            this.queueButton.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
-            // button9
+            // enterButton
             // 
-            this.button9.BackColor = System.Drawing.Color.White;
-            this.button9.BackgroundImage = global::VisualGPSS.Properties.Resources.download_info_icon_icons1;
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(9, 215);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(70, 70);
-            this.button9.TabIndex = 2;
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.ToolBoxItemClicked);
+            this.enterButton.BackColor = System.Drawing.Color.White;
+            this.enterButton.BackgroundImage = global::VisualGPSS.Properties.Resources.download_info_icon_icons1;
+            this.enterButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.enterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.enterButton.Location = new System.Drawing.Point(9, 215);
+            this.enterButton.Name = "enterButton";
+            this.enterButton.Size = new System.Drawing.Size(70, 70);
+            this.enterButton.TabIndex = 2;
+            this.enterButton.UseVisualStyleBackColor = false;
+            this.enterButton.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
-            // button10
+            // leaveButton
             // 
-            this.button10.BackColor = System.Drawing.Color.White;
-            this.button10.BackgroundImage = global::VisualGPSS.Properties.Resources.stop_upload_button_icon_icons_com_71328;
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(93, 215);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(70, 70);
-            this.button10.TabIndex = 1;
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.ToolBoxItemClicked);
+            this.leaveButton.BackColor = System.Drawing.Color.White;
+            this.leaveButton.BackgroundImage = global::VisualGPSS.Properties.Resources.stop_upload_button_icon_icons_com_71328;
+            this.leaveButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.leaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.leaveButton.Location = new System.Drawing.Point(93, 215);
+            this.leaveButton.Name = "leaveButton";
+            this.leaveButton.Size = new System.Drawing.Size(70, 70);
+            this.leaveButton.TabIndex = 1;
+            this.leaveButton.UseVisualStyleBackColor = false;
+            this.leaveButton.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
             // groupBox2
             // 
@@ -661,16 +664,16 @@
         private System.Windows.Forms.Button transferUncon_TBButton;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button uncertainButton;
+        private System.Windows.Forms.Button departButton;
+        private System.Windows.Forms.Button queueButton;
+        private System.Windows.Forms.Button enterButton;
+        private System.Windows.Forms.Button leaveButton;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button command_TBButton;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button seizeButton;
+        private System.Windows.Forms.Button terminateButton;
+        private System.Windows.Forms.Button generateButton;
     }
 }
 

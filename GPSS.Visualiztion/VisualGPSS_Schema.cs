@@ -70,7 +70,7 @@ namespace GPSS.Visualiztion
         {
             for (int i = 0; i < Elements.Count - 1; i++)
                 if (Elements[i] is not VisualTransfer && Elements[i + 1] is not VisualTransfer)
-                    graphics.DrawLine(new Pen(Color.DarkBlue, 3),
+                    graphics.DrawLine(new Pen(DefaultElementsLinesColor, 3),
                         Elements[i].center, Elements[i + 1].center);
 
             foreach (VisualElement element in Elements.Where(element =>
@@ -156,9 +156,9 @@ namespace GPSS.Visualiztion
                 defaultElementsColor, defaultLinesColor);
 
             string[] args = { "10.0", "1.0" };            
-            schema.AddBlock(0, new Point(100, 50), "GENERATE", null, args, null);
+            schema.AddBlock(0, new Point(100, 50), "GENERATE", null, args, "Создание транзакций");
             args = new string[] { "1" };
-            schema.AddBlock(1, new Point(100, 250), "TERMINATE", null, args, null);
+            schema.AddBlock(1, new Point(100, 250), "TERMINATE", null, args, "Уничтожение транзакций");
 
             return schema;
         }

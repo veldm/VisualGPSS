@@ -15,8 +15,8 @@ namespace GPSS.Visualiztion
         public VisualBlock(Operator essence, uint number, Point center,
             VisualGPSS_Schema parentSchema) : base(essence, number, center, parentSchema)
         {
-            width = 135;
-            heigth = 80;
+            width = 170;
+            heigth = 85;
             BlockColor = Color.White;
         }
 
@@ -50,8 +50,12 @@ namespace GPSS.Visualiztion
             graphics.DrawString(essence.Label is null ? "" : labelViev, Font, brush,
                 new Point(center.X - width / 2 + 3, center.Y - heigth / 2 + 3));
             graphics.DrawString((number + 1).ToString(), Font, brush,
-                new Point(center.X + width / 2 - 15, center.Y - heigth / 2 + 3));            
-            graphics.DrawString(essence.Code, Font, brush, _x + 3, _y + 3);
+                new Point(center.X + width / 2 - 15, center.Y - heigth / 2 + 3));
+            string[] codeString = essence.Code.Split(';');
+            if (codeString.Length == 2)
+                graphics.DrawString($"{codeString[0]}\n{codeString[1]}",
+                    Font, brush, _x + 3, _y + 3);
+            else graphics.DrawString(essence.Code, Font, brush, _x + 3, _y + 3);
         }
 
         public override void GetProperties()

@@ -328,6 +328,9 @@ namespace VisualGPSS
                 Cursor = Cursors.Cross;
                 creatingOperator = control.Name switch
                 {
+                    "generateButton" => new (CreateBlock, "GENERATE"),
+                    "terminateButton" => new (CreateBlock, "TERMINATE"),
+                    "uncertainButton" => new (CreateBlock, null),
                     _ => null
                 };
             }
@@ -351,6 +354,37 @@ namespace VisualGPSS
         {
             schema.Remove(activeElement);
             pictureBox.Refresh();
+        }
+
+        public void graphicsRefresh(object s, PropertyValueChangedEventArgs e)
+        {
+            pictureBox.Refresh();
+        }
+
+        private void EditElement(object sender, EventArgs e)
+        {
+            if (activeElement is not null)
+            {
+                if (activeElement is VisualBlock block)
+                {
+                    Block blockForm = new Block(block, this);
+                    blockForm.Show();
+                }
+                else if (activeElement is VisualTransfer transfer)
+                {
+                    Transfer transferForm = new Transfer(transfer);
+                    transferForm.Show();
+                }
+                //else if (activeElement is VisualCommand command)
+                //{
+                    
+                //}
+                else
+                {
+                    MessageBox.Show("Что-то пошло не так", "Ошибка",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

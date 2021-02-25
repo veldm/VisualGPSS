@@ -42,10 +42,10 @@
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.LabelTextBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.CommentTextbox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -56,18 +56,20 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Следующий блок (default)"});
-            this.comboBox1.Location = new System.Drawing.Point(112, 17);
+            this.comboBox1.Location = new System.Drawing.Point(166, 21);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(290, 28);
+            this.comboBox1.Size = new System.Drawing.Size(368, 33);
             this.comboBox1.TabIndex = 1;
             // 
             // comboBox2
             // 
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(112, 70);
+            this.comboBox2.Location = new System.Drawing.Point(166, 86);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(290, 28);
+            this.comboBox2.Size = new System.Drawing.Size(368, 33);
             this.comboBox2.TabIndex = 3;
             // 
             // Label1
@@ -76,10 +78,11 @@
             this.Label1.Depth = 0;
             this.Label1.Font = new System.Drawing.Font("Roboto", 11F);
             this.Label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Label1.Location = new System.Drawing.Point(11, 21);
+            this.Label1.Location = new System.Drawing.Point(15, 26);
+            this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label1.MouseState = MaterialSkin.MouseState.HOVER;
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(87, 19);
+            this.Label1.Size = new System.Drawing.Size(109, 24);
             this.Label1.TabIndex = 6;
             this.Label1.Text = "МЕТКА №1";
             this.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -90,10 +93,11 @@
             this.Label2.Depth = 0;
             this.Label2.Font = new System.Drawing.Font("Roboto", 11F);
             this.Label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Label2.Location = new System.Drawing.Point(11, 74);
+            this.Label2.Location = new System.Drawing.Point(15, 91);
+            this.Label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label2.MouseState = MaterialSkin.MouseState.HOVER;
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(87, 19);
+            this.Label2.Size = new System.Drawing.Size(109, 24);
             this.Label2.TabIndex = 7;
             this.Label2.Text = "МЕТКА №2";
             // 
@@ -103,24 +107,25 @@
             this.Label3.Depth = 0;
             this.Label3.Font = new System.Drawing.Font("Roboto", 11F);
             this.Label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Label3.Location = new System.Drawing.Point(11, 128);
+            this.Label3.Location = new System.Drawing.Point(15, 158);
+            this.Label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label3.MouseState = MaterialSkin.MouseState.HOVER;
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(92, 19);
+            this.Label3.Size = new System.Drawing.Size(143, 24);
             this.Label3.TabIndex = 8;
-            this.Label3.Text = "ДИАПАЗОН";
+            this.Label3.Text = "ВЕРОЯТНОСТЬ";
             // 
             // SaveButton
             // 
             this.SaveButton.AutoSize = true;
             this.SaveButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.SaveButton.Depth = 0;
-            this.SaveButton.Location = new System.Drawing.Point(333, 412);
-            this.SaveButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.SaveButton.Location = new System.Drawing.Point(444, 507);
+            this.SaveButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.SaveButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Primary = false;
-            this.SaveButton.Size = new System.Drawing.Size(93, 36);
+            this.SaveButton.Size = new System.Drawing.Size(115, 36);
             this.SaveButton.TabIndex = 11;
             this.SaveButton.Text = "Сохранить";
             this.SaveButton.UseVisualStyleBackColor = true;
@@ -130,12 +135,12 @@
             this.Cancelbutton.AutoSize = true;
             this.Cancelbutton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Cancelbutton.Depth = 0;
-            this.Cancelbutton.Location = new System.Drawing.Point(164, 412);
-            this.Cancelbutton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.Cancelbutton.Location = new System.Drawing.Point(219, 507);
+            this.Cancelbutton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.Cancelbutton.MouseState = MaterialSkin.MouseState.HOVER;
             this.Cancelbutton.Name = "Cancelbutton";
             this.Cancelbutton.Primary = false;
-            this.Cancelbutton.Size = new System.Drawing.Size(86, 36);
+            this.Cancelbutton.Size = new System.Drawing.Size(106, 36);
             this.Cancelbutton.TabIndex = 12;
             this.Cancelbutton.Text = "Отменить";
             this.Cancelbutton.UseVisualStyleBackColor = true;
@@ -146,12 +151,12 @@
             this.DeleteButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.DeleteButton.Depth = 0;
             this.DeleteButton.ForeColor = System.Drawing.Color.Red;
-            this.DeleteButton.Location = new System.Drawing.Point(13, 412);
-            this.DeleteButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.DeleteButton.Location = new System.Drawing.Point(17, 507);
+            this.DeleteButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.DeleteButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Primary = false;
-            this.DeleteButton.Size = new System.Drawing.Size(76, 36);
+            this.DeleteButton.Size = new System.Drawing.Size(94, 36);
             this.DeleteButton.TabIndex = 13;
             this.DeleteButton.Text = "Удалить";
             this.DeleteButton.UseVisualStyleBackColor = true;
@@ -166,32 +171,35 @@
             "TRANSFER VAR",
             "TRANSFER ALL",
             "TRANSFER PICK"});
-            this.TypeCB.Location = new System.Drawing.Point(80, 19);
+            this.TypeCB.Location = new System.Drawing.Point(107, 23);
+            this.TypeCB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TypeCB.Name = "TypeCB";
-            this.TypeCB.Size = new System.Drawing.Size(325, 28);
+            this.TypeCB.Size = new System.Drawing.Size(432, 33);
             this.TypeCB.TabIndex = 14;
             this.TypeCB.SelectedIndexChanged += new System.EventHandler(this.TypeCB_SelectedIndexChanged);
             // 
             // propertyGrid
             // 
             this.propertyGrid.LineColor = System.Drawing.SystemColors.Desktop;
-            this.propertyGrid.Location = new System.Drawing.Point(443, 75);
+            this.propertyGrid.Location = new System.Drawing.Point(591, 92);
+            this.propertyGrid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.propertyGrid.Name = "propertyGrid";
-            this.propertyGrid.Size = new System.Drawing.Size(182, 373);
+            this.propertyGrid.Size = new System.Drawing.Size(243, 459);
             this.propertyGrid.TabIndex = 15;
             // 
             // TextBox
             // 
             this.TextBox.Depth = 0;
             this.TextBox.Hint = "";
-            this.TextBox.Location = new System.Drawing.Point(112, 124);
+            this.TextBox.Location = new System.Drawing.Point(166, 153);
+            this.TextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TextBox.MouseState = MaterialSkin.MouseState.HOVER;
             this.TextBox.Name = "TextBox";
             this.TextBox.PasswordChar = '\0';
             this.TextBox.SelectedText = "";
             this.TextBox.SelectionLength = 0;
             this.TextBox.SelectionStart = 0;
-            this.TextBox.Size = new System.Drawing.Size(290, 23);
+            this.TextBox.Size = new System.Drawing.Size(370, 28);
             this.TextBox.TabIndex = 16;
             this.TextBox.UseSystemPasswordChar = false;
             // 
@@ -201,10 +209,11 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(11, 69);
+            this.materialLabel1.Location = new System.Drawing.Point(15, 85);
+            this.materialLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(60, 19);
+            this.materialLabel1.Size = new System.Drawing.Size(73, 24);
             this.materialLabel1.TabIndex = 8;
             this.materialLabel1.Text = "МЕТКА";
             // 
@@ -212,14 +221,15 @@
             // 
             this.LabelTextBox.Depth = 0;
             this.LabelTextBox.Hint = "";
-            this.LabelTextBox.Location = new System.Drawing.Point(77, 65);
+            this.LabelTextBox.Location = new System.Drawing.Point(103, 80);
+            this.LabelTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LabelTextBox.MouseState = MaterialSkin.MouseState.HOVER;
             this.LabelTextBox.Name = "LabelTextBox";
             this.LabelTextBox.PasswordChar = '\0';
             this.LabelTextBox.SelectedText = "";
             this.LabelTextBox.SelectionLength = 0;
             this.LabelTextBox.SelectionStart = 0;
-            this.LabelTextBox.Size = new System.Drawing.Size(325, 23);
+            this.LabelTextBox.Size = new System.Drawing.Size(433, 28);
             this.LabelTextBox.TabIndex = 16;
             this.LabelTextBox.UseSystemPasswordChar = false;
             // 
@@ -231,24 +241,41 @@
             this.groupBox1.Controls.Add(this.LabelTextBox);
             this.groupBox1.Controls.Add(this.materialLabel1);
             this.groupBox1.Controls.Add(this.TypeCB);
-            this.groupBox1.Location = new System.Drawing.Point(12, 75);
+            this.groupBox1.Location = new System.Drawing.Point(16, 92);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(411, 147);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(548, 181);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
+            // 
+            // materialLabel3
+            // 
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel3.Location = new System.Drawing.Point(19, 28);
+            this.materialLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(49, 24);
+            this.materialLabel3.TabIndex = 19;
+            this.materialLabel3.Text = "ТИП";
             // 
             // CommentTextbox
             // 
             this.CommentTextbox.Depth = 0;
             this.CommentTextbox.Hint = "";
-            this.CommentTextbox.Location = new System.Drawing.Point(142, 105);
+            this.CommentTextbox.Location = new System.Drawing.Point(189, 129);
+            this.CommentTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CommentTextbox.MouseState = MaterialSkin.MouseState.HOVER;
             this.CommentTextbox.Name = "CommentTextbox";
             this.CommentTextbox.PasswordChar = '\0';
             this.CommentTextbox.SelectedText = "";
             this.CommentTextbox.SelectionLength = 0;
             this.CommentTextbox.SelectionStart = 0;
-            this.CommentTextbox.Size = new System.Drawing.Size(260, 23);
+            this.CommentTextbox.Size = new System.Drawing.Size(347, 28);
             this.CommentTextbox.TabIndex = 18;
             this.CommentTextbox.UseSystemPasswordChar = false;
             // 
@@ -258,10 +285,11 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(11, 109);
+            this.materialLabel2.Location = new System.Drawing.Point(15, 134);
+            this.materialLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(125, 19);
+            this.materialLabel2.Size = new System.Drawing.Size(157, 24);
             this.materialLabel2.TabIndex = 17;
             this.materialLabel2.Text = "КОММЕНТАРИЙ";
             // 
@@ -273,42 +301,31 @@
             this.groupBox2.Controls.Add(this.Label1);
             this.groupBox2.Controls.Add(this.comboBox2);
             this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 228);
+            this.groupBox2.Location = new System.Drawing.Point(16, 281);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(414, 170);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(552, 209);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             // 
-            // materialLabel3
-            // 
-            this.materialLabel3.AutoSize = true;
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(14, 23);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(40, 19);
-            this.materialLabel3.TabIndex = 19;
-            this.materialLabel3.Text = "ТИП";
-            // 
             // Transfer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(637, 460);
+            this.ClientSize = new System.Drawing.Size(849, 566);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.propertyGrid);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.Cancelbutton);
             this.Controls.Add(this.SaveButton);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Transfer";
             this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.Sizable = false;
             this.Text = "Редактор перенаправлений";
             this.groupBox1.ResumeLayout(false);

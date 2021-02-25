@@ -12,6 +12,7 @@ namespace GPSS.Visualiztion
     {
         #region Поля
         private readonly Dictionary<string, VisualElement> labels;
+        private readonly List<string> labelsList;
         private readonly List<VisualElement> elements;
         private Font defaultFont;
         private Color defaultFontColor;
@@ -25,7 +26,7 @@ namespace GPSS.Visualiztion
         public Dictionary<string, VisualElement> Labels => labels;
 
         [Browsable(false)]
-        public List<string> LabelsList => Labels.Keys.ToList();
+        public List<string> LabelsList => labelsList;
 
         [Browsable(false)]
         public List<VisualElement> ElementsWithLabelsList => Labels.Values.ToList();
@@ -62,6 +63,7 @@ namespace GPSS.Visualiztion
             this.defaultLinesColor = defaultLinesColor;
 
             labels = new Dictionary<string, VisualElement>();
+            labelsList = new List<string>();
             elements = new List<VisualElement>();
         }
 
@@ -118,6 +120,11 @@ namespace GPSS.Visualiztion
             {
                 VisualBlock visualBlock = new VisualBlock(block, number, center, this);
                 Elements.Insert((int)number, visualBlock);
+                if (block.Label is not null or "")
+                {
+                    Labels.Add(block.Label, visualBlock);
+                    LabelsList.Add(block.Label);
+                }
                 Refresh();
             }
             else
@@ -138,6 +145,7 @@ namespace GPSS.Visualiztion
                 VisualTransfer visualTransfer = new VisualTransfer(startBlock, block1, block2, digit,
                     block, number, new Point(), this);
                 Elements.Insert((int)number, visualTransfer);
+                
                 Refresh();
             }
             else

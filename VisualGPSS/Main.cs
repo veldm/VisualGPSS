@@ -386,5 +386,11 @@ namespace VisualGPSS
                 }
             }
         }
+
+        private void AddTransfer(object sender, EventArgs e)
+        {
+            Transfer transferForm = new Transfer((VisualBlock)activeElement);
+            transferForm.Show();
+        }
     }
 }

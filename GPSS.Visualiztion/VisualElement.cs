@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GPSS;
+using Newtonsoft.Json;
 
 namespace GPSS.Visualiztion
 {
@@ -19,7 +20,6 @@ namespace GPSS.Visualiztion
         private Color fontColor;
         private Font font;
         private Color linesColor;
-        public VisualGPSS_Schema parentSchema;
         #endregion Поля
 
         #region Свойства
@@ -42,13 +42,25 @@ namespace GPSS.Visualiztion
             this.essence = essence ?? throw new ArgumentNullException(nameof(essence));
             this.number = number;
             this.center = center;
-            this.parentSchema = parentSchema ??
-                throw new ArgumentNullException(nameof(parentSchema));
 
             mainColor = parentSchema.DefaultElementsColor;
             linesColor = parentSchema.DefaultElementsLinesColor;
             font = parentSchema.DefaultFont;
             fontColor = parentSchema.DefaultFontColor;
+        }
+
+        [JsonConstructor]
+        protected VisualElement(Operator essence, uint number,
+            Point center, Color _mainColor, Color _linesColor, Font _font, Color _fontColor)
+        {
+            this.essence = essence ?? throw new ArgumentNullException(nameof(essence));
+            this.number = number;
+            this.center = center;
+
+            mainColor = _mainColor;
+            linesColor = _linesColor;
+            font = _font;
+            fontColor = _fontColor;
         }
 
         #region Абстрактные методы
@@ -57,7 +69,7 @@ namespace GPSS.Visualiztion
         public abstract bool IsHorizontalTouching(Point clickPoint);
         public abstract bool IsLeftDiagonalTouching(Point clickPoint);
         public abstract bool IsRightDiagonalTouching(Point clickPoint);
-        public abstract void Draw(Graphics graphics);
+        public abstract void Draw(Graphics graphics, List<VisualElement> otherElements);
         public abstract void GetProperties();
         #endregion Абстрактные методы
     }

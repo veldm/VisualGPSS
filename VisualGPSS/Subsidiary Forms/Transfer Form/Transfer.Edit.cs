@@ -14,11 +14,12 @@ namespace VisualGPSS
         /// Открытие формы <see cref="Transfer"/> для редактирования перенаправления
         /// </summary>
         /// <param name="transfer"></param>
-        public Transfer(VisualTransfer _transfer)
+        public Transfer(VisualTransfer _transfer, VisualGPSS_Schema _schema, Main _main)
         {
             InitializeComponent();
             transfer = _transfer;
-            schema = transfer.parentSchema;
+            schema = _schema;
+            main = _main;
 
             TypeCB.SelectedIndex = ((GPSS.Block)transfer.essence).Type switch
             {

@@ -16,7 +16,7 @@ namespace VisualGPSS
         {
             string openFileName = null;
             if (args.Length > 0)
-                if (args[0].Substring(args[0].Length - 4) == ".vgs")
+                if (args[0].Substring(args[0].Length - 6) == ".vgsch")
                     openFileName = args[0];
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

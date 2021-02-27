@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.numberComboBox = new System.Windows.Forms.ComboBox();
+            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.CommentTextbox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
@@ -50,8 +52,6 @@
             this.DeleteButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.Cancelbutton = new MaterialSkin.Controls.MaterialFlatButton();
             this.SaveButton = new MaterialSkin.Controls.MaterialFlatButton();
-            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
-            this.numberComboBox = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -72,6 +72,28 @@
             this.groupBox1.Size = new System.Drawing.Size(481, 137);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // numberComboBox
+            // 
+            this.numberComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numberComboBox.FormattingEnabled = true;
+            this.numberComboBox.Location = new System.Drawing.Point(417, 62);
+            this.numberComboBox.Name = "numberComboBox";
+            this.numberComboBox.Size = new System.Drawing.Size(51, 28);
+            this.numberComboBox.TabIndex = 26;
+            // 
+            // materialLabel4
+            // 
+            this.materialLabel4.AutoSize = true;
+            this.materialLabel4.Depth = 0;
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel4.Location = new System.Drawing.Point(378, 66);
+            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel4.Name = "materialLabel4";
+            this.materialLabel4.Size = new System.Drawing.Size(24, 19);
+            this.materialLabel4.TabIndex = 27;
+            this.materialLabel4.Text = "№";
             // 
             // materialLabel3
             // 
@@ -377,28 +399,6 @@
             this.SaveButton.Text = "Сохранить";
             this.SaveButton.UseVisualStyleBackColor = false;
             // 
-            // materialLabel4
-            // 
-            this.materialLabel4.AutoSize = true;
-            this.materialLabel4.Depth = 0;
-            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel4.Location = new System.Drawing.Point(378, 66);
-            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(24, 19);
-            this.materialLabel4.TabIndex = 27;
-            this.materialLabel4.Text = "№";
-            // 
-            // numberComboBox
-            // 
-            this.numberComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numberComboBox.FormattingEnabled = true;
-            this.numberComboBox.Location = new System.Drawing.Point(417, 62);
-            this.numberComboBox.Name = "numberComboBox";
-            this.numberComboBox.Size = new System.Drawing.Size(51, 28);
-            this.numberComboBox.TabIndex = 26;
-            // 
             // Block
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -415,7 +415,6 @@
             this.MinimizeBox = false;
             this.Name = "Block";
             this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.Sizable = false;
             this.Text = "Редактор блоков";
             this.groupBox1.ResumeLayout(false);

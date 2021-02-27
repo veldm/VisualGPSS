@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 
@@ -20,7 +22,17 @@ namespace GPSS.Visualiztion
             BlockColor = Color.White;
         }
 
-        public override void Draw(Graphics graphics)
+        [JsonConstructor]
+        public VisualBlock(int width, int heigth, Color blockColor, Operator essence, uint number,
+            Point center, Color _mainColor, Color _linesColor, Font _font, Color _fontColor)
+            : base(essence, number, center, _mainColor, _linesColor, _font, _fontColor)
+        {
+            this.width = width;
+            this.heigth = heigth;
+            BlockColor = blockColor;
+        }
+
+        public override void Draw(Graphics graphics, List<VisualElement> otherElements)
         {
             SolidBrush brush = new SolidBrush(MainColor);
             //Point[] vertexes =

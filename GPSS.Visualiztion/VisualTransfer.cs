@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
 using System.Drawing;
 
 namespace GPSS.Visualiztion
@@ -31,7 +33,19 @@ namespace GPSS.Visualiztion
             this.Digit = digit;
         }
 
-        public override void Draw(Graphics graphics)
+        [JsonConstructor]
+        public VisualTransfer(VisualBlock block1, VisualBlock block2, double digit,
+            VisualBlock startBlock, Operator essence, uint number,
+            Point center, Color _mainColor, Color _linesColor, Font _font, Color _fontColor)
+            : base(essence, number, center, _mainColor, _linesColor, _font, _fontColor)
+        {
+            this.block1 = block1;
+            this.block2 = block2;
+            this.digit = digit;
+            this.startBlock = startBlock;
+        }
+
+        public override void Draw(Graphics graphics, List<VisualElement> otherElements)
         {
             switch (Transfer.Type)
             {
@@ -72,7 +86,7 @@ namespace GPSS.Visualiztion
                 Pen pen = new Pen(Color.DarkBlue, 3);
                 for (int i = (int)Block1.number + (int)Digit; i <= Block2.number; i += (int)Digit)
                 {
-                    Point point = new Point(center.Y, parentSchema.Elements[i].center.X);
+                    Point point = new Point(center.Y, otherElements[i].center.X);
                     lock(graphics)
                     {
                         graphics.DrawLine(pen, pivot1, point);
@@ -121,7 +135,7 @@ namespace GPSS.Visualiztion
                 Pen pen = new Pen(Color.DarkBlue, 3);
                 for (int i = (int)Block1.number + 1; i <= Block2.number; i++)
                 {
-                    Point point = new Point(center.Y, parentSchema.Elements[i].center.X);
+                    Point point = new Point(center.Y, otherElements[i].center.X);
                     lock(graphics)
                     {
                         graphics.DrawLine(pen, pivot1, point);

@@ -18,11 +18,12 @@ namespace VisualGPSS
         private readonly Point point;
         private readonly VisualGPSS_Schema schema;
 
-        public Block(VisualBlock _visualBlock, Main _main)
+        public Block(VisualBlock _visualBlock, VisualGPSS_Schema _schema, Main _main)
         {
             InitializeComponent();
             visualBlock = _visualBlock;
             main = _main;
+            schema = _schema;
             SaveButton.Click += SaveChanges;
 
             //TypeCB.SelectedIndex = visualBlock.essence.Name switch
@@ -42,7 +43,7 @@ namespace VisualGPSS
 
             LabelTextBox.Text = visualBlock.essence.Label;
             CommentTextbox.Text = visualBlock.essence.Comment;
-            for (int ii = 0; ii != visualBlock.parentSchema.Elements.Count; ii++)
+            for (int ii = 0; ii != schema.Elements.Count; ii++)
                 numberComboBox.Items.Add(ii.ToString());
             numberComboBox.SelectedItem = (visualBlock.number + 1).ToString();
 
@@ -74,7 +75,7 @@ namespace VisualGPSS
             {
                 if (LabelTextBox.Text != visualBlock.essence.Label)
                 {
-                    if (visualBlock.parentSchema.Labels.TryGetValue
+                    if (schema.Labels.TryGetValue
                         (LabelTextBox.Text, out VisualElement visualElement))
                     {
                         throw new Exception($"Метка {LabelTextBox.Text} уже занята" +
@@ -96,7 +97,7 @@ namespace VisualGPSS
                     if (control.Text is not "")
                         args.Add(control.Text);
                 visualBlock.essence.Arguments = args.ToArray();
-                visualBlock.parentSchema.Refresh();
+                schema.Refresh();
                 main.graphicsRefresh(null, null);
                 GC.Collect();
             }

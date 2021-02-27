@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -67,6 +68,23 @@ namespace GPSS.Visualiztion
             elements = new List<VisualElement>();
         }
 
+        [JsonConstructor]
+        public VisualGPSS_Schema(Dictionary<string, VisualElement> labels, List<string> labelsList,
+            List<VisualElement> elements, Font defaultFont, Color defaultFontColor,
+            Color backgroundColor, Color defaultElementsColor, Color defaultLinesColor)
+        {
+            this.labels = labels;
+            this.labelsList = labelsList;
+            this.elements = elements;
+            this.defaultFont = defaultFont;
+            this.defaultFontColor = defaultFontColor;
+            this.backgroundColor = backgroundColor;
+            this.defaultElementsColor = defaultElementsColor;
+            this.defaultLinesColor = defaultLinesColor;
+        }
+
+
+
         #region Методы
         public void Draw(Graphics graphics)
         {
@@ -104,10 +122,10 @@ namespace GPSS.Visualiztion
             }
 
             foreach (VisualElement element in Elements.Where(element =>
-                    element is VisualTransfer)) element.Draw(graphics);
+                    element is VisualTransfer)) element.Draw(graphics, this.Elements);
 
             foreach (VisualElement element in Elements.Where(element =>
-                element is not VisualTransfer)) element.Draw(graphics);
+                element is not VisualTransfer)) element.Draw(graphics, this.Elements);
         }
 
         public void AddBlock(uint number, Point center, string type,

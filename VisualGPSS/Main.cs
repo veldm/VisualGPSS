@@ -198,7 +198,10 @@ namespace VisualGPSS
             resizing = moving.isGoing = false;
             timer.Stop();
             if (creatingOperator is not null)
-                creatingOperator.Value.method.Invoke(creatingOperator.Value.parameter, Cursor.Position);
+                creatingOperator.Value.method.Invoke(creatingOperator.Value.parameter,
+                    new Point(Cursor.Position.X, Cursor.Position.Y));
+            Cursor = Cursors.Default;
+            creatingOperator = null;
         }
 
         #endregion Мышь
@@ -367,12 +370,12 @@ namespace VisualGPSS
             {
                 if (activeElement is VisualBlock block)
                 {
-                    Block blockForm = new Block(block, this);
+                    Block blockForm = new Block(block, schema, this);
                     blockForm.Show();
                 }
                 else if (activeElement is VisualTransfer transfer)
                 {
-                    Transfer transferForm = new Transfer(transfer);
+                    Transfer transferForm = new Transfer(transfer, schema, this);
                     transferForm.Show();
                 }
                 //else if (activeElement is VisualCommand command)
@@ -389,8 +392,26 @@ namespace VisualGPSS
 
         private void AddTransfer(object sender, EventArgs e)
         {
-            Transfer transferForm = new Transfer((VisualBlock)activeElement);
+            Transfer transferForm = new Transfer((VisualBlock)activeElement, schema);
             transferForm.Show();
+        }
+
+        private void сохранитьКакToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (schemaSaveFileDialog.ShowDialog() is DialogResult.OK)
+            {
+                try
+                {
+                    string saveFileName = schemaSaveFileDialog.FileName;
+                    schema.Serialize(saveFileName);
+                    MessageBox.Show($"Файл {saveFileName} успешно сохранён", "VisualGPSS",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

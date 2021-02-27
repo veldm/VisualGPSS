@@ -14,11 +14,11 @@ namespace VisualGPSS
         /// Открытие формы <see cref="Transfer"/> для создания нового перенаправления
         /// </summary>
         /// <param name="_startBlock"></param>
-        public Transfer(VisualBlock _startBlock)
+        public Transfer(VisualBlock _startBlock, VisualGPSS_Schema _schema)
         {
             InitializeComponent();
             startBlock = _startBlock;
-            schema = startBlock.parentSchema;
+            schema = _schema;
             comboBox1.Items.AddRange(schema.LabelsList.ToArray());
             comboBox2.Items.AddRange(schema.LabelsList.ToArray());
             DeleteButton.Enabled = false;
@@ -144,7 +144,8 @@ namespace VisualGPSS
 
                 comment = CommentTextbox.Text;
 
-                schema.AddTransfer(typeString, startBlock, (VisualBlock)Block1, (VisualBlock)Block2, Digit, labelSelf, arguments, comment);
+                schema.AddTransfer(typeString, startBlock, (VisualBlock)Block1, (VisualBlock)Block2,
+                    Digit, labelSelf, arguments, comment);
 
                 propertyGrid.SelectedObject = schema.Elements[(int)startBlock.number + 1];
                 SaveButton.Click -= CreateNewTransfer;

@@ -14,9 +14,14 @@ namespace GPSS.Visualiztion
         {
             try
             {
-                JsonSerializer serializer = new Newtonsoft.Json.JsonSerializer();
+                JsonSerializer serializer = new JsonSerializer
+                {
+                    TypeNameHandling = TypeNameHandling.Auto,
+                    Formatting = Formatting.Indented
+                };
                 StreamWriter writer = new StreamWriter(savingFilePath);
                 serializer.Serialize(writer, this);
+                writer.Close();
             }
             catch (Exception ex)
             {
@@ -28,7 +33,11 @@ namespace GPSS.Visualiztion
         {
             try
             {
-                JsonSerializer serializer = new Newtonsoft.Json.JsonSerializer();
+                JsonSerializer serializer = new JsonSerializer
+                {
+                    TypeNameHandling = TypeNameHandling.Auto,
+                    Formatting = Formatting.Indented
+                };
                 StreamReader reader = new StreamReader(readingFilePath);
                 return (VisualGPSS_Schema)serializer.Deserialize(reader, typeof(VisualGPSS_Schema));
             }

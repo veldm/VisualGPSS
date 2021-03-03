@@ -29,7 +29,7 @@ namespace GPSS.Visualiztion
         {
             this.startBlock = startBlock ?? throw new ArgumentNullException(nameof(startBlock));
             this.Block1 = block1 ?? throw new ArgumentNullException(nameof(block1));
-            this.Block2 = block2 ?? throw new ArgumentNullException(nameof(block2));
+            this.Block2 = block2 /*?? throw new ArgumentNullException(nameof(block2))*/;
             this.Digit = digit;
         }
 
@@ -70,13 +70,13 @@ namespace GPSS.Visualiztion
 
             void unconDraw()
             {
-                Point start = new Point(StartBlock.center.X,
-                    StartBlock.center.Y - StartBlock.heigth / 2);
-                Point destination = new Point(Block1.center.X,
-                    Block1.center.Y + Block1.heigth / 2);
+                //Point start = new Point(StartBlock.center.X,
+                //    StartBlock.center.Y - StartBlock.heigth / 2);
+                //Point destination = new Point(Block1.center.X,
+                //    Block1.center.Y + Block1.heigth / 2);
                 lock(graphics)
                 {
-                    graphics.DrawLine(new Pen(Color.DarkBlue, 3), start, destination);
+                    graphics.DrawLine(new Pen(Color.DarkBlue, 3), startBlock.center, block1.center);
                 }
             }
 
@@ -102,7 +102,7 @@ namespace GPSS.Visualiztion
                 center = new Point(cX, cY);
 
                 Point pivot1 = new Point(Block1.center.X, center.Y);
-                Point pivot2 = new Point(Block1.center.X, center.Y);
+                Point pivot2 = new Point(Block2.center.X, center.Y);
 
                 Pen pen = new Pen(Color.DarkBlue, 3);
                 lock(graphics)

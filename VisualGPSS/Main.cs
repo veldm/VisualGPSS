@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,6 +24,34 @@ namespace VisualGPSS
             Y = pictureBox.PointToClient(Cursor.Position).Y
         };
 
+        private Point RightBottom
+        {
+            get
+            {
+                int x, y,
+                minX = int.MaxValue, minY = int.MaxValue,
+                maxX = int.MinValue, maxY = int.MinValue;
+                foreach (VisualElement element in schema.Elements)
+                {
+                    if (element is VisualBlock block)
+                    {
+                        if (block.center.X + block.width / 2 > maxX)
+                            maxX = block.center.X + block.width / 2;
+                        if (block.center.X - block.width / 2 < minX)
+                            minX = block.center.X - block.width / 2;
+                        if (block.center.Y + block.heigth / 2 > maxY)
+                            maxY = block.center.Y + block.heigth / 2;
+                        if (block.center.Y - block.heigth / 2 < minY)
+                            minY = block.center.Y + block.heigth / 2;
+                    }
+                }
+
+                x = maxX + minX;
+                y = maxY + minY;
+                return new Point(x, y);
+            }
+        }
+
         private VisualElement activeElement;
         private VisualBlock resizedBlock;
         private bool resizing;
@@ -37,6 +66,9 @@ namespace VisualGPSS
         public Main(string openFileName = null)
         {
             InitializeComponent();
+            typeof(Panel).InvokeMember("DoubleBuffered",
+                BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic,
+                null, DrawingContainer, new object[] { true });
             if (openFileName is null)
             {
                 // Шаблон по умолчанию
@@ -83,9 +115,9 @@ namespace VisualGPSS
                         resizedBlock.center.Y + corr : resizedBlock.center.Y - corr;
                 }
             }
-            else if (moving.isGoing && activeElement is VisualBlock)
+            else if (moving.isGoing && activeElement is VisualBlock bufferBlock)
             {
-                VisualBlock block = (VisualBlock)activeElement;
+                VisualBlock block = bufferBlock;
                 block.center.X = CursorPosition.X + moving.xc;
                 block.center.Y = CursorPosition.Y + moving.yc;
             }
@@ -215,7 +247,7 @@ namespace VisualGPSS
         private void timer1_Tick(object sender, EventArgs e)
         {
             SuspendLayout();
-            pictureBox.Refresh();
+            graphicsRefresh(sender, e);
             ResumeLayout();
         }
 
@@ -273,29 +305,8 @@ namespace VisualGPSS
 
         private void сохранитьКакИзображениеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int x, y,
-                minX = int.MaxValue, minY = int.MaxValue,
-                maxX = int.MinValue, maxY = int.MinValue;
-            foreach (VisualElement element in schema.Elements)
-            {
-                if (element is VisualBlock block)
-                {
-                    if (block.center.X + block.width / 2 > maxX)
-                        maxX = block.center.X + block.width / 2;
-                    if (block.center.X - block.width / 2 < minX)
-                        minX = block.center.X - block.width / 2;
-                    if (block.center.Y + block.heigth / 2 > maxY)
-                        maxY = block.center.Y + block.heigth / 2;
-                    if (block.center.Y - block.heigth / 2 < minY)
-                        minY = block.center.Y + block.heigth / 2;
-                }
-            }
-
-            x = maxX + minX;
-            y = maxY + minY;
-
-            Bitmap bitmap = new Bitmap(x, y);
-            pictureBox.DrawToBitmap(bitmap, new Rectangle(0, 0, x, y));
+            Bitmap bitmap = new Bitmap(RightBottom.X, RightBottom.Y);
+            pictureBox.DrawToBitmap(bitmap, new Rectangle(0, 0, RightBottom.X, RightBottom.Y));
             bitmap.Save("buf.png");
             bitmap.Dispose();
             GC.Collect();
@@ -367,12 +378,12 @@ namespace VisualGPSS
         private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             schema.Remove(activeElement);
-            pictureBox.Refresh();
+            graphicsRefresh(sender, e);
         }
 
         public void graphicsRefresh(object sender, EventArgs e)
-        {
-            pictureBox.Refresh();
+        {            
+            pictureBox.Invalidate();
         }
 
         private void EditElement(object sender, EventArgs e)

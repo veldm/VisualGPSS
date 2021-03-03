@@ -12,8 +12,6 @@ namespace GPSS.Visualiztion
     public partial class VisualGPSS_Schema
     {
         #region Поля
-        private readonly Dictionary<string, VisualElement> labels;
-        private readonly List<string> labelsList;
         private readonly List<VisualElement> elements;
         private Font defaultFont;
         private Color defaultFontColor;
@@ -24,10 +22,21 @@ namespace GPSS.Visualiztion
 
         #region Свойства
         [Browsable(false)]
-        public Dictionary<string, VisualElement> Labels => labels;
+        public Dictionary<string, VisualElement> Labels
+        {
+            get
+            {
+                Dictionary<string, VisualElement> res = new Dictionary<string, VisualElement>();
+                foreach (var element in from VisualElement element in Elements
+                                        where element.essence.Label is not null or ""
+                                        select element)
+                    res.Add(element.essence.Label, element);
+                return res;
+            }
+        }
 
         [Browsable(false)]
-        public List<string> LabelsList => labelsList;
+        public List<string> LabelsList => Labels.Keys.ToList();
 
         [Browsable(false)]
         public List<VisualElement> ElementsWithLabelsList => Labels.Values.ToList();
@@ -63,8 +72,8 @@ namespace GPSS.Visualiztion
             this.defaultElementsColor = defaultElementsColor;
             this.defaultLinesColor = defaultLinesColor;
 
-            labels = new Dictionary<string, VisualElement>();
-            labelsList = new List<string>();
+            //labels = new Dictionary<string, VisualElement>();
+            //labelsList = new List<string>();
             elements = new List<VisualElement>();
         }
 
@@ -73,8 +82,8 @@ namespace GPSS.Visualiztion
             List<VisualElement> elements, Font defaultFont, Color defaultFontColor,
             Color backgroundColor, Color defaultElementsColor, Color defaultLinesColor)
         {
-            this.labels = labels;
-            this.labelsList = labelsList;
+            //this.labels = labels;
+            //this.labelsList = labelsList;
             this.elements = elements;
             this.defaultFont = defaultFont;
             this.defaultFontColor = defaultFontColor;
@@ -125,6 +134,7 @@ namespace GPSS.Visualiztion
             //{
             //    if (Elements[i] is not VisualTransfer)
             //        Elements[i].Draw(graphics, this.Elements);
+            //    GC.Collect();
             //});
         }
 
@@ -197,8 +207,8 @@ namespace GPSS.Visualiztion
         public void Remove(VisualElement visualElement)
         {
             Elements.Remove(visualElement);
-            if (visualElement.essence.Label is not null or "")
-                labels.Remove(visualElement.essence.Label);
+            //if (visualElement.essence.Label is not null or "")
+            //    Labels.Remove(visualElement.essence.Label);
             Refresh();
         }
         #endregion Методы

@@ -129,7 +129,11 @@ namespace VisualGPSS
                         $" блоком {visualElement.essence.Name}");
 
                 List<string> args = arguments.ToList();
-                foreach (string item in args) if (item is null) args.Remove(item);
+                for (int i = 0; i < args.Count; i++)
+                {
+                    if (args[i] is null)
+                        args.Remove(args[i]);
+                }
                 arguments = args.ToArray();
 
                 typeString = TypeCB.SelectedIndex switch

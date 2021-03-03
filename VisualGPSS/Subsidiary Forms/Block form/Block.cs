@@ -13,16 +13,14 @@ namespace VisualGPSS
 {
     public partial class Block : MaterialSkin.Controls.MaterialForm
     {
-        private readonly Main main;
         private VisualBlock visualBlock;
         private readonly Point point;
         private readonly VisualGPSS_Schema schema;
 
-        public Block(VisualBlock _visualBlock, VisualGPSS_Schema _schema, Main _main)
+        public Block(VisualBlock _visualBlock, VisualGPSS_Schema _schema)
         {
             InitializeComponent();
             visualBlock = _visualBlock;
-            main = _main;
             schema = _schema;
             SaveButton.Click += SaveChanges;
 
@@ -98,7 +96,6 @@ namespace VisualGPSS
                         args.Add(control.Text);
                 visualBlock.essence.Arguments = args.ToArray();
                 schema.Refresh();
-                main.graphicsRefresh(null, null);
                 GC.Collect();
             }
             catch (Exception ex)

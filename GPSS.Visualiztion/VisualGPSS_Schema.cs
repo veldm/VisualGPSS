@@ -108,12 +108,6 @@ namespace GPSS.Visualiztion
             //    });
             ////);
 
-            //Parallel.For(0, Elements.Count, (i) =>
-            //{
-            //    if (Elements[i] is VisualBlock)
-            //        Elements[i].Draw(graphics);
-            //});
-
             for (int i = 0; i < Elements.Count - 1; i++)
             {
                 if (Elements[i] is not VisualTransfer && Elements[i + 1] is not VisualTransfer)
@@ -126,6 +120,12 @@ namespace GPSS.Visualiztion
 
             foreach (VisualElement element in Elements.Where(element =>
                 element is not VisualTransfer)) element.Draw(graphics, this.Elements);
+
+            //Parallel.For(0, Elements.Count, (i) =>
+            //{
+            //    if (Elements[i] is not VisualTransfer)
+            //        Elements[i].Draw(graphics, this.Elements);
+            //});
         }
 
         public void AddBlock(uint number, Point center, string type,

@@ -19,7 +19,6 @@ namespace VisualGPSS
             InitializeComponent();
             transfer = _transfer;
             schema = _schema;
-            main = _main;
 
             TypeCB.SelectedIndex = ((GPSS.Block)transfer.essence).Type switch
             {

@@ -15,7 +15,6 @@ namespace VisualGPSS
     {
         readonly VisualTransfer transfer;
         readonly VisualGPSS_Schema schema;
-        private Main main;
         readonly VisualBlock startBlock;
 
         private void TypeCB_SelectedIndexChanged(object sender, EventArgs e)

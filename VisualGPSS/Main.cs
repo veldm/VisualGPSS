@@ -18,7 +18,7 @@ namespace VisualGPSS
     {
         #region Поля
         private Point CursorPosition => new Point()
-        { 
+        {
             X = pictureBox.PointToClient(Cursor.Position).X,
             Y = pictureBox.PointToClient(Cursor.Position).Y
         };
@@ -199,7 +199,7 @@ namespace VisualGPSS
             timer.Stop();
             if (creatingOperator is not null)
                 creatingOperator.Value.method.Invoke(creatingOperator.Value.parameter,
-                    new Point(Cursor.Position.X, Cursor.Position.Y));
+                    new Point(CursorPosition.X, CursorPosition.Y));
             Cursor = Cursors.Default;
             creatingOperator = null;
         }
@@ -214,11 +214,14 @@ namespace VisualGPSS
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            SuspendLayout();
             pictureBox.Refresh();
+            ResumeLayout();
         }
-        
+
         private void pictureBox_Paint(object sender, PaintEventArgs e)
         {
+            //pictureBox.SuspendLayout();
             if (pictureBox.Image is not null) pictureBox.Image.Dispose();
             //GC.Collect();
             //Bitmap bitmap = new Bitmap(3510, 2480);
@@ -226,10 +229,17 @@ namespace VisualGPSS
             Graphics graphics = e.Graphics; /*Graphics.FromImage(bitmap);*/
             //foreach (VisualElement element in Elements)
             //    element.Draw(graphics);
-            schema.Draw(graphics);
+            if (timer.Enabled)
+            {
+                timer.Stop();
+                schema.Draw(graphics);
+                timer.Start();
+            }
+            else schema.Draw(graphics);
+            //pictureBox.ResumeLayout();
         }
         #endregion Отрисовка
-        
+
         #region Фичи
         private void settingsButton_MouseEnter(object sender, EventArgs e)
         {
@@ -331,9 +341,9 @@ namespace VisualGPSS
                 Cursor = Cursors.Cross;
                 creatingOperator = control.Name switch
                 {
-                    "generateButton" => new (CreateBlock, "GENERATE"),
-                    "terminateButton" => new (CreateBlock, "TERMINATE"),
-                    "uncertainButton" => new (CreateBlock, null),
+                    "generateButton" => new(CreateBlock, "GENERATE"),
+                    "terminateButton" => new(CreateBlock, "TERMINATE"),
+                    "uncertainButton" => new(CreateBlock, null),
                     _ => null
                 };
             }
@@ -343,6 +353,7 @@ namespace VisualGPSS
         {
             Block block = new Block(schema, point, type);
             block.Show();
+            block.SaveButton.Click += graphicsRefresh;
         }
 
         private void CreateCommand(string type, Point point)
@@ -359,7 +370,7 @@ namespace VisualGPSS
             pictureBox.Refresh();
         }
 
-        public void graphicsRefresh(object s, PropertyValueChangedEventArgs e)
+        public void graphicsRefresh(object sender, EventArgs e)
         {
             pictureBox.Refresh();
         }
@@ -370,17 +381,19 @@ namespace VisualGPSS
             {
                 if (activeElement is VisualBlock block)
                 {
-                    Block blockForm = new Block(block, schema, this);
+                    Block blockForm = new Block(block, schema);
                     blockForm.Show();
+                    blockForm.SaveButton.Click += graphicsRefresh;
                 }
                 else if (activeElement is VisualTransfer transfer)
                 {
                     Transfer transferForm = new Transfer(transfer, schema, this);
+                    transferForm.SaveButton.Click += graphicsRefresh;
                     transferForm.Show();
                 }
                 //else if (activeElement is VisualCommand command)
                 //{
-                    
+
                 //}
                 else
                 {
@@ -394,6 +407,7 @@ namespace VisualGPSS
         {
             Transfer transferForm = new Transfer((VisualBlock)activeElement, schema);
             transferForm.Show();
+            transferForm.SaveButton.Click += graphicsRefresh;
         }
 
         private void сохранитьКакToolStripMenuItem_Click(object sender, EventArgs e)
@@ -411,6 +425,13 @@ namespace VisualGPSS
                 {
                     MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+        private class CustomPictureBox : PictureBox
+        {
+            public CustomPictureBox() : base()
+            {
+                DoubleBuffered = true;
             }
         }
     }

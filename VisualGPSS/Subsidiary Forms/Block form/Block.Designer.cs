@@ -433,7 +433,7 @@
         private System.Windows.Forms.PropertyGrid propertyGrid;
         private MaterialSkin.Controls.MaterialFlatButton DeleteButton;
         private MaterialSkin.Controls.MaterialFlatButton Cancelbutton;
-        private MaterialSkin.Controls.MaterialFlatButton SaveButton;
+        public MaterialSkin.Controls.MaterialFlatButton SaveButton;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialSingleLineTextField CommentTextbox;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;

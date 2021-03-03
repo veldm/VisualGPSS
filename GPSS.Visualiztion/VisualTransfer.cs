@@ -114,9 +114,9 @@ namespace GPSS.Visualiztion
                     graphics.DrawLine(pen, pivot2, Block2.center);
                 }
 
-                Point rp1 = new Point(center.X + 60, center.Y);
-                Point rp2 = new Point(center.X - 60, center.Y);
-                Point rp3 = new Point(center.X, center.Y + 30);
+                Point rp1 = new Point(center.X - 60, center.Y);
+                Point rp2 = new Point(center.X, center.Y + 30);
+                Point rp3 = new Point(center.X + 60, center.Y);
                 Point rp4 = new Point(center.X, center.Y - 30);
                 Point[] points = { rp1, rp2, rp3, rp4 };
                 Brush brush = new SolidBrush(Color.SandyBrown);
@@ -164,7 +164,7 @@ namespace GPSS.Visualiztion
 
         public override bool IsClicked(Point clickPoint)
         {
-            throw new NotImplementedException();
+            return false;
         }
 
         public override bool IsHorizontalTouching(Point clickPoint) => false;

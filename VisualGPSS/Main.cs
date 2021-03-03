@@ -61,11 +61,13 @@ namespace VisualGPSS
         private (Creator method, string parameter)? creatingOperator;
 
         public VisualGPSS_Schema schema;
+        private string filePath;
         #endregion Поля
 
         public Main(string openFileName = null)
         {
             InitializeComponent();
+            filePath = openFileName;
             typeof(Panel).InvokeMember("DoubleBuffered",
                 BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic,
                 null, DrawingContainer, new object[] { true });
@@ -246,9 +248,9 @@ namespace VisualGPSS
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            SuspendLayout();
+            //SuspendLayout();
             graphicsRefresh(sender, e);
-            ResumeLayout();
+            //ResumeLayout();
         }
 
         private void pictureBox_Paint(object sender, PaintEventArgs e)
@@ -444,6 +446,23 @@ namespace VisualGPSS
             {
                 DoubleBuffered = true;
             }
+        }
+
+        private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (filePath is not null) schema.Serialize(filePath);
+            else сохранитьКакToolStripMenuItem_Click(sender, e);
+        }
+
+        private void генерацияКодаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CodeRedactor redactor = new CodeRedactor(schema.Code);
+            redactor.Show();
+        }
+
+        private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

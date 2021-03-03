@@ -36,6 +36,10 @@ namespace GPSS.Visualiztion
         }
 
         [Browsable(false)]
+        public string[] Code => (from VisualElement element in Elements
+                                 select element.essence.Code).ToArray();
+
+        [Browsable(false)]
         public List<string> LabelsList => Labels.Keys.ToList();
 
         [Browsable(false)]
@@ -148,11 +152,11 @@ namespace GPSS.Visualiztion
             {
                 VisualBlock visualBlock = new VisualBlock(block, number, center, this);
                 Elements.Insert((int)number, visualBlock);
-                if (block.Label is not null or "")
-                {
-                    Labels.Add(block.Label, visualBlock);
-                    LabelsList.Add(block.Label);
-                }
+                //if (block.Label is not null or "")
+                //{
+                //    Labels.Add(block.Label, visualBlock);
+                //    LabelsList.Add(block.Label);
+                //}
                 Refresh();
             }
             else

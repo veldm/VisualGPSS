@@ -90,8 +90,15 @@ namespace GPSS.Visualiztion
             string CodeToDraw()
             {
                 string body = essence.Name;
-                foreach (string argument in essence.Arguments)
-                    body += $" ,{argument}";
+                for (int i = essence.Arguments.Length - 1; i != 0; i--)
+                {
+                    if (essence.Arguments[i] is not "")
+                    {
+                        for (int j = 0; j < i; j++)
+                            body += $"{essence.Arguments[j]},";
+                        break;
+                    }
+                }
                 string bodyString = "";
                 foreach (char c in body)
                 {

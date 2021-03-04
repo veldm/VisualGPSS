@@ -46,11 +46,11 @@ namespace GPSS
             get
             {
                 string result = $"{(label is null or "" ? string.Empty : $"{label} ")}{Name} ";
-                for (int i = arguments.Length - 1; i != 0; i--)
+                for (int i = arguments.Length - 1; !(i < 0); i--)
                 {
                     if (arguments[i] is not "")
                     {
-                        for (int j = 0; j < i; j++)
+                        for (int j = 0; !(j > i); j++)
                             result += $"{arguments[j]},";
                         break;
                     }

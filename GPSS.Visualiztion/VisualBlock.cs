@@ -89,12 +89,12 @@ namespace GPSS.Visualiztion
 
             string CodeToDraw()
             {
-                string body = essence.Name;
-                for (int i = essence.Arguments.Length - 1; i != 0; i--)
+                string body = $"{essence.Name} ";
+                for (int i = essence.Arguments.Length - 1; !(i < 0); i--)
                 {
                     if (essence.Arguments[i] is not "")
                     {
-                        for (int j = 0; j < i; j++)
+                        for (int j = 0; !(j > i); j++)
                             body += $"{essence.Arguments[j]},";
                         break;
                     }

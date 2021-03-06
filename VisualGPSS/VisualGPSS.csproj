@@ -51,16 +51,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Subsidiary Forms\Block form\Block.cs">
+    <Compile Include="Subsidiary Forms\Device Form\Device.Create.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Subsidiary Forms\Block form\Block.Designer.cs">
-      <DependentUpon>Block.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AtomaryElement.cs">
+    <Compile Include="Subsidiary Forms\Device Form\Device.Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AtomaryElement.Designer.cs">
+    <Compile Include="Subsidiary Forms\Device Form\Device.Main.Designer.cs">
+      <DependentUpon>Device.Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subsidiary Forms\Block form\Block.Create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subsidiary Forms\Block form\Block.Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subsidiary Forms\Block form\Block.Main.Designer.cs">
+      <DependentUpon>Block.Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subsidiary Forms\Command Form\AtomaryElement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subsidiary Forms\Command Form\AtomaryElement.Designer.cs">
       <DependentUpon>AtomaryElement.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
@@ -71,29 +83,35 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Subsidiary Forms\Block form\Block.Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Subsidiary Forms\CodeRedactor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Subsidiary Forms\CodeRedactor.Designer.cs">
       <DependentUpon>CodeRedactor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Subsidiary Forms\Device Form\Device.Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Subsidiary Forms\Transfer Form\Transfer.Create.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Subsidiary Forms\Transfer Form\Transfer.cs">
+    <Compile Include="Subsidiary Forms\Transfer Form\Transfer.Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Subsidiary Forms\Transfer Form\Transfer.Designer.cs">
-      <DependentUpon>Transfer.cs</DependentUpon>
+    <Compile Include="Subsidiary Forms\Transfer Form\Transfer.Main.Designer.cs">
+      <DependentUpon>Transfer.Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Subsidiary Forms\Transfer Form\Transfer.Edit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <EmbeddedResource Include="AtomaryElement.resx">
+    <EmbeddedResource Include="Subsidiary Forms\Command Form\AtomaryElement.resx">
       <DependentUpon>AtomaryElement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Subsidiary Forms\Block form\Block.resx">
-      <DependentUpon>Block.cs</DependentUpon>
+    <EmbeddedResource Include="Subsidiary Forms\Block form\Block.Main.resx">
+      <DependentUpon>Block.Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -111,8 +129,8 @@
     <EmbeddedResource Include="Subsidiary Forms\CodeRedactor.resx">
       <DependentUpon>CodeRedactor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Subsidiary Forms\Transfer Form\Transfer.resx">
-      <DependentUpon>Transfer.cs</DependentUpon>
+    <EmbeddedResource Include="Subsidiary Forms\Transfer Form\Transfer.Main.resx">
+      <DependentUpon>Transfer.Main.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -227,7 +245,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Main Form\" />
-    <Folder Include="Subsidiary Forms\Command Form\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

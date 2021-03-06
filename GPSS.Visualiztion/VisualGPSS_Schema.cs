@@ -37,7 +37,7 @@ namespace GPSS.Visualiztion
 
         [Browsable(false)]
         public string[] Code => (from VisualElement element in Elements
-                                 select element.essence.Code).ToArray();
+                                 select element.Code).ToArray();
 
         [Browsable(false)]
         public List<string> LabelsList => Labels.Keys.ToList();

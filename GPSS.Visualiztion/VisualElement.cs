@@ -23,6 +23,9 @@ namespace GPSS.Visualiztion
         #endregion Поля
 
         #region Свойства
+        [Browsable(false)]
+        public virtual string Code => essence.Code;
+
         [Browsable(true), DisplayName("Основной цвет")]
         public Color MainColor { get => mainColor; set => mainColor = value; }
 

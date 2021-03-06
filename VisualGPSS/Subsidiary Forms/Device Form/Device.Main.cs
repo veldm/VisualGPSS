@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GPSS.Visualiztion;
 
 namespace VisualGPSS
 {
     public partial class Device : MaterialSkin.Controls.MaterialForm
     {
-        public Device()
+        private GPSS.Visualiztion.Device device;
+        private readonly VisualGPSS_Schema schema;
+        private readonly Point center;
+        EventHandler onSave;
+
+        private void multiChanellCB_CheckedChanged(object sender, EventArgs e)
         {
-            InitializeComponent();
+            ChanellCountCB.Enabled = multiChanellCB.Checked;
         }
     }
 }

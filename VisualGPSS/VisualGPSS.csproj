@@ -129,6 +129,9 @@
     <EmbeddedResource Include="Subsidiary Forms\CodeRedactor.resx">
       <DependentUpon>CodeRedactor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Subsidiary Forms\Device Form\Device.Main.resx">
+      <DependentUpon>Device.Main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Subsidiary Forms\Transfer Form\Transfer.Main.resx">
       <DependentUpon>Transfer.Main.cs</DependentUpon>
     </EmbeddedResource>

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace GPSS.Visualiztion
 {
-    class Device : VisualBlock
+    public class Device : VisualBlock
     {
         private new List<Operator> essence;
         private string queueName;

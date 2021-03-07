@@ -1,4 +1,6 @@
-﻿namespace VisualGPSS
+﻿using MaterialSkin;
+
+namespace VisualGPSS
 {
     partial class Block
     {

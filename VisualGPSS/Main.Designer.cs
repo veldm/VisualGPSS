@@ -52,9 +52,9 @@
             this.создатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.элементToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.блокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.DrawingContainer = new VisualGPSS.Main.CustomPanel();
+            this.DrawingContainer = new System.Windows.Forms.Panel();
             this.mEndLabel = new System.Windows.Forms.Label();
-            this.pictureBox = new VisualGPSS.Main.CustomPictureBox();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.ToolBox = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.terminateButton = new System.Windows.Forms.Button();
@@ -644,7 +644,7 @@
         }
 
         #endregion
-        private CustomPictureBox pictureBox;
+        private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem открытьToolStripMenuItem;
@@ -690,7 +690,7 @@
         private System.Windows.Forms.Button terminateButton;
         private System.Windows.Forms.Button generateButton;
         private System.Windows.Forms.SaveFileDialog schemaSaveFileDialog;
-        private CustomPanel DrawingContainer;
+        private System.Windows.Forms.Panel DrawingContainer;
     }
 }
 

@@ -17,7 +17,7 @@ namespace VisualGPSS
             schema = _schema;
             SaveButton.Click += SaveChanges;
 
-            //TypeCB.SelectedIndex = visualBlock.essence.Name switch
+            //TypeCB.SelectedIndex = visualBlock.Name switch
             //{
             //    "GENERATE" => 0,
             //    "TERMINATE" => 1,
@@ -30,9 +30,9 @@ namespace VisualGPSS
             //    "LEAVE" => 0,
             //    _ => throw new NotImplementedException(),
             //};
-            TypeCB.SelectedIndex = TypeCB.Items.IndexOf(visualBlock.essence.Name);
+            TypeCB.SelectedIndex = TypeCB.Items.IndexOf(visualBlock.Name);
 
-            LabelTextBox.Text = visualBlock.essence.Label;
+            LabelTextBox.Text = visualBlock.Label;
             CommentTextbox.Text = visualBlock.essence.Comment;
             for (int ii = 0; ii != schema.Elements.Count; ii++)
                 numberComboBox.Items.Add(ii.ToString());
@@ -64,13 +64,13 @@ namespace VisualGPSS
         {
             try
             {
-                if (LabelTextBox.Text != visualBlock.essence.Label)
+                if (LabelTextBox.Text != visualBlock.Label)
                 {
                     if (schema.Labels.TryGetValue
                         (LabelTextBox.Text, out VisualElement visualElement))
                     {
                         throw new Exception($"Метка {LabelTextBox.Text} уже занята" +
-                            $" блоком №{visualElement.number} ({visualElement.essence.Name})");
+                            $" блоком №{visualElement.number} ({visualElement.Name})");
                     }
                     else visualBlock.essence.Label = LabelTextBox.Text;
                 }

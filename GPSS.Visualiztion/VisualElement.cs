@@ -26,6 +26,12 @@ namespace GPSS.Visualiztion
         [Browsable(false)]
         public virtual string Code => essence.Code;
 
+        [Browsable(false)]
+        public virtual string Label => essence.Label;
+
+        [Browsable(false)]
+        public virtual string Name => essence.Name;
+
         [Browsable(true), DisplayName("Основной цвет")]
         public Color MainColor { get => mainColor; set => mainColor = value; }
 

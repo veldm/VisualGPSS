@@ -29,8 +29,8 @@ namespace VisualGPSS
                 GPSS.Block.BlockType.TRANSFER_PICK => 4,
                 _ => throw new ArgumentException(nameof(transfer.essence)),
             };
-            if (comboBox1.Enabled) comboBox1.SelectedItem = transfer.Block1.essence.Label;
-            if (comboBox2.Enabled) comboBox2.SelectedItem = transfer.Block2.essence.Label;
+            if (comboBox1.Enabled) comboBox1.SelectedItem = transfer.Block1.Label;
+            if (comboBox2.Enabled) comboBox2.SelectedItem = transfer.Block2.Label;
             if (TextBox.Enabled) TextBox.Text = transfer.Digit.ToString();
 
             comboBox1.Items.AddRange(schema.LabelsList.ToArray());
@@ -48,7 +48,7 @@ namespace VisualGPSS
                 VisualElement Block1, Block2;
                 double Digit;
 
-                switch (transfer.essence.Name)
+                switch (transfer.Name)
                 {
                     case "TRANSFER_VARIABLE":
                         // Block1
@@ -146,11 +146,11 @@ namespace VisualGPSS
                         break;
                 }
 
-                if (transfer.essence.Label != LabelTextBox.Text)
+                if (transfer.Label != LabelTextBox.Text)
                 {
                     if (schema.Labels.TryGetValue(LabelTextBox.Text, out VisualElement visualElement))
                         throw new Exception($"Метка {LabelTextBox.Text} уже занята" +
-                        $" блоком №{visualElement.number} ({visualElement.essence.Name})");
+                        $" блоком №{visualElement.number} ({visualElement.Name})");
                     else transfer.essence.Label = LabelTextBox.Text;
                 }
 

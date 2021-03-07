@@ -14,6 +14,7 @@ namespace GPSS.Visualiztion
         private new List<Operator> essence;
         private string queueName;
         private string name;
+        private string label;
         private double delay;
         private double scatter;
         private int chanellCount;
@@ -37,7 +38,11 @@ namespace GPSS.Visualiztion
 
         [Browsable(false)] public string QueueName { get => queueName; set => queueName = value; }
 
+        #pragma warning disable CS0114 // Член скрывает унаследованный член: отсутствует ключевое слово переопределения
         [Browsable(false)] public string Name { get => name; set => name = value; }
+
+        [Browsable(false)] public string Label { get => label; set => label = value; }
+        #pragma warning restore CS0114 // Член скрывает унаследованный член: отсутствует ключевое слово переопределения
 
         [Browsable(false)] public double Delay { get => delay; set => delay = value; }
 
@@ -51,7 +56,8 @@ namespace GPSS.Visualiztion
         {
             Essence = new List<Operator>();
             QueueName = _queueName;
-            Name = _name;
+            name = _name;
+            this.label = label;
             Delay = _delay;
             Scatter = _scatter;
             ChanellCount = _chanellCount;
@@ -77,13 +83,14 @@ namespace GPSS.Visualiztion
         [JsonConstructor]
         public Device(int width, int heigth, Color blockColor, List<Operator> essence, uint number,
             Point center, Color _mainColor, Color _linesColor, Font _font, Color _fontColor,
-            bool isMultiChannell, string queueName, string name, double delay, double scatter, int chanellCount) :
+            string queueName, string name, string label, double delay, double scatter, int chanellCount) :
             base(width, heigth, blockColor, null, number, center,
                 _mainColor, _linesColor, _font, _fontColor)
         { 
             this.Essence = essence;
             this.QueueName = queueName;
-            this.Name = name;
+            this.name = name;
+            this.label = label;
             this.Delay = delay;
             this.Scatter = scatter;
             this.ChanellCount = chanellCount;

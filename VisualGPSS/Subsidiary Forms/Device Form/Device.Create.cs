@@ -32,7 +32,7 @@ namespace VisualGPSS
             double delay = double.Parse(DelayTextBox.Text);
             double scatter = double.Parse(ScatterTextBox.Text);
             int? chanellCount = null;
-            if (numberComboBox.Enabled) chanellCount = (int?)ChanellCountCB.Value;
+            if (ChanellCountCB.Enabled) chanellCount = (int?)ChanellCountCB.Value;
 
             if (chanellCount is null)
                 schema.AddDevice(number, center, schema, label, queue, name, delay, scatter);

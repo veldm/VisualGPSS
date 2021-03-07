@@ -28,9 +28,9 @@ namespace GPSS.Visualiztion
             {
                 Dictionary<string, VisualElement> res = new Dictionary<string, VisualElement>();
                 foreach (var element in from VisualElement element in Elements
-                                        where element.essence.Label is not null or ""
+                                        where element.Label is not null or ""
                                         select element)
-                    res.Add(element.essence.Label, element);
+                    res.Add(element.Label, element);
                 return res;
             }
         }
@@ -220,8 +220,8 @@ namespace GPSS.Visualiztion
         public void Remove(VisualElement visualElement)
         {
             Elements.Remove(visualElement);
-            //if (visualElement.essence.Label is not null or "")
-            //    Labels.Remove(visualElement.essence.Label);
+            //if (visualElement.Label is not null or "")
+            //    Labels.Remove(visualElement.Label);
             Refresh();
         }
         #endregion Методы

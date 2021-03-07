@@ -126,7 +126,7 @@ namespace VisualGPSS
                 labelSelf = LabelTextBox.Text;
                 if (schema.Labels.TryGetValue(labelSelf, out VisualElement visualElement))
                     throw new Exception($"Метка {labelSelf} уже занята" +
-                        $" блоком {visualElement.essence.Name}");
+                        $" блоком {visualElement.Name}");
 
                 List<string> args = arguments.ToList();
                 for (int i = 0; i < args.Count; i++)

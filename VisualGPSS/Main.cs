@@ -445,6 +445,16 @@ namespace VisualGPSS
             public CustomPictureBox() : base()
             {
                 DoubleBuffered = true;
+                ResizeRedraw = true;
+            }
+        }
+
+        private class CustomPanel : Panel
+        {
+            public CustomPanel() : base()
+            {
+                DoubleBuffered = true;
+                ResizeRedraw = true;
             }
         }
 

@@ -52,7 +52,7 @@
             this.создатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.элементToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.блокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.DrawingContainer = new System.Windows.Forms.Panel();
+            this.DrawingContainer = new VisualGPSS.Main.CustomPanel();
             this.mEndLabel = new System.Windows.Forms.Label();
             this.pictureBox = new VisualGPSS.Main.CustomPictureBox();
             this.ToolBox = new System.Windows.Forms.Panel();
@@ -342,7 +342,7 @@
             this.pictureBox.ContextMenuStrip = this.BlockOrElementCMS;
             this.pictureBox.Location = new System.Drawing.Point(3, 3);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(63017, 42217);
+            this.pictureBox.Size = new System.Drawing.Size(65535, 45839);
             this.pictureBox.TabIndex = 2;
             this.pictureBox.TabStop = false;
             this.pictureBox.Click += new System.EventHandler(this.pictureBox_Click);
@@ -668,7 +668,6 @@
         private System.Windows.Forms.ToolStripMenuItem создатьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem элементToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem блокToolStripMenuItem;
-        private System.Windows.Forms.Panel DrawingContainer;
         private System.Windows.Forms.Panel ToolBox;
         private System.Windows.Forms.PictureBox LabelPictureBox;
         private System.Windows.Forms.Label mEndLabel;
@@ -691,6 +690,7 @@
         private System.Windows.Forms.Button terminateButton;
         private System.Windows.Forms.Button generateButton;
         private System.Windows.Forms.SaveFileDialog schemaSaveFileDialog;
+        private CustomPanel DrawingContainer;
     }
 }
 

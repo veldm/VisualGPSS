@@ -23,7 +23,7 @@ namespace GPSS.Visualiztion
         }
 
         [JsonConstructor]
-        public VisualBlock(int width, int heigth, Color blockColor, Operator essence, uint number,
+        public VisualBlock(int width, int heigth, Color blockColor, List<Operator> essence, uint number,
             Point center, Color _mainColor, Color _linesColor, Font _font, Color _fontColor)
             : base(essence, number, center, _mainColor, _linesColor, _font, _fontColor)
         {
@@ -64,15 +64,15 @@ namespace GPSS.Visualiztion
 
             brush = new SolidBrush(FontColor);
             int labelCharsCount = (int)(((width - 6) / Font.SizeInPoints) * 0.7);
-            string labelViev = essence.Label;
-            if (essence.Label is not null or "")
+            string labelViev = Essence.Label;
+            if (Essence.Label is not null or "")
             {
-                labelViev = essence.Label.Length < labelCharsCount ? essence.Label :
-                    essence.Label.Substring(0, labelCharsCount - 2) + "...";
+                labelViev = Essence.Label.Length < labelCharsCount ? Essence.Label :
+                    Essence.Label.Substring(0, labelCharsCount - 2) + "...";
             }
             lock(graphics)
             {
-                graphics.DrawString(essence.Label is null ? "" : labelViev, Font, brush,
+                graphics.DrawString(Essence.Label is null ? "" : labelViev, Font, brush,
                     new Point(center.X - width / 2 + 3, center.Y - heigth / 2 + 3));
             }
             lock(graphics)
@@ -94,13 +94,13 @@ namespace GPSS.Visualiztion
 
             string CodeToDraw()
             {
-                string body = $"{essence.Name} ";
-                for (int i = essence.Arguments.Length - 1; !(i < 0); i--)
+                string body = $"{Essence.Name} ";
+                for (int i = Essence.Arguments.Length - 1; !(i < 0); i--)
                 {
-                    if (essence.Arguments[i] is not "")
+                    if (Essence.Arguments[i] is not "")
                     {
                         for (int j = 0; !(j > i); j++)
-                            body += $"{essence.Arguments[j]},";
+                            body += $"{Essence.Arguments[j]},";
                         break;
                     }
                 }
@@ -117,7 +117,7 @@ namespace GPSS.Visualiztion
                     }
                 }
 
-                if (essence.Comment is not null or "")
+                if (Essence.Comment is not null or "")
                 {
                     bodyString += '\n';
                     lock(graphics)
@@ -125,7 +125,7 @@ namespace GPSS.Visualiztion
                         if (graphics.MeasureString(bodyString, Font).Height + Font.Height > heigth - 27)
                             return bodyString;
                     }
-                    foreach (char c in essence.Comment)
+                    foreach (char c in Essence.Comment)
                     {
                         bodyString += c;
                         lock(graphics)

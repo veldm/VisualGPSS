@@ -11,7 +11,7 @@ namespace GPSS.Visualiztion
 {
     public class Device : VisualBlock
     {
-        private new List<Operator> essence;
+        private List<Operator> essence;
         private string queueName;
         private string name;
         private string label;
@@ -20,7 +20,7 @@ namespace GPSS.Visualiztion
         private int chanellCount;
 
         [Browsable(false)]
-        public bool IsMultiChanell => ChanellCount == 1;
+        public bool IsMultiChanell => ChanellCount > 1;
 
         [Browsable(false)] public override string Code
         {

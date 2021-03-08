@@ -20,7 +20,7 @@ namespace VisualGPSS
 
             if (type is not null)
                 TypeCB.SelectedIndex = TypeCB.Items.IndexOf(type);
-            else TypeCB.SelectedIndex = 0;
+            //else TypeCB.SelectedIndex = 0;
 
             for (int ii = 0; !(ii > schema.Elements.Count); ii++)
                 numberComboBox.Items.Add((ii + 1).ToString());

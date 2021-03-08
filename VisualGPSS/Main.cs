@@ -58,8 +58,8 @@ namespace VisualGPSS
         private (bool isGoing, int xc, int yc) moving;
         private Bitmap bitmap;
 
-        private delegate void Creator(string type, Point point);
-        private (Creator method, string parameter)? creatingOperator;
+        private delegate void Creator(object param, Point point);
+        private (Creator method, object parameter)? creatingOperator;
 
         public VisualGPSS_Schema schema;
         private string filePath;
@@ -367,14 +367,16 @@ namespace VisualGPSS
                     "generateButton" => new(CreateBlock, "GENERATE"),
                     "terminateButton" => new(CreateBlock, "TERMINATE"),
                     "uncertainButton" => new(CreateBlock, null),
+                    "singleChannelDeviceButton" => new(CreateDevice, false),
+                    "multiChannelDeviceButton" => new(CreateDevice, true),
                     _ => null
                 };
             }
         }
 
-        private void CreateBlock(string type, Point point)
+        private void CreateBlock(object type, Point point)
         {
-            Block block = new Block(schema, point, type);
+            Block block = new Block(schema, point, (string)type);
             block.Show();
             block.SaveButton.Click += graphicsRefresh;
         }

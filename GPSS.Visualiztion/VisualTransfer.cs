@@ -14,8 +14,8 @@ namespace GPSS.Visualiztion
 
         public Block Transfer
         {
-            get => (Block)essence;
-            set => essence = value;
+            get => (Block)Essence;
+            set => Essence = value;
         }
         public VisualBlock StartBlock => startBlock;
 
@@ -35,7 +35,7 @@ namespace GPSS.Visualiztion
 
         [JsonConstructor]
         public VisualTransfer(VisualBlock block1, VisualBlock block2, double digit,
-            VisualBlock startBlock, Operator essence, uint number,
+            VisualBlock startBlock, List<Operator> essence, uint number,
             Point center, Color _mainColor, Color _linesColor, Font _font, Color _fontColor)
             : base(essence, number, center, _mainColor, _linesColor, _font, _fontColor)
         {

@@ -249,5 +249,11 @@
   <ItemGroup>
     <Folder Include="Main Form\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\устройство1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\устройствоN.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

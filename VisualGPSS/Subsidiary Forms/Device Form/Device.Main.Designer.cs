@@ -309,6 +309,7 @@
             // 
             // ChanellCountCB
             // 
+            this.ChanellCountCB.Enabled = false;
             this.ChanellCountCB.Location = new System.Drawing.Point(36, 62);
             this.ChanellCountCB.Minimum = new decimal(new int[] {
             1,

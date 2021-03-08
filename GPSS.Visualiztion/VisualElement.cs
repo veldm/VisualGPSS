@@ -13,7 +13,7 @@ namespace GPSS.Visualiztion
     public abstract class VisualElement
     {
         #region Поля
-        public Operator essence;
+        private List<Operator> essence = new List<Operator>();
         public uint number;
         public Point center;
         private Color mainColor;
@@ -24,13 +24,13 @@ namespace GPSS.Visualiztion
 
         #region Свойства
         [Browsable(false)]
-        public virtual string Code => essence.Code;
+        public virtual string Code => Essence.Code;
 
         [Browsable(false)]
-        public virtual string Label => essence.Label;
+        public virtual string Label => Essence.Label;
 
         [Browsable(false)]
-        public virtual string Name => essence.Name;
+        public virtual string Name => Essence.Name;
 
         [Browsable(true), DisplayName("Основной цвет")]
         public Color MainColor { get => mainColor; set => mainColor = value; }
@@ -43,12 +43,13 @@ namespace GPSS.Visualiztion
 
         [Browsable(true), DisplayName("Цвет линий")]
         public Color LinesColor { get => linesColor; set => linesColor = value; }
+        public Operator Essence { get => essence[0]; set => essence[0] = value; }
         #endregion Свойства
 
         protected VisualElement(Operator essence, uint number,
             Point center, VisualGPSS_Schema parentSchema)
         {
-            this.essence = essence ?? throw new ArgumentNullException(nameof(essence));
+            this.essence.Add(essence);
             this.number = number;
             this.center = center;
 
@@ -59,7 +60,7 @@ namespace GPSS.Visualiztion
         }
 
         [JsonConstructor]
-        protected VisualElement(Operator essence, uint number,
+        protected VisualElement(List<Operator> essence, uint number,
             Point center, Color _mainColor, Color _linesColor, Font _font, Color _fontColor)
         {
             this.essence = essence ?? throw new ArgumentNullException(nameof(essence));

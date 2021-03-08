@@ -48,6 +48,11 @@ namespace GPSS.Visualiztion
             {
                 graphics.FillRectangle(brush, _x, _y, width, heigth);
             }
+            Pen p = new Pen(LinesColor, 3);
+            lock (graphics)
+            {
+                graphics.DrawRectangle(p, _x, _y, width, heigth);
+            }
 
             brush = new SolidBrush(BlockColor);
             _x = center.X - (width / 2 - 7);

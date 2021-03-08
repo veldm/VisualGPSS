@@ -52,9 +52,6 @@
             this.создатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.элементToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.блокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.DrawingContainer = new System.Windows.Forms.Panel();
-            this.mEndLabel = new System.Windows.Forms.Label();
-            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.ToolBox = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.terminateButton = new System.Windows.Forms.Button();
@@ -76,16 +73,19 @@
             this.imageSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.LabelPictureBox = new System.Windows.Forms.PictureBox();
             this.schemaSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
+            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip.SuspendLayout();
             this.BlockOrElementCMS.SuspendLayout();
             this.FieldCMS.SuspendLayout();
-            this.DrawingContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.ToolBox.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LabelPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // propertyGrid
@@ -309,48 +309,6 @@
             this.блокToolStripMenuItem.Name = "блокToolStripMenuItem";
             this.блокToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
             this.блокToolStripMenuItem.Text = "Блок";
-            // 
-            // DrawingContainer
-            // 
-            this.DrawingContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DrawingContainer.AutoScroll = true;
-            this.DrawingContainer.Controls.Add(this.mEndLabel);
-            this.DrawingContainer.Controls.Add(this.pictureBox);
-            this.DrawingContainer.Location = new System.Drawing.Point(227, 76);
-            this.DrawingContainer.Name = "DrawingContainer";
-            this.DrawingContainer.Size = new System.Drawing.Size(730, 682);
-            this.DrawingContainer.TabIndex = 9;
-            // 
-            // mEndLabel
-            // 
-            this.mEndLabel.AutoSize = true;
-            this.mEndLabel.BackColor = System.Drawing.Color.Transparent;
-            this.mEndLabel.Location = new System.Drawing.Point(3510, 2480);
-            this.mEndLabel.Name = "mEndLabel";
-            this.mEndLabel.Size = new System.Drawing.Size(0, 13);
-            this.mEndLabel.TabIndex = 3;
-            // 
-            // pictureBox
-            // 
-            this.pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(213)))), ((int)(((byte)(231)))));
-            this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox.ContextMenuStrip = this.BlockOrElementCMS;
-            this.pictureBox.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(65535, 45839);
-            this.pictureBox.TabIndex = 2;
-            this.pictureBox.TabStop = false;
-            this.pictureBox.Click += new System.EventHandler(this.pictureBox_Click);
-            this.pictureBox.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox_Paint);
-            this.pictureBox.DoubleClick += new System.EventHandler(this.EditElement);
-            this.pictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseDown);
-            this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseMove);
-            this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseUp);
             // 
             // ToolBox
             // 
@@ -610,14 +568,69 @@
             // 
             this.schemaSaveFileDialog.Filter = "Все файлы|*.*|Файлы VisualGPSS схем|*.vgsch";
             // 
+            // pictureBox
+            // 
+            this.pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(213)))), ((int)(((byte)(231)))));
+            this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox.ContextMenuStrip = this.BlockOrElementCMS;
+            this.pictureBox.Location = new System.Drawing.Point(218, 76);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(718, 657);
+            this.pictureBox.TabIndex = 12;
+            this.pictureBox.TabStop = false;
+            this.pictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseDown);
+            this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseMove);
+            this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseUp);
+            // 
+            // hScrollBar1
+            // 
+            this.hScrollBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.hScrollBar1.Location = new System.Drawing.Point(218, 733);
+            this.hScrollBar1.Maximum = 50000;
+            this.hScrollBar1.Name = "hScrollBar1";
+            this.hScrollBar1.Size = new System.Drawing.Size(718, 25);
+            this.hScrollBar1.SmallChange = 10;
+            this.hScrollBar1.TabIndex = 13;
+            this.hScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.graphicsRefresh);
+            // 
+            // vScrollBar1
+            // 
+            this.vScrollBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.vScrollBar1.Location = new System.Drawing.Point(936, 76);
+            this.vScrollBar1.Maximum = 30000;
+            this.vScrollBar1.Name = "vScrollBar1";
+            this.vScrollBar1.Size = new System.Drawing.Size(30, 657);
+            this.vScrollBar1.TabIndex = 14;
+            this.vScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.graphicsRefresh);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(936, 733);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(30, 25);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "   ";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(969, 763);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.vScrollBar1);
+            this.Controls.Add(this.hScrollBar1);
+            this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.LabelPictureBox);
             this.Controls.Add(this.ToolBox);
-            this.Controls.Add(this.DrawingContainer);
             this.Controls.Add(this.helpButton);
             this.Controls.Add(this.settingsButton);
             this.Controls.Add(this.propertyGrid);
@@ -630,21 +643,18 @@
             this.menuStrip.PerformLayout();
             this.BlockOrElementCMS.ResumeLayout(false);
             this.FieldCMS.ResumeLayout(false);
-            this.DrawingContainer.ResumeLayout(false);
-            this.DrawingContainer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ToolBox.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LabelPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem открытьToolStripMenuItem;
@@ -670,7 +680,6 @@
         private System.Windows.Forms.ToolStripMenuItem блокToolStripMenuItem;
         private System.Windows.Forms.Panel ToolBox;
         private System.Windows.Forms.PictureBox LabelPictureBox;
-        private System.Windows.Forms.Label mEndLabel;
         private System.Windows.Forms.SaveFileDialog imageSaveFileDialog;
         private System.Windows.Forms.Button transferPick_TBButton;
         private System.Windows.Forms.Button transferBoth_TBButton;
@@ -690,7 +699,10 @@
         private System.Windows.Forms.Button terminateButton;
         private System.Windows.Forms.Button generateButton;
         private System.Windows.Forms.SaveFileDialog schemaSaveFileDialog;
-        private System.Windows.Forms.Panel DrawingContainer;
+        private System.Windows.Forms.PictureBox pictureBox;
+        private System.Windows.Forms.HScrollBar hScrollBar1;
+        private System.Windows.Forms.VScrollBar vScrollBar1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

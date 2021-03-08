@@ -10,11 +10,13 @@ namespace VisualGPSS
 {
     public partial class Device : MaterialSkin.Controls.MaterialForm
     {
-        public Device(VisualGPSS_Schema schema, Point center)
+        public Device(VisualGPSS_Schema schema, Point center, bool isMultiChanell)
         {
             InitializeComponent();
             this.schema = schema;
             this.center = center;
+
+            multiChanellCB.Checked = isMultiChanell;
 
             for (int ii = 0; !(ii > schema.Elements.Count); ii++)
                 numberComboBox.Items.Add((ii + 1).ToString());

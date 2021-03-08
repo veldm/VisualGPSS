@@ -16,7 +16,7 @@ namespace VisualGPSS
         private GPSS.Visualiztion.Device device;
         private readonly VisualGPSS_Schema schema;
         private readonly Point center;
-        EventHandler onSave;
+        public EventHandler onSave;
 
         private void multiChanellCB_CheckedChanged(object sender, EventArgs e)
         {

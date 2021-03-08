@@ -20,8 +20,8 @@ namespace VisualGPSS
         #region Поля
         private Point CursorPosition => new Point()
         {
-            X = pictureBox.PointToClient(Cursor.Position).X,
-            Y = pictureBox.PointToClient(Cursor.Position).Y
+            X = pictureBox.PointToClient(Cursor.Position).X + hScrollBar1.Value,
+            Y = pictureBox.PointToClient(Cursor.Position).Y + vScrollBar1.Value
         };
 
         private Point RightBottom
@@ -56,6 +56,7 @@ namespace VisualGPSS
         private VisualBlock resizedBlock;
         private bool resizing;
         private (bool isGoing, int xc, int yc) moving;
+        private Bitmap bitmap;
 
         private delegate void Creator(string type, Point point);
         private (Creator method, string parameter)? creatingOperator;
@@ -68,14 +69,20 @@ namespace VisualGPSS
         {
             InitializeComponent();
             filePath = openFileName;
-            typeof(Panel).InvokeMember("DoubleBuffered",
-                BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic,
-                null, DrawingContainer, new object[] { true });
+            //typeof(Panel).InvokeMember("DoubleBuffered",
+            //    BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic,
+            //    null, DrawingContainer, new object[] { true });
             if (openFileName is null)
             {
-                // Шаблон по умолчанию
-                schema = VisualGPSS_Schema.getDefaultSchema(Font, Color.Black,
-                    pictureBox.BackColor, Color.SandyBrown, Color.DarkBlue);
+                if (MessageBox.Show("Загрузить схему по умолчанию?", "VisualGPSS",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) is DialogResult.Yes)
+                {
+                    // Шаблон по умолчанию
+                    schema = VisualGPSS_Schema.getDefaultSchema(Font, Color.Black,
+                        pictureBox.BackColor, Color.SandyBrown, Color.MediumBlue);
+                }
+                else schema = new VisualGPSS_Schema(Font, Color.Black,
+                        pictureBox.BackColor, Color.SandyBrown, Color.MediumBlue);
             }
             else
             {
@@ -86,6 +93,8 @@ namespace VisualGPSS
                 //schema.Elements.Add(V);
                 //MessageBox.Show(openFileName);
             }
+            //pictureBox.Image = new Bitmap(pictureBox.Width, pictureBox.Height);
+            graphicsRefresh(null, null);
         }
 
         #region Мышь
@@ -231,6 +240,7 @@ namespace VisualGPSS
         {
             resizing = moving.isGoing = false;
             timer.Stop();
+            timer.Enabled = false;
             if (creatingOperator is not null)
                 creatingOperator.Value.method.Invoke(creatingOperator.Value.parameter,
                     new Point(CursorPosition.X, CursorPosition.Y));
@@ -255,22 +265,22 @@ namespace VisualGPSS
 
         private void pictureBox_Paint(object sender, PaintEventArgs e)
         {
-            //pictureBox.SuspendLayout();
-            if (pictureBox.Image is not null) pictureBox.Image.Dispose();
-            //GC.Collect();
-            //Bitmap bitmap = new Bitmap(3510, 2480);
-            //pictureBox.Image = bitmap;
-            Graphics graphics = e.Graphics; /*Graphics.FromImage(bitmap);*/
-            //foreach (VisualElement element in Elements)
-            //    element.Draw(graphics);
-            if (timer.Enabled)
-            {
-                timer.Stop();
-                schema.Draw(graphics);
-                timer.Start();
-            }
-            else schema.Draw(graphics);
-            //pictureBox.ResumeLayout();
+            ////pictureBox.SuspendLayout();
+            //if (pictureBox.Image is not null) pictureBox.Image.Dispose();
+            ////GC.Collect();
+            ////Bitmap bitmap = new Bitmap(3510, 2480);
+            ////pictureBox.Image = bitmap;
+            //Graphics graphics = e.Graphics; /*Graphics.FromImage(bitmap);*/
+            ////foreach (VisualElement element in Elements)
+            ////    element.Draw(graphics);
+            //if (timer.Enabled)
+            //{
+            //    timer.Stop();
+            //    schema.Draw(graphics);
+            //    timer.Start();
+            //}
+            //else schema.Draw(graphics);
+            ////pictureBox.ResumeLayout();
         }
         #endregion Отрисовка
 
@@ -384,8 +394,43 @@ namespace VisualGPSS
         }
 
         public void graphicsRefresh(object sender, EventArgs e)
-        {            
-            pictureBox.Invalidate();
+        {
+            using (bitmap = new Bitmap(pictureBox.Width + hScrollBar1.Value,
+                pictureBox.Height + vScrollBar1.Value))
+            {
+                Graphics graphics = Graphics.FromImage(bitmap);
+                if (timer.Enabled)
+                {
+                    timer.Stop();
+                    schema.Draw(graphics);
+                    timer.Start();
+                }
+                else schema.Draw(graphics);
+
+                using (Bitmap buf = (Bitmap)pictureBox.Image)
+                {
+                    GC.Collect();
+                    lock (bitmap)
+                    {
+                        pictureBox.Image = bitmap.Clone(new Rectangle(hScrollBar1.Value, vScrollBar1.Value,
+                            hScrollBar1.Value + pictureBox.Width, vScrollBar1.Value + pictureBox.Height),
+                            bitmap.PixelFormat);
+                        pictureBox.Refresh();
+                    }
+                }
+                GC.Collect();
+                //for (int i = 0; i < pictureBox.Width; i++)
+                //{
+                //    for (int j = 0; j < pictureBox.Height; j++)
+                //    {
+                //        ((Bitmap)pictureBox.Image).SetPixel
+                //            (i, j, bitmap.GetPixel(i + hScrollBar1.Value, j + vScrollBar1.Value));
+                //    }
+                //}
+                //pictureBox.Image.Dispose();
+            }
+            GC.Collect();
+            //pictureBox.Invalidate(new Rectangle(0, 0, RightBottom.X + 150, RightBottom.Y + 150));
         }
 
         private void EditElement(object sender, EventArgs e)
@@ -421,6 +466,13 @@ namespace VisualGPSS
             Transfer transferForm = new Transfer((VisualBlock)activeElement, schema);
             transferForm.Show();
             transferForm.SaveButton.Click += graphicsRefresh;
+        }
+
+        private void CreateDevice(object isMultichanell, Point point)
+        {
+            Device deviceForm = new Device(schema, point, (bool)isMultichanell);
+            deviceForm.Show();
+            deviceForm.onSave = graphicsRefresh;
         }
 
         private void сохранитьКакToolStripMenuItem_Click(object sender, EventArgs e)

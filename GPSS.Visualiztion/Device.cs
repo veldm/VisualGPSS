@@ -55,7 +55,7 @@ namespace GPSS.Visualiztion
             base(null, number, center, parentSchema) 
         {
             width = 170;
-            heigth = 500;
+            heigth = 170;
 
             Essence = new List<Operator>();
             QueueName = _queueName;
@@ -119,7 +119,7 @@ namespace GPSS.Visualiztion
             _y = center.Y - (heigth / 2 - 40);
             lock (graphics)
             {
-                graphics.FillRectangle(brush, _x, _y, width - 14, heigth - 27);
+                graphics.FillRectangle(brush, _x, _y, width - 14, heigth - 47);
             }
 
             brush = new SolidBrush(FontColor);
@@ -160,7 +160,7 @@ namespace GPSS.Visualiztion
                 string codeString = CodeToDraw(Essence[i], ref j);
                 lock (graphics)
                 {
-                    graphics.DrawString(codeString, Font, brush, _x + 3, _y + 3 + j + Font.Height);
+                    graphics.DrawString(codeString, Font, brush, _x + 3, _y + 3 + j * Font.Height);
                 }
             }
 
@@ -222,15 +222,15 @@ namespace GPSS.Visualiztion
 
             Point p1, p2, p3, p4, p5, p6;
             p1 = new Point(center.X - width / 2, center.Y - heigth / 2);
-            p2 = new Point(center.X - width / 2 - 35, center.Y - heigth / 2 - 35);            
+            p2 = new Point(center.X - width / 2 - 20, center.Y - heigth / 2 - 20);            
             p3 = new Point(center.X + width / 2, center.Y - heigth / 2);
-            p4 = new Point(center.X + width / 2 - 35, center.Y - heigth / 2 - 35);
+            p4 = new Point(center.X + width / 2 - 20, center.Y - heigth / 2 - 20);
             p5 = new Point(center.X - width / 2, center.Y + heigth / 2);
-            p6 = new Point(center.X - width / 2 - 35, center.Y + heigth / 2 - 35);
-            Color color = Color.FromArgb(MainColor.R - 20, MainColor.G - 20, MainColor.B - 20);
+            p6 = new Point(center.X - width / 2 - 20, center.Y + heigth / 2 - 20);
+            Color color = Color.FromArgb(MainColor.R - 80, MainColor.G - 80, MainColor.B - 80);
             brush = new SolidBrush(color);
-            Point[] points1 = { p1, p2, p3, p4 };
-            Point[] points2 = { p1, p2, p5, p6 };
+            Point[] points1 = { p1, p3, p4, p2 };
+            Point[] points2 = { p1, p5, p6, p2 };
 
             lock (graphics)
             {
@@ -240,7 +240,7 @@ namespace GPSS.Visualiztion
                 graphics.DrawLine(p, p3, p4);
                 graphics.DrawLine(p, p5, p6);
                 graphics.DrawLine(p, p2, p4);
-                graphics.DrawLine(p, p4, p6);
+                graphics.DrawLine(p, p2, p6);
             }
 
             GC.Collect();

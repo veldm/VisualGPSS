@@ -474,7 +474,7 @@ namespace VisualGPSS
         {
             Device deviceForm = new Device(schema, point, (bool)isMultichanell);
             deviceForm.Show();
-            deviceForm.onSave = graphicsRefresh;
+            deviceForm.SaveButton.Click += graphicsRefresh;
         }
 
         private void сохранитьКакToolStripMenuItem_Click(object sender, EventArgs e)

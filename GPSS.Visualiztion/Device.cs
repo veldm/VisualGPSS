@@ -34,21 +34,27 @@ namespace GPSS.Visualiztion
             }
         }
 
-        [Browsable(false)] public List<Operator> Essence { get => essence; set => essence = value; }
+        [Browsable(false), JsonIgnore] public List<Operator> Essence
+            { get => essence; set => essence = value; }
 
-        [Browsable(false)] public string QueueName { get => queueName; set => queueName = value; }
+        [Browsable(false), JsonIgnore] public string QueueName
+        { get => queueName; set => queueName = value; }
 
-        #pragma warning disable CS0114 // Член скрывает унаследованный член: отсутствует ключевое слово переопределения
-        [Browsable(false)] public string Name { get => name; set => name = value; }
+        #pragma warning disable CS0114
+        // Член скрывает унаследованный член: отсутствует ключевое слово переопределения
+        [Browsable(false), JsonIgnore] public string Name { get => name; set => name = value; }
 
-        [Browsable(false)] public string Label { get => label; set => label = value; }
-        #pragma warning restore CS0114 // Член скрывает унаследованный член: отсутствует ключевое слово переопределения
+        [Browsable(false), JsonIgnore] public string Label { get => label; set => label = value; }
+        #pragma warning restore CS0114
+        // Член скрывает унаследованный член: отсутствует ключевое слово переопределения
 
-        [Browsable(false)] public double Delay { get => delay; set => delay = value; }
+        [Browsable(false), JsonIgnore] public double Delay { get => delay; set => delay = value; }
 
-        [Browsable(false)] public double Scatter { get => scatter; set => scatter = value; }
+        [Browsable(false), JsonIgnore] public double Scatter
+            { get => scatter; set => scatter = value; }
 
-        [Browsable(false)] public int ChanellCount { get => chanellCount; set => chanellCount = value; }
+        [Browsable(false), JsonIgnore] public int ChanellCount
+            { get => chanellCount; set => chanellCount = value; }
 
         public Device(uint number, Point center, VisualGPSS_Schema parentSchema, string label,
             string _queueName, string _name, double _delay, double _scatter, int _chanellCount = 1) :

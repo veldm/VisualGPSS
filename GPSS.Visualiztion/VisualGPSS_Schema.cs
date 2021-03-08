@@ -35,33 +35,33 @@ namespace GPSS.Visualiztion
             }
         }
 
-        [Browsable(false)]
+        [Browsable(false), JsonIgnore]
         public string[] Code => (from VisualElement element in Elements
                                  select element.Code).ToArray();
 
-        [Browsable(false)]
+        [Browsable(false), JsonIgnore]
         public List<string> LabelsList => Labels.Keys.ToList();
 
-        [Browsable(false)]
+        [Browsable(false), JsonIgnore]
         public List<VisualElement> ElementsWithLabelsList => Labels.Values.ToList();
 
-        [Browsable(false)]
+        [Browsable(false), JsonIgnore]
         public List<VisualElement> Elements => elements;
 
-        [Browsable(true), DisplayName("Шрифт")]
+        [Browsable(true), DisplayName("Шрифт"), JsonIgnore]
         public Font DefaultFont { get => defaultFont; set => defaultFont = value; }
 
-        [Browsable(true), DisplayName("Цвет шрифта")]
+        [Browsable(true), DisplayName("Цвет шрифта"), JsonIgnore]
         public Color DefaultFontColor { get => defaultFontColor; set => defaultFontColor = value; }
 
-        [Browsable(true), DisplayName("Цвет фона")]
+        [Browsable(true), DisplayName("Цвет фона"), JsonIgnore]
         public Color BackgroundColor { get => backgroundColor; set => backgroundColor = value; }
 
-        [Browsable(true), DisplayName("Цвет тела блока по умолчанию")]
+        [Browsable(true), DisplayName("Цвет тела блока по умолчанию"), JsonIgnore]
         public Color DefaultElementsColor
         { get => defaultElementsColor; set => defaultElementsColor = value; }
 
-        [Browsable(true), DisplayName("Цвет линий по умолчанию")]
+        [Browsable(true), DisplayName("Цвет линий по умолчанию"), JsonIgnore]
         public Color DefaultElementsLinesColor
         { get => defaultLinesColor; set => defaultLinesColor = value; }
 

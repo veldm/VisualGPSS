@@ -23,28 +23,28 @@ namespace GPSS.Visualiztion
         #endregion Поля
 
         #region Свойства
-        [Browsable(false), JsonIgnore]
+        [Browsable(false)]
         public virtual string Code => Essence.Code;
 
-        [Browsable(false), JsonIgnore]
+        [Browsable(false)]
         public virtual string Label => Essence is not null ? Essence.Label : null;
 
-        [Browsable(false), JsonIgnore]
+        [Browsable(false)]
         public virtual string Name => Essence.Name;
 
-        [Browsable(true), DisplayName("Основной цвет"), JsonIgnore]
+        [Browsable(true), DisplayName("Основной цвет")]
         public Color MainColor { get => mainColor; set => mainColor = value; }
 
-        [Browsable(true), DisplayName("Цвет шрифта"), JsonIgnore]
+        [Browsable(true), DisplayName("Цвет шрифта")]
         public Color FontColor { get => fontColor; set => fontColor = value; }
 
-        [Browsable(true), DisplayName("Шрифт"), JsonIgnore]
+        [Browsable(true), DisplayName("Шрифт")]
         public Font Font { get => font; set => font = value; }
 
-        [Browsable(true), DisplayName("Цвет линий"), JsonIgnore]
+        [Browsable(true), DisplayName("Цвет линий")]
         public Color LinesColor { get => linesColor; set => linesColor = value; }
 
-        [Browsable(false), JsonIgnore]
+        [Browsable(false)]
         public Operator Essence { get => essence[0]; set => essence[0] = value; }
         #endregion Свойства
 

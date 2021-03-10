@@ -10,14 +10,14 @@ namespace GPSS.Visualiztion
         private VisualBlock block1;
         private VisualBlock block2;
         private double digit;
-        private readonly VisualBlock startBlock;
+        private VisualBlock startBlock;
 
         public Block Transfer
         {
             get => (Block)Essence;
             set => Essence = value;
         }
-        public VisualBlock StartBlock => startBlock;
+        public VisualBlock StartBlock { get => startBlock; set => startBlock = value; }
 
         public VisualBlock Block1 { get => block1; set => block1 = value; }
         public VisualBlock Block2 { get => block2; set => block2 = value; }
@@ -42,7 +42,7 @@ namespace GPSS.Visualiztion
             Point center, Color _mainColor, Color _linesColor, Font _font, Color _fontColor)
             : base(essence, number, center, _mainColor, _linesColor, _font, _fontColor)
         {
-            this.block1 = (VisualBlock)(block1 ?? ExtendedParams[1]);
+            this.block1 =  (VisualBlock)(block1 ?? ExtendedParams[1]);
             this.block2 = (VisualBlock)(block2 ?? ExtendedParams[2]);
             this.digit = digit;
             this.startBlock = (VisualBlock)(startBlock ?? ExtendedParams[0]);

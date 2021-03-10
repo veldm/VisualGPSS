@@ -94,6 +94,17 @@ namespace GPSS.Visualiztion
             this.backgroundColor = backgroundColor;
             this.defaultElementsColor = defaultElementsColor;
             this.defaultLinesColor = defaultLinesColor;
+
+            foreach (VisualElement element in Elements)
+            {
+                if (element is VisualTransfer transfer)
+                {
+                    transfer.StartBlock = (VisualBlock)Elements[(int)transfer.StartBlock.number];
+                    transfer.Block1 = (VisualBlock)Elements[(int)transfer.Block1.number];
+                    if (transfer.Block2 is not null)
+                        transfer.Block2 = (VisualBlock)Elements[(int)transfer.Block2.number];
+                }
+            }
         }
 
 

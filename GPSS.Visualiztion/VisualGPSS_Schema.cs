@@ -21,7 +21,7 @@ namespace GPSS.Visualiztion
         #endregion Поля
 
         #region Свойства
-        [Browsable(false)]
+        [Browsable(false), JsonIgnore]
         public Dictionary<string, VisualElement> Labels
         {
             get
@@ -45,23 +45,23 @@ namespace GPSS.Visualiztion
         [Browsable(false), JsonIgnore]
         public List<VisualElement> ElementsWithLabelsList => Labels.Values.ToList();
 
-        [Browsable(false), JsonIgnore]
+        [Browsable(false)]
         public List<VisualElement> Elements => elements;
 
-        [Browsable(true), DisplayName("Шрифт"), JsonIgnore]
+        [Browsable(true), DisplayName("Шрифт")]
         public Font DefaultFont { get => defaultFont; set => defaultFont = value; }
 
-        [Browsable(true), DisplayName("Цвет шрифта"), JsonIgnore]
+        [Browsable(true), DisplayName("Цвет шрифта")]
         public Color DefaultFontColor { get => defaultFontColor; set => defaultFontColor = value; }
 
-        [Browsable(true), DisplayName("Цвет фона"), JsonIgnore]
+        [Browsable(true), DisplayName("Цвет фона")]
         public Color BackgroundColor { get => backgroundColor; set => backgroundColor = value; }
 
-        [Browsable(true), DisplayName("Цвет тела блока по умолчанию"), JsonIgnore]
+        [Browsable(true), DisplayName("Цвет тела блока по умолчанию")]
         public Color DefaultElementsColor
         { get => defaultElementsColor; set => defaultElementsColor = value; }
 
-        [Browsable(true), DisplayName("Цвет линий по умолчанию"), JsonIgnore]
+        [Browsable(true), DisplayName("Цвет линий по умолчанию")]
         public Color DefaultElementsLinesColor
         { get => defaultLinesColor; set => defaultLinesColor = value; }
 
@@ -82,14 +82,14 @@ namespace GPSS.Visualiztion
         }
 
         [JsonConstructor]
-        public VisualGPSS_Schema(Dictionary<string, VisualElement> labels, List<string> labelsList,
-            List<VisualElement> elements, Font defaultFont, Color defaultFontColor,
-            Color backgroundColor, Color defaultElementsColor, Color defaultLinesColor)
+        public VisualGPSS_Schema(List<VisualElement> Elements, Font DefaultFont,
+            Color defaultFontColor, Color backgroundColor, Color defaultElementsColor,
+            Color defaultLinesColor)
         {
             //this.labels = labels;
             //this.labelsList = labelsList;
-            this.elements = elements;
-            this.defaultFont = defaultFont;
+            this.elements = Elements ?? throw new ArgumentNullException(nameof(Elements));
+            this.DefaultFont = DefaultFont ?? throw new ArgumentNullException(nameof(DefaultFont));
             this.defaultFontColor = defaultFontColor;
             this.backgroundColor = backgroundColor;
             this.defaultElementsColor = defaultElementsColor;

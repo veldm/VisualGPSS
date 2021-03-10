@@ -23,7 +23,7 @@ namespace GPSS.Visualiztion
         }
 
         [JsonConstructor]
-        public VisualBlock(int width, int heigth, Color blockColor, List<Operator> essence, uint number,
+        public VisualBlock(int width, int heigth, Color blockColor, Operator essence, uint number,
             Point center, Color _mainColor, Color _linesColor, Font _font, Color _fontColor)
             : base(essence, number, center, _mainColor, _linesColor, _font, _fontColor)
         {

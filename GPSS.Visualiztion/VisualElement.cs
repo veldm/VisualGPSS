@@ -13,7 +13,7 @@ namespace GPSS.Visualiztion
     public abstract class VisualElement
     {
         #region Поля
-        private List<Operator> essence = new List<Operator>();
+        private Operator essence;
         public uint number;
         public Point center;
         private Color mainColor;
@@ -32,6 +32,9 @@ namespace GPSS.Visualiztion
         [Browsable(false)]
         public virtual string Name => Essence.Name;
 
+        [Browsable(false)]
+        public virtual object[] ExtendedParams { get; set; }
+
         [Browsable(true), DisplayName("Основной цвет")]
         public Color MainColor { get => mainColor; set => mainColor = value; }
 
@@ -39,19 +42,20 @@ namespace GPSS.Visualiztion
         public Color FontColor { get => fontColor; set => fontColor = value; }
 
         [Browsable(true), DisplayName("Шрифт")]
-        public Font Font { get => font; set => font = value; }
+        public Font Font { get => font;
+            set => font = value ?? throw new ArgumentNullException(nameof(value)); }
 
         [Browsable(true), DisplayName("Цвет линий")]
         public Color LinesColor { get => linesColor; set => linesColor = value; }
 
         [Browsable(false)]
-        public Operator Essence { get => essence[0]; set => essence[0] = value; }
+        public Operator Essence { get => essence; set => essence = value; }
         #endregion Свойства
 
         protected VisualElement(Operator essence, uint number,
             Point center, VisualGPSS_Schema parentSchema)
         {
-            this.essence.Add(essence);
+            this.essence = essence;
             this.number = number;
             this.center = center;
 
@@ -62,10 +66,10 @@ namespace GPSS.Visualiztion
         }
 
         [JsonConstructor]
-        protected VisualElement(List<Operator> essence, uint number,
+        protected VisualElement(Operator essence, uint number,
             Point center, Color _mainColor, Color _linesColor, Font _font, Color _fontColor)
         {
-            this.essence = essence ?? throw new ArgumentNullException(nameof(essence));
+            this.essence = essence /*?? throw new ArgumentNullException(nameof(essence))*/;
             this.number = number;
             this.center = center;
 

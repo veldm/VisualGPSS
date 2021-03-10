@@ -34,17 +34,21 @@ namespace GPSS.Visualiztion
             }
         }
 
-        [Browsable(false), JsonIgnore] public List<Operator> Essence
+        [Browsable(false), JsonIgnore] public List<Operator> Operators
             { get => essence; set => essence = value; }
 
         [Browsable(false), JsonIgnore] public string QueueName
         { get => queueName; set => queueName = value; }
 
+        [Browsable(false)]
+        public override object[] ExtendedParams => new object[]
+            { Operators, QueueName, Delay, Scatter, ChanellCount };
+
         #pragma warning disable CS0114
         // Член скрывает унаследованный член: отсутствует ключевое слово переопределения
-        [Browsable(false), JsonIgnore] public string Name { get => name; set => name = value; }
+        [Browsable(false)] public string Name { get => name; set => name = value; }
 
-        [Browsable(false), JsonIgnore] public string Label { get => label; set => label = value; }
+        [Browsable(false)] public string Label { get => label; set => label = value; }
         #pragma warning restore CS0114
         // Член скрывает унаследованный член: отсутствует ключевое слово переопределения
 
@@ -63,7 +67,7 @@ namespace GPSS.Visualiztion
             width = 170;
             heigth = 170;
 
-            Essence = new List<Operator>();
+            Operators = new List<Operator>();
             QueueName = _queueName;
             name = _name;
             this.label = label;
@@ -81,28 +85,29 @@ namespace GPSS.Visualiztion
                 string[] args2 = { Name };
                 string[] args3 = { Delay.ToString(), Scatter.ToString() };
 
-                Essence.Add(new Block(label, args1, null, Block.BlockType.QUEUE));
-                Essence.Add(new Block(null, args2, null, Block.BlockType.SEIZE));
-                Essence.Add(new Block(null, args1, null, Block.BlockType.DEPART));
-                Essence.Add(new Block(null, args3, null, Block.BlockType.ADVANCE));
-                Essence.Add(new Block(null, args2, null, Block.BlockType.RELEASE));
+                Operators.Add(new Block(label, args1, null, Block.BlockType.QUEUE));
+                Operators.Add(new Block(null, args2, null, Block.BlockType.SEIZE));
+                Operators.Add(new Block(null, args1, null, Block.BlockType.DEPART));
+                Operators.Add(new Block(null, args3, null, Block.BlockType.ADVANCE));
+                Operators.Add(new Block(null, args2, null, Block.BlockType.RELEASE));
             }
         }
 
         [JsonConstructor]
         public Device(int width, int heigth, Color blockColor, List<Operator> essence, uint number,
-            Point center, Color _mainColor, Color _linesColor, Font _font, Color _fontColor,
-            string queueName, string name, string label, double delay, double scatter, int chanellCount) :
+            Point center, Color _mainColor, Color _linesColor, Font Font, Color _fontColor,
+            string queueName, string Name, string Label, double delay, double scatter,
+            int chanellCount, object[] ExtendedParams) :
             base(width, heigth, blockColor, null, number, center,
-                _mainColor, _linesColor, _font, _fontColor)
+                _mainColor, _linesColor, Font, _fontColor)
         { 
-            this.Essence = essence;
-            this.QueueName = queueName;
-            this.name = name;
-            this.label = label;
-            this.Delay = delay;
-            this.Scatter = scatter;
-            this.ChanellCount = chanellCount;
+            this.Operators = (List<Operator>)(essence ?? ExtendedParams[0]);
+            this.QueueName = (string)(queueName ?? ExtendedParams[1]);
+            this.name = Name;
+            this.label = Label;
+            this.Delay = (double)ExtendedParams[2];
+            this.Scatter = (double)ExtendedParams[3];
+            this.ChanellCount = int.Parse(ExtendedParams[4].ToString());
         }
 
         public override void Draw(Graphics graphics, List<VisualElement> otherElements)
@@ -161,9 +166,9 @@ namespace GPSS.Visualiztion
                     new Point(center.X + width / 2 - 30, center.Y - heigth / 2 + 6 + Font.Height));
             }
 
-            for (int i = 0, j = 0; i < Essence.Count; i++, j++)
+            for (int i = 0, j = 0; i < Operators.Count; i++, j++)
             {
-                string codeString = CodeToDraw(Essence[i], ref j);
+                string codeString = CodeToDraw(Operators[i], ref j);
                 lock (graphics)
                 {
                     graphics.DrawString(codeString, Font, brush, _x + 3, _y + 3 + j * Font.Height);

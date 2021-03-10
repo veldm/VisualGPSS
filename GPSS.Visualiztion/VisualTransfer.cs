@@ -23,6 +23,9 @@ namespace GPSS.Visualiztion
         public VisualBlock Block2 { get => block2; set => block2 = value; }
         public double Digit { get => digit; set => digit = value; }
 
+        public override object[] ExtendedParams
+        { get => new object[] { startBlock, block1, block2 }; }
+
         public VisualTransfer(VisualBlock startBlock, VisualBlock block1, VisualBlock block2,
             double digit, Operator essence, uint number, Point center,
             VisualGPSS_Schema parentSchema) : base(essence, number, center, parentSchema)
@@ -35,14 +38,14 @@ namespace GPSS.Visualiztion
 
         [JsonConstructor]
         public VisualTransfer(VisualBlock block1, VisualBlock block2, double digit,
-            VisualBlock startBlock, List<Operator> essence, uint number,
+            VisualBlock startBlock, Operator essence, uint number, object[] ExtendedParams,
             Point center, Color _mainColor, Color _linesColor, Font _font, Color _fontColor)
             : base(essence, number, center, _mainColor, _linesColor, _font, _fontColor)
         {
-            this.block1 = block1;
-            this.block2 = block2;
+            this.block1 = (VisualBlock)(block1 ?? ExtendedParams[1]);
+            this.block2 = (VisualBlock)(block2 ?? ExtendedParams[2]);
             this.digit = digit;
-            this.startBlock = startBlock;
+            this.startBlock = (VisualBlock)(startBlock ?? ExtendedParams[0]);
         }
 
         public override void Draw(Graphics graphics, List<VisualElement> otherElements)

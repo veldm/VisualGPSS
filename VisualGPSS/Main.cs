@@ -414,8 +414,8 @@ namespace VisualGPSS
                     GC.Collect();
                     lock (bitmap)
                     {
-                        pictureBox.Image = bitmap.Clone(new Rectangle(hScrollBar1.Value, vScrollBar1.Value,
-                            hScrollBar1.Value + pictureBox.Width, vScrollBar1.Value + pictureBox.Height),
+                        pictureBox.Image = bitmap.Clone(new Rectangle(hScrollBar1.Value,
+                            vScrollBar1.Value, pictureBox.Width, pictureBox.Height),
                             bitmap.PixelFormat);
                         pictureBox.Refresh();
                     }

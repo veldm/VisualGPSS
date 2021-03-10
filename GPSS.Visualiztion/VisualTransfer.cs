@@ -79,14 +79,14 @@ namespace GPSS.Visualiztion
                 //    Block1.center.Y + Block1.heigth / 2);
                 lock(graphics)
                 {
-                    graphics.DrawLine(new Pen(Color.DarkBlue, 3), startBlock.center, block1.center);
+                    graphics.DrawLine(new Pen(LinesColor, 3), startBlock.center, block1.center);
                 }
             }
 
             void allDraw()
             {
                 (Point pivot1, Point pivot2) = bothDraw();
-                Pen pen = new Pen(Color.DarkBlue, 3);
+                Pen pen = new Pen(LinesColor, 3);
                 for (int i = (int)Block1.number + (int)Digit; i <= Block2.number; i += (int)Digit)
                 {
                     Point point = new Point(center.Y, otherElements[i].center.X);
@@ -107,7 +107,7 @@ namespace GPSS.Visualiztion
                 Point pivot1 = new Point(Block1.center.X, center.Y);
                 Point pivot2 = new Point(Block2.center.X, center.Y);
 
-                Pen pen = new Pen(Color.DarkBlue, 3);
+                Pen pen = new Pen(LinesColor, 3);
                 lock(graphics)
                 {
                     graphics.DrawLine(pen, StartBlock.center, center);
@@ -135,7 +135,7 @@ namespace GPSS.Visualiztion
             void pickDraw()
             {
                 (Point pivot1, Point pivot2) = bothDraw();
-                Pen pen = new Pen(Color.DarkBlue, 3);
+                Pen pen = new Pen(LinesColor, 3);
                 for (int i = (int)Block1.number + 1; i <= Block2.number; i++)
                 {
                     Point point = new Point(center.Y, otherElements[i].center.X);
@@ -151,7 +151,7 @@ namespace GPSS.Visualiztion
                 (Point pivot1, Point pivot2) = bothDraw();
                 double v1 = Digit;
                 double v2 = 1 - v1;
-                Brush brush = new SolidBrush(Color.DarkBlue);
+                Brush brush = new SolidBrush(LinesColor);
                 lock(graphics)
                 {
                     graphics.DrawString(v1.ToString(), Font, brush, x: pivot1.X, y: pivot1.Y - 15);

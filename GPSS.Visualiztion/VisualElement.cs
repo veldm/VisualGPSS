@@ -30,7 +30,7 @@ namespace GPSS.Visualiztion
         public virtual string Label => Essence is not null ? Essence.Label : null;
 
         [Browsable(false)]
-        public virtual string Name => Essence.Name;
+        public virtual string Name => Essence is not null ? Essence.Name : null;
 
         [Browsable(false)]
         public virtual object[] ExtendedParams { get; set; }

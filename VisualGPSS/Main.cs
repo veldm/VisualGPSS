@@ -439,7 +439,13 @@ namespace VisualGPSS
         {
             if (activeElement is not null)
             {
-                if (activeElement is VisualBlock block)
+                if (activeElement is GPSS.Visualiztion.Device device)
+                {
+                    Device deviceForm = new Device(device, schema);
+                    deviceForm.Show();
+                    deviceForm.SaveButton.Click += graphicsRefresh;
+                }
+                else if (activeElement is VisualBlock block)
                 {
                     Block blockForm = new Block(block, schema);
                     blockForm.Show();

@@ -44,12 +44,12 @@ namespace GPSS.Visualiztion
         public override object[] ExtendedParams => new object[]
             { Operators, QueueName, Delay, Scatter, ChanellCount };
 
-        #pragma warning disable CS0114
+        //#pragma warning disable CS0114
         // Член скрывает унаследованный член: отсутствует ключевое слово переопределения
-        [Browsable(false)] public string Name { get => name; set => name = value; }
+        [Browsable(false)] public override string Name { get => name; }
 
-        [Browsable(false)] public string Label { get => label; set => label = value; }
-        #pragma warning restore CS0114
+        [Browsable(false)] public override string Label { get => label; }
+        //#pragma warning restore CS0114
         // Член скрывает унаследованный член: отсутствует ключевое слово переопределения
 
         [Browsable(false), JsonIgnore] public double Delay { get => delay; set => delay = value; }

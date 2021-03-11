@@ -397,6 +397,7 @@ namespace VisualGPSS
 
         public void graphicsRefresh(object sender, EventArgs e)
         {
+            if (schema is null) return;
             using (bitmap = new Bitmap(pictureBox.Width + hScrollBar1.Value,
                 pictureBox.Height + vScrollBar1.Value))
             {

@@ -27,9 +27,8 @@ namespace GPSS.Visualiztion
             get
             {
                 string result = "";
-                for (int i = 0; i < essence.Count - 1; i++)
+                for (int i = 0; i < essence.Count; i++)
                     result += $"{essence[i].Code}\n";
-                result += essence.Last().Code;
                 return result;
             }
         }

@@ -1,0 +1,1136 @@
+{
+  "Elements": [
+    {
+      "$type": "GPSS.Visualiztion.VisualBlock, GPSS.Visualiztion",
+      "width": 170,
+      "heigth": 85,
+      "number": 0,
+      "center": "505, 58",
+      "BlockColor": "White",
+      "Code": "GENERATE 20,2,",
+      "Label": null,
+      "Name": "GENERATE",
+      "ExtendedParams": null,
+      "MainColor": "Lime",
+      "FontColor": "Black",
+      "Font": "Microsoft Sans Serif, 8.25pt",
+      "LinesColor": "MediumBlue",
+      "Essence": {
+        "$type": "GPSS.Block, GPSS",
+        "Type": 0,
+        "Code": "GENERATE 20,2,",
+        "Label": null,
+        "Name": "GENERATE",
+        "Arguments": [
+          "20",
+          "2",
+          "",
+          "",
+          ""
+        ],
+        "Comment": null
+      }
+    },
+    {
+      "$type": "GPSS.Visualiztion.VisualTransfer, GPSS.Visualiztion",
+      "number": 1,
+      "center": "505, 195",
+      "Transfer": {
+        "Type": 9,
+        "Code": "TRANSFER .7,,Mod_Remont",
+        "Label": "",
+        "Name": "TRANSFER_VARIABLE",
+        "Arguments": [
+          "0,7",
+          "",
+          "Mod_Remont"
+        ],
+        "Comment": ""
+      },
+      "StartBlock": {
+        "width": 170,
+        "heigth": 85,
+        "number": 0,
+        "center": "505, 58",
+        "BlockColor": "White",
+        "Code": "GENERATE 20,2,",
+        "Label": null,
+        "Name": "GENERATE",
+        "ExtendedParams": null,
+        "MainColor": "Lime",
+        "FontColor": "Black",
+        "Font": "Microsoft Sans Serif, 8.25pt",
+        "LinesColor": "MediumBlue",
+        "Essence": {
+          "$type": "GPSS.Block, GPSS",
+          "Type": 0,
+          "Code": "GENERATE 20,2,",
+          "Label": null,
+          "Name": "GENERATE",
+          "Arguments": [
+            "20",
+            "2",
+            "",
+            "",
+            ""
+          ],
+          "Comment": null
+        }
+      },
+      "Block1": {
+        "$type": "GPSS.Visualiztion.Device, GPSS.Visualiztion",
+        "width": 170,
+        "heigth": 170,
+        "number": 2,
+        "center": "236, 349",
+        "IsMultiChanell": false,
+        "Code": "Mod_Diagnostika QUEUE Ocher_Diagnostika,Ocher_Diagnostika\nSEIZE Diagnostika,Diagnostika\nDEPART Ocher_Diagnostika,Ocher_Diagnostika\nADVANCE 20,5,5\nRELEASE Diagnostika,Diagnostika",
+        "ExtendedParams": [
+          {
+            "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
+            "$values": [
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 5,
+                "Code": "Mod_Diagnostika QUEUE Ocher_Diagnostika,Ocher_Diagnostika",
+                "Label": "Mod_Diagnostika",
+                "Name": "QUEUE",
+                "Arguments": [
+                  "Ocher_Diagnostika"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 3,
+                "Code": "SEIZE Diagnostika,Diagnostika",
+                "Label": null,
+                "Name": "SEIZE",
+                "Arguments": [
+                  "Diagnostika"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 6,
+                "Code": "DEPART Ocher_Diagnostika,Ocher_Diagnostika",
+                "Label": null,
+                "Name": "DEPART",
+                "Arguments": [
+                  "Ocher_Diagnostika"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 2,
+                "Code": "ADVANCE 20,5,5",
+                "Label": null,
+                "Name": "ADVANCE",
+                "Arguments": [
+                  "20",
+                  "5"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 4,
+                "Code": "RELEASE Diagnostika,Diagnostika",
+                "Label": null,
+                "Name": "RELEASE",
+                "Arguments": [
+                  "Diagnostika"
+                ],
+                "Comment": null
+              }
+            ]
+          },
+          "Ocher_Diagnostika",
+          20.0,
+          5.0,
+          1
+        ],
+        "Name": "Diagnostika",
+        "Label": "Mod_Diagnostika",
+        "BlockColor": "White",
+        "MainColor": "SandyBrown",
+        "FontColor": "Black",
+        "Font": "Microsoft Sans Serif, 8.25pt",
+        "LinesColor": "MediumBlue",
+        "Essence": null
+      },
+      "Block2": {
+        "$type": "GPSS.Visualiztion.Device, GPSS.Visualiztion",
+        "width": 170,
+        "heigth": 170,
+        "number": 4,
+        "center": "811, 333",
+        "IsMultiChanell": false,
+        "Code": "Mod_Remont QUEUE Ocher_Mod_Remont,Ocher_Mod_Remont\nSEIZE Remont,Remont\nDEPART Ocher_Mod_Remont,Ocher_Mod_Remont\nADVANCE 30,5,5\nRELEASE Remont,Remont",
+        "ExtendedParams": [
+          {
+            "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
+            "$values": [
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 5,
+                "Code": "Mod_Remont QUEUE Ocher_Mod_Remont,Ocher_Mod_Remont",
+                "Label": "Mod_Remont",
+                "Name": "QUEUE",
+                "Arguments": [
+                  "Ocher_Mod_Remont"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 3,
+                "Code": "SEIZE Remont,Remont",
+                "Label": null,
+                "Name": "SEIZE",
+                "Arguments": [
+                  "Remont"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 6,
+                "Code": "DEPART Ocher_Mod_Remont,Ocher_Mod_Remont",
+                "Label": null,
+                "Name": "DEPART",
+                "Arguments": [
+                  "Ocher_Mod_Remont"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 2,
+                "Code": "ADVANCE 30,5,5",
+                "Label": null,
+                "Name": "ADVANCE",
+                "Arguments": [
+                  "30",
+                  "5"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 4,
+                "Code": "RELEASE Remont,Remont",
+                "Label": null,
+                "Name": "RELEASE",
+                "Arguments": [
+                  "Remont"
+                ],
+                "Comment": null
+              }
+            ]
+          },
+          "Ocher_Mod_Remont",
+          30.0,
+          5.0,
+          1
+        ],
+        "Name": "Remont",
+        "Label": "Mod_Remont",
+        "BlockColor": "White",
+        "MainColor": "SandyBrown",
+        "FontColor": "Black",
+        "Font": "Microsoft Sans Serif, 8.25pt",
+        "LinesColor": "MediumBlue",
+        "Essence": null
+      },
+      "Digit": 0.7,
+      "ExtendedParams": [
+        {
+          "$type": "GPSS.Visualiztion.VisualBlock, GPSS.Visualiztion",
+          "width": 170,
+          "heigth": 85,
+          "number": 0,
+          "center": "505, 58",
+          "BlockColor": "White",
+          "Code": "GENERATE 20,2,",
+          "Label": null,
+          "Name": "GENERATE",
+          "ExtendedParams": null,
+          "MainColor": "Lime",
+          "FontColor": "Black",
+          "Font": "Microsoft Sans Serif, 8.25pt",
+          "LinesColor": "MediumBlue",
+          "Essence": {
+            "$type": "GPSS.Block, GPSS",
+            "Type": 0,
+            "Code": "GENERATE 20,2,",
+            "Label": null,
+            "Name": "GENERATE",
+            "Arguments": [
+              "20",
+              "2",
+              "",
+              "",
+              ""
+            ],
+            "Comment": null
+          }
+        },
+        {
+          "$type": "GPSS.Visualiztion.Device, GPSS.Visualiztion",
+          "width": 170,
+          "heigth": 170,
+          "number": 2,
+          "center": "236, 349",
+          "IsMultiChanell": false,
+          "Code": "Mod_Diagnostika QUEUE Ocher_Diagnostika,Ocher_Diagnostika\nSEIZE Diagnostika,Diagnostika\nDEPART Ocher_Diagnostika,Ocher_Diagnostika\nADVANCE 20,5,5\nRELEASE Diagnostika,Diagnostika",
+          "ExtendedParams": [
+            {
+              "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
+              "$values": [
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 5,
+                  "Code": "Mod_Diagnostika QUEUE Ocher_Diagnostika,Ocher_Diagnostika",
+                  "Label": "Mod_Diagnostika",
+                  "Name": "QUEUE",
+                  "Arguments": [
+                    "Ocher_Diagnostika"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 3,
+                  "Code": "SEIZE Diagnostika,Diagnostika",
+                  "Label": null,
+                  "Name": "SEIZE",
+                  "Arguments": [
+                    "Diagnostika"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 6,
+                  "Code": "DEPART Ocher_Diagnostika,Ocher_Diagnostika",
+                  "Label": null,
+                  "Name": "DEPART",
+                  "Arguments": [
+                    "Ocher_Diagnostika"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 2,
+                  "Code": "ADVANCE 20,5,5",
+                  "Label": null,
+                  "Name": "ADVANCE",
+                  "Arguments": [
+                    "20",
+                    "5"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 4,
+                  "Code": "RELEASE Diagnostika,Diagnostika",
+                  "Label": null,
+                  "Name": "RELEASE",
+                  "Arguments": [
+                    "Diagnostika"
+                  ],
+                  "Comment": null
+                }
+              ]
+            },
+            "Ocher_Diagnostika",
+            20.0,
+            5.0,
+            1
+          ],
+          "Name": "Diagnostika",
+          "Label": "Mod_Diagnostika",
+          "BlockColor": "White",
+          "MainColor": "SandyBrown",
+          "FontColor": "Black",
+          "Font": "Microsoft Sans Serif, 8.25pt",
+          "LinesColor": "MediumBlue",
+          "Essence": null
+        },
+        {
+          "$type": "GPSS.Visualiztion.Device, GPSS.Visualiztion",
+          "width": 170,
+          "heigth": 170,
+          "number": 4,
+          "center": "811, 333",
+          "IsMultiChanell": false,
+          "Code": "Mod_Remont QUEUE Ocher_Mod_Remont,Ocher_Mod_Remont\nSEIZE Remont,Remont\nDEPART Ocher_Mod_Remont,Ocher_Mod_Remont\nADVANCE 30,5,5\nRELEASE Remont,Remont",
+          "ExtendedParams": [
+            {
+              "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
+              "$values": [
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 5,
+                  "Code": "Mod_Remont QUEUE Ocher_Mod_Remont,Ocher_Mod_Remont",
+                  "Label": "Mod_Remont",
+                  "Name": "QUEUE",
+                  "Arguments": [
+                    "Ocher_Mod_Remont"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 3,
+                  "Code": "SEIZE Remont,Remont",
+                  "Label": null,
+                  "Name": "SEIZE",
+                  "Arguments": [
+                    "Remont"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 6,
+                  "Code": "DEPART Ocher_Mod_Remont,Ocher_Mod_Remont",
+                  "Label": null,
+                  "Name": "DEPART",
+                  "Arguments": [
+                    "Ocher_Mod_Remont"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 2,
+                  "Code": "ADVANCE 30,5,5",
+                  "Label": null,
+                  "Name": "ADVANCE",
+                  "Arguments": [
+                    "30",
+                    "5"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 4,
+                  "Code": "RELEASE Remont,Remont",
+                  "Label": null,
+                  "Name": "RELEASE",
+                  "Arguments": [
+                    "Remont"
+                  ],
+                  "Comment": null
+                }
+              ]
+            },
+            "Ocher_Mod_Remont",
+            30.0,
+            5.0,
+            1
+          ],
+          "Name": "Remont",
+          "Label": "Mod_Remont",
+          "BlockColor": "White",
+          "MainColor": "SandyBrown",
+          "FontColor": "Black",
+          "Font": "Microsoft Sans Serif, 8.25pt",
+          "LinesColor": "MediumBlue",
+          "Essence": null
+        }
+      ],
+      "Code": "TRANSFER .7,,Mod_Remont",
+      "Label": "",
+      "Name": "TRANSFER_VARIABLE",
+      "MainColor": "SandyBrown",
+      "FontColor": "Black",
+      "Font": "Microsoft Sans Serif, 8.25pt",
+      "LinesColor": "MediumBlue",
+      "Essence": {
+        "$type": "GPSS.Block, GPSS",
+        "Type": 9,
+        "Code": "TRANSFER .7,,Mod_Remont",
+        "Label": "",
+        "Name": "TRANSFER_VARIABLE",
+        "Arguments": [
+          "0,7",
+          "",
+          "Mod_Remont"
+        ],
+        "Comment": ""
+      }
+    },
+    {
+      "$type": "GPSS.Visualiztion.Device, GPSS.Visualiztion",
+      "width": 170,
+      "heigth": 170,
+      "number": 2,
+      "center": "236, 349",
+      "IsMultiChanell": false,
+      "Code": "Mod_Diagnostika QUEUE Ocher_Diagnostika,Ocher_Diagnostika\nSEIZE Diagnostika,Diagnostika\nDEPART Ocher_Diagnostika,Ocher_Diagnostika\nADVANCE 20,5,5\nRELEASE Diagnostika,Diagnostika",
+      "ExtendedParams": [
+        {
+          "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
+          "$values": [
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 5,
+              "Code": "Mod_Diagnostika QUEUE Ocher_Diagnostika,Ocher_Diagnostika",
+              "Label": "Mod_Diagnostika",
+              "Name": "QUEUE",
+              "Arguments": [
+                "Ocher_Diagnostika"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 3,
+              "Code": "SEIZE Diagnostika,Diagnostika",
+              "Label": null,
+              "Name": "SEIZE",
+              "Arguments": [
+                "Diagnostika"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 6,
+              "Code": "DEPART Ocher_Diagnostika,Ocher_Diagnostika",
+              "Label": null,
+              "Name": "DEPART",
+              "Arguments": [
+                "Ocher_Diagnostika"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 2,
+              "Code": "ADVANCE 20,5,5",
+              "Label": null,
+              "Name": "ADVANCE",
+              "Arguments": [
+                "20",
+                "5"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 4,
+              "Code": "RELEASE Diagnostika,Diagnostika",
+              "Label": null,
+              "Name": "RELEASE",
+              "Arguments": [
+                "Diagnostika"
+              ],
+              "Comment": null
+            }
+          ]
+        },
+        "Ocher_Diagnostika",
+        20.0,
+        5.0,
+        1
+      ],
+      "Name": "Diagnostika",
+      "Label": "Mod_Diagnostika",
+      "BlockColor": "White",
+      "MainColor": "SandyBrown",
+      "FontColor": "Black",
+      "Font": "Microsoft Sans Serif, 8.25pt",
+      "LinesColor": "MediumBlue",
+      "Essence": null
+    },
+    {
+      "$type": "GPSS.Visualiztion.VisualTransfer, GPSS.Visualiztion",
+      "number": 3,
+      "center": "0, 0",
+      "Transfer": {
+        "Type": 11,
+        "Code": "TRANSFER ,Mod_Sdacha",
+        "Label": "goto",
+        "Name": "TRANSFER_UNCON",
+        "Arguments": [
+          "Mod_Sdacha",
+          null
+        ],
+        "Comment": ""
+      },
+      "StartBlock": {
+        "$type": "GPSS.Visualiztion.Device, GPSS.Visualiztion",
+        "width": 170,
+        "heigth": 170,
+        "number": 2,
+        "center": "236, 349",
+        "IsMultiChanell": false,
+        "Code": "Mod_Diagnostika QUEUE Ocher_Diagnostika,Ocher_Diagnostika\nSEIZE Diagnostika,Diagnostika\nDEPART Ocher_Diagnostika,Ocher_Diagnostika\nADVANCE 20,5,5\nRELEASE Diagnostika,Diagnostika",
+        "ExtendedParams": [
+          {
+            "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
+            "$values": [
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 5,
+                "Code": "Mod_Diagnostika QUEUE Ocher_Diagnostika,Ocher_Diagnostika",
+                "Label": "Mod_Diagnostika",
+                "Name": "QUEUE",
+                "Arguments": [
+                  "Ocher_Diagnostika"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 3,
+                "Code": "SEIZE Diagnostika,Diagnostika",
+                "Label": null,
+                "Name": "SEIZE",
+                "Arguments": [
+                  "Diagnostika"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 6,
+                "Code": "DEPART Ocher_Diagnostika,Ocher_Diagnostika",
+                "Label": null,
+                "Name": "DEPART",
+                "Arguments": [
+                  "Ocher_Diagnostika"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 2,
+                "Code": "ADVANCE 20,5,5",
+                "Label": null,
+                "Name": "ADVANCE",
+                "Arguments": [
+                  "20",
+                  "5"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 4,
+                "Code": "RELEASE Diagnostika,Diagnostika",
+                "Label": null,
+                "Name": "RELEASE",
+                "Arguments": [
+                  "Diagnostika"
+                ],
+                "Comment": null
+              }
+            ]
+          },
+          "Ocher_Diagnostika",
+          20.0,
+          5.0,
+          1
+        ],
+        "Name": "Diagnostika",
+        "Label": "Mod_Diagnostika",
+        "BlockColor": "White",
+        "MainColor": "SandyBrown",
+        "FontColor": "Black",
+        "Font": "Microsoft Sans Serif, 8.25pt",
+        "LinesColor": "MediumBlue",
+        "Essence": null
+      },
+      "Block1": {
+        "$type": "GPSS.Visualiztion.Device, GPSS.Visualiztion",
+        "width": 170,
+        "heigth": 170,
+        "number": 5,
+        "center": "526, 540",
+        "IsMultiChanell": false,
+        "Code": "Mod_Sdacha QUEUE Ocher_sdacha,Ocher_sdacha\nSEIZE Sdacha,Sdacha\nDEPART Ocher_sdacha,Ocher_sdacha\nADVANCE 10,0,0\nRELEASE Sdacha,Sdacha",
+        "ExtendedParams": [
+          {
+            "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
+            "$values": [
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 5,
+                "Code": "Mod_Sdacha QUEUE Ocher_sdacha,Ocher_sdacha",
+                "Label": "Mod_Sdacha",
+                "Name": "QUEUE",
+                "Arguments": [
+                  "Ocher_sdacha"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 3,
+                "Code": "SEIZE Sdacha,Sdacha",
+                "Label": null,
+                "Name": "SEIZE",
+                "Arguments": [
+                  "Sdacha"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 6,
+                "Code": "DEPART Ocher_sdacha,Ocher_sdacha",
+                "Label": null,
+                "Name": "DEPART",
+                "Arguments": [
+                  "Ocher_sdacha"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 2,
+                "Code": "ADVANCE 10,0,0",
+                "Label": null,
+                "Name": "ADVANCE",
+                "Arguments": [
+                  "10",
+                  "0"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 4,
+                "Code": "RELEASE Sdacha,Sdacha",
+                "Label": null,
+                "Name": "RELEASE",
+                "Arguments": [
+                  "Sdacha"
+                ],
+                "Comment": null
+              }
+            ]
+          },
+          "Ocher_sdacha",
+          10.0,
+          0.0,
+          1
+        ],
+        "Name": "Sdacha",
+        "Label": "Mod_Sdacha",
+        "BlockColor": "White",
+        "MainColor": "SandyBrown",
+        "FontColor": "Black",
+        "Font": "Microsoft Sans Serif, 8.25pt",
+        "LinesColor": "MediumBlue",
+        "Essence": null
+      },
+      "Block2": null,
+      "Digit": 0.0,
+      "ExtendedParams": [
+        {
+          "$type": "GPSS.Visualiztion.Device, GPSS.Visualiztion",
+          "width": 170,
+          "heigth": 170,
+          "number": 2,
+          "center": "236, 349",
+          "IsMultiChanell": false,
+          "Code": "Mod_Diagnostika QUEUE Ocher_Diagnostika,Ocher_Diagnostika\nSEIZE Diagnostika,Diagnostika\nDEPART Ocher_Diagnostika,Ocher_Diagnostika\nADVANCE 20,5,5\nRELEASE Diagnostika,Diagnostika",
+          "ExtendedParams": [
+            {
+              "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
+              "$values": [
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 5,
+                  "Code": "Mod_Diagnostika QUEUE Ocher_Diagnostika,Ocher_Diagnostika",
+                  "Label": "Mod_Diagnostika",
+                  "Name": "QUEUE",
+                  "Arguments": [
+                    "Ocher_Diagnostika"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 3,
+                  "Code": "SEIZE Diagnostika,Diagnostika",
+                  "Label": null,
+                  "Name": "SEIZE",
+                  "Arguments": [
+                    "Diagnostika"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 6,
+                  "Code": "DEPART Ocher_Diagnostika,Ocher_Diagnostika",
+                  "Label": null,
+                  "Name": "DEPART",
+                  "Arguments": [
+                    "Ocher_Diagnostika"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 2,
+                  "Code": "ADVANCE 20,5,5",
+                  "Label": null,
+                  "Name": "ADVANCE",
+                  "Arguments": [
+                    "20",
+                    "5"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 4,
+                  "Code": "RELEASE Diagnostika,Diagnostika",
+                  "Label": null,
+                  "Name": "RELEASE",
+                  "Arguments": [
+                    "Diagnostika"
+                  ],
+                  "Comment": null
+                }
+              ]
+            },
+            "Ocher_Diagnostika",
+            20.0,
+            5.0,
+            1
+          ],
+          "Name": "Diagnostika",
+          "Label": "Mod_Diagnostika",
+          "BlockColor": "White",
+          "MainColor": "SandyBrown",
+          "FontColor": "Black",
+          "Font": "Microsoft Sans Serif, 8.25pt",
+          "LinesColor": "MediumBlue",
+          "Essence": null
+        },
+        {
+          "$type": "GPSS.Visualiztion.Device, GPSS.Visualiztion",
+          "width": 170,
+          "heigth": 170,
+          "number": 5,
+          "center": "526, 540",
+          "IsMultiChanell": false,
+          "Code": "Mod_Sdacha QUEUE Ocher_sdacha,Ocher_sdacha\nSEIZE Sdacha,Sdacha\nDEPART Ocher_sdacha,Ocher_sdacha\nADVANCE 10,0,0\nRELEASE Sdacha,Sdacha",
+          "ExtendedParams": [
+            {
+              "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
+              "$values": [
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 5,
+                  "Code": "Mod_Sdacha QUEUE Ocher_sdacha,Ocher_sdacha",
+                  "Label": "Mod_Sdacha",
+                  "Name": "QUEUE",
+                  "Arguments": [
+                    "Ocher_sdacha"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 3,
+                  "Code": "SEIZE Sdacha,Sdacha",
+                  "Label": null,
+                  "Name": "SEIZE",
+                  "Arguments": [
+                    "Sdacha"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 6,
+                  "Code": "DEPART Ocher_sdacha,Ocher_sdacha",
+                  "Label": null,
+                  "Name": "DEPART",
+                  "Arguments": [
+                    "Ocher_sdacha"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 2,
+                  "Code": "ADVANCE 10,0,0",
+                  "Label": null,
+                  "Name": "ADVANCE",
+                  "Arguments": [
+                    "10",
+                    "0"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 4,
+                  "Code": "RELEASE Sdacha,Sdacha",
+                  "Label": null,
+                  "Name": "RELEASE",
+                  "Arguments": [
+                    "Sdacha"
+                  ],
+                  "Comment": null
+                }
+              ]
+            },
+            "Ocher_sdacha",
+            10.0,
+            0.0,
+            1
+          ],
+          "Name": "Sdacha",
+          "Label": "Mod_Sdacha",
+          "BlockColor": "White",
+          "MainColor": "SandyBrown",
+          "FontColor": "Black",
+          "Font": "Microsoft Sans Serif, 8.25pt",
+          "LinesColor": "MediumBlue",
+          "Essence": null
+        },
+        null
+      ],
+      "Code": "TRANSFER ,Mod_Sdacha",
+      "Label": "goto",
+      "Name": "TRANSFER_UNCON",
+      "MainColor": "SandyBrown",
+      "FontColor": "Black",
+      "Font": "Microsoft Sans Serif, 8.25pt",
+      "LinesColor": "MediumBlue",
+      "Essence": {
+        "$type": "GPSS.Block, GPSS",
+        "Type": 11,
+        "Code": "TRANSFER ,Mod_Sdacha",
+        "Label": "goto",
+        "Name": "TRANSFER_UNCON",
+        "Arguments": [
+          "Mod_Sdacha",
+          null
+        ],
+        "Comment": ""
+      }
+    },
+    {
+      "$type": "GPSS.Visualiztion.Device, GPSS.Visualiztion",
+      "width": 170,
+      "heigth": 170,
+      "number": 4,
+      "center": "811, 333",
+      "IsMultiChanell": false,
+      "Code": "Mod_Remont QUEUE Ocher_Mod_Remont,Ocher_Mod_Remont\nSEIZE Remont,Remont\nDEPART Ocher_Mod_Remont,Ocher_Mod_Remont\nADVANCE 30,5,5\nRELEASE Remont,Remont",
+      "ExtendedParams": [
+        {
+          "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
+          "$values": [
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 5,
+              "Code": "Mod_Remont QUEUE Ocher_Mod_Remont,Ocher_Mod_Remont",
+              "Label": "Mod_Remont",
+              "Name": "QUEUE",
+              "Arguments": [
+                "Ocher_Mod_Remont"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 3,
+              "Code": "SEIZE Remont,Remont",
+              "Label": null,
+              "Name": "SEIZE",
+              "Arguments": [
+                "Remont"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 6,
+              "Code": "DEPART Ocher_Mod_Remont,Ocher_Mod_Remont",
+              "Label": null,
+              "Name": "DEPART",
+              "Arguments": [
+                "Ocher_Mod_Remont"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 2,
+              "Code": "ADVANCE 30,5,5",
+              "Label": null,
+              "Name": "ADVANCE",
+              "Arguments": [
+                "30",
+                "5"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 4,
+              "Code": "RELEASE Remont,Remont",
+              "Label": null,
+              "Name": "RELEASE",
+              "Arguments": [
+                "Remont"
+              ],
+              "Comment": null
+            }
+          ]
+        },
+        "Ocher_Mod_Remont",
+        30.0,
+        5.0,
+        1
+      ],
+      "Name": "Remont",
+      "Label": "Mod_Remont",
+      "BlockColor": "White",
+      "MainColor": "SandyBrown",
+      "FontColor": "Black",
+      "Font": "Microsoft Sans Serif, 8.25pt",
+      "LinesColor": "MediumBlue",
+      "Essence": null
+    },
+    {
+      "$type": "GPSS.Visualiztion.Device, GPSS.Visualiztion",
+      "width": 170,
+      "heigth": 170,
+      "number": 5,
+      "center": "526, 540",
+      "IsMultiChanell": false,
+      "Code": "Mod_Sdacha QUEUE Ocher_sdacha,Ocher_sdacha\nSEIZE Sdacha,Sdacha\nDEPART Ocher_sdacha,Ocher_sdacha\nADVANCE 10,0,0\nRELEASE Sdacha,Sdacha",
+      "ExtendedParams": [
+        {
+          "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
+          "$values": [
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 5,
+              "Code": "Mod_Sdacha QUEUE Ocher_sdacha,Ocher_sdacha",
+              "Label": "Mod_Sdacha",
+              "Name": "QUEUE",
+              "Arguments": [
+                "Ocher_sdacha"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 3,
+              "Code": "SEIZE Sdacha,Sdacha",
+              "Label": null,
+              "Name": "SEIZE",
+              "Arguments": [
+                "Sdacha"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 6,
+              "Code": "DEPART Ocher_sdacha,Ocher_sdacha",
+              "Label": null,
+              "Name": "DEPART",
+              "Arguments": [
+                "Ocher_sdacha"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 2,
+              "Code": "ADVANCE 10,0,0",
+              "Label": null,
+              "Name": "ADVANCE",
+              "Arguments": [
+                "10",
+                "0"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 4,
+              "Code": "RELEASE Sdacha,Sdacha",
+              "Label": null,
+              "Name": "RELEASE",
+              "Arguments": [
+                "Sdacha"
+              ],
+              "Comment": null
+            }
+          ]
+        },
+        "Ocher_sdacha",
+        10.0,
+        0.0,
+        1
+      ],
+      "Name": "Sdacha",
+      "Label": "Mod_Sdacha",
+      "BlockColor": "White",
+      "MainColor": "SandyBrown",
+      "FontColor": "Black",
+      "Font": "Microsoft Sans Serif, 8.25pt",
+      "LinesColor": "MediumBlue",
+      "Essence": null
+    },
+    {
+      "$type": "GPSS.Visualiztion.VisualBlock, GPSS.Visualiztion",
+      "width": 170,
+      "heigth": 85,
+      "number": 6,
+      "center": "523, 740",
+      "BlockColor": "White",
+      "Code": "TERMINATE 1,",
+      "Label": null,
+      "Name": "TERMINATE",
+      "ExtendedParams": null,
+      "MainColor": "Red",
+      "FontColor": "Black",
+      "Font": "Microsoft Sans Serif, 8.25pt",
+      "LinesColor": "MediumBlue",
+      "Essence": {
+        "$type": "GPSS.Block, GPSS",
+        "Type": 1,
+        "Code": "TERMINATE 1,",
+        "Label": null,
+        "Name": "TERMINATE",
+        "Arguments": [
+          "1",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "Comment": null
+      }
+    }
+  ],
+  "DefaultFont": "Microsoft Sans Serif, 8.25pt",
+  "DefaultFontColor": "Black",
+  "BackgroundColor": "188, 213, 231",
+  "DefaultElementsColor": "SandyBrown",
+  "DefaultElementsLinesColor": "MediumBlue"
+}

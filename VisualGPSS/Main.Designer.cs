@@ -494,7 +494,6 @@
             this.Controls.Add(this.menuStrip);
             this.MainMenuStrip = this.menuStrip;
             this.Name = "Main";
-            this.Sizable = false;
             this.Text = "VisualGPSS";
             this.SizeChanged += new System.EventHandler(this.graphicsRefresh);
             this.menuStrip.ResumeLayout(false);

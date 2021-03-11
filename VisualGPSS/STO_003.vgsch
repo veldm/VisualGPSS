@@ -5,7 +5,7 @@
       "width": 170,
       "heigth": 85,
       "number": 0,
-      "center": "505, 58",
+      "center": "370, 63",
       "BlockColor": "White",
       "Code": "GENERATE 20,2,",
       "Label": null,
@@ -34,7 +34,7 @@
     {
       "$type": "GPSS.Visualiztion.VisualTransfer, GPSS.Visualiztion",
       "number": 1,
-      "center": "505, 195",
+      "center": "370, 196",
       "Transfer": {
         "Type": 9,
         "Code": "TRANSFER .7,,Mod_Remont",
@@ -51,7 +51,7 @@
         "width": 170,
         "heigth": 85,
         "number": 0,
-        "center": "505, 58",
+        "center": "370, 63",
         "BlockColor": "White",
         "Code": "GENERATE 20,2,",
         "Label": null,
@@ -82,9 +82,9 @@
         "width": 170,
         "heigth": 170,
         "number": 2,
-        "center": "236, 349",
+        "center": "135, 333",
         "IsMultiChanell": false,
-        "Code": "Mod_Diagnostika QUEUE Ocher_Diagnostika,Ocher_Diagnostika\nSEIZE Diagnostika,Diagnostika\nDEPART Ocher_Diagnostika,Ocher_Diagnostika\nADVANCE 20,5,5\nRELEASE Diagnostika,Diagnostika",
+        "Code": "Mod_Diagnostika QUEUE Ocher_Diagnostika,Ocher_Diagnostika\nSEIZE Diagnostika,Diagnostika\nDEPART Ocher_Diagnostika,Ocher_Diagnostika\nADVANCE 20,5,5\nRELEASE Diagnostika,Diagnostika\n",
         "ExtendedParams": [
           {
             "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -166,9 +166,9 @@
         "width": 170,
         "heigth": 170,
         "number": 4,
-        "center": "811, 333",
+        "center": "628, 329",
         "IsMultiChanell": false,
-        "Code": "Mod_Remont QUEUE Ocher_Mod_Remont,Ocher_Mod_Remont\nSEIZE Remont,Remont\nDEPART Ocher_Mod_Remont,Ocher_Mod_Remont\nADVANCE 30,5,5\nRELEASE Remont,Remont",
+        "Code": "Mod_Remont QUEUE Ocher_Mod_Remont,Ocher_Mod_Remont\nSEIZE Remont,Remont\nDEPART Ocher_Mod_Remont,Ocher_Mod_Remont\nADVANCE 30,5,5\nRELEASE Remont,Remont\n",
         "ExtendedParams": [
           {
             "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -252,7 +252,7 @@
           "width": 170,
           "heigth": 85,
           "number": 0,
-          "center": "505, 58",
+          "center": "370, 63",
           "BlockColor": "White",
           "Code": "GENERATE 20,2,",
           "Label": null,
@@ -283,9 +283,9 @@
           "width": 170,
           "heigth": 170,
           "number": 2,
-          "center": "236, 349",
+          "center": "135, 333",
           "IsMultiChanell": false,
-          "Code": "Mod_Diagnostika QUEUE Ocher_Diagnostika,Ocher_Diagnostika\nSEIZE Diagnostika,Diagnostika\nDEPART Ocher_Diagnostika,Ocher_Diagnostika\nADVANCE 20,5,5\nRELEASE Diagnostika,Diagnostika",
+          "Code": "Mod_Diagnostika QUEUE Ocher_Diagnostika,Ocher_Diagnostika\nSEIZE Diagnostika,Diagnostika\nDEPART Ocher_Diagnostika,Ocher_Diagnostika\nADVANCE 20,5,5\nRELEASE Diagnostika,Diagnostika\n",
           "ExtendedParams": [
             {
               "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -367,9 +367,9 @@
           "width": 170,
           "heigth": 170,
           "number": 4,
-          "center": "811, 333",
+          "center": "628, 329",
           "IsMultiChanell": false,
-          "Code": "Mod_Remont QUEUE Ocher_Mod_Remont,Ocher_Mod_Remont\nSEIZE Remont,Remont\nDEPART Ocher_Mod_Remont,Ocher_Mod_Remont\nADVANCE 30,5,5\nRELEASE Remont,Remont",
+          "Code": "Mod_Remont QUEUE Ocher_Mod_Remont,Ocher_Mod_Remont\nSEIZE Remont,Remont\nDEPART Ocher_Mod_Remont,Ocher_Mod_Remont\nADVANCE 30,5,5\nRELEASE Remont,Remont\n",
           "ExtendedParams": [
             {
               "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -473,9 +473,9 @@
       "width": 170,
       "heigth": 170,
       "number": 2,
-      "center": "236, 349",
+      "center": "135, 333",
       "IsMultiChanell": false,
-      "Code": "Mod_Diagnostika QUEUE Ocher_Diagnostika,Ocher_Diagnostika\nSEIZE Diagnostika,Diagnostika\nDEPART Ocher_Diagnostika,Ocher_Diagnostika\nADVANCE 20,5,5\nRELEASE Diagnostika,Diagnostika",
+      "Code": "Mod_Diagnostika QUEUE Ocher_Diagnostika,Ocher_Diagnostika\nSEIZE Diagnostika,Diagnostika\nDEPART Ocher_Diagnostika,Ocher_Diagnostika\nADVANCE 20,5,5\nRELEASE Diagnostika,Diagnostika\n",
       "ExtendedParams": [
         {
           "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -572,9 +572,9 @@
         "width": 170,
         "heigth": 170,
         "number": 2,
-        "center": "236, 349",
+        "center": "135, 333",
         "IsMultiChanell": false,
-        "Code": "Mod_Diagnostika QUEUE Ocher_Diagnostika,Ocher_Diagnostika\nSEIZE Diagnostika,Diagnostika\nDEPART Ocher_Diagnostika,Ocher_Diagnostika\nADVANCE 20,5,5\nRELEASE Diagnostika,Diagnostika",
+        "Code": "Mod_Diagnostika QUEUE Ocher_Diagnostika,Ocher_Diagnostika\nSEIZE Diagnostika,Diagnostika\nDEPART Ocher_Diagnostika,Ocher_Diagnostika\nADVANCE 20,5,5\nRELEASE Diagnostika,Diagnostika\n",
         "ExtendedParams": [
           {
             "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -656,9 +656,9 @@
         "width": 170,
         "heigth": 170,
         "number": 5,
-        "center": "526, 540",
+        "center": "369, 577",
         "IsMultiChanell": false,
-        "Code": "Mod_Sdacha QUEUE Ocher_sdacha,Ocher_sdacha\nSEIZE Sdacha,Sdacha\nDEPART Ocher_sdacha,Ocher_sdacha\nADVANCE 10,0,0\nRELEASE Sdacha,Sdacha",
+        "Code": "Mod_Sdacha QUEUE Ocher_sdacha,Ocher_sdacha\nSEIZE Sdacha,Sdacha\nDEPART Ocher_sdacha,Ocher_sdacha\nADVANCE 10,0,0\nRELEASE Sdacha,Sdacha\n",
         "ExtendedParams": [
           {
             "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -743,9 +743,9 @@
           "width": 170,
           "heigth": 170,
           "number": 2,
-          "center": "236, 349",
+          "center": "135, 333",
           "IsMultiChanell": false,
-          "Code": "Mod_Diagnostika QUEUE Ocher_Diagnostika,Ocher_Diagnostika\nSEIZE Diagnostika,Diagnostika\nDEPART Ocher_Diagnostika,Ocher_Diagnostika\nADVANCE 20,5,5\nRELEASE Diagnostika,Diagnostika",
+          "Code": "Mod_Diagnostika QUEUE Ocher_Diagnostika,Ocher_Diagnostika\nSEIZE Diagnostika,Diagnostika\nDEPART Ocher_Diagnostika,Ocher_Diagnostika\nADVANCE 20,5,5\nRELEASE Diagnostika,Diagnostika\n",
           "ExtendedParams": [
             {
               "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -827,9 +827,9 @@
           "width": 170,
           "heigth": 170,
           "number": 5,
-          "center": "526, 540",
+          "center": "369, 577",
           "IsMultiChanell": false,
-          "Code": "Mod_Sdacha QUEUE Ocher_sdacha,Ocher_sdacha\nSEIZE Sdacha,Sdacha\nDEPART Ocher_sdacha,Ocher_sdacha\nADVANCE 10,0,0\nRELEASE Sdacha,Sdacha",
+          "Code": "Mod_Sdacha QUEUE Ocher_sdacha,Ocher_sdacha\nSEIZE Sdacha,Sdacha\nDEPART Ocher_sdacha,Ocher_sdacha\nADVANCE 10,0,0\nRELEASE Sdacha,Sdacha\n",
           "ExtendedParams": [
             {
               "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -933,9 +933,9 @@
       "width": 170,
       "heigth": 170,
       "number": 4,
-      "center": "811, 333",
+      "center": "628, 329",
       "IsMultiChanell": false,
-      "Code": "Mod_Remont QUEUE Ocher_Mod_Remont,Ocher_Mod_Remont\nSEIZE Remont,Remont\nDEPART Ocher_Mod_Remont,Ocher_Mod_Remont\nADVANCE 30,5,5\nRELEASE Remont,Remont",
+      "Code": "Mod_Remont QUEUE Ocher_Mod_Remont,Ocher_Mod_Remont\nSEIZE Remont,Remont\nDEPART Ocher_Mod_Remont,Ocher_Mod_Remont\nADVANCE 30,5,5\nRELEASE Remont,Remont\n",
       "ExtendedParams": [
         {
           "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -1017,9 +1017,9 @@
       "width": 170,
       "heigth": 170,
       "number": 5,
-      "center": "526, 540",
+      "center": "369, 577",
       "IsMultiChanell": false,
-      "Code": "Mod_Sdacha QUEUE Ocher_sdacha,Ocher_sdacha\nSEIZE Sdacha,Sdacha\nDEPART Ocher_sdacha,Ocher_sdacha\nADVANCE 10,0,0\nRELEASE Sdacha,Sdacha",
+      "Code": "Mod_Sdacha QUEUE Ocher_sdacha,Ocher_sdacha\nSEIZE Sdacha,Sdacha\nDEPART Ocher_sdacha,Ocher_sdacha\nADVANCE 10,0,0\nRELEASE Sdacha,Sdacha\n",
       "ExtendedParams": [
         {
           "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -1101,7 +1101,7 @@
       "width": 170,
       "heigth": 85,
       "number": 6,
-      "center": "523, 740",
+      "center": "736, 575",
       "BlockColor": "White",
       "Code": "TERMINATE 1,",
       "Label": null,

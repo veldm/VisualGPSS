@@ -49,21 +49,98 @@ namespace GPSS.Visualiztion
         public List<VisualElement> Elements => elements;
 
         [Browsable(true), DisplayName("Шрифт")]
-        public Font DefaultFont { get => defaultFont; set => defaultFont = value; }
+        public Font DefaultFont
+        {
+            get => defaultFont;
+            set
+            {
+                if (Elements.Count > 35)
+                {
+                    Parallel.ForEach(Elements.Where(x => x.Font == defaultFont), new ParallelOptions()
+                        { MaxDegreeOfParallelism = Environment.ProcessorCount * 8 },
+                            element => { element.Font = value; });
+                }
+                else
+                {
+                    foreach (Font font in from VisualElement element in Elements
+                                          where element.Font == defaultFont
+                                          select element.Font = value) ;
+                }
+                defaultFont = value;
+            }
+        }
 
         [Browsable(true), DisplayName("Цвет шрифта")]
-        public Color DefaultFontColor { get => defaultFontColor; set => defaultFontColor = value; }
+        public Color DefaultFontColor
+        {
+            get => defaultFontColor;
+            set
+            {
+                if (Elements.Count > 35)
+                {
+                    Parallel.ForEach(Elements.Where(x => x.FontColor == defaultFontColor),
+                        new ParallelOptions()
+                            { MaxDegreeOfParallelism = Environment.ProcessorCount * 8 },
+                                element => { element.FontColor = value; });
+                }
+                else
+                {
+                    foreach (Color color in from VisualElement element in Elements
+                                          where element.FontColor == defaultFontColor
+                                          select element.FontColor = value) ;
+                }
+                defaultFontColor = value;
+            }
+        }
 
         [Browsable(true), DisplayName("Цвет фона")]
         public Color BackgroundColor { get => backgroundColor; set => backgroundColor = value; }
 
         [Browsable(true), DisplayName("Цвет тела блока по умолчанию")]
         public Color DefaultElementsColor
-        { get => defaultElementsColor; set => defaultElementsColor = value; }
+        {
+            get => defaultElementsColor;
+            set
+            {
+                if (Elements.Count > 35)
+                {
+                    Parallel.ForEach(Elements.Where(x => x.MainColor == defaultElementsColor),
+                        new ParallelOptions()
+                        { MaxDegreeOfParallelism = Environment.ProcessorCount * 8 },
+                                element => { element.MainColor = value; });
+                }
+                else
+                {
+                    foreach (Color color in from VisualElement element in Elements
+                                            where element.MainColor == defaultElementsColor
+                                            select element.MainColor = value) ;
+                }
+                defaultElementsColor = value;
+            }
+        }
 
         [Browsable(true), DisplayName("Цвет линий по умолчанию")]
         public Color DefaultElementsLinesColor
-        { get => defaultLinesColor; set => defaultLinesColor = value; }
+        {
+            get => defaultLinesColor;
+            set
+            {
+                if (Elements.Count > 35)
+                {
+                    Parallel.ForEach(Elements.Where(x => x.LinesColor == defaultLinesColor),
+                        new ParallelOptions()
+                        { MaxDegreeOfParallelism = Environment.ProcessorCount * 8 },
+                                element => { element.LinesColor = value; });
+                }
+                else
+                {
+                    foreach (Color color in from VisualElement element in Elements
+                                            where element.LinesColor == defaultLinesColor
+                                            select element.LinesColor = value) ;
+                }
+                defaultLinesColor = value;
+            }
+        }
 
         #endregion Свойства
 

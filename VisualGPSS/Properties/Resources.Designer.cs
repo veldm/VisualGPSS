@@ -365,6 +365,26 @@ namespace VisualGPSS.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap zoomin_zoom_search_find_1530 {
+            get {
+                object obj = ResourceManager.GetObject("zoomin_zoom_search_find_1530", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zoomout_zoom_search_find_1530 {
+            get {
+                object obj = ResourceManager.GetObject("zoomout_zoom_search_find_1530", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap устройство1 {
             get {
                 object obj = ResourceManager.GetObject("устройство1", resourceCulture);

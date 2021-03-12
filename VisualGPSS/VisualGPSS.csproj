@@ -255,12 +255,17 @@
   <ItemGroup>
     <None Include="Resources\diskette_save_saveas_15141.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\zoomin_zoom_search_find_1530.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\устройство1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\устройствоN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoomout_zoom_search_find_1530.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -139,6 +139,9 @@
   <data name="settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="353443-clock-stopwatch-timer-watch_107503" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\353443-clock-stopwatch-timer-watch_107503.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="delete_delete_exit_1577" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete_delete_exit_1577.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -202,16 +205,19 @@
   <data name="kisspng-brand-symbol-font-utilities-terminal-5ab0990dc46a48.96718621158215229578045" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-brand-symbol-font-utilities-terminal-5ab0990dc46a48.967186211582152295780451.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="zoomin_zoom_search_find_1530" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zoomin_zoom_search_find_1530.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="open_256_icon-icons.com_76002" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\open_256_icon-icons.com_76002.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="353443-clock-stopwatch-timer-watch_107503" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\353443-clock-stopwatch-timer-watch_107503.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="устройствоN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\устройствоN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="устройствоN" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\устройствоN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="zoomout_zoom_search_find_1530" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zoomout_zoom_search_find_1530.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

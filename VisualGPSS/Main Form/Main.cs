@@ -68,6 +68,7 @@ namespace VisualGPSS
         public Main(string openFileName = null)
         {
             InitializeComponent();
+            Show();
             filePath = openFileName;
             //typeof(Panel).InvokeMember("DoubleBuffered",
             //    BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic,

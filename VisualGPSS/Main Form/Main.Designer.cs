@@ -200,7 +200,7 @@
             this.settingsButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.settingsButton.Location = new System.Drawing.Point(885, 23);
             this.settingsButton.Name = "settingsButton";
-            this.settingsButton.Size = new System.Drawing.Size(55, 37);
+            this.settingsButton.Size = new System.Drawing.Size(38, 37);
             this.settingsButton.TabIndex = 5;
             this.settingsButton.Text = "⚙";
             this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
@@ -226,7 +226,7 @@
             // timer
             // 
             this.timer.Interval = 20;
-            this.timer.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timer.Tick += new System.EventHandler(this.graphicsRefresh);
             // 
             // BlockOrElementCMS
             // 

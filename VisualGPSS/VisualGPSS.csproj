@@ -51,6 +51,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Main Form\Main.Features.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main Form\Main.Mouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main Form\Main.Opeartors.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Subsidiary Forms\Device Form\Device.Create.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,10 +84,10 @@
     <Compile Include="Subsidiary Forms\Command Form\AtomaryElement.Designer.cs">
       <DependentUpon>AtomaryElement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main.cs">
+    <Compile Include="Main Form\Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
+    <Compile Include="Main Form\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -113,7 +122,7 @@
     <EmbeddedResource Include="Subsidiary Forms\Block form\Block.Main.resx">
       <DependentUpon>Block.Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
+    <EmbeddedResource Include="Main Form\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -246,9 +255,7 @@
   <ItemGroup>
     <None Include="Resources\diskette_save_saveas_15141.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Main Form\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\устройство1.png" />
   </ItemGroup>

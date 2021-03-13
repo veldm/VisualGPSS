@@ -22,6 +22,9 @@ namespace VisualGPSS
         {
             X = pictureBox.PointToClient(Cursor.Position).X + hScrollBar1.Value,
             Y = pictureBox.PointToClient(Cursor.Position).Y + vScrollBar1.Value
+
+            //X = (int)((pictureBox.PointToClient(Cursor.Position).X + hScrollBar1.Value) * scale),
+            //Y = (int)((pictureBox.PointToClient(Cursor.Position).Y + vScrollBar1.Value) * scale)
         };
 
         private Point RightBottom
@@ -57,6 +60,7 @@ namespace VisualGPSS
         private bool resizing;
         private (bool isGoing, int xc, int yc) moving;
         private Bitmap bitmap;
+        double scale = 1;
 
         private delegate void Creator(object param, Point point);
         private (Creator method, object parameter)? creatingOperator;
@@ -120,9 +124,12 @@ namespace VisualGPSS
                     GC.Collect();
                     lock (bitmap)
                     {
-                        pictureBox.Image = bitmap.Clone(new Rectangle(hScrollBar1.Value,
+                        Bitmap _bitmap = new Bitmap(bitmap, new Size
+                            ((int)(bitmap.Width * scale), (int)(bitmap.Height * scale)));
+                        pictureBox.Image = _bitmap.Clone(new Rectangle(hScrollBar1.Value,
                             vScrollBar1.Value, pictureBox.Width, pictureBox.Height),
                             bitmap.PixelFormat);
+                        _bitmap.Dispose();
                         pictureBox.Refresh();
                     }
                 }

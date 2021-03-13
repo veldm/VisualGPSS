@@ -60,6 +60,9 @@
     <Compile Include="Main Form\Main.Opeartors.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Main Form\Main.Scale.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Subsidiary Forms\Device Form\Device.Create.cs">
       <SubType>Form</SubType>
     </Compile>

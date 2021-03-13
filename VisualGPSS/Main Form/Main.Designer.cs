@@ -40,9 +40,9 @@
             this.печатьСхемыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сохранитьКакИзображениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.масштабToolStripMenuItem = new System.Windows.Forms.ToolStripComboBox();
-            this.увеличитьМасштабToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.upScaleMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scaleCB = new System.Windows.Forms.ToolStripComboBox();
+            this.downScaleMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.запускСимуляцииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsButton = new System.Windows.Forms.Label();
             this.helpButton = new System.Windows.Forms.Label();
@@ -157,9 +157,9 @@
             this.печатьСхемыToolStripMenuItem,
             this.сохранитьКакИзображениеToolStripMenuItem,
             this.toolStripSeparator1,
-            this.toolStripMenuItem1,
-            this.масштабToolStripMenuItem,
-            this.увеличитьМасштабToolStripMenuItem});
+            this.upScaleMenuItem,
+            this.scaleCB,
+            this.downScaleMenuItem});
             this.средстваToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.средстваToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.средстваToolStripMenuItem.Name = "средстваToolStripMenuItem";
@@ -196,26 +196,29 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(259, 6);
             // 
-            // toolStripMenuItem1
+            // upScaleMenuItem
             // 
-            this.toolStripMenuItem1.Image = global::VisualGPSS.Properties.Resources.zoomin_zoom_search_find_1530;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(262, 26);
-            this.toolStripMenuItem1.Text = "Увеличить масштаб";
+            this.upScaleMenuItem.Image = global::VisualGPSS.Properties.Resources.zoomin_zoom_search_find_1530;
+            this.upScaleMenuItem.Name = "upScaleMenuItem";
+            this.upScaleMenuItem.Size = new System.Drawing.Size(262, 26);
+            this.upScaleMenuItem.Text = "Увеличить масштаб";
+            this.upScaleMenuItem.Click += new System.EventHandler(this.UpScale);
             // 
-            // масштабToolStripMenuItem
+            // scaleCB
             // 
-            this.масштабToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.масштабToolStripMenuItem.Name = "масштабToolStripMenuItem";
-            this.масштабToolStripMenuItem.Size = new System.Drawing.Size(100, 25);
-            this.масштабToolStripMenuItem.Text = "100%";
+            this.scaleCB.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.scaleCB.Name = "scaleCB";
+            this.scaleCB.Size = new System.Drawing.Size(100, 25);
+            this.scaleCB.Text = "100%";
+            this.scaleCB.TextChanged += new System.EventHandler(this.ScaleChanged);
             // 
-            // увеличитьМасштабToolStripMenuItem
+            // downScaleMenuItem
             // 
-            this.увеличитьМасштабToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.zoomout_zoom_search_find_1530;
-            this.увеличитьМасштабToolStripMenuItem.Name = "увеличитьМасштабToolStripMenuItem";
-            this.увеличитьМасштабToolStripMenuItem.Size = new System.Drawing.Size(262, 26);
-            this.увеличитьМасштабToolStripMenuItem.Text = "Уменьшить масштаб";
+            this.downScaleMenuItem.Image = global::VisualGPSS.Properties.Resources.zoomout_zoom_search_find_1530;
+            this.downScaleMenuItem.Name = "downScaleMenuItem";
+            this.downScaleMenuItem.Size = new System.Drawing.Size(262, 26);
+            this.downScaleMenuItem.Text = "Уменьшить масштаб";
+            this.downScaleMenuItem.Click += new System.EventHandler(this.DownScale);
             // 
             // запускСимуляцииToolStripMenuItem
             // 
@@ -584,10 +587,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button multiChannelDeviceButton;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.ToolStripComboBox масштабToolStripMenuItem;
+        private System.Windows.Forms.ToolStripComboBox scaleCB;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem увеличитьМасштабToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem upScaleMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem downScaleMenuItem;
     }
 }
 

@@ -146,7 +146,7 @@
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip.Size = new System.Drawing.Size(393, 25);
+            this.menuStrip.Size = new System.Drawing.Size(273, 25);
             this.menuStrip.TabIndex = 4;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -207,6 +207,17 @@
             // scaleCB
             // 
             this.scaleCB.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.scaleCB.Items.AddRange(new object[] {
+            "30%",
+            "50%",
+            "70%",
+            "100%",
+            "120%",
+            "150%",
+            "180%",
+            "200%",
+            "250%",
+            "300%"});
             this.scaleCB.Name = "scaleCB";
             this.scaleCB.Size = new System.Drawing.Size(100, 25);
             this.scaleCB.Text = "100%";

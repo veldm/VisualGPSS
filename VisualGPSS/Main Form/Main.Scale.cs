@@ -23,6 +23,10 @@ namespace VisualGPSS
         private void ScaleChanged(object sender, EventArgs e)
         {
             scale = double.Parse(scaleCB.Text.Substring(0, scaleCB.Text.Length - 1)) / 100;
+            vScrollBar1.Value = (int)(vScrollBar1.Value * scale);
+            vScrollBar1.Maximum = (int)(vScrollBar1.Maximum * scale);
+            hScrollBar1.Value = (int)(hScrollBar1.Value * scale);
+            hScrollBar1.Maximum = (int)(hScrollBar1.Maximum * scale);
             graphicsRefresh(sender, e);
         }
     }

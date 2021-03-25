@@ -74,16 +74,22 @@ namespace GPSS.Visualiztion
             Scatter = _scatter;
             ChanellCount = _chanellCount;
 
+            string[] args1 = { QueueName };
+            string[] args2 = { Name };
+            string[] args3 = { Delay.ToString(), Scatter.ToString() };
             if (IsMultiChanell)
             {
+                string[] args4 = { ChanellCount.ToString() };
 
+                Operators.Add(new Comand(label, args4, null, Comand.ComandType.STORAGE));
+                Operators.Add(new Block(null, args1, null, Block.BlockType.QUEUE));
+                Operators.Add(new Block(null, args2, null, Block.BlockType.ENTER));
+                Operators.Add(new Block(null, args1, null, Block.BlockType.DEPART));
+                Operators.Add(new Block(null, args3, null, Block.BlockType.ADVANCE));
+                Operators.Add(new Block(null, args2, null, Block.BlockType.LEAVE));
             }
             else
             {
-                string[] args1 = { QueueName };
-                string[] args2 = { Name };
-                string[] args3 = { Delay.ToString(), Scatter.ToString() };
-
                 Operators.Add(new Block(label, args1, null, Block.BlockType.QUEUE));
                 Operators.Add(new Block(null, args2, null, Block.BlockType.SEIZE));
                 Operators.Add(new Block(null, args1, null, Block.BlockType.DEPART));

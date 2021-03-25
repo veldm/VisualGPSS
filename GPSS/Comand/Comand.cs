@@ -10,10 +10,8 @@ namespace GPSS
     {
         private ComandType type;
 
-        public Comand(string label, string[] arguments, string comment)
-            : base(label, arguments, comment)
-        {
-        }
+        public Comand(string label, string[] arguments, string comment, ComandType type)
+            : base(label, arguments, comment) { this.type = type; }
 
         #region Свойства
         public ComandType Type { get => type; set => type = value; }

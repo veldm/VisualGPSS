@@ -74,6 +74,13 @@ namespace VisualGPSS
             else сохранитьКакToolStripMenuItem_Click(sender, e);
         }
 
+        private void SaveOnClosing(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Сохранить изменения?", "VisualGPSS",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) is DialogResult.Yes)
+                    сохранитьToolStripMenuItem_Click(sender, e);
+        }
+
         private void генерацияКодаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CodeRedactor redactor = new CodeRedactor(schema.Code);
@@ -82,7 +89,11 @@ namespace VisualGPSS
 
         private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (openFileDialog1.ShowDialog() is DialogResult.OK)
+            {
+                schema = GPSS.Visualiztion.VisualGPSS_Schema.Deserialize(openFileDialog1.FileName);
+                filePath = openFileDialog1.FileName;
+            }
         }
 
         private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)

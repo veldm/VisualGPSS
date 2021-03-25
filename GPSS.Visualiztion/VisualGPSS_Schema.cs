@@ -147,6 +147,7 @@ namespace GPSS.Visualiztion
         public VisualGPSS_Schema(Font font, Color fontColor, Color backgroundColor,
             Color defaultElementsColor, Color defaultLinesColor)
         {
+            elements = new List<VisualElement>();
             DefaultFont = font ?? throw new ArgumentNullException(nameof(font));
             DefaultFontColor = fontColor;
             BackgroundColor = backgroundColor;
@@ -155,7 +156,6 @@ namespace GPSS.Visualiztion
 
             //labels = new Dictionary<string, VisualElement>();
             //labelsList = new List<string>();
-            elements = new List<VisualElement>();
         }
 
         [JsonConstructor]

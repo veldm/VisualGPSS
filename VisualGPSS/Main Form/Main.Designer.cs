@@ -69,7 +69,7 @@
             this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.label1 = new System.Windows.Forms.Label();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.LabelPictureBox = new System.Windows.Forms.PictureBox();
             this.menuStrip.SuspendLayout();
@@ -493,9 +493,9 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "   ";
             // 
-            // openFileDialog1
+            // openFileDialog
             // 
-            this.openFileDialog1.Filter = "Файлы схем VisualGPSS|*.vgsch|Все файлы|*.*";
+            this.openFileDialog.Filter = "Файлы схем VisualGPSS|*.vgsch|Все файлы|*.*";
             // 
             // pictureBox
             // 
@@ -596,7 +596,7 @@
         private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button multiChannelDeviceButton;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.ToolStripComboBox scaleCB;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem upScaleMenuItem;

@@ -7,26 +7,26 @@ namespace GPSS.Visualiztion
 {
     public class VisualTransfer : VisualElement
     {
-        private VisualBlock block1;
-        private VisualBlock block2;
+        private VisualElement block1;
+        private VisualElement block2;
         private double digit;
-        private VisualBlock startBlock;
+        private VisualElement startBlock;
 
         public Block Transfer
         {
             get => (Block)Essence;
             set => Essence = value;
         }
-        public VisualBlock StartBlock { get => startBlock; set => startBlock = value; }
+        public VisualElement StartBlock { get => startBlock; set => startBlock = value; }
 
-        public VisualBlock Block1 { get => block1; set => block1 = value; }
-        public VisualBlock Block2 { get => block2; set => block2 = value; }
+        public VisualElement Block1 { get => block1; set => block1 = value; }
+        public VisualElement Block2 { get => block2; set => block2 = value; }
         public double Digit { get => digit; set => digit = value; }
 
         public override object[] ExtendedParams
         { get => new object[] { startBlock, block1, block2 }; }
 
-        public VisualTransfer(VisualBlock startBlock, VisualBlock block1, VisualBlock block2,
+        public VisualTransfer(VisualElement startBlock, VisualElement block1, VisualElement block2,
             double digit, Operator essence, uint number, Point center,
             VisualGPSS_Schema parentSchema) : base(essence, number, center, parentSchema)
         {
@@ -37,15 +37,16 @@ namespace GPSS.Visualiztion
         }
 
         [JsonConstructor]
-        public VisualTransfer(VisualBlock block1, VisualBlock block2, double digit,
-            VisualBlock startBlock, Operator essence, uint number, object[] ExtendedParams,
-            Point center, Color _mainColor, Color _linesColor, Font _font, Color _fontColor)
-            : base(essence, number, center, _mainColor, _linesColor, _font, _fontColor)
+        public VisualTransfer(VisualElement block1, VisualElement block2, double digit,
+            VisualElement startBlock, Operator essence, uint number, object[] ExtendedParams,
+            Point center, int width, int heigth, Color _mainColor, Color _linesColor, Font _font,
+            Color _fontColor)
+            : base(essence, number, width, heigth, center, _mainColor, _linesColor, _font, _fontColor)
         {
-            this.block1 =  (VisualBlock)(block1 ?? ExtendedParams[1]);
-            this.block2 = (VisualBlock)(block2 ?? ExtendedParams[2]);
+            this.block1 =  (VisualElement)(block1 ?? ExtendedParams[1]);
+            this.block2 = (VisualElement)(block2 ?? ExtendedParams[2]);
             this.digit = digit;
-            this.startBlock = (VisualBlock)(startBlock ?? ExtendedParams[0]);
+            this.startBlock = (VisualElement)(startBlock ?? ExtendedParams[0]);
         }
 
         public override void Draw(Graphics graphics, List<VisualElement> otherElements)
@@ -110,7 +111,8 @@ namespace GPSS.Visualiztion
                 Pen pen = new Pen(LinesColor, 3);
                 lock(graphics)
                 {
-                    graphics.DrawLine(pen, StartBlock.center, center);
+                    if (startBlock is VisualBlock)
+                        graphics.DrawLine(pen, StartBlock.center, center);
                     graphics.DrawLine(pen, center, pivot1);
                     graphics.DrawLine(pen, center, pivot2);
                     graphics.DrawLine(pen, pivot1, Block1.center);

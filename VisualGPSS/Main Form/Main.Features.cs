@@ -89,10 +89,10 @@ namespace VisualGPSS
 
         private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (openFileDialog1.ShowDialog() is DialogResult.OK)
+            if (openFileDialog.ShowDialog() is DialogResult.OK)
             {
-                schema = GPSS.Visualiztion.VisualGPSS_Schema.Deserialize(openFileDialog1.FileName);
-                filePath = openFileDialog1.FileName;
+                schema = GPSS.Visualiztion.VisualGPSS_Schema.Deserialize(openFileDialog.FileName);
+                filePath = openFileDialog.FileName;
             }
         }
 

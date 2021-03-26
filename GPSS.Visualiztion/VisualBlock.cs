@@ -8,9 +8,6 @@ namespace GPSS.Visualiztion
 {
     public class VisualBlock : VisualElement    
     {
-        public int width;
-        public int heigth;
-
         [Browsable(true), DisplayName("Цвет текстового поля")]
         public Color BlockColor { get; set; }
 
@@ -25,10 +22,8 @@ namespace GPSS.Visualiztion
         [JsonConstructor]
         public VisualBlock(int width, int heigth, Color blockColor, Operator essence, uint number,
             Point center, Color _mainColor, Color _linesColor, Font _font, Color _fontColor)
-            : base(essence, number, center, _mainColor, _linesColor, _font, _fontColor)
+            : base(essence, number, width, heigth, center, _mainColor, _linesColor, _font, _fontColor)
         {
-            this.width = width;
-            this.heigth = heigth;
             BlockColor = blockColor;
         }
 

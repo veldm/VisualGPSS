@@ -16,6 +16,8 @@ namespace GPSS.Visualiztion
         private Operator essence;
         public uint number;
         public Point center;
+        public int width;
+        public int heigth;
         private Color mainColor;
         private Color fontColor;
         private Font font;
@@ -66,11 +68,13 @@ namespace GPSS.Visualiztion
         }
 
         [JsonConstructor]
-        protected VisualElement(Operator essence, uint number,
+        protected VisualElement(Operator essence, uint number, int width, int heigth,
             Point center, Color _mainColor, Color _linesColor, Font _font, Color _fontColor)
         {
             this.essence = essence /*?? throw new ArgumentNullException(nameof(essence))*/;
             this.number = number;
+            this.width = width;
+            this.heigth = heigth;
             this.center = center;
 
             mainColor = _mainColor;

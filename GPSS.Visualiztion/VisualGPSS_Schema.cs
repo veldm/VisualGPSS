@@ -176,10 +176,10 @@ namespace GPSS.Visualiztion
             {
                 if (element is VisualTransfer transfer)
                 {
-                    transfer.StartBlock = (VisualBlock)Elements[(int)transfer.StartBlock.number];
-                    transfer.Block1 = (VisualBlock)Elements[(int)transfer.Block1.number];
+                    transfer.StartBlock = Elements[(int)transfer.StartBlock.number];
+                    transfer.Block1 = Elements[(int)transfer.Block1.number];
                     if (transfer.Block2 is not null)
-                        transfer.Block2 = (VisualBlock)Elements[(int)transfer.Block2.number];
+                        transfer.Block2 = Elements[(int)transfer.Block2.number];
                 }
             }
         }

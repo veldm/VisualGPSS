@@ -63,14 +63,14 @@ namespace VisualGPSS
                             label1 = "";
                             Block1 = schema.Elements[(int)(transfer.StartBlock.number + 2)];
                         }
-                        transfer.Block1 = (VisualBlock)Block1;
+                        transfer.Block1 = Block1;
                         transfer.Essence.Arguments[1] = label1;
 
                         // Block2
                         label2 = (string)comboBox2.Items[comboBox2.SelectedIndex];
                         if (!schema.Labels.TryGetValue(label1, out Block2))
                             throw new Exception($"Метки {label2} не существует");
-                        transfer.Block2 = (VisualBlock)Block2;
+                        transfer.Block2 = Block2;
                         transfer.Essence.Arguments[2] = label2;
 
                         // Digit
@@ -91,14 +91,14 @@ namespace VisualGPSS
                             label1 = "";
                             Block1 = schema.Elements[(int)(transfer.StartBlock.number + 2)];
                         }
-                        transfer.Block1 = (VisualBlock)Block1;
+                        transfer.Block1 = Block1;
                         transfer.Essence.Arguments[0] = label1;
 
                         // Block2
                         label2 = (string)comboBox2.Items[comboBox2.SelectedIndex];
                         if (!schema.Labels.TryGetValue(label1, out Block2))
                             throw new Exception($"Метки {label2} не существует");
-                        transfer.Block2 = (VisualBlock)Block2;
+                        transfer.Block2 = Block2;
                         transfer.Essence.Arguments[1] = label2;
                         break;
                     case "TRANSFER_UNCON":
@@ -106,7 +106,7 @@ namespace VisualGPSS
                         label1 = (string)comboBox1.Items[comboBox1.SelectedIndex];
                         if (!schema.Labels.TryGetValue(label1, out Block1))
                             throw new Exception($"Метки {label1} не существует");
-                        transfer.Block1 = (VisualBlock)Block1;
+                        transfer.Block1 = Block1;
                         transfer.Essence.Arguments[0] = label1;
                         break;
                     case "TRANSFER_ALL":
@@ -114,14 +114,14 @@ namespace VisualGPSS
                         label1 = (string)comboBox1.Items[comboBox1.SelectedIndex];
                         if (!schema.Labels.TryGetValue(label1, out Block1))
                             throw new Exception($"Метки {label1} не существует");
-                        transfer.Block1 = (VisualBlock)Block1;
+                        transfer.Block1 = Block1;
                         transfer.Essence.Arguments[0] = label1;
 
                         // Block2
                         label2 = (string)comboBox2.Items[comboBox2.SelectedIndex];
                         if (!schema.Labels.TryGetValue(label1, out Block2))
                             throw new Exception($"Метки {label2} не существует");
-                        transfer.Block2 = (VisualBlock)Block2;
+                        transfer.Block2 = Block2;
                         transfer.Essence.Arguments[1] = label1 == label2 ? "" : label2;
 
                         // Digit
@@ -134,14 +134,14 @@ namespace VisualGPSS
                         label1 = (string)comboBox1.Items[comboBox1.SelectedIndex];
                         if (!schema.Labels.TryGetValue(label1, out Block1))
                             throw new Exception($"Метки {label1} не существует");
-                        transfer.Block1 = (VisualBlock)Block1;
+                        transfer.Block1 = Block1;
                         transfer.Essence.Arguments[0] = label1;
 
                         // Block2
                         label2 = (string)comboBox2.Items[comboBox2.SelectedIndex];
                         if (!schema.Labels.TryGetValue(label1, out Block2))
                             throw new Exception($"Метки {label2} не существует");
-                        transfer.Block2 = (VisualBlock)Block2;
+                        transfer.Block2 = Block2;
                         transfer.Essence.Arguments[1] = label2;
                         break;
                 }

@@ -33,6 +33,8 @@
     },
     {
       "$type": "GPSS.Visualiztion.VisualTransfer, GPSS.Visualiztion",
+      "width": 120,
+      "heigth": 60,
       "number": 1,
       "center": "370, 196",
       "Transfer": {
@@ -48,6 +50,7 @@
         "Comment": ""
       },
       "StartBlock": {
+        "$type": "GPSS.Visualiztion.VisualBlock, GPSS.Visualiztion",
         "width": 170,
         "heigth": 85,
         "number": 0,

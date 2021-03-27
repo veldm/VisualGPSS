@@ -34,6 +34,9 @@ namespace GPSS.Visualiztion
             this.Block1 = block1 ?? throw new ArgumentNullException(nameof(block1));
             this.Block2 = block2 /*?? throw new ArgumentNullException(nameof(block2))*/;
             this.Digit = digit;
+
+            width = 120;
+            heigth = 60;
         }
 
         [JsonConstructor]
@@ -80,7 +83,8 @@ namespace GPSS.Visualiztion
                 //    Block1.center.Y + Block1.heigth / 2);
                 lock(graphics)
                 {
-                    graphics.DrawLine(new Pen(LinesColor, 3), startBlock.center, block1.center);
+                    graphics.DrawArrowNear(new Pen(LinesColor, 3), Font, FontColor, (int)number,
+                        MainColor, startBlock.center, block1.center);
                 }
             }
 
@@ -115,14 +119,14 @@ namespace GPSS.Visualiztion
                         graphics.DrawLine(pen, StartBlock.center, center);
                     graphics.DrawLine(pen, center, pivot1);
                     graphics.DrawLine(pen, center, pivot2);
-                    graphics.DrawLine(pen, pivot1, Block1.center);
-                    graphics.DrawLine(pen, pivot2, Block2.center);
+                    graphics.DrawArrowNear(pen, MainColor, pivot1, Block1.center);
+                    graphics.DrawArrowNear(pen, MainColor, pivot2, Block2.center);
                 }
 
-                Point rp1 = new Point(center.X - 60, center.Y);
-                Point rp2 = new Point(center.X, center.Y + 30);
-                Point rp3 = new Point(center.X + 60, center.Y);
-                Point rp4 = new Point(center.X, center.Y - 30);
+                Point rp1 = new Point(center.X - width / 2, center.Y);
+                Point rp2 = new Point(center.X, center.Y + heigth / 2);
+                Point rp3 = new Point(center.X + width / 2, center.Y);
+                Point rp4 = new Point(center.X, center.Y - heigth / 2);
                 Point[] points = { rp1, rp2, rp3, rp4 };
                 Brush brush = new SolidBrush(Color.SandyBrown);
                 lock(graphics)

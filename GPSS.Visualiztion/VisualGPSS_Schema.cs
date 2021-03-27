@@ -225,8 +225,8 @@ namespace GPSS.Visualiztion
             for (int i = 0; i < Elements.Count - 1; i++)
             {
                 if (Elements[i] is not VisualTransfer && Elements[i + 1] is not VisualTransfer)
-                    graphics.DrawLine(new Pen(DefaultElementsLinesColor, 3),
-                        Elements[i].center, Elements[i + 1].center);
+                    graphics.DrawArrowMid(new Pen(DefaultElementsLinesColor, 3),
+                        DefaultElementsColor, Elements[i].center, Elements[i + 1].center);
             }
 
             foreach (VisualElement element in Elements.Where(element =>

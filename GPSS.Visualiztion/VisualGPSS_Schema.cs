@@ -67,17 +67,20 @@ namespace GPSS.Visualiztion
             get => defaultFont;
             set
             {
-                if (Elements.Count > 35)
+                if (defaultFont is not null)
                 {
-                    Parallel.ForEach(Elements.Where(x => x.Font == defaultFont), new ParallelOptions()
+                    if (Elements.Count > 35)
+                    {
+                        Parallel.ForEach(Elements.Where(x => x.Font == defaultFont), new ParallelOptions()
                         { MaxDegreeOfParallelism = Environment.ProcessorCount * 8 },
-                            element => { element.Font = value; });
-                }
-                else
-                {
-                    foreach (Font font in from VisualElement element in Elements
-                                          where element.Font == defaultFont
-                                          select element.Font = value) ;
+                                element => { element.Font = value; });
+                    }
+                    else
+                    {
+                        foreach (Font font in from VisualElement element in Elements
+                                              where element.Font.ToString() == defaultFont.ToString()
+                                              select element.Font = value) ;
+                    }
                 }
                 defaultFont = value;
             }

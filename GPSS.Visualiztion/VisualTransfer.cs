@@ -83,7 +83,7 @@ namespace GPSS.Visualiztion
                 //    Block1.center.Y + Block1.heigth / 2);
                 lock(graphics)
                 {
-                    graphics.DrawArrowNear(new Pen(LinesColor, 3), Font, FontColor, (int)number,
+                    graphics.DrawArrowMid(new Pen(LinesColor, 3), Font, FontColor, (int)number + 1,
                         MainColor, startBlock.center, block1.center);
                 }
             }
@@ -104,8 +104,13 @@ namespace GPSS.Visualiztion
 
             (Point pivot1, Point pivot2) bothDraw()
             {
-                int cY = StartBlock.center.Y + (Math.Min(Block1.center.Y - (Block1.heigth / 2),
-                    Block2.center.Y - (Block2.heigth / 2)) - StartBlock.center.Y) / 2;
+                int cY = ((StartBlock.center.Y > Block1.center.Y && StartBlock.center.Y >
+                    Block2.center.Y) || (StartBlock.center.Y < Block1.center.Y && 
+                    StartBlock.center.Y < Block2.center.Y)) ?
+                    StartBlock.center.Y + (Math.Min(Block1.center.Y - (Block1.heigth / 2),
+                        Block2.center.Y - (Block2.heigth / 2)) - StartBlock.center.Y) / 2 : 
+                    StartBlock.center.Y + (Math.Max(Block1.center.Y - (Block1.heigth / 2),
+                        Block2.center.Y - (Block2.heigth / 2)) - StartBlock.center.Y) / 2;
                 int cX = StartBlock.center.X;
                 center = new Point(cX, cY);
 

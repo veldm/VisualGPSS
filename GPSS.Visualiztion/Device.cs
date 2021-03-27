@@ -117,6 +117,8 @@ namespace GPSS.Visualiztion
 
         public override void Draw(Graphics graphics, List<VisualElement> otherElements)
         {
+            center.X += 20;
+            center.Y += 20;
             SolidBrush brush = new SolidBrush(MainColor);
             int _x = center.X - width / 2;
             int _y = center.Y - heigth / 2;
@@ -258,6 +260,8 @@ namespace GPSS.Visualiztion
                 graphics.DrawLine(p, p2, p4);
                 graphics.DrawLine(p, p2, p6);
             }
+            center.X -= 20;
+            center.Y -= 20;
 
             GC.Collect();
         }

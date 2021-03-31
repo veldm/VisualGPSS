@@ -33,12 +33,17 @@ namespace VisualGPSS
             string queue = QueueTextBox.Text;
             double delay = double.Parse(DelayTextBox.Text);
             double scatter = double.Parse(ScatterTextBox.Text);
-            int? chanellCount = null;
-            if (ChanellCountCB.Enabled) chanellCount = (int?)ChanellCountCB.Value;
+            int? chanellCount = null, transactSize = null;
+            if (ChanellCountCB.Enabled)
+            {
+                chanellCount = (int?)ChanellCountCB.Value;
+                transactSize = (int?)transactSizeCB.Value;
+            }
 
             if (chanellCount is null)
                 schema.AddDevice(number - 1, center, schema, label, queue, name, delay, scatter);
-            else schema.AddDevice(number - 1, center, schema, label, queue, name, delay, scatter, chanellCount.Value);
+            else schema.AddDevice(number - 1, center, schema, label, queue, name, delay, scatter,
+                chanellCount.Value, transactSize.Value);
 
             DeleteButton.Enabled = true;
             SaveButton.Click -= CreateNewDevice;

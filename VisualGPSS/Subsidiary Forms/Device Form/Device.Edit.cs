@@ -21,6 +21,8 @@ namespace VisualGPSS
             {
                 ChanellCountCB.Value = device.ChanellCount;
                 ChanellCountCB.Enabled = true;
+                transactSizeCB.Value = device.TransactSize;
+                transactSizeCB.Enabled = true;
             }
             else ChanellCountCB.Enabled = false;
 

@@ -34,7 +34,6 @@
             this.SaveButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.ScatterTextBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
@@ -52,13 +51,17 @@
             this.LabelTextBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
             this.ChanellCountCB = new System.Windows.Forms.NumericUpDown();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
+            this.transactSizeCB = new System.Windows.Forms.NumericUpDown();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChanellCountCB)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.transactSizeCB)).BeginInit();
             this.SuspendLayout();
             // 
             // propertyGrid
@@ -76,7 +79,7 @@
             this.DeleteButton.Depth = 0;
             this.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteButton.ForeColor = System.Drawing.Color.Red;
-            this.DeleteButton.Location = new System.Drawing.Point(12, 515);
+            this.DeleteButton.Location = new System.Drawing.Point(12, 548);
             this.DeleteButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.DeleteButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.DeleteButton.Name = "DeleteButton";
@@ -92,7 +95,7 @@
             this.Cancelbutton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Cancelbutton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Cancelbutton.Depth = 0;
-            this.Cancelbutton.Location = new System.Drawing.Point(199, 515);
+            this.Cancelbutton.Location = new System.Drawing.Point(212, 547);
             this.Cancelbutton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Cancelbutton.MouseState = MaterialSkin.MouseState.HOVER;
             this.Cancelbutton.Name = "Cancelbutton";
@@ -108,7 +111,7 @@
             this.SaveButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.SaveButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.SaveButton.Depth = 0;
-            this.SaveButton.Location = new System.Drawing.Point(411, 515);
+            this.SaveButton.Location = new System.Drawing.Point(422, 548);
             this.SaveButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.SaveButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.SaveButton.Name = "SaveButton";
@@ -126,7 +129,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 72);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(508, 434);
+            this.tabControl1.Size = new System.Drawing.Size(508, 466);
             this.tabControl1.TabIndex = 20;
             // 
             // tabPage1
@@ -136,21 +139,10 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(500, 401);
+            this.tabPage1.Size = new System.Drawing.Size(500, 433);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Свойства";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.listBox1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(500, 401);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Блоки";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -163,7 +155,7 @@
             this.groupBox2.Controls.Add(this.materialLabel2);
             this.groupBox2.Controls.Add(this.NameTextBox);
             this.groupBox2.Controls.Add(this.materialLabel1);
-            this.groupBox2.Location = new System.Drawing.Point(6, 158);
+            this.groupBox2.Location = new System.Drawing.Point(6, 209);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(485, 218);
             this.groupBox2.TabIndex = 22;
@@ -284,6 +276,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.materialLabel8);
+            this.groupBox1.Controls.Add(this.transactSizeCB);
             this.groupBox1.Controls.Add(this.materialLabel7);
             this.groupBox1.Controls.Add(this.multiChanellCB);
             this.groupBox1.Controls.Add(this.numberComboBox);
@@ -293,7 +287,7 @@
             this.groupBox1.Controls.Add(this.ChanellCountCB);
             this.groupBox1.Location = new System.Drawing.Point(5, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(486, 149);
+            this.groupBox1.Size = new System.Drawing.Size(486, 200);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             // 
@@ -330,7 +324,7 @@
             // 
             this.numberComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.numberComboBox.FormattingEnabled = true;
-            this.numberComboBox.Location = new System.Drawing.Point(420, 106);
+            this.numberComboBox.Location = new System.Drawing.Point(418, 152);
             this.numberComboBox.Name = "numberComboBox";
             this.numberComboBox.Size = new System.Drawing.Size(51, 28);
             this.numberComboBox.TabIndex = 30;
@@ -341,7 +335,7 @@
             this.materialLabel5.Depth = 0;
             this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel5.Location = new System.Drawing.Point(381, 110);
+            this.materialLabel5.Location = new System.Drawing.Point(379, 156);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
             this.materialLabel5.Size = new System.Drawing.Size(24, 19);
@@ -352,7 +346,7 @@
             // 
             this.LabelTextBox.Depth = 0;
             this.LabelTextBox.Hint = "";
-            this.LabelTextBox.Location = new System.Drawing.Point(80, 106);
+            this.LabelTextBox.Location = new System.Drawing.Point(78, 152);
             this.LabelTextBox.MouseState = MaterialSkin.MouseState.HOVER;
             this.LabelTextBox.Name = "LabelTextBox";
             this.LabelTextBox.PasswordChar = '\0';
@@ -369,7 +363,7 @@
             this.materialLabel6.Depth = 0;
             this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel6.Location = new System.Drawing.Point(11, 110);
+            this.materialLabel6.Location = new System.Drawing.Point(9, 156);
             this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel6.Name = "materialLabel6";
             this.materialLabel6.Size = new System.Drawing.Size(60, 19);
@@ -394,6 +388,17 @@
             0,
             0});
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.listBox1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(500, 401);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Блоки";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
@@ -403,12 +408,43 @@
             this.listBox1.Size = new System.Drawing.Size(488, 384);
             this.listBox1.TabIndex = 0;
             // 
+            // materialLabel8
+            // 
+            this.materialLabel8.AutoSize = true;
+            this.materialLabel8.Depth = 0;
+            this.materialLabel8.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel8.Location = new System.Drawing.Point(109, 110);
+            this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel8.Name = "materialLabel8";
+            this.materialLabel8.Size = new System.Drawing.Size(159, 19);
+            this.materialLabel8.TabIndex = 35;
+            this.materialLabel8.Text = "РАЗМЕР ТРАНЗАКТА";
+            // 
+            // transactSizeCB
+            // 
+            this.transactSizeCB.Enabled = false;
+            this.transactSizeCB.Location = new System.Drawing.Point(36, 107);
+            this.transactSizeCB.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.transactSizeCB.Name = "transactSizeCB";
+            this.transactSizeCB.Size = new System.Drawing.Size(54, 26);
+            this.transactSizeCB.TabIndex = 34;
+            this.transactSizeCB.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // Device
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(762, 570);
+            this.ClientSize = new System.Drawing.Size(762, 599);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.propertyGrid);
@@ -419,12 +455,13 @@
             this.Text = "Редактор устройств";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChanellCountCB)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.transactSizeCB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -456,5 +493,7 @@
         private System.Windows.Forms.NumericUpDown ChanellCountCB;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.ListBox listBox1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel8;
+        private System.Windows.Forms.NumericUpDown transactSizeCB;
     }
 }

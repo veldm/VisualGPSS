@@ -61,7 +61,7 @@
             // 
             // saveFileDialog1
             // 
-            this.saveFileDialog1.Filter = "Текстовые файлы|*.txt|Все файлы|*.*";
+            this.saveFileDialog1.Filter = "Текстовые файлы|*.txt|Файлы GPSS моделей|*.gps";
             // 
             // CodeRedactor
             // 

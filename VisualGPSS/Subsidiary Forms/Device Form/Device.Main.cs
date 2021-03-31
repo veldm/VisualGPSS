@@ -20,7 +20,7 @@ namespace VisualGPSS
 
         private void multiChanellCB_CheckedChanged(object sender, EventArgs e)
         {
-            ChanellCountCB.Enabled = multiChanellCB.Checked;
+            ChanellCountCB.Enabled = transactSizeCB.Enabled = multiChanellCB.Checked;
         }
     }
 }

@@ -293,10 +293,11 @@ namespace GPSS.Visualiztion
         }
 
         public void AddDevice(uint number, Point center, VisualGPSS_Schema schema, string label, 
-            string queue, string name, double delay, double scatter, int chanellCount = 1)
+            string queue, string name, double delay, double scatter,
+            int chanellCount = 1, int transactCount = 1)
         {
             Device device = new Device(number, center, schema, label, queue,
-                name, delay, scatter, chanellCount);
+                name, delay, scatter, chanellCount, transactCount);
             schema.Elements.Insert((int)number, device);
             Refresh();
         }

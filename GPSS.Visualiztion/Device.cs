@@ -18,6 +18,7 @@ namespace GPSS.Visualiztion
         private double delay;
         private double scatter;
         private int chanellCount;
+        private int transactSize;
 
         [Browsable(false)]
         public bool IsMultiChanell => ChanellCount > 1;
@@ -41,7 +42,7 @@ namespace GPSS.Visualiztion
 
         [Browsable(false)]
         public override object[] ExtendedParams => new object[]
-            { Operators, QueueName, Delay, Scatter, ChanellCount };
+            { Operators, QueueName, Delay, Scatter, ChanellCount, TransactSize };
 
         //#pragma warning disable CS0114
         // Член скрывает унаследованный член: отсутствует ключевое слово переопределения
@@ -59,9 +60,12 @@ namespace GPSS.Visualiztion
         [Browsable(false), JsonIgnore] public int ChanellCount
             { get => chanellCount; set => chanellCount = value; }
 
+        [Browsable(false), JsonIgnore] public int TransactSize
+        { get => transactSize; set => transactSize = value; }
+
         public Device(uint number, Point center, VisualGPSS_Schema parentSchema, string label,
-            string _queueName, string _name, double _delay, double _scatter, int _chanellCount = 1) :
-            base(null, number, center, parentSchema) 
+            string _queueName, string _name, double _delay, double _scatter, int _chanellCount = 1,
+            int _transactSize = 1) : base(null, number, center, parentSchema) 
         {
             width = 170;
             heigth = 170;
@@ -73,13 +77,13 @@ namespace GPSS.Visualiztion
             Delay = _delay;
             Scatter = _scatter;
             ChanellCount = _chanellCount;
-
+            TransactSize = _transactSize;
             string[] args1 = { QueueName };
-            string[] args2 = { Name };
             string[] args3 = { Delay.ToString(), Scatter.ToString() };
             if (IsMultiChanell)
             {
                 string[] args4 = { ChanellCount.ToString() };
+                string[] args2 = { Name, TransactSize.ToString() };
 
                 Operators.Add(new Comand(label, args4, null, Comand.ComandType.STORAGE));
                 Operators.Add(new Block(null, args1, null, Block.BlockType.QUEUE));
@@ -90,6 +94,8 @@ namespace GPSS.Visualiztion
             }
             else
             {
+                string[] args2 = { Name };
+
                 Operators.Add(new Block(label, args1, null, Block.BlockType.QUEUE));
                 Operators.Add(new Block(null, args2, null, Block.BlockType.SEIZE));
                 Operators.Add(new Block(null, args1, null, Block.BlockType.DEPART));
@@ -113,6 +119,7 @@ namespace GPSS.Visualiztion
             this.Delay = (double)ExtendedParams[2];
             this.Scatter = (double)ExtendedParams[3];
             this.ChanellCount = int.Parse(ExtendedParams[4].ToString());
+            this.TransactSize = int.Parse(ExtendedParams[5].ToString());
         }
 
         public override void Draw(Graphics graphics, List<VisualElement> otherElements)

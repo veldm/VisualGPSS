@@ -319,6 +319,7 @@
             this.multiChanellCB.TabIndex = 32;
             this.multiChanellCB.Text = "МНОГОКАНАЛЬНОЕ УСТРОЙСТВО";
             this.multiChanellCB.UseVisualStyleBackColor = true;
+            this.multiChanellCB.CheckedChanged += new System.EventHandler(this.multiChanellCB_CheckedChanged);
             // 
             // numberComboBox
             // 

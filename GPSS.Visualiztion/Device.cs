@@ -82,7 +82,7 @@ namespace GPSS.Visualiztion
             string[] args3 = { Delay.ToString(), Scatter.ToString() };
             if (IsMultiChanell)
             {
-                string[] args4 = { ChanellCount.ToString() };
+                string[] args4 = { Name, ChanellCount.ToString() };
                 string[] args2 = { Name, TransactSize.ToString() };
 
                 Operators.Add(new Comand(label, args4, null, Comand.ComandType.STORAGE));

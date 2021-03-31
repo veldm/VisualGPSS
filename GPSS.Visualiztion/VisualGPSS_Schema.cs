@@ -48,18 +48,20 @@ namespace GPSS.Visualiztion
         [Browsable(false)]
         public List<VisualElement> Elements => elements;
 
-        [Browsable(false)]
         public List<T> TypeElements<T>() where T : VisualElement =>
             (from VisualElement element in Elements where element is T select element as T).ToList();
 
-        [Browsable(false)]
+        [Browsable(false), JsonIgnore]
         public List<Device> Devices => TypeElements<Device>();
 
-        [Browsable(false)]
+        [Browsable(false), JsonIgnore]
         public List<VisualBlock> Blocks => TypeElements<VisualBlock>();
 
-        [Browsable(false)]
+        [Browsable(false), JsonIgnore]
         public List<VisualTransfer> Transfers => TypeElements<VisualTransfer>();
+
+        [Browsable(false), JsonIgnore]
+        public VisualElement LastAddedElement { get; set; }
 
         [Browsable(true), DisplayName("Шрифт")]
         public Font DefaultFont

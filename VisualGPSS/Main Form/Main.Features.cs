@@ -43,10 +43,18 @@ namespace VisualGPSS
 
         private void сохранитьКакИзображениеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Bitmap bitmap = new Bitmap(RightBottom.X, RightBottom.Y);
-            pictureBox.DrawToBitmap(bitmap, new Rectangle(0, 0, RightBottom.X, RightBottom.Y));
-            bitmap.Save("buf.png");
-            bitmap.Dispose();
+            using (Bitmap bitmap = new Bitmap(RightBottom.X, RightBottom.Y))
+            {
+                //pictureBox.DrawToBitmap(bitmap, new Rectangle(0, 0, RightBottom.X, RightBottom.Y));
+                using (Graphics graphics = Graphics.FromImage(bitmap))
+                {
+                    schema.Draw(graphics);
+                }
+                if (imageSaveFileDialog.ShowDialog() is DialogResult.OK)
+                {
+                    bitmap.Save(imageSaveFileDialog.FileName);
+                }
+            }
             GC.Collect();
         }
 

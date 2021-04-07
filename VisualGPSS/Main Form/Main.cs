@@ -72,6 +72,7 @@ namespace VisualGPSS
         public Main(string openFileName = null)
         {
             InitializeComponent();
+            открытьToolStripMenuItem.Click += graphicsRefresh;
             Show();
             filePath = openFileName;
             //typeof(Panel).InvokeMember("DoubleBuffered",

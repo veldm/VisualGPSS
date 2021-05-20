@@ -209,43 +209,44 @@ namespace GPSS.Visualiztion
         {
             ////Parallel.Invoke
             ////(
-            //    /*() => */Parallel.For(0, Elements.Count - 1, (i) =>
-            //    {
-            //        if (Elements[i] is not VisualTransfer && Elements[i + 1] is not VisualTransfer)
-            //            lock(graphics)
-            //            {
-            //                graphics.DrawLine(new Pen(DefaultElementsLinesColor, 3),
-            //                Elements[i].center, Elements[i + 1].center);
-            //            }
-            //    });//,
-
-            //    /*() => */
-            //              Parallel.For(0, Elements.Count, (i) =>
-            //    {
-            //        if (Elements[i] is VisualTransfer)
-            //            Elements[i].Draw(graphics);
-            //    });
-            ////);
-
-            for (int i = 0; i < Elements.Count - 1; i++)
+            /*() => */
+            Parallel.For(0, Elements.Count - 1, (i) =>
             {
                 if (Elements[i] is not VisualTransfer && Elements[i + 1] is not VisualTransfer)
-                    graphics.DrawArrowMid(new Pen(DefaultElementsLinesColor, 3),
-                        DefaultElementsColor, Elements[i].center, Elements[i + 1].center);
-            }
+                   lock (graphics)
+                    {
+                        graphics.DrawArrowMid(new Pen(DefaultElementsLinesColor, 3),
+                            DefaultElementsColor, Elements[i].center, Elements[i + 1].center);
+                    }
+            });//,
 
-            foreach (VisualElement element in Elements.Where(element =>
-                    element is VisualTransfer)) element.Draw(graphics, this.Elements);
+            //    /*() => */
+            Parallel.For(0, Elements.Count, (i) =>
+              {
+                  if (Elements[i] is VisualTransfer)
+                      Elements[i].Draw(graphics, this.Elements);
+              });
+            ////);
 
-            foreach (VisualElement element in Elements.Where(element =>
-                element is not VisualTransfer)) element.Draw(graphics, this.Elements);
-
-            //Parallel.For(0, Elements.Count, (i) =>
+            //for (int i = 0; i < Elements.Count - 1; i++)
             //{
-            //    if (Elements[i] is not VisualTransfer)
-            //        Elements[i].Draw(graphics, this.Elements);
-            //    GC.Collect();
-            //});
+            //    if (Elements[i] is not VisualTransfer && Elements[i + 1] is not VisualTransfer)
+            //        graphics.DrawArrowMid(new Pen(DefaultElementsLinesColor, 3),
+            //            DefaultElementsColor, Elements[i].center, Elements[i + 1].center);
+            //}
+
+            //foreach (VisualElement element in Elements.Where(element =>
+            //        element is VisualTransfer)) element.Draw(graphics, this.Elements);
+
+            //foreach (VisualElement element in Elements.Where(element =>
+            //    element is not VisualTransfer)) element.Draw(graphics, this.Elements);
+
+            Parallel.For(0, Elements.Count, (i) =>
+            {
+                if (Elements[i] is not VisualTransfer)
+                    Elements[i].Draw(graphics, this.Elements);
+                GC.Collect();
+            });
         }
 
         public void AddBlock(uint number, Point center, string type,

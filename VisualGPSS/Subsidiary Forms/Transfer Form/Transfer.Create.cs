@@ -14,11 +14,12 @@ namespace VisualGPSS
         /// Открытие формы <see cref="Transfer"/> для создания нового перенаправления
         /// </summary>
         /// <param name="_startBlock"></param>
-        public Transfer(VisualBlock _startBlock, VisualGPSS_Schema _schema)
+        public Transfer(VisualElement _startBlock, VisualGPSS_Schema _schema, string label = null)
         {
             InitializeComponent();
             startBlock = _startBlock;
             schema = _schema;
+            if (label is not null) LabelTextBox.Text = label;
             comboBox1.Items.AddRange(schema.LabelsList.ToArray());
             comboBox2.Items.AddRange(schema.LabelsList.ToArray());
             DeleteButton.Enabled = false;
@@ -127,6 +128,7 @@ namespace VisualGPSS
                 if (schema.Labels.TryGetValue(labelSelf, out VisualElement visualElement))
                     throw new Exception($"Метка {labelSelf} уже занята" +
                         $" блоком {visualElement.Name}");
+                else label = labelSelf;
 
                 List<string> args = arguments.ToList();
                 for (int i = 0; i < args.Count; i++)

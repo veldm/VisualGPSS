@@ -272,8 +272,8 @@ namespace GPSS.Visualiztion
             }
         }
 
-        public void AddTransfer(string type, VisualBlock startBlock, VisualBlock block1,
-            VisualBlock block2, double digit, string label, string[] args, string comment)        
+        public void AddTransfer(string type, VisualElement startBlock, VisualElement block1,
+            VisualElement block2, double digit, string label, string[] args, string comment)        
         {
             Block.BlockType blockType = (Block.BlockType)Enum.Parse(typeof(Block.BlockType), type);
             Block block = new Block(label, args, comment, blockType);

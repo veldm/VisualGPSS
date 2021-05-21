@@ -15,7 +15,8 @@ namespace VisualGPSS
     {
         readonly VisualTransfer transfer;
         readonly VisualGPSS_Schema schema;
-        readonly VisualBlock startBlock;
+        readonly VisualElement startBlock;
+        string label;
 
         private void TypeCB_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -69,6 +70,26 @@ namespace VisualGPSS
                         comboBox1.Items.RemoveAt(0);
                     break;
             }
+        }
+
+        private void labelAddButton_Click(object sender, EventArgs e)
+        {
+            addNewElement_CMS.Show((Control)sender, new Point(0, 0));
+        }
+
+        private void добавитьВетвлениеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Transfer transferForm = new Transfer
+                (transfer, schema, $"label{schema.ElementsWithLabelsList.Count + 1}");
+            ComboBox cb = ((Control)sender).Name switch
+            {
+                "label1AddButton" => comboBox1,
+                "label2AddButton" => comboBox2,
+                _ => throw new NotImplementedException()
+            };
+            transferForm.SaveButton.Click += (object sender, EventArgs e)
+                => { cb.SelectedItem = transferForm.label; };
+            transferForm.Show();
         }
     }
 }

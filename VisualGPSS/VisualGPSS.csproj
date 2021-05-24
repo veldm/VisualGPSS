@@ -107,6 +107,12 @@
     <Compile Include="Subsidiary Forms\Device Form\Device.Edit.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Subsidiary Forms\Function.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subsidiary Forms\Function.Designer.cs">
+      <DependentUpon>Function.cs</DependentUpon>
+    </Compile>
     <Compile Include="Subsidiary Forms\Transfer Form\Transfer.Create.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Subsidiary Forms\Device Form\Device.Main.resx">
       <DependentUpon>Device.Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subsidiary Forms\Function.resx">
+      <DependentUpon>Function.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Subsidiary Forms\Transfer Form\Transfer.Main.resx">
       <DependentUpon>Transfer.Main.cs</DependentUpon>

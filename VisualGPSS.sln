@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPSS", "GPSS\GPSS.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPSS.Visualiztion", "GPSS.Visualiztion\GPSS.Visualiztion.csproj", "{5EEC445F-F5F1-4152-90BC-E8BAE37C363F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPSS.PLUS", "GPSS.PLUS\GPSS.PLUS.csproj", "{29E8C1CD-1CA5-4B68-8605-AC081B836F20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5EEC445F-F5F1-4152-90BC-E8BAE37C363F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EEC445F-F5F1-4152-90BC-E8BAE37C363F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EEC445F-F5F1-4152-90BC-E8BAE37C363F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29E8C1CD-1CA5-4B68-8605-AC081B836F20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29E8C1CD-1CA5-4B68-8605-AC081B836F20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29E8C1CD-1CA5-4B68-8605-AC081B836F20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29E8C1CD-1CA5-4B68-8605-AC081B836F20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

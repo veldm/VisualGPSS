@@ -56,6 +56,10 @@
     <Compile Include="VisualTransfer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GPSS.PLUS\GPSS.PLUS.csproj">
+      <Project>{29e8c1cd-1ca5-4b68-8605-ac081b836f20}</Project>
+      <Name>GPSS.PLUS</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GPSS\GPSS.csproj">
       <Project>{7ac7734a-84d9-4b0d-bbf0-55c3a6a96129}</Project>
       <Name>GPSS</Name>

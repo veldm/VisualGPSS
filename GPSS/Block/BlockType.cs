@@ -167,7 +167,17 @@ namespace GPSS
             /// <summary>
             /// 
             /// </summary>
-            MATCH
+            MATCH,
+
+            /// <summary>
+            /// 
+            /// </summary>
+            Tabulate,
+
+            /// <summary>
+            /// 
+            /// </summary>
+            SaveValue
         }
     }
 

@@ -17,6 +17,15 @@ namespace GPSS.PLUS
         public string Operand1 { get => operand1; set => operand1 = value; }
         public string Operand2 { get => operand2; set => operand2 = value; }
         public List<KeyValuePair<string, string>> Values { get => values; set => values = value; }
+
+        public Function(string name, string operand1, string operand2, List<KeyValuePair<string, string>> values)
+        {
+            this.name = name ?? throw new ArgumentNullException(nameof(name));
+            this.operand1 = operand1 ?? throw new ArgumentNullException(nameof(operand1));
+            this.operand2 = operand2 ?? throw new ArgumentNullException(nameof(operand2));
+            this.values = values ?? throw new ArgumentNullException(nameof(values));
+        }
+
         public string Code
         {
             get
@@ -24,7 +33,7 @@ namespace GPSS.PLUS
                 string result = $"{ToString()}\n";
                 foreach (KeyValuePair<string, string> pair in values)
                     result += $"{pair.Key},{pair.Value}{(pair.Equals(values.Last()) ? "" : "/")}";
-                return result;
+                return result.Replace("0.", ".");
             }
         }
 

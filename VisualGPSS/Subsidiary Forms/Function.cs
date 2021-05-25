@@ -12,9 +12,13 @@ namespace VisualGPSS.Subsidiary_Forms
 {
     public partial class Function : MaterialSkin.Controls.MaterialForm
     {
-        public Function()
+        private GPSS.Visualiztion.VisualGPSS_Schema schema;
+
+        public Function(GPSS.Visualiztion.VisualGPSS_Schema schema)
         {
             InitializeComponent();
+            typeCB.SelectedIndex = 0;
+            this.schema = schema;
         }
 
         private void pointsCountNUD_ValueChanged(object sender, EventArgs e)
@@ -27,6 +31,33 @@ namespace VisualGPSS.Subsidiary_Forms
                     FrqVal_DGV.Rows.RemoveAt(FrqVal_DGV.Rows.Count);
         }
 
-
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string name = nameTB.Text is not "" ? nameTB.Text :
+                    throw new ArgumentException("Не задано имя функции");
+                string operand1 = operandTB.Text is not "" ? operandTB.Text :
+                    throw new ArgumentException("Не задан опреанд функции");
+                string type = pointsCountNUD.Value switch
+                {
+                    0 => "D",
+                    1 => "C"
+                };
+                string operand2 = pointsCountNUD.Value is not 0 ? $"{type}{pointsCountNUD.Value}" :
+                    throw new ArgumentException("Функция должна задавать хотя бы одну точку");
+                List<KeyValuePair<string, string>> values = new List<KeyValuePair<string, string>>();
+                foreach (DataGridViewRow row in FrqVal_DGV.Rows)
+                {
+                    values.Add(new KeyValuePair<string, string>
+                        ((string)row.Cells[0].Value, (string)row.Cells[1].Value));
+                }
+                schema.AddFunction(name, operand1, operand2, values);
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

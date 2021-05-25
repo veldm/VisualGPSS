@@ -58,6 +58,9 @@ namespace VisualGPSS
                 case "LEAVE":
                     SetParams("УСТРОЙСТВО", "КОЛИЧЕСТВО");
                     break;
+                case "SaveValue":
+                    SetParams("ИМЯ", "ДЕЙСТВИЕ", "ЗНАЧЕНИЕ");
+                    break;
             }
 
             void SetParams(string s1, string s2 = "", string s3 = "", string s4 = "", string s5 = "")

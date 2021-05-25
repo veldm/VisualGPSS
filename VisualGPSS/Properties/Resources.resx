@@ -130,8 +130,14 @@
   <data name="stop-upload-button_icon-icons.com_71328" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stop-upload-button_icon-icons.com_71328.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="vector-screening-svg-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vector-screening-svg-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Pustoy_block" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pustoy_block.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zoomout_zoom_search_find_1530" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zoomout_zoom_search_find_1530.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="download-info_icon-icons1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\download-info_icon-icons.com_716781.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,17 +145,17 @@
   <data name="settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="353443-clock-stopwatch-timer-watch_107503" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\353443-clock-stopwatch-timer-watch_107503.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="delete_delete_exit_1577" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete_delete_exit_1577.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="diskette_save_saveas_1514" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\diskette_save_saveas_1514.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="-file-download_90117" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\-file-download_90117.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="32-321721_download-notepad-vector-png-clipart-clip-art-notepad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32-321721_download-notepad-vector-png-clipart-clip-art-notepad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,8 +169,8 @@
   <data name="-file-upload_90117" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\-file-upload_90117.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="-file-download_90117" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\-file-download_90117.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="documentediting_editdocuments_text_documentedi_2820" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\documentediting_editdocuments_text_documentedi_2820.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,16 +214,19 @@
   <data name="zoomin_zoom_search_find_1530" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\zoomin_zoom_search_find_1530.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="устройствоN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\устройствоN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="open_256_icon-icons.com_76002" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\open_256_icon-icons.com_76002.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="устройствоN" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\устройствоN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="353443-clock-stopwatch-timer-watch_107503" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\353443-clock-stopwatch-timer-watch_107503.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="zoomout_zoom_search_find_1530" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\zoomout_zoom_search_find_1530.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="91-916310_save-png-clipart-save-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\91-916310_save-png-clipart-save-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -179,7 +179,8 @@ namespace VisualGPSS
             "QUEUE",
             "DEPART",
             "ENTER",
-            "LEAVE"});
+            "LEAVE",
+            "SaveValue"});
             this.TypeCB.Location = new System.Drawing.Point(77, 16);
             this.TypeCB.Name = "TypeCB";
             this.TypeCB.Size = new System.Drawing.Size(391, 28);

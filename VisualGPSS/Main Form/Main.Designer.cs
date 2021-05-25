@@ -58,6 +58,8 @@
             this.блокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolBox = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.saveValueButton = new System.Windows.Forms.Button();
+            this.tabulateButton = new System.Windows.Forms.Button();
             this.terminateButton = new System.Windows.Forms.Button();
             this.generateButton = new System.Windows.Forms.Button();
             this.uncertainButton = new System.Windows.Forms.Button();
@@ -113,7 +115,7 @@
             this.открытьToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.открытьToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.open_256_icon_icons_com_76002;
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.открытьToolStripMenuItem.Text = "Открыть";
             this.открытьToolStripMenuItem.Click += new System.EventHandler(this.открытьToolStripMenuItem_Click);
             // 
@@ -121,7 +123,7 @@
             // 
             this.сохранитьToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.save_file_disk_open_searsh_loading_clipboard_1513;
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
             this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.сохранитьToolStripMenuItem_Click);
             // 
@@ -129,7 +131,7 @@
             // 
             this.сохранитьКакToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.diskette_save_saveas_1514;
             this.сохранитьКакToolStripMenuItem.Name = "сохранитьКакToolStripMenuItem";
-            this.сохранитьКакToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.сохранитьКакToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.сохранитьКакToolStripMenuItem.Text = "Сохранить как";
             this.сохранитьКакToolStripMenuItem.Click += new System.EventHandler(this.сохранитьКакToolStripMenuItem_Click);
             // 
@@ -146,7 +148,7 @@
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip.Size = new System.Drawing.Size(393, 25);
+            this.menuStrip.Size = new System.Drawing.Size(273, 25);
             this.menuStrip.TabIndex = 4;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -172,7 +174,7 @@
             // 
             this.генерацияКодаToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.downloadoutline_110860;
             this.генерацияКодаToolStripMenuItem.Name = "генерацияКодаToolStripMenuItem";
-            this.генерацияКодаToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.генерацияКодаToolStripMenuItem.Size = new System.Drawing.Size(262, 26);
             this.генерацияКодаToolStripMenuItem.Text = "Генерация кода";
             this.генерацияКодаToolStripMenuItem.Click += new System.EventHandler(this.генерацияКодаToolStripMenuItem_Click);
             // 
@@ -180,27 +182,27 @@
             // 
             this.печатьСхемыToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.Print_icon_icons_com_73705;
             this.печатьСхемыToolStripMenuItem.Name = "печатьСхемыToolStripMenuItem";
-            this.печатьСхемыToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.печатьСхемыToolStripMenuItem.Size = new System.Drawing.Size(262, 26);
             this.печатьСхемыToolStripMenuItem.Text = "Печать схемы";
             // 
             // сохранитьКакИзображениеToolStripMenuItem
             // 
             this.сохранитьКакИзображениеToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources._1491253396_5document_image_82883;
             this.сохранитьКакИзображениеToolStripMenuItem.Name = "сохранитьКакИзображениеToolStripMenuItem";
-            this.сохранитьКакИзображениеToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.сохранитьКакИзображениеToolStripMenuItem.Size = new System.Drawing.Size(262, 26);
             this.сохранитьКакИзображениеToolStripMenuItem.Text = "Сохранить как изображение";
             this.сохранитьКакИзображениеToolStripMenuItem.Click += new System.EventHandler(this.сохранитьКакИзображениеToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(255, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(259, 6);
             // 
             // upScaleMenuItem
             // 
             this.upScaleMenuItem.Image = global::VisualGPSS.Properties.Resources.zoomin_zoom_search_find_1530;
             this.upScaleMenuItem.Name = "upScaleMenuItem";
-            this.upScaleMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.upScaleMenuItem.Size = new System.Drawing.Size(262, 26);
             this.upScaleMenuItem.Text = "Увеличить масштаб";
             this.upScaleMenuItem.Click += new System.EventHandler(this.UpScale);
             // 
@@ -227,7 +229,7 @@
             // 
             this.downScaleMenuItem.Image = global::VisualGPSS.Properties.Resources.zoomout_zoom_search_find_1530;
             this.downScaleMenuItem.Name = "downScaleMenuItem";
-            this.downScaleMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.downScaleMenuItem.Size = new System.Drawing.Size(262, 26);
             this.downScaleMenuItem.Text = "Уменьшить масштаб";
             this.downScaleMenuItem.Click += new System.EventHandler(this.DownScale);
             // 
@@ -365,15 +367,41 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox3.Controls.Add(this.saveValueButton);
+            this.groupBox3.Controls.Add(this.tabulateButton);
             this.groupBox3.Controls.Add(this.terminateButton);
             this.groupBox3.Controls.Add(this.generateButton);
             this.groupBox3.Controls.Add(this.uncertainButton);
             this.groupBox3.Location = new System.Drawing.Point(7, 10);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(169, 205);
+            this.groupBox3.Size = new System.Drawing.Size(169, 291);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Блоки";
+            // 
+            // saveValueButton
+            // 
+            this.saveValueButton.BackColor = System.Drawing.Color.White;
+            this.saveValueButton.BackgroundImage = global::VisualGPSS.Properties.Resources._91_916310_save_png_clipart_save_icon;
+            this.saveValueButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.saveValueButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveValueButton.Location = new System.Drawing.Point(9, 215);
+            this.saveValueButton.Name = "saveValueButton";
+            this.saveValueButton.Size = new System.Drawing.Size(70, 70);
+            this.saveValueButton.TabIndex = 9;
+            this.saveValueButton.UseVisualStyleBackColor = false;
+            // 
+            // tabulateButton
+            // 
+            this.tabulateButton.BackColor = System.Drawing.Color.White;
+            this.tabulateButton.BackgroundImage = global::VisualGPSS.Properties.Resources.vector_screening_svg_3;
+            this.tabulateButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabulateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tabulateButton.Location = new System.Drawing.Point(93, 123);
+            this.tabulateButton.Name = "tabulateButton";
+            this.tabulateButton.Size = new System.Drawing.Size(70, 70);
+            this.tabulateButton.TabIndex = 8;
+            this.tabulateButton.UseVisualStyleBackColor = false;
             // 
             // terminateButton
             // 
@@ -418,7 +446,7 @@
             // 
             this.groupBox2.Controls.Add(this.multiChannelDeviceButton);
             this.groupBox2.Controls.Add(this.singleChannelDeviceButton);
-            this.groupBox2.Location = new System.Drawing.Point(7, 223);
+            this.groupBox2.Location = new System.Drawing.Point(7, 307);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(169, 109);
             this.groupBox2.TabIndex = 6;
@@ -603,6 +631,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem upScaleMenuItem;
         private System.Windows.Forms.ToolStripMenuItem downScaleMenuItem;
+        private System.Windows.Forms.Button tabulateButton;
+        private System.Windows.Forms.Button saveValueButton;
     }
 }
 

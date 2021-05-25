@@ -103,6 +103,16 @@ namespace VisualGPSS.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _32_321721_download_notepad_vector_png_clipart_clip_art_notepad {
+            get {
+                object obj = ResourceManager.GetObject("32-321721_download-notepad-vector-png-clipart-clip-art-notepad", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _353443_clock_stopwatch_timer_watch_107503 {
             get {
                 object obj = ResourceManager.GetObject("353443-clock-stopwatch-timer-watch_107503", resourceCulture);
@@ -136,6 +146,16 @@ namespace VisualGPSS.Properties {
         internal static System.Drawing.Bitmap _5 {
             get {
                 object obj = ResourceManager.GetObject("5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _91_916310_save_png_clipart_save_icon {
+            get {
+                object obj = ResourceManager.GetObject("91-916310_save-png-clipart-save-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -338,6 +358,16 @@ namespace VisualGPSS.Properties {
         internal static System.Drawing.Bitmap stop_upload_button_icon_icons_com_71328 {
             get {
                 object obj = ResourceManager.GetObject("stop-upload-button_icon-icons.com_71328", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vector_screening_svg_3 {
+            get {
+                object obj = ResourceManager.GetObject("vector-screening-svg-3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -279,5 +279,14 @@
   <ItemGroup>
     <None Include="Resources\zoomout_zoom_search_find_1530.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32-321721_download-notepad-vector-png-clipart-clip-art-notepad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vector-screening-svg-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\91-916310_save-png-clipart-save-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

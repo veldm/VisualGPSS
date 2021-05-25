@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using GPSS.PLUS;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,7 @@ namespace GPSS.Visualiztion
     {
         #region Поля
         private readonly List<VisualElement> elements;
+        private readonly List<Function> functions;
         private Font defaultFont;
         private Color defaultFontColor;
         private Color backgroundColor;
@@ -160,6 +162,9 @@ namespace GPSS.Visualiztion
             }
         }
 
+        [Browsable(true), DisplayName("Пользовательские функции")]
+        public List<Function> Functions => functions;
+
         #endregion Свойства
 
         public VisualGPSS_Schema(Font font, Color fontColor, Color backgroundColor,
@@ -301,6 +306,20 @@ namespace GPSS.Visualiztion
                 name, delay, scatter, chanellCount, transactCount);
             schema.Elements.Insert((int)number, device);
             Refresh();
+        }
+
+        public void AddFunction(string name, string operand1, string operand2,
+            List<KeyValuePair<string, string>> values)
+        {
+            Function function = new Function(name, operand1, operand2, values);
+            foreach (Function func in Functions)
+            {
+                if (func.Name == function.Name)
+                {
+                    throw new ArgumentException("Функция с таким именем уже существует");
+                }
+            }
+            Functions.Add(function);
         }
 
         public void Refresh()

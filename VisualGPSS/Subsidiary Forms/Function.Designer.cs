@@ -246,6 +246,7 @@ namespace VisualGPSS.Subsidiary_Forms
             this.SaveButton.TabIndex = 14;
             this.SaveButton.Text = "Сохранить";
             this.SaveButton.UseVisualStyleBackColor = false;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // Function
             // 

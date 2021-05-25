@@ -41,19 +41,19 @@ namespace VisualGPSS
             this.TypeCB = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Label5 = new MaterialSkin.Controls.MaterialLabel();
-            this.TextBox5 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.Label4 = new MaterialSkin.Controls.MaterialLabel();
-            this.TextBox4 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.Label3 = new MaterialSkin.Controls.MaterialLabel();
-            this.TextBox3 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.Label2 = new MaterialSkin.Controls.MaterialLabel();
-            this.TextBox2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.Label1 = new MaterialSkin.Controls.MaterialLabel();
-            this.TextBox1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.propertyGrid = new System.Windows.Forms.PropertyGrid();
             this.DeleteButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.Cancelbutton = new MaterialSkin.Controls.MaterialFlatButton();
             this.SaveButton = new MaterialSkin.Controls.MaterialFlatButton();
+            this.TextBox1 = new System.Windows.Forms.ComboBox();
+            this.TextBox2 = new System.Windows.Forms.ComboBox();
+            this.TextBox3 = new System.Windows.Forms.ComboBox();
+            this.TextBox4 = new System.Windows.Forms.ComboBox();
+            this.TextBox5 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -190,16 +190,16 @@ namespace VisualGPSS
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox2.Controls.Add(this.Label5);
             this.groupBox2.Controls.Add(this.TextBox5);
-            this.groupBox2.Controls.Add(this.Label4);
             this.groupBox2.Controls.Add(this.TextBox4);
-            this.groupBox2.Controls.Add(this.Label3);
             this.groupBox2.Controls.Add(this.TextBox3);
-            this.groupBox2.Controls.Add(this.Label2);
             this.groupBox2.Controls.Add(this.TextBox2);
-            this.groupBox2.Controls.Add(this.Label1);
             this.groupBox2.Controls.Add(this.TextBox1);
+            this.groupBox2.Controls.Add(this.Label5);
+            this.groupBox2.Controls.Add(this.Label4);
+            this.groupBox2.Controls.Add(this.Label3);
+            this.groupBox2.Controls.Add(this.Label2);
+            this.groupBox2.Controls.Add(this.Label1);
             this.groupBox2.Location = new System.Drawing.Point(12, 218);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(481, 259);
@@ -219,21 +219,6 @@ namespace VisualGPSS
             this.Label5.TabIndex = 32;
             this.Label5.Text = "ИНТЕРВАЛ";
             // 
-            // TextBox5
-            // 
-            this.TextBox5.Depth = 0;
-            this.TextBox5.Hint = "";
-            this.TextBox5.Location = new System.Drawing.Point(147, 213);
-            this.TextBox5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.TextBox5.Name = "TextBox5";
-            this.TextBox5.PasswordChar = '\0';
-            this.TextBox5.SelectedText = "";
-            this.TextBox5.SelectionLength = 0;
-            this.TextBox5.SelectionStart = 0;
-            this.TextBox5.Size = new System.Drawing.Size(318, 23);
-            this.TextBox5.TabIndex = 31;
-            this.TextBox5.UseSystemPasswordChar = false;
-            // 
             // Label4
             // 
             this.Label4.AutoSize = true;
@@ -246,21 +231,6 @@ namespace VisualGPSS
             this.Label4.Size = new System.Drawing.Size(88, 19);
             this.Label4.TabIndex = 30;
             this.Label4.Text = "ИНТЕРВАЛ";
-            // 
-            // TextBox4
-            // 
-            this.TextBox4.Depth = 0;
-            this.TextBox4.Hint = "";
-            this.TextBox4.Location = new System.Drawing.Point(149, 170);
-            this.TextBox4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.TextBox4.Name = "TextBox4";
-            this.TextBox4.PasswordChar = '\0';
-            this.TextBox4.SelectedText = "";
-            this.TextBox4.SelectionLength = 0;
-            this.TextBox4.SelectionStart = 0;
-            this.TextBox4.Size = new System.Drawing.Size(318, 23);
-            this.TextBox4.TabIndex = 29;
-            this.TextBox4.UseSystemPasswordChar = false;
             // 
             // Label3
             // 
@@ -275,21 +245,6 @@ namespace VisualGPSS
             this.Label3.TabIndex = 28;
             this.Label3.Text = "ИНТЕРВАЛ";
             // 
-            // TextBox3
-            // 
-            this.TextBox3.Depth = 0;
-            this.TextBox3.Hint = "";
-            this.TextBox3.Location = new System.Drawing.Point(149, 124);
-            this.TextBox3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.TextBox3.Name = "TextBox3";
-            this.TextBox3.PasswordChar = '\0';
-            this.TextBox3.SelectedText = "";
-            this.TextBox3.SelectionLength = 0;
-            this.TextBox3.SelectionStart = 0;
-            this.TextBox3.Size = new System.Drawing.Size(318, 23);
-            this.TextBox3.TabIndex = 27;
-            this.TextBox3.UseSystemPasswordChar = false;
-            // 
             // Label2
             // 
             this.Label2.AutoSize = true;
@@ -303,21 +258,6 @@ namespace VisualGPSS
             this.Label2.TabIndex = 26;
             this.Label2.Text = "ИНТЕРВАЛ";
             // 
-            // TextBox2
-            // 
-            this.TextBox2.Depth = 0;
-            this.TextBox2.Hint = "";
-            this.TextBox2.Location = new System.Drawing.Point(147, 73);
-            this.TextBox2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.TextBox2.Name = "TextBox2";
-            this.TextBox2.PasswordChar = '\0';
-            this.TextBox2.SelectedText = "";
-            this.TextBox2.SelectionLength = 0;
-            this.TextBox2.SelectionStart = 0;
-            this.TextBox2.Size = new System.Drawing.Size(318, 23);
-            this.TextBox2.TabIndex = 25;
-            this.TextBox2.UseSystemPasswordChar = false;
-            // 
             // Label1
             // 
             this.Label1.AutoSize = true;
@@ -330,21 +270,6 @@ namespace VisualGPSS
             this.Label1.Size = new System.Drawing.Size(88, 19);
             this.Label1.TabIndex = 24;
             this.Label1.Text = "ИНТЕРВАЛ";
-            // 
-            // TextBox1
-            // 
-            this.TextBox1.Depth = 0;
-            this.TextBox1.Hint = "";
-            this.TextBox1.Location = new System.Drawing.Point(147, 27);
-            this.TextBox1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.TextBox1.Name = "TextBox1";
-            this.TextBox1.PasswordChar = '\0';
-            this.TextBox1.SelectedText = "";
-            this.TextBox1.SelectionLength = 0;
-            this.TextBox1.SelectionStart = 0;
-            this.TextBox1.Size = new System.Drawing.Size(318, 23);
-            this.TextBox1.TabIndex = 1;
-            this.TextBox1.UseSystemPasswordChar = false;
             // 
             // propertyGrid
             // 
@@ -402,6 +327,51 @@ namespace VisualGPSS
             this.SaveButton.Text = "Сохранить";
             this.SaveButton.UseVisualStyleBackColor = false;
             // 
+            // TextBox1
+            // 
+            this.TextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TextBox1.FormattingEnabled = true;
+            this.TextBox1.Location = new System.Drawing.Point(150, 23);
+            this.TextBox1.Name = "TextBox1";
+            this.TextBox1.Size = new System.Drawing.Size(318, 28);
+            this.TextBox1.TabIndex = 33;
+            // 
+            // TextBox2
+            // 
+            this.TextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TextBox2.FormattingEnabled = true;
+            this.TextBox2.Location = new System.Drawing.Point(150, 69);
+            this.TextBox2.Name = "TextBox2";
+            this.TextBox2.Size = new System.Drawing.Size(318, 28);
+            this.TextBox2.TabIndex = 34;
+            // 
+            // TextBox3
+            // 
+            this.TextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TextBox3.FormattingEnabled = true;
+            this.TextBox3.Location = new System.Drawing.Point(150, 120);
+            this.TextBox3.Name = "TextBox3";
+            this.TextBox3.Size = new System.Drawing.Size(318, 28);
+            this.TextBox3.TabIndex = 35;
+            // 
+            // TextBox4
+            // 
+            this.TextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TextBox4.FormattingEnabled = true;
+            this.TextBox4.Location = new System.Drawing.Point(150, 166);
+            this.TextBox4.Name = "TextBox4";
+            this.TextBox4.Size = new System.Drawing.Size(318, 28);
+            this.TextBox4.TabIndex = 36;
+            // 
+            // TextBox5
+            // 
+            this.TextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TextBox5.FormattingEnabled = true;
+            this.TextBox5.Location = new System.Drawing.Point(150, 209);
+            this.TextBox5.Name = "TextBox5";
+            this.TextBox5.Size = new System.Drawing.Size(318, 28);
+            this.TextBox5.TabIndex = 37;
+            // 
             // Block
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -444,16 +414,16 @@ namespace VisualGPSS
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private System.Windows.Forms.ComboBox TypeCB;
         private MaterialSkin.Controls.MaterialLabel Label1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField TextBox1;
         private MaterialSkin.Controls.MaterialLabel Label5;
-        private MaterialSkin.Controls.MaterialSingleLineTextField TextBox5;
         private MaterialSkin.Controls.MaterialLabel Label4;
-        private MaterialSkin.Controls.MaterialSingleLineTextField TextBox4;
         private MaterialSkin.Controls.MaterialLabel Label3;
-        private MaterialSkin.Controls.MaterialSingleLineTextField TextBox3;
         private MaterialSkin.Controls.MaterialLabel Label2;
-        private MaterialSkin.Controls.MaterialSingleLineTextField TextBox2;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private System.Windows.Forms.ComboBox numberComboBox;
+        private System.Windows.Forms.ComboBox TextBox5;
+        private System.Windows.Forms.ComboBox TextBox4;
+        private System.Windows.Forms.ComboBox TextBox3;
+        private System.Windows.Forms.ComboBox TextBox2;
+        private System.Windows.Forms.ComboBox TextBox1;
     }
 }

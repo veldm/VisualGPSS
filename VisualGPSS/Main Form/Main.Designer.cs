@@ -57,6 +57,9 @@
             this.элементToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.блокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolBox = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tableButton = new System.Windows.Forms.Button();
+            this.functionButton = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.saveValueButton = new System.Windows.Forms.Button();
             this.tabulateButton = new System.Windows.Forms.Button();
@@ -78,6 +81,7 @@
             this.BlockOrElementCMS.SuspendLayout();
             this.FieldCMS.SuspendLayout();
             this.ToolBox.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
@@ -174,7 +178,7 @@
             // 
             this.генерацияКодаToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.downloadoutline_110860;
             this.генерацияКодаToolStripMenuItem.Name = "генерацияКодаToolStripMenuItem";
-            this.генерацияКодаToolStripMenuItem.Size = new System.Drawing.Size(262, 26);
+            this.генерацияКодаToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
             this.генерацияКодаToolStripMenuItem.Text = "Генерация кода";
             this.генерацияКодаToolStripMenuItem.Click += new System.EventHandler(this.генерацияКодаToolStripMenuItem_Click);
             // 
@@ -182,27 +186,27 @@
             // 
             this.печатьСхемыToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.Print_icon_icons_com_73705;
             this.печатьСхемыToolStripMenuItem.Name = "печатьСхемыToolStripMenuItem";
-            this.печатьСхемыToolStripMenuItem.Size = new System.Drawing.Size(262, 26);
+            this.печатьСхемыToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
             this.печатьСхемыToolStripMenuItem.Text = "Печать схемы";
             // 
             // сохранитьКакИзображениеToolStripMenuItem
             // 
             this.сохранитьКакИзображениеToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources._1491253396_5document_image_82883;
             this.сохранитьКакИзображениеToolStripMenuItem.Name = "сохранитьКакИзображениеToolStripMenuItem";
-            this.сохранитьКакИзображениеToolStripMenuItem.Size = new System.Drawing.Size(262, 26);
+            this.сохранитьКакИзображениеToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
             this.сохранитьКакИзображениеToolStripMenuItem.Text = "Сохранить как изображение";
             this.сохранитьКакИзображениеToolStripMenuItem.Click += new System.EventHandler(this.сохранитьКакИзображениеToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(259, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(255, 6);
             // 
             // upScaleMenuItem
             // 
             this.upScaleMenuItem.Image = global::VisualGPSS.Properties.Resources.zoomin_zoom_search_find_1530;
             this.upScaleMenuItem.Name = "upScaleMenuItem";
-            this.upScaleMenuItem.Size = new System.Drawing.Size(262, 26);
+            this.upScaleMenuItem.Size = new System.Drawing.Size(258, 22);
             this.upScaleMenuItem.Text = "Увеличить масштаб";
             this.upScaleMenuItem.Click += new System.EventHandler(this.UpScale);
             // 
@@ -229,7 +233,7 @@
             // 
             this.downScaleMenuItem.Image = global::VisualGPSS.Properties.Resources.zoomout_zoom_search_find_1530;
             this.downScaleMenuItem.Name = "downScaleMenuItem";
-            this.downScaleMenuItem.Size = new System.Drawing.Size(262, 26);
+            this.downScaleMenuItem.Size = new System.Drawing.Size(258, 22);
             this.downScaleMenuItem.Text = "Уменьшить масштаб";
             this.downScaleMenuItem.Click += new System.EventHandler(this.DownScale);
             // 
@@ -356,6 +360,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.ToolBox.AutoScroll = true;
             this.ToolBox.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ToolBox.Controls.Add(this.groupBox1);
             this.ToolBox.Controls.Add(this.groupBox3);
             this.ToolBox.Controls.Add(this.groupBox2);
             this.ToolBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -363,6 +368,43 @@
             this.ToolBox.Name = "ToolBox";
             this.ToolBox.Size = new System.Drawing.Size(200, 307);
             this.ToolBox.TabIndex = 10;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.tableButton);
+            this.groupBox1.Controls.Add(this.functionButton);
+            this.groupBox1.Location = new System.Drawing.Point(3, 416);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(169, 109);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "PLUS";
+            // 
+            // tableButton
+            // 
+            this.tableButton.BackColor = System.Drawing.Color.White;
+            this.tableButton.BackgroundImage = global::VisualGPSS.Properties.Resources._31276;
+            this.tableButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tableButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tableButton.Location = new System.Drawing.Point(93, 27);
+            this.tableButton.Name = "tableButton";
+            this.tableButton.Size = new System.Drawing.Size(70, 70);
+            this.tableButton.TabIndex = 6;
+            this.tableButton.UseVisualStyleBackColor = false;
+            this.tableButton.Click += new System.EventHandler(this.tableButton_Click);
+            // 
+            // functionButton
+            // 
+            this.functionButton.BackColor = System.Drawing.Color.Transparent;
+            this.functionButton.BackgroundImage = global::VisualGPSS.Properties.Resources.kisspng_mathematical_notation_mathematics_functional_predi_analytic_function_5b18e71a7efec21;
+            this.functionButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.functionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.functionButton.Location = new System.Drawing.Point(10, 27);
+            this.functionButton.Name = "functionButton";
+            this.functionButton.Size = new System.Drawing.Size(70, 70);
+            this.functionButton.TabIndex = 5;
+            this.functionButton.UseVisualStyleBackColor = false;
+            this.functionButton.Click += new System.EventHandler(this.functionButton_Click);
             // 
             // groupBox3
             // 
@@ -372,7 +414,7 @@
             this.groupBox3.Controls.Add(this.terminateButton);
             this.groupBox3.Controls.Add(this.generateButton);
             this.groupBox3.Controls.Add(this.uncertainButton);
-            this.groupBox3.Location = new System.Drawing.Point(7, 10);
+            this.groupBox3.Location = new System.Drawing.Point(3, 4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(169, 291);
             this.groupBox3.TabIndex = 6;
@@ -446,7 +488,7 @@
             // 
             this.groupBox2.Controls.Add(this.multiChannelDeviceButton);
             this.groupBox2.Controls.Add(this.singleChannelDeviceButton);
-            this.groupBox2.Location = new System.Drawing.Point(7, 307);
+            this.groupBox2.Location = new System.Drawing.Point(3, 301);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(169, 109);
             this.groupBox2.TabIndex = 6;
@@ -578,6 +620,7 @@
             this.BlockOrElementCMS.ResumeLayout(false);
             this.FieldCMS.ResumeLayout(false);
             this.ToolBox.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
@@ -633,6 +676,9 @@
         private System.Windows.Forms.ToolStripMenuItem downScaleMenuItem;
         private System.Windows.Forms.Button tabulateButton;
         private System.Windows.Forms.Button saveValueButton;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button tableButton;
+        private System.Windows.Forms.Button functionButton;
     }
 }
 

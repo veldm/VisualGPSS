@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace VisualGPSS.Subsidiary_Forms
+namespace VisualGPSS
 {
     public partial class Function : MaterialSkin.Controls.MaterialForm
     {

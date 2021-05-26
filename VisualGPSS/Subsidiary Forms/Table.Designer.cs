@@ -1,5 +1,5 @@
 ﻿
-namespace VisualGPSS.Subsidiary_Forms
+namespace VisualGPSS
 {
     partial class Table
     {

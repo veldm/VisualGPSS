@@ -194,5 +194,17 @@ namespace VisualGPSS
         }
 
         #endregion Custom Controls
+
+        private void functionButton_Click(object sender, EventArgs e)
+        {
+            Function function = new Function(schema);
+            function.Show();
+        }
+
+        private void tableButton_Click(object sender, EventArgs e)
+        {
+            Table table = new Table(schema);
+            table.Show();
+        }
     }
 }

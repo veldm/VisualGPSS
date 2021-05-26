@@ -297,5 +297,14 @@
   <ItemGroup>
     <None Include="Resources\91-916310_save-png-clipart-save-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-mathematical-notation-mathematics-functional-predi-analytic-function-5b18e71a7efec2.3657208115283586825202.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-mathematical-notation-mathematics-functional-predi-analytic-function-5b18e71a7efec2.36572081152835868252021.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\31276.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

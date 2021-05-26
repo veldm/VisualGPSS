@@ -103,6 +103,16 @@ namespace VisualGPSS.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _31276 {
+            get {
+                object obj = ResourceManager.GetObject("31276", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _32_321721_download_notepad_vector_png_clipart_clip_art_notepad {
             get {
                 object obj = ResourceManager.GetObject("32-321721_download-notepad-vector-png-clipart-clip-art-notepad", resourceCulture);
@@ -288,6 +298,28 @@ namespace VisualGPSS.Properties {
             get {
                 object obj = ResourceManager.GetObject("kisspng-computer-icons-git-branching-clip-art-fork-git-5b4d48a3433994.17242679153" +
                         "17915232754", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_mathematical_notation_mathematics_functional_predi_analytic_function_5b18e71a7efec2_3657208115283586825202 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-mathematical-notation-mathematics-functional-predi-analytic-function-5b18" +
+                        "e71a7efec2.3657208115283586825202", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_mathematical_notation_mathematics_functional_predi_analytic_function_5b18e71a7efec21 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-mathematical-notation-mathematics-functional-predi-analytic-function-5b18" +
+                        "e71a7efec21", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

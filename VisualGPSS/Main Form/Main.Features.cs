@@ -91,7 +91,7 @@ namespace VisualGPSS
 
         private void генерацияКодаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CodeRedactor redactor = new CodeRedactor(schema.Code);
+            CodeRedactor redactor = new CodeRedactor(schema.FullCode);
             redactor.Show();
         }
 

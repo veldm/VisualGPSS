@@ -15,6 +15,7 @@ namespace GPSS.Visualiztion
         #region Поля
         private readonly List<VisualElement> elements;
         private readonly List<Function> functions;
+        private readonly List<Table> tables;
         private Font defaultFont;
         private Color defaultFontColor;
         private Color backgroundColor;
@@ -40,6 +41,11 @@ namespace GPSS.Visualiztion
         [Browsable(false), JsonIgnore]
         public string[] Code => (from VisualElement element in Elements
                                  select element.Code).ToArray();
+
+        [Browsable(false), JsonIgnore]
+        public string[] FullCode => (from Table table in Tables select table.Code).Concat
+            (from Function function in Functions select function.Code).Concat
+            (from VisualElement element in Elements select element.Code).ToArray();
 
         [Browsable(false), JsonIgnore]
         public List<string> LabelsList => Labels.Keys.ToList();
@@ -165,6 +171,9 @@ namespace GPSS.Visualiztion
         [Browsable(true), DisplayName("Пользовательские функции")]
         public List<Function> Functions => functions;
 
+        [Browsable(true), DisplayName("Таблицы статистики")]
+        public List<Table> Tables => tables;
+
         #endregion Свойства
 
         public VisualGPSS_Schema(Font font, Color fontColor, Color backgroundColor,
@@ -176,6 +185,8 @@ namespace GPSS.Visualiztion
             BackgroundColor = backgroundColor;
             this.defaultElementsColor = defaultElementsColor;
             this.defaultLinesColor = defaultLinesColor;
+            tables = new List<Table>();
+            functions = new List<Function>();
 
             //labels = new Dictionary<string, VisualElement>();
             //labelsList = new List<string>();
@@ -184,17 +195,18 @@ namespace GPSS.Visualiztion
         [JsonConstructor]
         public VisualGPSS_Schema(List<VisualElement> Elements, Font DefaultFont,
             Color defaultFontColor, Color backgroundColor, Color defaultElementsColor,
-            Color defaultLinesColor)
+            Color defaultLinesColor, List<Table> tables, List<Function> functions)
         {
             //this.labels = labels;
             //this.labelsList = labelsList;
             this.elements = Elements ?? throw new ArgumentNullException(nameof(Elements));
-            this.DefaultFont = DefaultFont ?? throw new ArgumentNullException(nameof(DefaultFont));
+            this.defaultFont = DefaultFont ?? throw new ArgumentNullException(nameof(DefaultFont));
             this.defaultFontColor = defaultFontColor;
             this.backgroundColor = backgroundColor;
             this.defaultElementsColor = defaultElementsColor;
             this.defaultLinesColor = defaultLinesColor;
-
+            this.tables = tables;
+            this.functions = functions;
             foreach (VisualElement element in Elements)
             {
                 if (element is VisualTransfer transfer)
@@ -320,6 +332,20 @@ namespace GPSS.Visualiztion
                 }
             }
             Functions.Add(function);
+        }
+
+        public void AddTable(string name, string intervalMax, string intervalWidth,
+            string intervalsCount, string timeInterval_RT = null)
+        {
+            Table table = new Table(name, intervalMax, intervalWidth, intervalsCount, timeInterval_RT);
+            foreach (Table tab in Tables)
+            {
+                if (tab.Name == tab.Name)
+                {
+                    throw new ArgumentException("Таблица с таким именем уже существует");
+                }
+            }
+            Tables.Add(table);
         }
 
         public void Refresh()

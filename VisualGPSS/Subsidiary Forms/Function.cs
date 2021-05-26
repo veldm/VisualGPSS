@@ -39,7 +39,9 @@ namespace VisualGPSS.Subsidiary_Forms
                     throw new ArgumentException("Не задано имя функции");
                 string operand1 = operandTB.Text is not "" ? operandTB.Text :
                     throw new ArgumentException("Не задан опреанд функции");
-                string type = pointsCountNUD.Value switch
+                #pragma warning disable CS8509
+                string type = typeCB.SelectedIndex switch
+                #pragma warning restore CS8509
                 {
                     0 => "D",
                     1 => "C"

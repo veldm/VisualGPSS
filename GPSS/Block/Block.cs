@@ -26,6 +26,7 @@ namespace GPSS
                     BlockType.TRANSFER_UNCON => $"TRANSFER ,{Arguments[0]}",
                     BlockType.TRANSFER_VARIABLE => $"TRANSFER " +
                         $".{Arguments[0].Substring(2)},{Arguments[1]},{Arguments[2]}",
+                    BlockType.SaveValue => $"{Arguments[0]}{Arguments[1]},{Arguments[2]}",
                     _ => base.Code
                 };
             }

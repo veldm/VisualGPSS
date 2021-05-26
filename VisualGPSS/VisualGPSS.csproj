@@ -113,6 +113,12 @@
     <Compile Include="Subsidiary Forms\Function.Designer.cs">
       <DependentUpon>Function.cs</DependentUpon>
     </Compile>
+    <Compile Include="Subsidiary Forms\Table.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subsidiary Forms\Table.Designer.cs">
+      <DependentUpon>Table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Subsidiary Forms\Transfer Form\Transfer.Create.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Subsidiary Forms\Function.resx">
       <DependentUpon>Function.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subsidiary Forms\Table.resx">
+      <DependentUpon>Table.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Subsidiary Forms\Transfer Form\Transfer.Main.resx">
       <DependentUpon>Transfer.Main.cs</DependentUpon>

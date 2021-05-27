@@ -13,7 +13,7 @@ namespace VisualGPSS
 {
     public partial class Transfer : MaterialSkin.Controls.MaterialForm
     {
-        readonly VisualTransfer transfer;
+        VisualTransfer transfer;
         readonly VisualGPSS_Schema schema;
         readonly VisualElement startBlock;
         string label;
@@ -75,20 +75,22 @@ namespace VisualGPSS
         private void labelAddButton_Click(object sender, EventArgs e)
         {
             addNewElement_CMS.Show((Control)sender, new Point(0, 0));
+            addNewElement_CMS.Tag = ((Control)sender).Name;
         }
 
         private void добавитьВетвлениеToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (transfer is null) transfer = new VisualTransfer() { number = startBlock.number + 1 };
             Transfer transferForm = new Transfer
                 (transfer, schema, $"label{schema.ElementsWithLabelsList.Count + 1}");
-            ComboBox cb = ((Control)sender).Name switch
+            ComboBox cb = ((ToolStripMenuItem)sender).Owner.Tag switch
             {
                 "label1AddButton" => comboBox1,
                 "label2AddButton" => comboBox2,
                 _ => throw new NotImplementedException()
             };
             transferForm.SaveButton.Click += (object sender, EventArgs e)
-                => { cb.SelectedItem = transferForm.label; };
+                => { cb.Text = transferForm.label; };
             transferForm.Show();
         }
     }

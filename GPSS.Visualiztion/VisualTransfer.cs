@@ -26,6 +26,8 @@ namespace GPSS.Visualiztion
         public override object[] ExtendedParams
         { get => new object[] { startBlock, block1, block2 }; }
 
+        public VisualTransfer() { }
+
         public VisualTransfer(VisualElement startBlock, VisualElement block1, VisualElement block2,
             double digit, Operator essence, uint number, Point center,
             VisualGPSS_Schema parentSchema) : base(essence, number, center, parentSchema)

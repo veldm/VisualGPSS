@@ -15,8 +15,8 @@ namespace GPSS.Visualiztion
         private string queueName;
         private string name;
         private string label;
-        private double delay;
-        private double scatter;
+        private string delay;
+        private string scatter;
         private int chanellCount;
         private int transactSize;
 
@@ -52,9 +52,9 @@ namespace GPSS.Visualiztion
         //#pragma warning restore CS0114
         // Член скрывает унаследованный член: отсутствует ключевое слово переопределения
 
-        [Browsable(false), JsonIgnore] public double Delay { get => delay; set => delay = value; }
+        [Browsable(false), JsonIgnore] public string Delay { get => delay; set => delay = value; }
 
-        [Browsable(false), JsonIgnore] public double Scatter
+        [Browsable(false), JsonIgnore] public string Scatter
             { get => scatter; set => scatter = value; }
 
         [Browsable(false), JsonIgnore] public int ChanellCount
@@ -64,7 +64,7 @@ namespace GPSS.Visualiztion
         { get => transactSize; set => transactSize = value; }
 
         public Device(uint number, Point center, VisualGPSS_Schema parentSchema, string label,
-            string _queueName, string _name, double _delay, double _scatter, int _chanellCount = 1,
+            string _queueName, string _name, string _delay, string _scatter, int _chanellCount = 1,
             int _transactSize = 1) : base(null, number, center, parentSchema) 
         {
             width = 170;
@@ -116,8 +116,8 @@ namespace GPSS.Visualiztion
             this.QueueName = (string)(queueName ?? ExtendedParams[1]);
             this.name = Name;
             this.label = Label;
-            this.Delay = (double)ExtendedParams[2];
-            this.Scatter = (double)ExtendedParams[3];
+            this.Delay = (string)ExtendedParams[2];
+            this.Scatter = (string)ExtendedParams[3];
             this.ChanellCount = int.Parse(ExtendedParams[4].ToString());
             this.TransactSize = int.Parse(ExtendedParams[5].ToString());
         }

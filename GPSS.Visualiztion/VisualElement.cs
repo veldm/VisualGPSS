@@ -67,6 +67,8 @@ namespace GPSS.Visualiztion
             fontColor = parentSchema.DefaultFontColor;
         }
 
+        protected VisualElement() { }
+
         [JsonConstructor]
         protected VisualElement(Operator essence, uint number, int width, int heigth,
             Point center, Color _mainColor, Color _linesColor, Font _font, Color _fontColor)

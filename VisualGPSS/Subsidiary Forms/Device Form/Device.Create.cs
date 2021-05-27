@@ -31,8 +31,8 @@ namespace VisualGPSS
             string label = LabelTextBox.Text;
             string name = NameTextBox.Text;
             string queue = QueueTextBox.Text;
-            double delay = double.Parse(DelayTextBox.Text);
-            double scatter = double.Parse(ScatterTextBox.Text);
+            string delay = DelayTextBox.Text;
+            string scatter = ScatterTextBox.Text;
             int? chanellCount = null, transactSize = null;
             if (ChanellCountCB.Enabled)
             {

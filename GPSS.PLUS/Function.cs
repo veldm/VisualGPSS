@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,9 +15,17 @@ namespace GPSS.PLUS
         private List<KeyValuePair<string, string>> values;
 
         public string Name { get => name; set => name = value; }
+        public string NameToCall => $"FN${name}";
         public string Operand1 { get => operand1; set => operand1 = value; }
         public string Operand2 { get => operand2; set => operand2 = value; }
+        
+        [DisplayName("Значения")]
         public List<KeyValuePair<string, string>> Values { get => values; set => values = value; }
+
+        public Function()
+        {
+            values = new List<KeyValuePair<string, string>>();
+        }
 
         public Function(string name, string operand1, string operand2, List<KeyValuePair<string, string>> values)
         {

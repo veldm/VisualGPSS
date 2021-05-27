@@ -86,5 +86,34 @@ namespace VisualGPSS
                 TextBox5.Enabled = s5 is not "";
             }
         }
+
+        private void SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (GPSS.PLUS.Base.FunctionsHeaders.Contains((string)((ComboBox)sender).SelectedItem))
+            {
+                ((Control)sender).Text = GPSS.PLUS.Base.Functions
+                    [GPSS.PLUS.Base.FunctionsHeaders.IndexOf((string)((ComboBox)sender).SelectedItem)];
+            }
+        }
+
+        private void Block_Shown(object sender, EventArgs e)
+        {
+            if (visualBlock is not null)
+            {
+                int i = 0;
+                if (TextBox1.Enabled) TextBox1.Text = i < visualBlock.Essence.Arguments.Length ?
+                        visualBlock.Essence.Arguments[i++] : "";
+                if (TextBox2.Enabled) TextBox2.Text = i < visualBlock.Essence.Arguments.Length ?
+                        visualBlock.Essence.Arguments[i++] : "";
+                if (TextBox3.Enabled) TextBox3.Text = i < visualBlock.Essence.Arguments.Length ?
+                        visualBlock.Essence.Arguments[i++] : "";
+                if (TextBox4.Enabled) TextBox4.Text = i < visualBlock.Essence.Arguments.Length ?
+                        visualBlock.Essence.Arguments[i++] : "";
+                if (TextBox5.Enabled) TextBox5.Text = i < visualBlock.Essence.Arguments.Length ?
+                        visualBlock.Essence.Arguments[i++] : "";
+            }
+            else TextBox1.SelectedIndex = TextBox2.SelectedIndex = TextBox3.SelectedIndex =
+                    TextBox4.SelectedIndex = TextBox5.SelectedIndex = -1;
+        }
     }
 }

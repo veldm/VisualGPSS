@@ -216,6 +216,10 @@
     <None Include="Resources\add_insert_1193.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GPSS.PLUS\GPSS.PLUS.csproj">
+      <Project>{29e8c1cd-1ca5-4b68-8605-ac081b836f20}</Project>
+      <Name>GPSS.PLUS</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GPSS.Visualiztion\GPSS.Visualiztion.csproj">
       <Project>{5eec445f-f5f1-4152-90bc-e8bae37c363f}</Project>
       <Name>GPSS.Visualiztion</Name>

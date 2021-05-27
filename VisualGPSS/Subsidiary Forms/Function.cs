@@ -28,7 +28,7 @@ namespace VisualGPSS
                 FrqVal_DGV.Rows.Add(pointsCountNUD.Value - FrqVal_DGV.Rows.Count);
             else if (pointsCountNUD.Value < FrqVal_DGV.Rows.Count)
                 for (int i = 0; i < FrqVal_DGV.Rows.Count -pointsCountNUD.Value; i++)
-                    FrqVal_DGV.Rows.RemoveAt(FrqVal_DGV.Rows.Count);
+                    FrqVal_DGV.Rows.RemoveAt(FrqVal_DGV.Rows.Count - 1);
         }
 
         private void SaveButton_Click(object sender, EventArgs e)

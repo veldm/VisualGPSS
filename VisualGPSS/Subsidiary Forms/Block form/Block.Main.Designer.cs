@@ -40,6 +40,11 @@ namespace VisualGPSS
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.TypeCB = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.TextBox5 = new System.Windows.Forms.ComboBox();
+            this.TextBox4 = new System.Windows.Forms.ComboBox();
+            this.TextBox3 = new System.Windows.Forms.ComboBox();
+            this.TextBox2 = new System.Windows.Forms.ComboBox();
+            this.TextBox1 = new System.Windows.Forms.ComboBox();
             this.Label5 = new MaterialSkin.Controls.MaterialLabel();
             this.Label4 = new MaterialSkin.Controls.MaterialLabel();
             this.Label3 = new MaterialSkin.Controls.MaterialLabel();
@@ -49,11 +54,6 @@ namespace VisualGPSS
             this.DeleteButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.Cancelbutton = new MaterialSkin.Controls.MaterialFlatButton();
             this.SaveButton = new MaterialSkin.Controls.MaterialFlatButton();
-            this.TextBox1 = new System.Windows.Forms.ComboBox();
-            this.TextBox2 = new System.Windows.Forms.ComboBox();
-            this.TextBox3 = new System.Windows.Forms.ComboBox();
-            this.TextBox4 = new System.Windows.Forms.ComboBox();
-            this.TextBox5 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -206,6 +206,56 @@ namespace VisualGPSS
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
+            // TextBox5
+            // 
+            this.TextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TextBox5.FormattingEnabled = true;
+            this.TextBox5.Location = new System.Drawing.Point(150, 209);
+            this.TextBox5.Name = "TextBox5";
+            this.TextBox5.Size = new System.Drawing.Size(318, 28);
+            this.TextBox5.TabIndex = 37;
+            this.TextBox5.SelectedIndexChanged += new System.EventHandler(this.SelectedIndexChanged);
+            // 
+            // TextBox4
+            // 
+            this.TextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TextBox4.FormattingEnabled = true;
+            this.TextBox4.Location = new System.Drawing.Point(150, 166);
+            this.TextBox4.Name = "TextBox4";
+            this.TextBox4.Size = new System.Drawing.Size(318, 28);
+            this.TextBox4.TabIndex = 36;
+            this.TextBox4.SelectedIndexChanged += new System.EventHandler(this.SelectedIndexChanged);
+            // 
+            // TextBox3
+            // 
+            this.TextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TextBox3.FormattingEnabled = true;
+            this.TextBox3.Location = new System.Drawing.Point(150, 120);
+            this.TextBox3.Name = "TextBox3";
+            this.TextBox3.Size = new System.Drawing.Size(318, 28);
+            this.TextBox3.TabIndex = 35;
+            this.TextBox3.SelectedIndexChanged += new System.EventHandler(this.SelectedIndexChanged);
+            // 
+            // TextBox2
+            // 
+            this.TextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TextBox2.FormattingEnabled = true;
+            this.TextBox2.Location = new System.Drawing.Point(150, 69);
+            this.TextBox2.Name = "TextBox2";
+            this.TextBox2.Size = new System.Drawing.Size(318, 28);
+            this.TextBox2.TabIndex = 34;
+            this.TextBox2.SelectedIndexChanged += new System.EventHandler(this.SelectedIndexChanged);
+            // 
+            // TextBox1
+            // 
+            this.TextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TextBox1.FormattingEnabled = true;
+            this.TextBox1.Location = new System.Drawing.Point(150, 23);
+            this.TextBox1.Name = "TextBox1";
+            this.TextBox1.Size = new System.Drawing.Size(318, 28);
+            this.TextBox1.TabIndex = 33;
+            this.TextBox1.SelectedIndexChanged += new System.EventHandler(this.SelectedIndexChanged);
+            // 
             // Label5
             // 
             this.Label5.AutoSize = true;
@@ -327,51 +377,6 @@ namespace VisualGPSS
             this.SaveButton.Text = "Сохранить";
             this.SaveButton.UseVisualStyleBackColor = false;
             // 
-            // TextBox1
-            // 
-            this.TextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TextBox1.FormattingEnabled = true;
-            this.TextBox1.Location = new System.Drawing.Point(150, 23);
-            this.TextBox1.Name = "TextBox1";
-            this.TextBox1.Size = new System.Drawing.Size(318, 28);
-            this.TextBox1.TabIndex = 33;
-            // 
-            // TextBox2
-            // 
-            this.TextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TextBox2.FormattingEnabled = true;
-            this.TextBox2.Location = new System.Drawing.Point(150, 69);
-            this.TextBox2.Name = "TextBox2";
-            this.TextBox2.Size = new System.Drawing.Size(318, 28);
-            this.TextBox2.TabIndex = 34;
-            // 
-            // TextBox3
-            // 
-            this.TextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TextBox3.FormattingEnabled = true;
-            this.TextBox3.Location = new System.Drawing.Point(150, 120);
-            this.TextBox3.Name = "TextBox3";
-            this.TextBox3.Size = new System.Drawing.Size(318, 28);
-            this.TextBox3.TabIndex = 35;
-            // 
-            // TextBox4
-            // 
-            this.TextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TextBox4.FormattingEnabled = true;
-            this.TextBox4.Location = new System.Drawing.Point(150, 166);
-            this.TextBox4.Name = "TextBox4";
-            this.TextBox4.Size = new System.Drawing.Size(318, 28);
-            this.TextBox4.TabIndex = 36;
-            // 
-            // TextBox5
-            // 
-            this.TextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TextBox5.FormattingEnabled = true;
-            this.TextBox5.Location = new System.Drawing.Point(150, 209);
-            this.TextBox5.Name = "TextBox5";
-            this.TextBox5.Size = new System.Drawing.Size(318, 28);
-            this.TextBox5.TabIndex = 37;
-            // 
             // Block
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -390,6 +395,7 @@ namespace VisualGPSS
             this.ShowIcon = false;
             this.Sizable = false;
             this.Text = "Редактор блоков";
+            this.Shown += new System.EventHandler(this.Block_Shown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

@@ -20,6 +20,8 @@ namespace GPSS.PLUS
         public string IntervalsCount { get => intervalsCount; set => intervalsCount = value; }
         public string TimeInterval_RT { get => timeInterval_RT; set => timeInterval_RT = value; }
 
+        public Table() { }
+
         public Table(string name, string intervalMax, string intervalWidth,
             string intervalsCount, string timeInterval_RT = null)
         {

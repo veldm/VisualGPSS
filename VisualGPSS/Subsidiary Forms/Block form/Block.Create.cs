@@ -27,6 +27,17 @@ namespace VisualGPSS
             numberComboBox.SelectedIndex = numberComboBox.Items.Count - 1;
 
             SaveButton.Click += CreateNewBlock;
+
+            TextBox1.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
+                (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
+            TextBox2.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
+                (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
+            TextBox3.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
+                (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
+            TextBox4.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
+                (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
+            TextBox5.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
+                (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
         }
 
         private void CreateNewBlock(object sender, EventArgs e)
@@ -40,6 +51,7 @@ namespace VisualGPSS
                 foreach (var control in from Control control in groupBox2.Controls
                                         where control
                                         is MaterialSkin.Controls.MaterialSingleLineTextField
+                                        or ComboBox
                                         select control)
                     arguments.Add(control.Text);
                 arguments.Reverse();

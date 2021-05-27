@@ -432,6 +432,7 @@
             this.saveValueButton.Size = new System.Drawing.Size(70, 70);
             this.saveValueButton.TabIndex = 9;
             this.saveValueButton.UseVisualStyleBackColor = false;
+            this.saveValueButton.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
             // tabulateButton
             // 
@@ -444,6 +445,7 @@
             this.tabulateButton.Size = new System.Drawing.Size(70, 70);
             this.tabulateButton.TabIndex = 8;
             this.tabulateButton.UseVisualStyleBackColor = false;
+            this.tabulateButton.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
             // terminateButton
             // 

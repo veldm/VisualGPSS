@@ -38,17 +38,17 @@ namespace VisualGPSS
                 numberComboBox.Items.Add(ii.ToString());
             numberComboBox.SelectedItem = (visualBlock.number + 1).ToString();
 
-            int i = 0;
-            if (TextBox1.Enabled) TextBox1.Text = i < visualBlock.Essence.Arguments.Length ?
-                    visualBlock.Essence.Arguments[i++] : "";
-            if (TextBox2.Enabled) TextBox2.Text = i < visualBlock.Essence.Arguments.Length ?
-                    visualBlock.Essence.Arguments[i++] : "";
-            if (TextBox3.Enabled) TextBox3.Text = i < visualBlock.Essence.Arguments.Length ?
-                    visualBlock.Essence.Arguments[i++] : "";
-            if (TextBox4.Enabled) TextBox4.Text = i < visualBlock.Essence.Arguments.Length ?
-                    visualBlock.Essence.Arguments[i++] : "";
-            if (TextBox5.Enabled) TextBox5.Text = i < visualBlock.Essence.Arguments.Length ?
-                    visualBlock.Essence.Arguments[i++] : "";
+            TextBox1.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
+                (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
+            TextBox2.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
+                (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
+            TextBox3.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
+                (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
+            TextBox4.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
+                (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
+            TextBox5.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
+                (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
+
             //int i = visualBlock.essence.Arguments.Length - 1;
             //foreach (var control in from Control control in groupBox2.Controls
             //                        where control
@@ -83,6 +83,7 @@ namespace VisualGPSS
                 foreach (var control in from Control control in groupBox2.Controls
                                         where control
                                         is MaterialSkin.Controls.MaterialSingleLineTextField
+                                        or ComboBox
                                         select control)
                     //visualBlock.essence.Arguments[i++] = control.Text;
                     if (control.Text is not "")

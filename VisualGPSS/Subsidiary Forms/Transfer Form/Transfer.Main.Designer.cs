@@ -66,7 +66,7 @@
             "Следующий блок (default)"});
             this.comboBox1.Location = new System.Drawing.Point(131, 17);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(232, 28);
+            this.comboBox1.Size = new System.Drawing.Size(273, 28);
             this.comboBox1.TabIndex = 1;
             // 
             // comboBox2
@@ -75,7 +75,7 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(131, 70);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(232, 28);
+            this.comboBox2.Size = new System.Drawing.Size(273, 28);
             this.comboBox2.TabIndex = 3;
             // 
             // Label1
@@ -199,7 +199,7 @@
             this.TextBox.SelectedText = "";
             this.TextBox.SelectionLength = 0;
             this.TextBox.SelectionStart = 0;
-            this.TextBox.Size = new System.Drawing.Size(233, 23);
+            this.TextBox.Size = new System.Drawing.Size(274, 23);
             this.TextBox.TabIndex = 16;
             this.TextBox.UseSystemPasswordChar = false;
             // 
@@ -288,15 +288,15 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.TextBox);
+            this.groupBox2.Controls.Add(this.comboBox2);
+            this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.functionAddButton);
             this.groupBox2.Controls.Add(this.label2Addbutton);
             this.groupBox2.Controls.Add(this.label1AddButton);
             this.groupBox2.Controls.Add(this.Label3);
             this.groupBox2.Controls.Add(this.Label2);
-            this.groupBox2.Controls.Add(this.TextBox);
             this.groupBox2.Controls.Add(this.Label1);
-            this.groupBox2.Controls.Add(this.comboBox2);
-            this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Location = new System.Drawing.Point(12, 228);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(414, 170);
@@ -314,6 +314,7 @@
             this.functionAddButton.Size = new System.Drawing.Size(26, 27);
             this.functionAddButton.TabIndex = 19;
             this.functionAddButton.UseVisualStyleBackColor = false;
+            this.functionAddButton.Visible = false;
             this.functionAddButton.Click += new System.EventHandler(this.labelAddButton_Click);
             // 
             // label2Addbutton
@@ -327,6 +328,7 @@
             this.label2Addbutton.Size = new System.Drawing.Size(26, 27);
             this.label2Addbutton.TabIndex = 18;
             this.label2Addbutton.UseVisualStyleBackColor = false;
+            this.label2Addbutton.Visible = false;
             this.label2Addbutton.Click += new System.EventHandler(this.labelAddButton_Click);
             // 
             // label1AddButton
@@ -340,6 +342,7 @@
             this.label1AddButton.Size = new System.Drawing.Size(26, 27);
             this.label1AddButton.TabIndex = 17;
             this.label1AddButton.UseVisualStyleBackColor = false;
+            this.label1AddButton.Visible = false;
             this.label1AddButton.Click += new System.EventHandler(this.labelAddButton_Click);
             // 
             // addNewElement_CMS

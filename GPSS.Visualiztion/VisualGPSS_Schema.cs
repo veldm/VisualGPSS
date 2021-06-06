@@ -33,7 +33,7 @@ namespace GPSS.Visualiztion
                 foreach (var element in from VisualElement element in Elements
                                         where element.Label is not null or ""
                                         select element)
-                    res.Add(element.Label, element);
+                    if (element.Label is not "") res.Add(element.Label, element);
                 return res;
             }
         }
@@ -375,6 +375,14 @@ namespace GPSS.Visualiztion
             Elements.Remove(visualElement);
             //if (visualElement.Label is not null or "")
             //    Labels.Remove(visualElement.Label);
+            foreach (VisualTransfer transfer in Transfers)
+            {
+                if (transfer.StartBlock == visualElement || transfer.Block1 == visualElement ||
+                    transfer.Block2 == visualElement)
+                {
+                    Remove(transfer);
+                }
+            }
             Refresh();
         }
         #endregion Методы

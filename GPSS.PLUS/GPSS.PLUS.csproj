@@ -10,7 +10,7 @@
     <RootNamespace>GPSS.PLUS</RootNamespace>
     <AssemblyName>GPSS.PLUS</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-	<LangVersion>9.0</LangVersion>
+    <LangVersion>9.0</LangVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
@@ -47,6 +47,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Base.cs" />
     <Compile Include="Table.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.GPSS.PLUS.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

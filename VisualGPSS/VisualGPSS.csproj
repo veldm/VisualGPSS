@@ -165,6 +165,7 @@
     <EmbeddedResource Include="Subsidiary Forms\Transfer Form\Transfer.Main.resx">
       <DependentUpon>Transfer.Main.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram.Common.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

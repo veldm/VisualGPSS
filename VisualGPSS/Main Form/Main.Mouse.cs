@@ -142,12 +142,12 @@ namespace VisualGPSS
                 false => activeElement,
                 true => schema
             };
-            if (Cursor.Current == Cursors.Cross)
-            {
-                Cursor.Current = Cursors.Default;
-                creatingOperator.Value.method.Invoke
-                    (creatingOperator.Value.parameter, CursorPosition);
-            }
+            //if (Cursor.Current == Cursors.Cross)
+            //{
+            //    Cursor.Current = Cursors.Default;
+            //    creatingOperator.Value.method.Invoke
+            //        (creatingOperator.Value.parameter, CursorPosition);
+            //}
         }
 
         private void pictureBox_MouseUp(object sender, MouseEventArgs e)
@@ -155,7 +155,7 @@ namespace VisualGPSS
             resizing = moving.isGoing = false;
             timer.Stop();
             timer.Enabled = false;
-            if (creatingOperator is not null)
+            if (Cursor.Current == Cursors.Cross && creatingOperator is not null)
                 creatingOperator.Value.method.Invoke(creatingOperator.Value.parameter,
                     new Point(CursorPosition.X, CursorPosition.Y));
             Cursor = Cursors.Default;

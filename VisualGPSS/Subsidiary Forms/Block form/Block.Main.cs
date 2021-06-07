@@ -15,7 +15,7 @@ namespace VisualGPSS
     {
         private VisualBlock visualBlock;
         private readonly Point point;
-        private readonly VisualGPSS_Schema schema;        
+        private readonly VisualGPSS_Schema schema;
 
         //  GENERATE[〈интервал〉],[〈разброс〉],[〈задержка〉],[〈ограничение〉],[〈приоритет〉
         //  TERMINATE [hвычитаемоеi]
@@ -26,6 +26,23 @@ namespace VisualGPSS
         //  DEPART hимя очередиi[, hколичествоi]
         //  ENTER hимяi,[hколичествоi]
         //  LEAVE hимяi,[hколичествоi]
+
+        //  PREEMPT устройство,[режим приоритета],[назначение],[№ параметра],[режим]
+        //  RETURN устройство
+        //  FUNAVAIL имя,[режим1],[метка1],[№],[режим2],[метка2],[режим3],[метка3]
+        //  FAVAIL имя
+        //  SUNAVAIL имя
+        //  SAVAIL имя
+        //  LOOP<№ параметра>[, метка]
+        //  ASSIGN № параметра[суффикс],значение[, функция]
+        //  MARK № параметра
+        //  TEST отношение значение1, значение2[, метка]
+        //  GATE условие устройство[, метка]
+        //  SPLIT количество,[метка] [,№ параметра]
+        //  ASSEMBLE количество
+        //  GATHER количество
+        //  ADOPT № группы
+        //  MATCH метка
 
         private void TypeCB_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -60,6 +77,45 @@ namespace VisualGPSS
                     break;
                 case "SaveValue":
                     SetParams("ИМЯ", "ДЕЙСТВИЕ", "ЗНАЧЕНИЕ");
+                    break;
+                case "PREEMPT":
+                    SetParams("УСТРОЙСТВО", "ПРИОРИТЕТ", "НАЗНАЧЕНИЕ", "ПАРАМЕТР", "РЕЖИМ");
+                    break;
+                case "RETURN":
+                    SetParams("УСТРОЙСТВО");
+                    break;
+                case "FAVAIL":
+                    SetParams("ИМЯ");
+                    break;
+                case "SUNAVAIL":
+                    SetParams("ИМЯ");
+                    break;
+                case "SAVAIL":
+                    SetParams("ИМЯ");
+                    break;
+                case "LOOP":
+                    SetParams("ПАРАМЕТР", "МЕТКА");
+                    break;
+                case "ASSIGN":
+                    SetParams("ПАРАМЕТР", "СУФФИКС", "ЗНАЧЕНИЕ", "ФУНКЦИЯ");
+                    break;
+                case "MARK":
+                    SetParams("ПАРАМЕТР");
+                    break;
+                case "SPLIT":
+                    SetParams("КОЛИЧЕСТВО", "МЕТКА", "ПАРАМЕТР");
+                    break;
+                case "ASSEMBLE":
+                    SetParams("КОЛИЧЕСТВО");
+                    break;
+                case "GATHER":
+                    SetParams("КОЛИЧЕСТВО");
+                    break;
+                case "ADOPT":
+                    SetParams("ГРУППА");
+                    break;
+                case "MATCH":
+                    SetParams("МЕТКА");
                     break;
             }
 

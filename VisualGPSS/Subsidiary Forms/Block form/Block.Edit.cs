@@ -81,9 +81,9 @@ namespace VisualGPSS
                 //int i = 0;
                 List<string> args = new List<string>();
                 foreach (var control in from Control control in groupBox2.Controls
-                                        where control
+                                        where (control
                                         is MaterialSkin.Controls.MaterialSingleLineTextField
-                                        or ComboBox
+                                        or ComboBox) && control.Enabled
                                         select control)
                     //visualBlock.essence.Arguments[i++] = control.Text;
                     if (control.Text is not "")

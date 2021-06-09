@@ -36,6 +36,30 @@ namespace VisualGPSS
 
             try
             {
+                //if (comboBox1.Enabled && comboBox1.Tag is not null)
+                //{
+                //    switch (comboBox1.Tag)
+                //    {
+                //        case VisualTransfer addedTransfer:
+                //            schema.AddTransfer(addedTransfer.Name, null, addedTransfer.Block1,
+                //                addedTransfer.Block2, addedTransfer.Digit, addedTransfer.Label,
+                //                addedTransfer.Essence.Arguments, addedTransfer.Essence.Comment );
+                //            break;
+                //    }
+                //}
+
+                //if (comboBox2.Enabled && comboBox2.Tag is not null)
+                //{
+                //    switch (comboBox2.Tag)
+                //    {
+                //        case VisualTransfer addedTransfer:
+                //            schema.AddTransfer(addedTransfer.Name, null, addedTransfer.Block1,
+                //                addedTransfer.Block2, addedTransfer.Digit, addedTransfer.Label,
+                //                addedTransfer.Essence.Arguments, addedTransfer.Essence.Comment);
+                //            break;
+                //    }
+                //}
+
                 switch (TypeCB.SelectedIndex)
                 {
                     case 2:
@@ -148,12 +172,19 @@ namespace VisualGPSS
                     _ => throw new NotImplementedException()
                 };
 
-                comment = CommentTextbox.Text;
+                comment = CommentTextbox.Text;                
 
-                schema.AddTransfer(typeString, startBlock, (VisualBlock)Block1, (VisualBlock)Block2,
-                    Digit, labelSelf, arguments, comment);
+                propertyGrid.SelectedObject = transfer =
+                    schema.AddTransfer(typeString, startBlock, Block1,
+                        Block2, Digit, labelSelf, arguments, comment, false);
 
-                propertyGrid.SelectedObject = schema.Elements[(int)startBlock.number + 1];
+                if (comboBox1.Tag is VisualTransfer transfer1)
+                    if (schema.LabelsList.Contains(transfer1.Label))
+                        ((VisualTransfer)schema.Labels[transfer1.Label]).StartBlock = transfer;
+                if (comboBox2.Tag is VisualTransfer transfer2)
+                    if (schema.LabelsList.Contains(transfer2.Label))
+                        ((VisualTransfer)schema.Labels[transfer2.Label]).StartBlock = transfer;
+                if (startBlock is not null) schema.Refresh();
                 SaveButton.Click -= CreateNewTransfer;
                 SaveButton.Click += SaveChanges;
             }

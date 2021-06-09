@@ -155,7 +155,7 @@ namespace VisualGPSS
             resizing = moving.isGoing = false;
             timer.Stop();
             timer.Enabled = false;
-            if (Cursor.Current == Cursors.Cross && creatingOperator is not null)
+            if (/*Cursor.Current == Cursors.Cross &&*/ creatingOperator is not null)
                 creatingOperator.Value.method.Invoke(creatingOperator.Value.parameter,
                     new Point(CursorPosition.X, CursorPosition.Y));
             Cursor = Cursors.Default;

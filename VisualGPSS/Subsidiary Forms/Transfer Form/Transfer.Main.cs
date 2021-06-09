@@ -18,6 +18,7 @@ namespace VisualGPSS
         readonly VisualElement startBlock;
         string label;
 
+
         private void TypeCB_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (TypeCB.SelectedIndex)
@@ -80,7 +81,7 @@ namespace VisualGPSS
 
         private void добавитьВетвлениеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (transfer is null) transfer = new VisualTransfer() { number = startBlock.number + 1 };
+            //if (transfer is null) transfer = new VisualTransfer() { number = startBlock.number + 1 };
             Transfer transferForm = new Transfer
                 (transfer, schema, $"label{schema.ElementsWithLabelsList.Count + 1}");
             ComboBox cb = ((ToolStripMenuItem)sender).Owner.Tag switch
@@ -89,8 +90,12 @@ namespace VisualGPSS
                 "label2AddButton" => comboBox2,
                 _ => throw new NotImplementedException()
             };
-            transferForm.SaveButton.Click += (object sender, EventArgs e)
-                => { cb.Text = transferForm.label; };
+            transferForm.SaveButton.Click += (object sender, EventArgs e) => 
+            {
+                cb.Items.Add(transferForm.label);
+                cb.SelectedItem = transferForm.label;
+                cb.Tag = transferForm.transfer;
+            };
             transferForm.Show();
         }
     }

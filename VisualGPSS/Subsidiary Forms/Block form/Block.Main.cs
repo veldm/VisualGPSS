@@ -168,8 +168,8 @@ namespace VisualGPSS
                 if (TextBox5.Enabled) TextBox5.Text = i < visualBlock.Essence.Arguments.Length ?
                         visualBlock.Essence.Arguments[i++] : "";
             }
-            else TextBox1.SelectedIndex = TextBox2.SelectedIndex = TextBox3.SelectedIndex =
-                    TextBox4.SelectedIndex = TextBox5.SelectedIndex = -1;
+            TextBox1.SelectedIndex = TextBox2.SelectedIndex = TextBox3.SelectedIndex =
+                TextBox4.SelectedIndex = TextBox5.SelectedIndex = -1;
         }
     }
 }

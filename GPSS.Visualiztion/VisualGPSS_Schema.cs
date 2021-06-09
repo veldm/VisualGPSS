@@ -289,20 +289,23 @@ namespace GPSS.Visualiztion
             }
         }
 
-        public void AddTransfer(string type, VisualElement startBlock, VisualElement block1,
-            VisualElement block2, double digit, string label, string[] args, string comment)        
+        public VisualTransfer AddTransfer(string type, VisualElement startBlock, VisualElement block1,
+            VisualElement block2, double digit, string label, string[] args, string comment,
+            bool needRefresh = true)        
         {
             Block.BlockType blockType = (Block.BlockType)Enum.Parse(typeof(Block.BlockType), type);
             Block block = new Block(label, args, comment, blockType);
 
             if (blockType.IsTransfer())
             {
-                uint number = startBlock.number + 1;
+                uint number = startBlock is not null ? startBlock.number + 1 : (uint)Elements.Count;
                 VisualTransfer visualTransfer = new VisualTransfer(startBlock, block1, block2, digit,
                     block, number, new Point(), this);
                 Elements.Insert((int)number, visualTransfer);
                 
-                Refresh();
+                if (startBlock is not null && needRefresh) Refresh();
+
+                return visualTransfer;
             }
             else
             {

@@ -32,7 +32,7 @@ namespace GPSS.Visualiztion
             double digit, Operator essence, uint number, Point center,
             VisualGPSS_Schema parentSchema) : base(essence, number, center, parentSchema)
         {
-            this.startBlock = startBlock ?? throw new ArgumentNullException(nameof(startBlock));
+            this.startBlock = startBlock /*?? throw new ArgumentNullException(nameof(startBlock))*/;
             this.Block1 = block1 ?? throw new ArgumentNullException(nameof(block1));
             this.Block2 = block2 /*?? throw new ArgumentNullException(nameof(block2))*/;
             this.Digit = digit;
@@ -56,6 +56,8 @@ namespace GPSS.Visualiztion
 
         public override void Draw(Graphics graphics, List<VisualElement> otherElements)
         {
+            if (StartBlock is null) return;
+
             switch (Transfer.Type)
             {
                 case GPSS.Block.BlockType.TRANSFER_UNCON:

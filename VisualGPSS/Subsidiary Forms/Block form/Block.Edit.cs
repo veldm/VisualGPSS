@@ -34,7 +34,7 @@ namespace VisualGPSS
 
             LabelTextBox.Text = visualBlock.Label;
             CommentTextbox.Text = visualBlock.Essence.Comment;
-            for (int ii = 0; ii != schema.Elements.Count; ii++)
+            for (int ii = 1; ii != schema.Elements.Count + 1; ii++)
                 numberComboBox.Items.Add(ii.ToString());
             numberComboBox.SelectedItem = (visualBlock.number + 1).ToString();
 
@@ -64,6 +64,13 @@ namespace VisualGPSS
         {
             try
             {
+                if (numberComboBox.Text != (visualBlock.number + 1).ToString())
+                {
+                    schema.Remove(visualBlock);
+                    CreateNewBlock(sender, e);
+                    return;
+                }
+
                 if (LabelTextBox.Text != visualBlock.Label)
                 {
                     if (schema.Labels.TryGetValue
@@ -77,6 +84,7 @@ namespace VisualGPSS
 
                 if (CommentTextbox.Text != visualBlock.Essence.Comment)
                     visualBlock.Essence.Comment = CommentTextbox.Text;
+
 
                 //int i = 0;
                 List<string> args = new List<string>();

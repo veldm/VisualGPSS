@@ -211,7 +211,10 @@ namespace GPSS.Visualiztion
             {
                 if (element is VisualTransfer transfer)
                 {
-                    transfer.StartBlock = Elements[(int)transfer.StartBlock.number];
+                    transfer.StartBlock = transfer.StartBlock is not null ?
+                        Elements[(int)transfer.StartBlock.number] :
+                        Elements[(int)transfer.StartBlockNumber];
+
                     transfer.Block1 = Elements[(int)transfer.Block1.number];
                     if (transfer.Block2 is not null)
                         transfer.Block2 = Elements[(int)transfer.Block2.number];
@@ -356,16 +359,19 @@ namespace GPSS.Visualiztion
             Elements.Sort(new Comparison<VisualElement>((e1, e2)
                 => e1.number.CompareTo(e2.number)));
 
-            foreach (VisualElement element in Elements.Where
-                (element => element is VisualTransfer))
+            List<VisualTransfer> elems = (from VisualElement elem in Elements
+                                          where elem is VisualTransfer
+                                          select (VisualTransfer)elem).ToList();
+
+            for (int i = 0; i < elems.Count(); i++)
             {
-                int index1 = Elements.IndexOf(element);
-                int index2 = Elements.IndexOf(((VisualTransfer)element).StartBlock);
+                int index1 = Elements.IndexOf(elems[i]);
+                int index2 = Elements.IndexOf(((VisualTransfer)elems[i]).StartBlock);
                 if (index2 != index1 - 1)
                 {
-                    VisualElement buf = Elements[index1 - 1];
-                    Elements[index1 - 1] = ((VisualTransfer)element).StartBlock;
-                    Elements[index2] = buf;
+                    VisualElement buf = elems[i];
+                    Elements.Remove(elems[i]);
+                    Elements.Insert(index2 + 1, buf);
                 }
             }
 

@@ -105,7 +105,7 @@ namespace VisualGPSS
 
                         // Block2
                         label2 = (string)comboBox2.Items[comboBox2.SelectedIndex];
-                        if (!schema.Labels.TryGetValue(label1, out Block2))
+                        if (!schema.Labels.TryGetValue(label2, out Block2))
                             throw new Exception($"Метки {label2} не существует");
                         arguments[1] = label2;
                         break;

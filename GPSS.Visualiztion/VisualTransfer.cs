@@ -17,14 +17,23 @@ namespace GPSS.Visualiztion
             get => (Block)Essence;
             set => Essence = value;
         }
+        
+        [JsonIgnore]
         public VisualElement StartBlock { get => startBlock; set => startBlock = value; }
+
+        private uint startBlockNumber;
+        public uint StartBlockNumber
+        { 
+            get => StartBlock is not null ? StartBlock.number : startBlockNumber;
+            set => startBlockNumber = value;
+        }
 
         public VisualElement Block1 { get => block1; set => block1 = value; }
         public VisualElement Block2 { get => block2; set => block2 = value; }
         public double Digit { get => digit; set => digit = value; }
 
         public override object[] ExtendedParams
-        { get => new object[] { startBlock, block1, block2 }; }
+        { get => new object[] { block1, block2 }; }
 
         public VisualTransfer() { }
 
@@ -45,13 +54,14 @@ namespace GPSS.Visualiztion
         public VisualTransfer(VisualElement block1, VisualElement block2, double digit,
             VisualElement startBlock, Operator essence, uint number, object[] ExtendedParams,
             Point center, int width, int heigth, Color _mainColor, Color _linesColor, Font _font,
-            Color _fontColor)
+            Color _fontColor, uint startBlockNumber)
             : base(essence, number, width, heigth, center, _mainColor, _linesColor, _font, _fontColor)
         {
-            this.block1 =  (VisualElement)(block1 ?? ExtendedParams[1]);
-            this.block2 = (VisualElement)(block2 ?? ExtendedParams[2]);
+            this.block1 =  (VisualElement)(block1 ?? ExtendedParams[0]);
+            this.block2 = (VisualElement)(block2 ?? ExtendedParams[1]);
             this.digit = digit;
-            this.startBlock = (VisualElement)(startBlock ?? ExtendedParams[0]);
+            //this.startBlock = (VisualElement)(startBlock ?? ExtendedParams[0]);
+            StartBlockNumber = startBlockNumber;
         }
 
         public override void Draw(Graphics graphics, List<VisualElement> otherElements)

@@ -69,8 +69,8 @@ namespace GPSS
 
         protected Operator(string label, string[] arguments, string comment)
         {
-            this.label = label;
-            this.comment = comment;
+            this.label = label is not "" ? label : null;
+            this.comment = comment is not "" ? comment : null;
             this.arguments = arguments ?? throw new ArgumentNullException(nameof(label));
 
             List<string> buf = this.arguments.ToList();

@@ -24,7 +24,8 @@ namespace GPSS.PLUS
              select $"{item.name}{item.paramsSignature}").ToList();
 
         public static List<string> DistribRulesHeaders =>
-            (from item in ps.ToList() select item.name).ToList();
+            (from item in ps.ToList() where item.type is Type.DistribRule
+             select item.name).ToList();
 
         private static (Type type, string name, string paramsSignature)[] ps =
         {

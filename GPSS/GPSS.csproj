@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Block\Block.cs" />
     <Compile Include="Block\BlockType.cs" />
+    <Compile Include="Block\DataTypes.cs" />
     <Compile Include="Block\Validator.cs" />
     <Compile Include="Comand\Comand.cs" />
     <Compile Include="Comand\ComandType.cs" />

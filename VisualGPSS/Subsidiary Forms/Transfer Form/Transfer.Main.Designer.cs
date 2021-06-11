@@ -47,7 +47,7 @@
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.functionAddButton = new System.Windows.Forms.Button();
-            this.label2Addbutton = new System.Windows.Forms.Button();
+            this.label2AddButton = new System.Windows.Forms.Button();
             this.label1AddButton = new System.Windows.Forms.Button();
             this.addNewElement_CMS = new MaterialSkin.Controls.MaterialContextMenuStrip();
             this.добавитьБлокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -292,7 +292,7 @@
             this.groupBox2.Controls.Add(this.comboBox2);
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.functionAddButton);
-            this.groupBox2.Controls.Add(this.label2Addbutton);
+            this.groupBox2.Controls.Add(this.label2AddButton);
             this.groupBox2.Controls.Add(this.label1AddButton);
             this.groupBox2.Controls.Add(this.Label3);
             this.groupBox2.Controls.Add(this.Label2);
@@ -317,18 +317,18 @@
             this.functionAddButton.Visible = false;
             this.functionAddButton.Click += new System.EventHandler(this.labelAddButton_Click);
             // 
-            // label2Addbutton
+            // label2AddButton
             // 
-            this.label2Addbutton.BackColor = System.Drawing.SystemColors.Control;
-            this.label2Addbutton.BackgroundImage = global::VisualGPSS.Properties.Resources.add_insert_1193;
-            this.label2Addbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.label2Addbutton.Location = new System.Drawing.Point(378, 70);
-            this.label2Addbutton.Margin = new System.Windows.Forms.Padding(2);
-            this.label2Addbutton.Name = "label2Addbutton";
-            this.label2Addbutton.Size = new System.Drawing.Size(26, 27);
-            this.label2Addbutton.TabIndex = 18;
-            this.label2Addbutton.UseVisualStyleBackColor = false;
-            this.label2Addbutton.Click += new System.EventHandler(this.labelAddButton_Click);
+            this.label2AddButton.BackColor = System.Drawing.SystemColors.Control;
+            this.label2AddButton.BackgroundImage = global::VisualGPSS.Properties.Resources.add_insert_1193;
+            this.label2AddButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.label2AddButton.Location = new System.Drawing.Point(378, 70);
+            this.label2AddButton.Margin = new System.Windows.Forms.Padding(2);
+            this.label2AddButton.Name = "label2AddButton";
+            this.label2AddButton.Size = new System.Drawing.Size(26, 27);
+            this.label2AddButton.TabIndex = 18;
+            this.label2AddButton.UseVisualStyleBackColor = false;
+            this.label2AddButton.Click += new System.EventHandler(this.labelAddButton_Click);
             // 
             // label1AddButton
             // 
@@ -353,16 +353,18 @@
             this.добавитьВетвлениеToolStripMenuItem});
             this.addNewElement_CMS.MouseState = MaterialSkin.MouseState.HOVER;
             this.addNewElement_CMS.Name = "materialContextMenuStrip1";
-            this.addNewElement_CMS.Size = new System.Drawing.Size(192, 70);
+            this.addNewElement_CMS.Size = new System.Drawing.Size(192, 92);
             // 
             // добавитьБлокToolStripMenuItem
             // 
+            this.добавитьБлокToolStripMenuItem.Enabled = false;
             this.добавитьБлокToolStripMenuItem.Name = "добавитьБлокToolStripMenuItem";
             this.добавитьБлокToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.добавитьБлокToolStripMenuItem.Text = "Добавить блок";
             // 
             // добавитьУстройствоToolStripMenuItem
             // 
+            this.добавитьУстройствоToolStripMenuItem.Enabled = false;
             this.добавитьУстройствоToolStripMenuItem.Name = "добавитьУстройствоToolStripMenuItem";
             this.добавитьУстройствоToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.добавитьУстройствоToolStripMenuItem.Text = "Добавить устройство";
@@ -421,7 +423,7 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField CommentTextbox;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private System.Windows.Forms.Button label2Addbutton;
+        private System.Windows.Forms.Button label2AddButton;
         private System.Windows.Forms.Button label1AddButton;
         private System.Windows.Forms.Button functionAddButton;
         private MaterialSkin.Controls.MaterialContextMenuStrip addNewElement_CMS;

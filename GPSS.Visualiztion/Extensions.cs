@@ -179,5 +179,20 @@ namespace GPSS.Visualiztion
 
             return result;
         }
+
+        public static bool IsPointOnLine(this (Point p1, Point p2) line, Point point)
+        {
+            int x1 = line.p1.X, x2 = line.p2.X;
+            int y1 = line.p1.Y, y2 = line.p2.Y;
+            int x = point.X, y = point.Y;
+
+            int kx = (x - x1) * (x2 - x);
+            int ky = (y - y1) * (y2 - y);
+
+            bool isOnLine = Math.Abs((x - x1) * (y2 - y1) - (x2 - x1) * (y - y1)) == 0;
+
+            return isOnLine && 0 <= kx && kx <= Math.Pow(x1 - x2, 2)
+                && 0 <= ky && ky <= Math.Pow(y1 - y2, 2);
+        }
     }
 }

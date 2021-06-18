@@ -272,5 +272,19 @@ namespace GPSS.Visualiztion
 
             GC.Collect();
         }
+
+        public override bool IsClicked(Point clickPoint)
+        {
+            Point p1, p2, p3, p4, p5, p6;
+            p1 = new Point(center.X - width / 2, center.Y - heigth / 2);
+            p2 = new Point(center.X + width / 2, center.Y - heigth / 2);
+            p3 = new Point(center.X + width / 2 + 20, center.Y - heigth / 2 + 20);
+            p4 = new Point(center.X + width / 2 + 20, center.Y + heigth / 2 + 20);
+            p5 = new Point(center.X - width / 2 + 20, center.Y + heigth / 2 + 20);
+            p6 = new Point(center.X - width / 2, center.Y + heigth / 2);
+            Point[] points = { p1, p2, p3, p4, p5, p6 };
+
+            return clickPoint.IsInPolygon(points);
+        }
     }
 }

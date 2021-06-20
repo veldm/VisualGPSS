@@ -35,10 +35,21 @@ namespace GPSS.Visualiztion
         }
 
         [Browsable(false), JsonIgnore] public List<Operator> Operators
-            { get => essence; set => essence = value; }
+        { get => essence; set => essence = value; }
 
         [Browsable(false), JsonIgnore] public string QueueName
         { get => queueName; set => queueName = value; }
+
+        [Browsable(false), JsonIgnore] private Point[] Points => new Point[] 
+        {
+            new Point(center.X - width / 2, center.Y - heigth / 2),
+            new Point(center.X + width / 2, center.Y - heigth / 2),
+            new Point(center.X + width / 2 + 20, center.Y - heigth / 2 + 20),
+            new Point(center.X + width / 2 + 20, center.Y + heigth / 2 + 20),
+            new Point(center.X - width / 2 + 20, center.Y + heigth / 2 + 20),
+            new Point(center.X - width / 2, center.Y + heigth / 2)
+        };
+
 
         [Browsable(false)]
         public override object[] ExtendedParams => new object[]
@@ -275,16 +286,39 @@ namespace GPSS.Visualiztion
 
         public override bool IsClicked(Point clickPoint)
         {
-            Point p1, p2, p3, p4, p5, p6;
-            p1 = new Point(center.X - width / 2, center.Y - heigth / 2);
-            p2 = new Point(center.X + width / 2, center.Y - heigth / 2);
-            p3 = new Point(center.X + width / 2 + 20, center.Y - heigth / 2 + 20);
-            p4 = new Point(center.X + width / 2 + 20, center.Y + heigth / 2 + 20);
-            p5 = new Point(center.X - width / 2 + 20, center.Y + heigth / 2 + 20);
-            p6 = new Point(center.X - width / 2, center.Y + heigth / 2);
-            Point[] points = { p1, p2, p3, p4, p5, p6 };
+        //    Point p1, p2, p3, p4, p5, p6;
+        //    p1 = new Point(center.X - width / 2, center.Y - heigth / 2);
+        //    p2 = new Point(center.X + width / 2, center.Y - heigth / 2);
+        //    p3 = new Point(center.X + width / 2 + 20, center.Y - heigth / 2 + 20);
+        //    p4 = new Point(center.X + width / 2 + 20, center.Y + heigth / 2 + 20);
+        //    p5 = new Point(center.X - width / 2 + 20, center.Y + heigth / 2 + 20);
+        //    p6 = new Point(center.X - width / 2, center.Y + heigth / 2);
+        //    Point[] points = { p1, p2, p3, p4, p5, p6 };
 
-            return clickPoint.IsInPolygon(points);
+            return clickPoint.IsInPolygon(Points);
+        }
+
+        public override bool IsVerticalTouching(Point clickPoint)
+        {
+            return clickPoint.IsOnSection((Points[0], Points[5]), 3) ||
+                clickPoint.IsOnSection((Points[2], Points[3]), 3);
+        }
+
+        public override bool IsHorizontalTouching(Point clickPoint)
+        {
+            return clickPoint.IsOnSection((Points[0], Points[1]), 3) ||
+                clickPoint.IsOnSection((Points[4], Points[3]), 3);
+        }
+
+        public override bool IsRightDiagonalTouching(Point clickPoint)
+        {
+            return clickPoint.IsOnSection((Points[1], Points[2]), 3) ||
+                clickPoint.IsOnSection((Points[5], Points[4]), 3);
+        }
+
+        public override bool IsLeftDiagonalTouching(Point clickPoint)
+        {
+            return clickPoint.IsNear(Points[0], 3) || clickPoint.IsNear(Points[3], 3);
         }
     }
 }

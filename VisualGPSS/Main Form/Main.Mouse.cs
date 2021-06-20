@@ -40,11 +40,14 @@ namespace VisualGPSS
                         resizedBlock.center.Y + corr : resizedBlock.center.Y - corr;
                 }
             }
-            else if (moving.isGoing && activeElement is VisualBlock bufferBlock)
+            else if (moving.isGoing /*&& activeElement is VisualBlock bufferBlock*/)
             {
-                VisualBlock block = bufferBlock;
-                block.center.X = CursorPosition.X + moving.xc;
-                block.center.Y = CursorPosition.Y + moving.yc;
+                //VisualBlock block = bufferBlock;
+                //block.center.X = CursorPosition.X + moving.xc;
+                //block.center.Y = CursorPosition.Y + moving.yc;
+
+                activeElement.center.X = CursorPosition.X + moving.xc;
+                activeElement.center.Y = CursorPosition.Y + moving.yc;
             }
             else foreach (VisualElement element in schema.Elements)
                 {

@@ -12,8 +12,8 @@ namespace GPSS.Visualiztion
         public static void DrawArrowNear(this Graphics graphics, Pen pen,
             Color bodyColor, Point start, Point destination)
         {
-            double ugol;
-            ugol = Math.Atan2(start.X - destination.X, start.Y - destination.Y);
+            double angle;
+            angle = Math.Atan2(start.X - destination.X, start.Y - destination.Y);
             float x_middle = (destination.X + start.X) / 2;
             float y_middle = (destination.Y + start.Y) / 2;
 
@@ -25,10 +25,10 @@ namespace GPSS.Visualiztion
             x_middle = (x_middle + x) / 2;
             y_middle = (y_middle + y) / 2;
 
-            int x1 = Convert.ToInt32(x_middle + 30 * Math.Sin(0.5 + ugol));
-            int y1 = Convert.ToInt32(y_middle + 30 * Math.Cos(0.5 + ugol));
-            int x2 = Convert.ToInt32(x_middle + 30 * Math.Sin(ugol - 0.5));
-            int y2 = Convert.ToInt32(y_middle + 30 * Math.Cos(ugol - 0.5));
+            int x1 = Convert.ToInt32(x_middle + 30 * Math.Sin(0.5 + angle));
+            int y1 = Convert.ToInt32(y_middle + 30 * Math.Cos(0.5 + angle));
+            int x2 = Convert.ToInt32(x_middle + 30 * Math.Sin(angle - 0.5));
+            int y2 = Convert.ToInt32(y_middle + 30 * Math.Cos(angle - 0.5));
 
             PointF[] points = { new PointF(x_middle, y_middle),
                 new PointF(x1, y1), new PointF(x2, y2) };
@@ -44,8 +44,8 @@ namespace GPSS.Visualiztion
         public static void DrawArrowNear(this Graphics graphics, Pen pen, Font font,
             Color fontColor, int number, Color bodyColor, Point start, Point destination)
         {
-            double ugol;
-            ugol = Math.Atan2(start.X - destination.X, start.Y - destination.Y);
+            double angle;
+            angle = Math.Atan2(start.X - destination.X, start.Y - destination.Y);
             float x_middle = (start.X + start.X) / 2;
             float y_middle = (start.Y + start.Y) / 2;
 
@@ -57,10 +57,10 @@ namespace GPSS.Visualiztion
             x_middle = (x_middle + x) / 2;
             y_middle = (y_middle + y) / 2;
 
-            int x1 = Convert.ToInt32(x_middle + 30 * Math.Sin(0.5 + ugol));
-            int y1 = Convert.ToInt32(y_middle + 30 * Math.Cos(0.5 + ugol));
-            int x2 = Convert.ToInt32(x_middle + 30 * Math.Sin(ugol - 0.5));
-            int y2 = Convert.ToInt32(y_middle + 30 * Math.Cos(ugol - 0.5));
+            int x1 = Convert.ToInt32(x_middle + 30 * Math.Sin(0.5 + angle));
+            int y1 = Convert.ToInt32(y_middle + 30 * Math.Cos(0.5 + angle));
+            int x2 = Convert.ToInt32(x_middle + 30 * Math.Sin(angle - 0.5));
+            int y2 = Convert.ToInt32(y_middle + 30 * Math.Cos(angle - 0.5));
 
             PointF[] points = { new PointF(x_middle, y_middle),
                 new PointF(x1, y1), new PointF(x2, y2) };
@@ -81,8 +81,8 @@ namespace GPSS.Visualiztion
         public static void DrawArrowMid(this Graphics graphics, Pen pen,
             Color bodyColor, Point start, Point destination)
         {
-            double ugol;
-            ugol = Math.Atan2(start.X - destination.X, start.Y - destination.Y);
+            double angle;
+            angle = Math.Atan2(start.X - destination.X, start.Y - destination.Y);
             float x_middle = (destination.X + start.X) / 2;
             float y_middle = (destination.Y + start.Y) / 2;
 
@@ -94,10 +94,10 @@ namespace GPSS.Visualiztion
             x_middle = (x_middle + x) / 2;
             y_middle = (y_middle + y) / 2;
 
-            int x1 = Convert.ToInt32(x_middle + 30 * Math.Sin(0.5 + ugol));
-            int y1 = Convert.ToInt32(y_middle + 30 * Math.Cos(0.5 + ugol));
-            int x2 = Convert.ToInt32(x_middle + 30 * Math.Sin(ugol - 0.5));
-            int y2 = Convert.ToInt32(y_middle + 30 * Math.Cos(ugol - 0.5));
+            int x1 = Convert.ToInt32(x_middle + 30 * Math.Sin(0.5 + angle));
+            int y1 = Convert.ToInt32(y_middle + 30 * Math.Cos(0.5 + angle));
+            int x2 = Convert.ToInt32(x_middle + 30 * Math.Sin(angle - 0.5));
+            int y2 = Convert.ToInt32(y_middle + 30 * Math.Cos(angle - 0.5));
 
             PointF[] points = { new PointF(x_middle, y_middle),
                 new PointF(x1, y1), new PointF(x2, y2) };
@@ -113,8 +113,8 @@ namespace GPSS.Visualiztion
         public static void DrawArrowMid(this Graphics graphics, Pen pen, Font font,
             Color fontColor, int number, Color bodyColor, Point start, Point destination)
         {
-            double ugol;
-            ugol = Math.Atan2(start.X - destination.X, start.Y - destination.Y);
+            double angle;
+            angle = Math.Atan2(start.X - destination.X, start.Y - destination.Y);
             float x_middle = (destination.X + start.X) / 2;
             float y_middle = (destination.Y + start.Y) / 2;
 
@@ -126,10 +126,10 @@ namespace GPSS.Visualiztion
             x_middle = (x_middle + x) / 2;
             y_middle = (y_middle + y) / 2;
 
-            int x1 = Convert.ToInt32(x_middle + 30 * Math.Sin(0.5 + ugol));
-            int y1 = Convert.ToInt32(y_middle + 30 * Math.Cos(0.5 + ugol));
-            int x2 = Convert.ToInt32(x_middle + 30 * Math.Sin(ugol - 0.5));
-            int y2 = Convert.ToInt32(y_middle + 30 * Math.Cos(ugol - 0.5));
+            int x1 = Convert.ToInt32(x_middle + 30 * Math.Sin(0.5 + angle));
+            int y1 = Convert.ToInt32(y_middle + 30 * Math.Cos(0.5 + angle));
+            int x2 = Convert.ToInt32(x_middle + 30 * Math.Sin(angle - 0.5));
+            int y2 = Convert.ToInt32(y_middle + 30 * Math.Cos(angle - 0.5));
 
             PointF[] points = { new PointF(x_middle, y_middle),
                 new PointF(x1, y1), new PointF(x2, y2) };
@@ -145,6 +145,12 @@ namespace GPSS.Visualiztion
             float y3 = (y1 + y2 + y_middle - 15) / 3;
             graphics.DrawString(number.ToString(), font, new SolidBrush(fontColor),
                 x3 /*- (graphics.MeasureString(number.ToString(), font).Width / 2)*/, y3);
+        }
+
+        public static void DrawDashLine(this Graphics graphics, Pen pen, Point pt1, Point pt2)
+        {
+            pen.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            graphics.DrawLine(pen, pt1, pt2);
         }
 
         public static bool IsInPolygon(this Point point, Point[] polygonPoints)
@@ -180,7 +186,7 @@ namespace GPSS.Visualiztion
             return result;
         }
 
-        public static bool IsPointOnLine(this (Point p1, Point p2) line, Point point)
+        public static bool IsOnSection(this Point point, (Point p1, Point p2) line, int admit = 0)
         {
             int x1 = line.p1.X, x2 = line.p2.X;
             int y1 = line.p1.Y, y2 = line.p2.Y;
@@ -189,10 +195,18 @@ namespace GPSS.Visualiztion
             int kx = (x - x1) * (x2 - x);
             int ky = (y - y1) * (y2 - y);
 
-            bool isOnLine = Math.Abs((x - x1) * (y2 - y1) - (x2 - x1) * (y - y1)) == 0;
+            bool isOnLine = Math.Abs((x - x1) * (y2 - y1) - (x2 - x1) * (y - y1)) <= admit;
 
             return isOnLine && 0 <= kx && kx <= Math.Pow(x1 - x2, 2)
                 && 0 <= ky && ky <= Math.Pow(y1 - y2, 2);
+        }
+
+        public static bool IsNear(this Point point1, Point point2, int admit)
+        {
+            double dx = Math.Abs(point1.X - point2.X);
+            double dy = Math.Abs(point1.Y - point2.Y);
+            double R = Math.Sqrt(Math.Pow(dx, 2) + Math.Pow(dy, 2));
+            return R <= admit;
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 
 namespace GPSS.Visualiztion
@@ -11,27 +12,41 @@ namespace GPSS.Visualiztion
         private VisualElement block2;
         private double digit;
         private VisualElement startBlock;
+        private uint startBlockNumber;
 
+        [Browsable(false)]
         public Block Transfer
         {
             get => (Block)Essence;
             set => Essence = value;
         }
-        
-        [JsonIgnore]
+
+        [JsonIgnore, Browsable(false)]
         public VisualElement StartBlock { get => startBlock; set => startBlock = value; }
 
-        private uint startBlockNumber;
+        private Point[] Points => Essence.Name is not "TRANSFER_UNCON" ? new Point[]
+        {
+            new Point(center.X, center.Y - heigth / 2),
+            new Point(center.X + width / 2, center.Y),
+            new Point(center.X, center.Y + heigth / 2),
+            new Point(center.X - width / 2, center.Y),
+        } : null;
+
+        [Browsable(false)]
         public uint StartBlockNumber
         { 
             get => StartBlock is not null ? StartBlock.number : startBlockNumber;
             set => startBlockNumber = value;
         }
 
+        [Browsable(false)]
         public VisualElement Block1 { get => block1; set => block1 = value; }
+
+        [Browsable(false)]
         public VisualElement Block2 { get => block2; set => block2 = value; }
         public double Digit { get => digit; set => digit = value; }
 
+        [Browsable(false)]
         public override object[] ExtendedParams
         { get => new object[] { block1, block2 }; }
 
@@ -192,7 +207,9 @@ namespace GPSS.Visualiztion
 
         public override bool IsClicked(Point clickPoint)
         {
-            return false;
+            return Points is not null ? clickPoint.IsInPolygon(Points) :
+                clickPoint.IsOnSection((startBlock.center, block1.center), 3)
+                && !startBlock.IsClicked(clickPoint) && !block1.IsClicked(clickPoint);
         }
 
         public override bool IsHorizontalTouching(Point clickPoint) => false;

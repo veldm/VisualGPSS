@@ -203,6 +203,26 @@ namespace VisualGPSS.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap adopt {
+            get {
+                object obj = ResourceManager.GetObject("adopt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap assemble {
+            get {
+                object obj = ResourceManager.GetObject("assemble", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap creation_date_sort_icon_155568 {
             get {
                 object obj = ResourceManager.GetObject("creation_date_sort_icon_155568", resourceCulture);
@@ -283,6 +303,46 @@ namespace VisualGPSS.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Favail {
+            get {
+                object obj = ResourceManager.GetObject("Favail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap funavail {
+            get {
+                object obj = ResourceManager.GetObject("funavail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gate {
+            get {
+                object obj = ResourceManager.GetObject("gate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gather {
+            get {
+                object obj = ResourceManager.GetObject("gather", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap kisspng_brand_symbol_font_utilities_terminal_5ab0990dc46a48_96718621158215229578045 {
             get {
                 object obj = ResourceManager.GetObject("kisspng-brand-symbol-font-utilities-terminal-5ab0990dc46a48.967186211582152295780" +
@@ -337,6 +397,16 @@ namespace VisualGPSS.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap match {
+            get {
+                object obj = ResourceManager.GetObject("match", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap open_256_icon_icons_com_76002 {
             get {
                 object obj = ResourceManager.GetObject("open_256_icon-icons.com_76002", resourceCulture);
@@ -367,6 +437,26 @@ namespace VisualGPSS.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Savail {
+            get {
+                object obj = ResourceManager.GetObject("Savail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Savail1 {
+            get {
+                object obj = ResourceManager.GetObject("Savail1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap save_file_disk_open_searsh_loading_clipboard_1513 {
             get {
                 object obj = ResourceManager.GetObject("save_file_disk_open_searsh_loading_clipboard_1513", resourceCulture);
@@ -387,9 +477,49 @@ namespace VisualGPSS.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap split {
+            get {
+                object obj = ResourceManager.GetObject("split", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap stop_upload_button_icon_icons_com_71328 {
             get {
                 object obj = ResourceManager.GetObject("stop-upload-button_icon-icons.com_71328", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sunavail {
+            get {
+                object obj = ResourceManager.GetObject("sunavail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sunavail1 {
+            get {
+                object obj = ResourceManager.GetObject("sunavail1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap test {
+            get {
+                object obj = ResourceManager.GetObject("test", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -460,6 +590,16 @@ namespace VisualGPSS.Properties {
         internal static System.Drawing.Bitmap устройствоN {
             get {
                 object obj = ResourceManager.GetObject("устройствоN", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap цикл {
+            get {
+                object obj = ResourceManager.GetObject("цикл", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

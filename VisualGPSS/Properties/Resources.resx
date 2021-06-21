@@ -124,8 +124,8 @@
   <data name="add_insert_1193" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add_insert_1193.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kisspng-mathematical-notation-mathematics-functional-predi-analytic-function-5b18e71a7efec2.3657208115283586825202" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kisspng-mathematical-notation-mathematics-functional-predi-analytic-function-5b18e71a7efec2.3657208115283586825202.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sunavail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sunavail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kisspng-computer-icons-git-branching-clip-art-fork-git-5b4d48a3433994.1724267915317915232754" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-computer-icons-git-branching-clip-art-fork-git-5b4d48a3433994.1724267915317915232754.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,6 +145,9 @@
   <data name="download-info_icon-icons1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\download-info_icon-icons.com_716781.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="split" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\split.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,14 +157,17 @@
   <data name="delete_delete_exit_1577" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete_delete_exit_1577.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="-file-download_90117" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\-file-download_90117.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="diskette_save_saveas_1514" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\diskette_save_saveas_1514.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="32-321721_download-notepad-vector-png-clipart-clip-art-notepad" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\32-321721_download-notepad-vector-png-clipart-clip-art-notepad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gather" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gather.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="-file-download_90117" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\-file-download_90117.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,20 +178,32 @@
   <data name="VisualGPSS_Label1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\VisualGPSS_Label.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="-file-upload_90117" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\-file-upload_90117.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="match" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\match.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sunavail1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sunavail1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="цикл" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\цикл.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="documentediting_editdocuments_text_documentedi_2820" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\documentediting_editdocuments_text_documentedi_2820.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="creation_date_sort_icon_155568" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\creation_date_sort_icon_155568.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="устройство1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\устройство1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="test" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\test.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,8 +214,14 @@
   <data name="91-916310_save-png-clipart-save-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\91-916310_save-png-clipart-save-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="creation_date_sort_icon_155568" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\creation_date_sort_icon_155568.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="-file-upload_90117" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\-file-upload_90117.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="funavail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\funavail.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kisspng-mathematical-notation-mathematics-functional-predi-analytic-function-5b18e71a7efec2.3657208115283586825202" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-mathematical-notation-mathematics-functional-predi-analytic-function-5b18e71a7efec2.3657208115283586825202.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="VisualGPSS_Label" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\VisualGPSS_Label.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,8 +238,20 @@
   <data name="4115235-exit-logout-sign-out_114030" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4115235-exit-logout-sign-out_114030.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="assemble" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\assemble.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="downloadoutline_110860" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\downloadoutline_110860.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Savail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Savail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="31276" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\31276.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="adopt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\adopt.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kisspng-brand-symbol-font-utilities-terminal-5ab0990dc46a48.96718621158215229578045" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-brand-symbol-font-utilities-terminal-5ab0990dc46a48.967186211582152295780451.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,19 +259,25 @@
   <data name="zoomin_zoom_search_find_1530" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\zoomin_zoom_search_find_1530.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Favail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Favail.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="open_256_icon-icons.com_76002" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\open_256_icon-icons.com_76002.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="устройствоN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\устройствоN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="32-321721_download-notepad-vector-png-clipart-clip-art-notepad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32-321721_download-notepad-vector-png-clipart-clip-art-notepad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="kisspng-mathematical-notation-mathematics-functional-predi-analytic-function-5b18e71a7efec21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-mathematical-notation-mathematics-functional-predi-analytic-function-5b18e71a7efec2.36572081152835868252021.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gate.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="31276" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\31276.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Savail1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Savail1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

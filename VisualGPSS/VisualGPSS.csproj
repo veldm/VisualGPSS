@@ -311,5 +311,47 @@
   <ItemGroup>
     <None Include="Resources\31276.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gate.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\split.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assemble.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gather.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adopt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\match.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sunavail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Savail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\цикл.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\funavail.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Favail.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sunavail1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Savail1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

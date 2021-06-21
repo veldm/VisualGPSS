@@ -206,5 +206,75 @@ namespace VisualGPSS
             Table table = new Table(schema);
             table.Show();
         }
+
+        private void ToolBoxItemClicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EditElement(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void pictureBox_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void pictureBox_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void сохранитьКакToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void генерацияКодаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void сохранитьКакИзображениеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpScale(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DownScale(object sender, EventArgs e)
+        {
+
+        }
+
+        private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddTransfer(object sender, EventArgs e)
+        {
+
+        }
     }
 }

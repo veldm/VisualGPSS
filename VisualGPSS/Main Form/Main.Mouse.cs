@@ -133,11 +133,11 @@ namespace VisualGPSS
                 resizing = true;
                 timer.Start();
             }
-            if (activeElement is VisualBlock and not null)
+            if (activeElement is /*VisualBlock and*/ not null)
             {
                 moving = (true,
-                    ((VisualBlock)activeElement).center.X - CursorPosition.X,
-                    ((VisualBlock)activeElement).center.Y - CursorPosition.Y);
+                    activeElement.center.X - CursorPosition.X,
+                    activeElement.center.Y - CursorPosition.Y);
                 timer.Start();
             }
             propertyGrid.SelectedObject = (activeElement is null) switch

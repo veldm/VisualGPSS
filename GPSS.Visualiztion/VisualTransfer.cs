@@ -133,15 +133,18 @@ namespace GPSS.Visualiztion
 
             (Point pivot1, Point pivot2) bothDraw()
             {
-                int cY = ((StartBlock.center.Y > Block1.center.Y && StartBlock.center.Y >
-                    Block2.center.Y) || (StartBlock.center.Y < Block1.center.Y && 
-                    StartBlock.center.Y < Block2.center.Y)) ?
-                    StartBlock.center.Y + (Math.Min(Block1.center.Y - (Block1.heigth / 2),
-                        Block2.center.Y - (Block2.heigth / 2)) - StartBlock.center.Y) / 2 : 
-                    StartBlock.center.Y + (Math.Max(Block1.center.Y - (Block1.heigth / 2),
-                        Block2.center.Y - (Block2.heigth / 2)) - StartBlock.center.Y) / 2;
-                int cX = StartBlock.center.X;
-                center = new Point(cX, cY);
+                if (center.X is 0 && center.Y is 0)
+                {
+                    int cY = ((StartBlock.center.Y > Block1.center.Y && StartBlock.center.Y >
+                        Block2.center.Y) || (StartBlock.center.Y < Block1.center.Y &&
+                        StartBlock.center.Y < Block2.center.Y)) ?
+                        StartBlock.center.Y + (Math.Min(Block1.center.Y - (Block1.heigth / 2),
+                            Block2.center.Y - (Block2.heigth / 2)) - StartBlock.center.Y) / 2 :
+                        StartBlock.center.Y + (Math.Max(Block1.center.Y - (Block1.heigth / 2),
+                            Block2.center.Y - (Block2.heigth / 2)) - StartBlock.center.Y) / 2;
+                    int cX = StartBlock.center.X;
+                    center = new Point(cX, cY);
+                }
 
                 Point pivot1 = new Point(Block1.center.X, center.Y);
                 Point pivot2 = new Point(Block2.center.X, center.Y);

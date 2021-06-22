@@ -101,6 +101,44 @@ namespace VisualGPSS
             }
             //pictureBox.Image = new Bitmap(pictureBox.Width, pictureBox.Height);
             graphicsRefresh(null, null);
+            foreach (GroupBox box in from Control _control in ToolBox.Controls
+                                      where _control is GroupBox
+                                      select (GroupBox)_control)
+            {
+                foreach (var (_button, toolTip) in from Button _button in
+                                                       from Control control in box.Controls
+                                                       where control is Button
+                                                       select (Button)control
+                                                   let toolTip = new ToolTip()
+                                                   select (_button, toolTip))
+                {
+                    toolTip.SetToolTip(_button, _button.Name switch
+                    {
+                        "generateButton" => "Блок GENERATE",
+                        "terminateButton" => "Блок TERMINATE",
+                        "saveValueButton" => "Блок SaveValue",
+                        "testButton" => "Блок TEST",
+                        "gateButton" => "Блок GATE",
+                        "splitButton" => "Блок SPLIT",
+                        "assembleButton" => "Блок ASSEMBLE",
+                        "gatherButton" => "Блок GATHER",
+                        "adoptButton" => "Блок ADOPT",
+                        "matchButton" => "Блок MATCH",
+                        "loopButton" => "Блок LOOP",
+                        "funavailButton" => "Блок FUNAVAIL",
+                        "favailButton" => "Блок FAVAIL",
+                        "sunavailButton" => "Блок SUNAVAIL",
+                        "savailButton" => "Блок SAVAIL",
+                        "tableButton" => "Таблица статистики",
+                        "functionButton" => "Табличная функция",
+                        //"codeBlockButton" => "",
+                        "uncertainButton" => "Пустой блок",
+                        "singleChannelDeviceButton" => "Одноканальное устройство",
+                        "multiChannelDeviceButton" => "Многоканальное устройство",
+                        _ => "",
+                    });
+                }
+            }
         }
 
         #region Отрисовка

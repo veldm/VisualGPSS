@@ -31,38 +31,42 @@
             this.components = new System.ComponentModel.Container();
             this.propertyGrid = new System.Windows.Forms.PropertyGrid();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.сохранитьКакToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.средстваToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.генерацияКодаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.печатьСхемыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.сохранитьКакИзображениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.upScaleMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.scaleCB = new System.Windows.Forms.ToolStripComboBox();
+            this.downScaleMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.запускСимуляцииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsButton = new System.Windows.Forms.Label();
             this.helpButton = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.BlockOrElementCMS = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.редактироватьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.добавитьВетвлениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.редактироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FieldCMS = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.создатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.элементToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.блокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolBox = new System.Windows.Forms.Panel();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.imageSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.schemaSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            this.label1 = new System.Windows.Forms.Label();
-            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.pictureBox = new System.Windows.Forms.PictureBox();
-            this.LabelPictureBox = new System.Windows.Forms.PictureBox();
             this.savailButton = new System.Windows.Forms.Button();
             this.favailButton = new System.Windows.Forms.Button();
             this.sunavailButton = new System.Windows.Forms.Button();
             this.funavailButton = new System.Windows.Forms.Button();
             this.loopButton = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableButton = new System.Windows.Forms.Button();
             this.functionButton = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.matchButton = new System.Windows.Forms.Button();
             this.adoptButton = new System.Windows.Forms.Button();
             this.gatherButton = new System.Windows.Forms.Button();
@@ -70,36 +74,32 @@
             this.assembleButton = new System.Windows.Forms.Button();
             this.gateButton = new System.Windows.Forms.Button();
             this.testButton = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.multiChannelDeviceButton = new System.Windows.Forms.Button();
             this.singleChannelDeviceButton = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.saveValueButton = new System.Windows.Forms.Button();
             this.tabulateButton = new System.Windows.Forms.Button();
             this.terminateButton = new System.Windows.Forms.Button();
             this.generateButton = new System.Windows.Forms.Button();
             this.uncertainButton = new System.Windows.Forms.Button();
-            this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.сохранитьКакToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.генерацияКодаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.печатьСхемыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.сохранитьКакИзображениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.upScaleMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.downScaleMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.редактироватьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.добавитьВетвлениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.создатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.элементToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.блокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imageSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.schemaSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
+            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
+            this.label1 = new System.Windows.Forms.Label();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.LabelPictureBox = new System.Windows.Forms.PictureBox();
             this.menuStrip.SuspendLayout();
             this.BlockOrElementCMS.SuspendLayout();
             this.FieldCMS.SuspendLayout();
             this.ToolBox.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LabelPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -128,6 +128,32 @@
             this.файлToolStripMenuItem.Text = "Файл";
             this.файлToolStripMenuItem.DropDownClosed += new System.EventHandler(this.файлToolStripMenuItem_DropDownClosed);
             this.файлToolStripMenuItem.DropDownOpening += new System.EventHandler(this.файлToolStripMenuItem_DropDownOpening);
+            // 
+            // открытьToolStripMenuItem
+            // 
+            this.открытьToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.открытьToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.открытьToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.open_256_icon_icons_com_76002;
+            this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.открытьToolStripMenuItem.Text = "Открыть";
+            this.открытьToolStripMenuItem.Click += new System.EventHandler(this.открытьToolStripMenuItem_Click);
+            // 
+            // сохранитьToolStripMenuItem
+            // 
+            this.сохранитьToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.save_file_disk_open_searsh_loading_clipboard_1513;
+            this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.сохранитьToolStripMenuItem.Text = "Сохранить";
+            this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.сохранитьToolStripMenuItem_Click);
+            // 
+            // сохранитьКакToolStripMenuItem
+            // 
+            this.сохранитьКакToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.diskette_save_saveas_1514;
+            this.сохранитьКакToolStripMenuItem.Name = "сохранитьКакToolStripMenuItem";
+            this.сохранитьКакToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.сохранитьКакToolStripMenuItem.Text = "Сохранить как";
+            this.сохранитьКакToolStripMenuItem.Click += new System.EventHandler(this.сохранитьКакToolStripMenuItem_Click);
             // 
             // menuStrip
             // 
@@ -164,10 +190,41 @@
             this.средстваToolStripMenuItem.DropDownClosed += new System.EventHandler(this.средстваToolStripMenuItem_DropDownClosed);
             this.средстваToolStripMenuItem.DropDownOpening += new System.EventHandler(this.средстваToolStripMenuItem_DropDownOpening);
             // 
+            // генерацияКодаToolStripMenuItem
+            // 
+            this.генерацияКодаToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.downloadoutline_110860;
+            this.генерацияКодаToolStripMenuItem.Name = "генерацияКодаToolStripMenuItem";
+            this.генерацияКодаToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.генерацияКодаToolStripMenuItem.Text = "Генерация кода";
+            this.генерацияКодаToolStripMenuItem.Click += new System.EventHandler(this.генерацияКодаToolStripMenuItem_Click);
+            // 
+            // печатьСхемыToolStripMenuItem
+            // 
+            this.печатьСхемыToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.Print_icon_icons_com_73705;
+            this.печатьСхемыToolStripMenuItem.Name = "печатьСхемыToolStripMenuItem";
+            this.печатьСхемыToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.печатьСхемыToolStripMenuItem.Text = "Печать схемы";
+            // 
+            // сохранитьКакИзображениеToolStripMenuItem
+            // 
+            this.сохранитьКакИзображениеToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources._1491253396_5document_image_82883;
+            this.сохранитьКакИзображениеToolStripMenuItem.Name = "сохранитьКакИзображениеToolStripMenuItem";
+            this.сохранитьКакИзображениеToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.сохранитьКакИзображениеToolStripMenuItem.Text = "Сохранить как изображение";
+            this.сохранитьКакИзображениеToolStripMenuItem.Click += new System.EventHandler(this.сохранитьКакИзображениеToolStripMenuItem_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(255, 6);
+            // 
+            // upScaleMenuItem
+            // 
+            this.upScaleMenuItem.Image = global::VisualGPSS.Properties.Resources.zoomin_zoom_search_find_1530;
+            this.upScaleMenuItem.Name = "upScaleMenuItem";
+            this.upScaleMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.upScaleMenuItem.Text = "Увеличить масштаб";
+            this.upScaleMenuItem.Click += new System.EventHandler(this.UpScale);
             // 
             // scaleCB
             // 
@@ -187,6 +244,14 @@
             this.scaleCB.Size = new System.Drawing.Size(100, 25);
             this.scaleCB.Text = "100%";
             this.scaleCB.TextChanged += new System.EventHandler(this.ScaleChanged);
+            // 
+            // downScaleMenuItem
+            // 
+            this.downScaleMenuItem.Image = global::VisualGPSS.Properties.Resources.zoomout_zoom_search_find_1530;
+            this.downScaleMenuItem.Name = "downScaleMenuItem";
+            this.downScaleMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.downScaleMenuItem.Text = "Уменьшить масштаб";
+            this.downScaleMenuItem.Click += new System.EventHandler(this.DownScale);
             // 
             // запускСимуляцииToolStripMenuItem
             // 
@@ -244,6 +309,30 @@
             this.BlockOrElementCMS.Name = "BlockOrElementCMS";
             this.BlockOrElementCMS.Size = new System.Drawing.Size(234, 82);
             // 
+            // удалитьToolStripMenuItem
+            // 
+            this.удалитьToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.delete_delete_exit_1577;
+            this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
+            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
+            this.удалитьToolStripMenuItem.Text = "Удалить";
+            this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
+            // 
+            // редактироватьToolStripMenuItem1
+            // 
+            this.редактироватьToolStripMenuItem1.Image = global::VisualGPSS.Properties.Resources.documentediting_editdocuments_text_documentedi_2820;
+            this.редактироватьToolStripMenuItem1.Name = "редактироватьToolStripMenuItem1";
+            this.редактироватьToolStripMenuItem1.Size = new System.Drawing.Size(233, 26);
+            this.редактироватьToolStripMenuItem1.Text = "Редактировать";
+            this.редактироватьToolStripMenuItem1.Click += new System.EventHandler(this.EditElement);
+            // 
+            // добавитьВетвлениеToolStripMenuItem
+            // 
+            this.добавитьВетвлениеToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.linegraphsymbol_120645;
+            this.добавитьВетвлениеToolStripMenuItem.Name = "добавитьВетвлениеToolStripMenuItem";
+            this.добавитьВетвлениеToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
+            this.добавитьВетвлениеToolStripMenuItem.Text = "Добавить ветвление";
+            this.добавитьВетвлениеToolStripMenuItem.Click += new System.EventHandler(this.AddTransfer);
+            // 
             // редактироватьToolStripMenuItem
             // 
             this.редактироватьToolStripMenuItem.Name = "редактироватьToolStripMenuItem";
@@ -258,6 +347,28 @@
             this.создатьToolStripMenuItem});
             this.FieldCMS.Name = "FieldCMS";
             this.FieldCMS.Size = new System.Drawing.Size(140, 30);
+            // 
+            // создатьToolStripMenuItem
+            // 
+            this.создатьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.элементToolStripMenuItem,
+            this.блокToolStripMenuItem});
+            this.создатьToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.add_insert_1193;
+            this.создатьToolStripMenuItem.Name = "создатьToolStripMenuItem";
+            this.создатьToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
+            this.создатьToolStripMenuItem.Text = "Создать";
+            // 
+            // элементToolStripMenuItem
+            // 
+            this.элементToolStripMenuItem.Name = "элементToolStripMenuItem";
+            this.элементToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
+            this.элементToolStripMenuItem.Text = "Элемент";
+            // 
+            // блокToolStripMenuItem
+            // 
+            this.блокToolStripMenuItem.Name = "блокToolStripMenuItem";
+            this.блокToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
+            this.блокToolStripMenuItem.Text = "Блок";
             // 
             // ToolBox
             // 
@@ -276,107 +387,6 @@
             this.ToolBox.Size = new System.Drawing.Size(216, 307);
             this.ToolBox.TabIndex = 10;
             // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox3.Controls.Add(this.saveValueButton);
-            this.groupBox3.Controls.Add(this.tabulateButton);
-            this.groupBox3.Controls.Add(this.terminateButton);
-            this.groupBox3.Controls.Add(this.generateButton);
-            this.groupBox3.Controls.Add(this.uncertainButton);
-            this.groupBox3.Location = new System.Drawing.Point(3, 4);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(193, 161);
-            this.groupBox3.TabIndex = 6;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Блоки";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.multiChannelDeviceButton);
-            this.groupBox2.Controls.Add(this.singleChannelDeviceButton);
-            this.groupBox2.Location = new System.Drawing.Point(3, 171);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(193, 88);
-            this.groupBox2.TabIndex = 6;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Устройства";
-            // 
-            // imageSaveFileDialog
-            // 
-            this.imageSaveFileDialog.Filter = "Image Files(*.BMP)|*.BMP|Image Files(*.JPG)|*.JPG|Image Files(*.GIF)|*.GIF|Image " +
-    "Files(*.PNG)|*.PNG|All files (*.*)|*.*";
-            // 
-            // schemaSaveFileDialog
-            // 
-            this.schemaSaveFileDialog.Filter = "Все файлы|*.*|Файлы VisualGPSS схем|*.vgsch";
-            // 
-            // hScrollBar1
-            // 
-            this.hScrollBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.hScrollBar1.Location = new System.Drawing.Point(234, 681);
-            this.hScrollBar1.Maximum = 50000;
-            this.hScrollBar1.Name = "hScrollBar1";
-            this.hScrollBar1.Size = new System.Drawing.Size(702, 25);
-            this.hScrollBar1.SmallChange = 10;
-            this.hScrollBar1.TabIndex = 13;
-            this.hScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.graphicsRefresh);
-            // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.vScrollBar1.Location = new System.Drawing.Point(936, 76);
-            this.vScrollBar1.Maximum = 30000;
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(30, 605);
-            this.vScrollBar1.TabIndex = 14;
-            this.vScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.graphicsRefresh);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(936, 681);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 25);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "   ";
-            // 
-            // openFileDialog
-            // 
-            this.openFileDialog.Filter = "Файлы схем VisualGPSS|*.vgsch|Все файлы|*.*";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.matchButton);
-            this.groupBox4.Controls.Add(this.adoptButton);
-            this.groupBox4.Controls.Add(this.gatherButton);
-            this.groupBox4.Controls.Add(this.splitButton);
-            this.groupBox4.Controls.Add(this.assembleButton);
-            this.groupBox4.Controls.Add(this.gateButton);
-            this.groupBox4.Controls.Add(this.testButton);
-            this.groupBox4.Location = new System.Drawing.Point(3, 265);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(193, 220);
-            this.groupBox4.TabIndex = 7;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Синхронизация";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.tableButton);
-            this.groupBox1.Controls.Add(this.functionButton);
-            this.groupBox1.Location = new System.Drawing.Point(3, 659);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(193, 85);
-            this.groupBox1.TabIndex = 7;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "PLUS";
-            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.savailButton);
@@ -391,34 +401,6 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Циклы и вытеснение";
             // 
-            // pictureBox
-            // 
-            this.pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(213)))), ((int)(((byte)(231)))));
-            this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox.ContextMenuStrip = this.BlockOrElementCMS;
-            this.pictureBox.Location = new System.Drawing.Point(234, 80);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(702, 600);
-            this.pictureBox.TabIndex = 12;
-            this.pictureBox.TabStop = false;
-            this.pictureBox.DoubleClick += new System.EventHandler(this.EditElement);
-            this.pictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseDown);
-            this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseMove);
-            this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseUp);
-            // 
-            // LabelPictureBox
-            // 
-            this.LabelPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.LabelPictureBox.Image = global::VisualGPSS.Properties.Resources.VisualGPSS_Label1;
-            this.LabelPictureBox.Location = new System.Drawing.Point(12, 31);
-            this.LabelPictureBox.Name = "LabelPictureBox";
-            this.LabelPictureBox.Size = new System.Drawing.Size(100, 29);
-            this.LabelPictureBox.TabIndex = 11;
-            this.LabelPictureBox.TabStop = false;
-            // 
             // savailButton
             // 
             this.savailButton.BackColor = System.Drawing.Color.White;
@@ -430,6 +412,7 @@
             this.savailButton.Size = new System.Drawing.Size(50, 50);
             this.savailButton.TabIndex = 9;
             this.savailButton.UseVisualStyleBackColor = false;
+            this.savailButton.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
             // favailButton
             // 
@@ -442,6 +425,7 @@
             this.favailButton.Size = new System.Drawing.Size(50, 50);
             this.favailButton.TabIndex = 8;
             this.favailButton.UseVisualStyleBackColor = false;
+            this.favailButton.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
             // sunavailButton
             // 
@@ -454,6 +438,7 @@
             this.sunavailButton.Size = new System.Drawing.Size(50, 50);
             this.sunavailButton.TabIndex = 7;
             this.sunavailButton.UseVisualStyleBackColor = false;
+            this.sunavailButton.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
             // funavailButton
             // 
@@ -466,6 +451,7 @@
             this.funavailButton.Size = new System.Drawing.Size(50, 50);
             this.funavailButton.TabIndex = 6;
             this.funavailButton.UseVisualStyleBackColor = false;
+            this.funavailButton.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
             // loopButton
             // 
@@ -478,6 +464,18 @@
             this.loopButton.Size = new System.Drawing.Size(50, 50);
             this.loopButton.TabIndex = 5;
             this.loopButton.UseVisualStyleBackColor = false;
+            this.loopButton.Click += new System.EventHandler(this.ToolBoxItemClicked);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.tableButton);
+            this.groupBox1.Controls.Add(this.functionButton);
+            this.groupBox1.Location = new System.Drawing.Point(3, 659);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(193, 85);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "PLUS";
             // 
             // tableButton
             // 
@@ -505,6 +503,22 @@
             this.functionButton.UseVisualStyleBackColor = false;
             this.functionButton.Click += new System.EventHandler(this.functionButton_Click);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.matchButton);
+            this.groupBox4.Controls.Add(this.adoptButton);
+            this.groupBox4.Controls.Add(this.gatherButton);
+            this.groupBox4.Controls.Add(this.splitButton);
+            this.groupBox4.Controls.Add(this.assembleButton);
+            this.groupBox4.Controls.Add(this.gateButton);
+            this.groupBox4.Controls.Add(this.testButton);
+            this.groupBox4.Location = new System.Drawing.Point(3, 265);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(193, 220);
+            this.groupBox4.TabIndex = 7;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Синхронизация";
+            // 
             // matchButton
             // 
             this.matchButton.BackColor = System.Drawing.Color.Transparent;
@@ -516,6 +530,7 @@
             this.matchButton.Size = new System.Drawing.Size(50, 50);
             this.matchButton.TabIndex = 11;
             this.matchButton.UseVisualStyleBackColor = false;
+            this.matchButton.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
             // adoptButton
             // 
@@ -528,6 +543,7 @@
             this.adoptButton.Size = new System.Drawing.Size(50, 50);
             this.adoptButton.TabIndex = 10;
             this.adoptButton.UseVisualStyleBackColor = false;
+            this.adoptButton.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
             // gatherButton
             // 
@@ -540,6 +556,7 @@
             this.gatherButton.Size = new System.Drawing.Size(50, 50);
             this.gatherButton.TabIndex = 9;
             this.gatherButton.UseVisualStyleBackColor = false;
+            this.gatherButton.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
             // splitButton
             // 
@@ -552,6 +569,7 @@
             this.splitButton.Size = new System.Drawing.Size(50, 50);
             this.splitButton.TabIndex = 8;
             this.splitButton.UseVisualStyleBackColor = false;
+            this.splitButton.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
             // assembleButton
             // 
@@ -564,6 +582,7 @@
             this.assembleButton.Size = new System.Drawing.Size(50, 50);
             this.assembleButton.TabIndex = 7;
             this.assembleButton.UseVisualStyleBackColor = false;
+            this.assembleButton.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
             // gateButton
             // 
@@ -576,6 +595,7 @@
             this.gateButton.Size = new System.Drawing.Size(50, 50);
             this.gateButton.TabIndex = 6;
             this.gateButton.UseVisualStyleBackColor = false;
+            this.gateButton.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
             // testButton
             // 
@@ -588,10 +608,24 @@
             this.testButton.Size = new System.Drawing.Size(50, 50);
             this.testButton.TabIndex = 5;
             this.testButton.UseVisualStyleBackColor = false;
+            this.testButton.Click += new System.EventHandler(this.ToolBoxItemClicked);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox2.Controls.Add(this.multiChannelDeviceButton);
+            this.groupBox2.Controls.Add(this.singleChannelDeviceButton);
+            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox2.Location = new System.Drawing.Point(3, 171);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(193, 88);
+            this.groupBox2.TabIndex = 6;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Устройства";
             // 
             // multiChannelDeviceButton
             // 
-            this.multiChannelDeviceButton.BackColor = System.Drawing.Color.Transparent;
+            this.multiChannelDeviceButton.BackColor = System.Drawing.Color.White;
             this.multiChannelDeviceButton.BackgroundImage = global::VisualGPSS.Properties.Resources.устройствоN;
             this.multiChannelDeviceButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.multiChannelDeviceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -604,7 +638,7 @@
             // 
             // singleChannelDeviceButton
             // 
-            this.singleChannelDeviceButton.BackColor = System.Drawing.Color.Transparent;
+            this.singleChannelDeviceButton.BackColor = System.Drawing.Color.White;
             this.singleChannelDeviceButton.BackgroundImage = global::VisualGPSS.Properties.Resources.устройство1;
             this.singleChannelDeviceButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.singleChannelDeviceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -614,6 +648,22 @@
             this.singleChannelDeviceButton.TabIndex = 5;
             this.singleChannelDeviceButton.UseVisualStyleBackColor = false;
             this.singleChannelDeviceButton.Click += new System.EventHandler(this.ToolBoxItemClicked);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox3.Controls.Add(this.saveValueButton);
+            this.groupBox3.Controls.Add(this.tabulateButton);
+            this.groupBox3.Controls.Add(this.terminateButton);
+            this.groupBox3.Controls.Add(this.generateButton);
+            this.groupBox3.Controls.Add(this.uncertainButton);
+            this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox3.Location = new System.Drawing.Point(3, 4);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(193, 161);
+            this.groupBox3.TabIndex = 6;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Основное";
             // 
             // saveValueButton
             // 
@@ -680,116 +730,81 @@
             this.uncertainButton.UseVisualStyleBackColor = false;
             this.uncertainButton.Click += new System.EventHandler(this.ToolBoxItemClicked);
             // 
-            // открытьToolStripMenuItem
+            // imageSaveFileDialog
             // 
-            this.открытьToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
-            this.открытьToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.открытьToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.open_256_icon_icons_com_76002;
-            this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.открытьToolStripMenuItem.Text = "Открыть";
-            this.открытьToolStripMenuItem.Click += new System.EventHandler(this.открытьToolStripMenuItem_Click);
+            this.imageSaveFileDialog.Filter = "Image Files(*.BMP)|*.BMP|Image Files(*.JPG)|*.JPG|Image Files(*.GIF)|*.GIF|Image " +
+    "Files(*.PNG)|*.PNG|All files (*.*)|*.*";
             // 
-            // сохранитьToolStripMenuItem
+            // schemaSaveFileDialog
             // 
-            this.сохранитьToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.save_file_disk_open_searsh_loading_clipboard_1513;
-            this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.сохранитьToolStripMenuItem.Text = "Сохранить";
-            this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.сохранитьToolStripMenuItem_Click);
+            this.schemaSaveFileDialog.Filter = "Все файлы|*.*|Файлы VisualGPSS схем|*.vgsch";
             // 
-            // сохранитьКакToolStripMenuItem
+            // hScrollBar1
             // 
-            this.сохранитьКакToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.diskette_save_saveas_1514;
-            this.сохранитьКакToolStripMenuItem.Name = "сохранитьКакToolStripMenuItem";
-            this.сохранитьКакToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.сохранитьКакToolStripMenuItem.Text = "Сохранить как";
-            this.сохранитьКакToolStripMenuItem.Click += new System.EventHandler(this.сохранитьКакToolStripMenuItem_Click);
+            this.hScrollBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.hScrollBar1.Location = new System.Drawing.Point(234, 681);
+            this.hScrollBar1.Maximum = 50000;
+            this.hScrollBar1.Name = "hScrollBar1";
+            this.hScrollBar1.Size = new System.Drawing.Size(702, 25);
+            this.hScrollBar1.SmallChange = 10;
+            this.hScrollBar1.TabIndex = 13;
+            this.hScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.graphicsRefresh);
             // 
-            // генерацияКодаToolStripMenuItem
+            // vScrollBar1
             // 
-            this.генерацияКодаToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.downloadoutline_110860;
-            this.генерацияКодаToolStripMenuItem.Name = "генерацияКодаToolStripMenuItem";
-            this.генерацияКодаToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
-            this.генерацияКодаToolStripMenuItem.Text = "Генерация кода";
-            this.генерацияКодаToolStripMenuItem.Click += new System.EventHandler(this.генерацияКодаToolStripMenuItem_Click);
+            this.vScrollBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.vScrollBar1.Location = new System.Drawing.Point(936, 76);
+            this.vScrollBar1.Maximum = 30000;
+            this.vScrollBar1.Name = "vScrollBar1";
+            this.vScrollBar1.Size = new System.Drawing.Size(30, 605);
+            this.vScrollBar1.TabIndex = 14;
+            this.vScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.graphicsRefresh);
             // 
-            // печатьСхемыToolStripMenuItem
+            // label1
             // 
-            this.печатьСхемыToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.Print_icon_icons_com_73705;
-            this.печатьСхемыToolStripMenuItem.Name = "печатьСхемыToolStripMenuItem";
-            this.печатьСхемыToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
-            this.печатьСхемыToolStripMenuItem.Text = "Печать схемы";
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(936, 681);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(30, 25);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "   ";
             // 
-            // сохранитьКакИзображениеToolStripMenuItem
+            // openFileDialog
             // 
-            this.сохранитьКакИзображениеToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources._1491253396_5document_image_82883;
-            this.сохранитьКакИзображениеToolStripMenuItem.Name = "сохранитьКакИзображениеToolStripMenuItem";
-            this.сохранитьКакИзображениеToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
-            this.сохранитьКакИзображениеToolStripMenuItem.Text = "Сохранить как изображение";
-            this.сохранитьКакИзображениеToolStripMenuItem.Click += new System.EventHandler(this.сохранитьКакИзображениеToolStripMenuItem_Click);
+            this.openFileDialog.Filter = "Файлы схем VisualGPSS|*.vgsch|Все файлы|*.*";
             // 
-            // upScaleMenuItem
+            // pictureBox
             // 
-            this.upScaleMenuItem.Image = global::VisualGPSS.Properties.Resources.zoomin_zoom_search_find_1530;
-            this.upScaleMenuItem.Name = "upScaleMenuItem";
-            this.upScaleMenuItem.Size = new System.Drawing.Size(258, 22);
-            this.upScaleMenuItem.Text = "Увеличить масштаб";
-            this.upScaleMenuItem.Click += new System.EventHandler(this.UpScale);
+            this.pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(213)))), ((int)(((byte)(231)))));
+            this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox.ContextMenuStrip = this.BlockOrElementCMS;
+            this.pictureBox.Location = new System.Drawing.Point(234, 80);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(702, 600);
+            this.pictureBox.TabIndex = 12;
+            this.pictureBox.TabStop = false;
+            this.pictureBox.DoubleClick += new System.EventHandler(this.EditElement);
+            this.pictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseDown);
+            this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseMove);
+            this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseUp);
             // 
-            // downScaleMenuItem
+            // LabelPictureBox
             // 
-            this.downScaleMenuItem.Image = global::VisualGPSS.Properties.Resources.zoomout_zoom_search_find_1530;
-            this.downScaleMenuItem.Name = "downScaleMenuItem";
-            this.downScaleMenuItem.Size = new System.Drawing.Size(258, 22);
-            this.downScaleMenuItem.Text = "Уменьшить масштаб";
-            this.downScaleMenuItem.Click += new System.EventHandler(this.DownScale);
-            // 
-            // удалитьToolStripMenuItem
-            // 
-            this.удалитьToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.delete_delete_exit_1577;
-            this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
-            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
-            this.удалитьToolStripMenuItem.Text = "Удалить";
-            this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
-            // 
-            // редактироватьToolStripMenuItem1
-            // 
-            this.редактироватьToolStripMenuItem1.Image = global::VisualGPSS.Properties.Resources.documentediting_editdocuments_text_documentedi_2820;
-            this.редактироватьToolStripMenuItem1.Name = "редактироватьToolStripMenuItem1";
-            this.редактироватьToolStripMenuItem1.Size = new System.Drawing.Size(233, 26);
-            this.редактироватьToolStripMenuItem1.Text = "Редактировать";
-            this.редактироватьToolStripMenuItem1.Click += new System.EventHandler(this.EditElement);
-            // 
-            // добавитьВетвлениеToolStripMenuItem
-            // 
-            this.добавитьВетвлениеToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.linegraphsymbol_120645;
-            this.добавитьВетвлениеToolStripMenuItem.Name = "добавитьВетвлениеToolStripMenuItem";
-            this.добавитьВетвлениеToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
-            this.добавитьВетвлениеToolStripMenuItem.Text = "Добавить ветвление";
-            this.добавитьВетвлениеToolStripMenuItem.Click += new System.EventHandler(this.AddTransfer);
-            // 
-            // создатьToolStripMenuItem
-            // 
-            this.создатьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.элементToolStripMenuItem,
-            this.блокToolStripMenuItem});
-            this.создатьToolStripMenuItem.Image = global::VisualGPSS.Properties.Resources.add_insert_1193;
-            this.создатьToolStripMenuItem.Name = "создатьToolStripMenuItem";
-            this.создатьToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
-            this.создатьToolStripMenuItem.Text = "Создать";
-            // 
-            // элементToolStripMenuItem
-            // 
-            this.элементToolStripMenuItem.Name = "элементToolStripMenuItem";
-            this.элементToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
-            this.элементToolStripMenuItem.Text = "Элемент";
-            // 
-            // блокToolStripMenuItem
-            // 
-            this.блокToolStripMenuItem.Name = "блокToolStripMenuItem";
-            this.блокToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
-            this.блокToolStripMenuItem.Text = "Блок";
+            this.LabelPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.LabelPictureBox.Image = global::VisualGPSS.Properties.Resources.VisualGPSS_Label1;
+            this.LabelPictureBox.Location = new System.Drawing.Point(12, 31);
+            this.LabelPictureBox.Name = "LabelPictureBox";
+            this.LabelPictureBox.Size = new System.Drawing.Size(100, 29);
+            this.LabelPictureBox.TabIndex = 11;
+            this.LabelPictureBox.TabStop = false;
             // 
             // Main
             // 
@@ -815,11 +830,11 @@
             this.BlockOrElementCMS.ResumeLayout(false);
             this.FieldCMS.ResumeLayout(false);
             this.ToolBox.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LabelPictureBox)).EndInit();
             this.ResumeLayout(false);

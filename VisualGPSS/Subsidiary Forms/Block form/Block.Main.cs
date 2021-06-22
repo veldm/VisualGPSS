@@ -84,6 +84,9 @@ namespace VisualGPSS
                 case "RETURN":
                     SetParams("УСТРОЙСТВО");
                     break;
+                case "FUNAVAIL":
+                    SetParams("ИМЯ");
+                    break;
                 case "FAVAIL":
                     SetParams("ИМЯ");
                     break;

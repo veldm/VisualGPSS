@@ -180,7 +180,23 @@ namespace VisualGPSS
             "DEPART",
             "ENTER",
             "LEAVE",
-            "SaveValue"});
+            "SaveValue",
+            "PREEMPT",
+            "RETURN",
+            "FUNAVAIL",
+            "FAVAIL",
+            "SUNAVAIL",
+            "SAVAIL",
+            "LOOP",
+            "ASSIGN",
+            "MARK",
+            "TEST",
+            "GATE",
+            "SPLIT",
+            "ASSEMBLE",
+            "GATHER",
+            "ADOPT",
+            "MATCH"});
             this.TypeCB.Location = new System.Drawing.Point(77, 16);
             this.TypeCB.Name = "TypeCB";
             this.TypeCB.Size = new System.Drawing.Size(391, 28);

@@ -20,11 +20,13 @@ namespace VisualGPSS
         #region Поля
         private Point CursorPosition => new Point()
         {
-            X = pictureBox.PointToClient(Cursor.Position).X + hScrollBar1.Value,
-            Y = pictureBox.PointToClient(Cursor.Position).Y + vScrollBar1.Value
+            //X = pictureBox.PointToClient(Cursor.Position).X + hScrollBar1.Value,
+            //Y = pictureBox.PointToClient(Cursor.Position).Y + vScrollBar1.Value
 
-            //X = (int)((pictureBox.PointToClient(Cursor.Position).X + hScrollBar1.Value) * scale),
-            //Y = (int)((pictureBox.PointToClient(Cursor.Position).Y + vScrollBar1.Value) * scale)
+            X = (int)((pictureBox.PointToClient(Cursor.Position).X +
+                hScrollBar1.Value) * (1 / scale)),
+            Y = (int)((pictureBox.PointToClient(Cursor.Position).Y +
+                vScrollBar1.Value) * (1 / scale))
         };
 
         private Point RightBottom
@@ -166,7 +168,8 @@ namespace VisualGPSS
                     lock (bitmap)
                     {
                         Bitmap _bitmap = new Bitmap(bitmap, new Size
-                            ((int)(bitmap.Width * scale), (int)(bitmap.Height * scale)));
+                            ((int)(bitmap.Width * scale) + 1,
+                            (int)(bitmap.Height * scale) + 1));
                         pictureBox.Image = _bitmap.Clone(new Rectangle(hScrollBar1.Value,
                             vScrollBar1.Value, pictureBox.Width, pictureBox.Height),
                             bitmap.PixelFormat);

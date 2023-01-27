@@ -19,7 +19,9 @@ namespace VisualGPSS
                 if (Cursor.Current.Handle == Cursors.SizeNESW.Handle ||
                     Cursor.Current.Handle == Cursors.SizeNWSE.Handle)
                 {
-                    Parallel.Invoke(new Action(xResize), new Action(yResize));
+                    //Parallel.Invoke(new Action(xResize), new Action(yResize));
+                    xResize();
+                    yResize();
                 }
                 else if (Cursor.Current.Handle == Cursors.SizeWE.Handle) xResize();
                 else if (Cursor.Current.Handle == Cursors.SizeNS.Handle) yResize();

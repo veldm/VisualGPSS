@@ -300,25 +300,24 @@ namespace GPSS.Visualiztion
 
         public override bool IsVerticalTouching(Point clickPoint)
         {
-            return clickPoint.IsOnSection((Points[0], Points[5]), 3) ||
-                clickPoint.IsOnSection((Points[2], Points[3]), 3);
+            return clickPoint.IsOnSection((Points[0], Points[5]), 5) ||
+                clickPoint.IsOnSection((Points[2], Points[3]), 5);
         }
 
         public override bool IsHorizontalTouching(Point clickPoint)
         {
-            return clickPoint.IsOnSection((Points[0], Points[1]), 3) ||
-                clickPoint.IsOnSection((Points[4], Points[3]), 3);
+            return clickPoint.IsOnSection((Points[0], Points[1]), 5) ||
+                clickPoint.IsOnSection((Points[4], Points[3]), 5);
         }
 
         public override bool IsRightDiagonalTouching(Point clickPoint)
         {
-            return clickPoint.IsOnSection((Points[1], Points[2]), 3) ||
-                clickPoint.IsOnSection((Points[5], Points[4]), 3);
+            return clickPoint.IsNear(Points[2], 5) || clickPoint.IsNear(Points[1], 5);
         }
 
         public override bool IsLeftDiagonalTouching(Point clickPoint)
         {
-            return clickPoint.IsNear(Points[0], 3) || clickPoint.IsNear(Points[3], 3);
+            return clickPoint.IsNear(Points[0], 5) || clickPoint.IsNear(Points[3], 5);
         }
     }
 }

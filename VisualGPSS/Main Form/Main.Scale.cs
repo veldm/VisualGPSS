@@ -11,13 +11,13 @@ namespace VisualGPSS
         private void UpScale(object sender, EventArgs e)
         {
             double _scale = double.Parse(scaleCB.Text.Substring(0, scaleCB.Text.Length - 1)) + 10;
-            scaleCB.Text = $"{_scale}%";
+            if (_scale > 0 && _scale < 500) scaleCB.Text = $"{_scale}%";
         }
 
         private void DownScale(object sender, EventArgs e)
         {
             double _scale = double.Parse(scaleCB.Text.Substring(0, scaleCB.Text.Length - 1)) - 10;
-            scaleCB.Text = $"{_scale}%";
+            if (_scale > 0 && _scale < 500) scaleCB.Text = $"{_scale}%";
         }
 
         private void ScaleChanged(object sender, EventArgs e)

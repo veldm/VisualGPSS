@@ -20,7 +20,9 @@ namespace VisualGPSS
 
             for (int ii = 0; !(ii > schema.Elements.Count); ii++)
                 numberComboBox.Items.Add((ii + 1).ToString());
-            numberComboBox.SelectedIndex = numberComboBox.Items.Count - 1;
+            //numberComboBox.SelectedIndex = numberComboBox.Items.Count - 1;
+            numberComboBox.SelectedIndex = numberComboBox.Items.IndexOf(
+                (schema.GetPlace(center) + 1).ToString());
 
             SaveButton.Click += CreateNewDevice + onSave;
         }

@@ -165,6 +165,7 @@ namespace VisualGPSS
                     new Point(CursorPosition.X, CursorPosition.Y));
             Cursor = Cursors.Default;
             creatingOperator = null;
+            //MessageBox.Show($"{CursorPosition.X}, {CursorPosition.Y}");
         }
 
         #endregion Мышь

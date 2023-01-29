@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -45,6 +46,11 @@ namespace GPSS.Visualiztion
             {
                 throw new Exception($"Ошибка десериализации: {ex.Message}");
             }
+        }
+
+        public int GetPlace(Point centroid)
+        {
+            return Elements.Where(a => a.center.Y <= centroid.Y).Count();
         }
     }
 }

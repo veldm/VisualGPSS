@@ -118,5 +118,25 @@ namespace VisualGPSS
             };
             deviceForm.Show();
         }
+
+        private void добавитьБлокToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            (ComboBox cb, Point center) buf = ((ToolStripMenuItem)sender).Owner.Tag switch
+            {
+                "label1AddButton" => (comboBox1,
+                    new Point(startBlock.center.X - 200, startBlock.center.Y + 400)),
+                "label2AddButton" => (comboBox2,
+                    new Point(startBlock.center.X + 200, startBlock.center.Y + 400)),
+                _ => throw new NotImplementedException()
+            };
+            Block blockForm = new Block(schema, buf.center,
+                label: $"label{schema.ElementsWithLabelsList.Count + 1}");
+            blockForm.SaveButton.Click += (object sender, EventArgs e) =>
+            {
+                buf.cb.Items.Add(blockForm.label);
+                buf.cb.SelectedItem = blockForm.label;
+            };
+            blockForm.Show();
+        }
     }
 }

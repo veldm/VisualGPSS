@@ -357,10 +357,10 @@
             // 
             // добавитьБлокToolStripMenuItem
             // 
-            this.добавитьБлокToolStripMenuItem.Enabled = false;
             this.добавитьБлокToolStripMenuItem.Name = "добавитьБлокToolStripMenuItem";
             this.добавитьБлокToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.добавитьБлокToolStripMenuItem.Text = "Добавить блок";
+            this.добавитьБлокToolStripMenuItem.Click += new System.EventHandler(this.добавитьБлокToolStripMenuItem_Click);
             // 
             // добавитьУстройствоToolStripMenuItem
             // 

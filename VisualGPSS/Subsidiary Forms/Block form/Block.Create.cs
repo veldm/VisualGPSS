@@ -11,8 +11,10 @@ namespace VisualGPSS
 {
     public partial class Block : MaterialSkin.Controls.MaterialForm
     {
+        public string label;
 
-        public Block(VisualGPSS_Schema _schema, Point _point, string type = null)
+        public Block(VisualGPSS_Schema _schema, Point _point,
+            string type = null, string label = null)
         {
             InitializeComponent();
             schema = _schema;
@@ -21,6 +23,8 @@ namespace VisualGPSS
             if (type is not null)
                 TypeCB.SelectedIndex = TypeCB.Items.IndexOf(type);
             //else TypeCB.SelectedIndex = 0;
+
+            if (label is not null) LabelTextBox.Text = label;
 
             for (int ii = 0; !(ii > schema.Elements.Count); ii++)
                 numberComboBox.Items.Add((ii + 1).ToString());
@@ -48,7 +52,7 @@ namespace VisualGPSS
             {
                 uint number = uint.Parse(numberComboBox.Text);
                 string type = TypeCB.Text;
-                string label = LabelTextBox.Text is "" ? null : LabelTextBox.Text;
+                label = LabelTextBox.Text is "" ? null : LabelTextBox.Text;
                 List<string> arguments = new List<string>();
                 foreach (var control in from Control control in groupBox2.Controls
                                         where control

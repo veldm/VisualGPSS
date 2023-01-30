@@ -10,11 +10,15 @@ namespace VisualGPSS
 {
     public partial class Device : MaterialSkin.Controls.MaterialForm
     {
-        public Device(VisualGPSS_Schema schema, Point center, bool isMultiChanell)
+        public string label;
+
+        public Device(VisualGPSS_Schema schema, Point center,
+            bool isMultiChanell = false, string label = null)
         {
             InitializeComponent();
             this.schema = schema;
             this.center = center;
+            if (label is not null) LabelTextBox.Text = label;
 
             multiChanellCB.Checked = isMultiChanell;
 
@@ -30,7 +34,7 @@ namespace VisualGPSS
         private void CreateNewDevice(object sender, EventArgs e)
         {
             uint number = uint.Parse(numberComboBox.Text);
-            string label = LabelTextBox.Text;
+            label = LabelTextBox.Text;
             string name = NameTextBox.Text;
             string queue = QueueTextBox.Text;
             string delay = DelayTextBox.Text;

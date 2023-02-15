@@ -62,6 +62,7 @@ namespace VisualGPSS
                     arguments.Add(control.Text);
                 arguments.Reverse();
                 string[] args = arguments.ToArray();
+                // TODO: Валидация аргументов здесь
                 string comment = CommentTextbox.Text is "" ? null : LabelTextBox.Text;
 
                 schema.AddBlock(number - 1, point, type, label, args, comment);

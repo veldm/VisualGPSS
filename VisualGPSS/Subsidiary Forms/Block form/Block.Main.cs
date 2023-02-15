@@ -122,6 +122,9 @@ namespace VisualGPSS
                     break;
             }
 
+            // TODO:
+            // Масссив типов данных аргументов, передаваемый как параметр
+            // Валидатор, принимающий на вход типы данных агрументов и их обязательность
             void SetParams(string s1, string s2 = "", string s3 = "", string s4 = "", string s5 = "")
             {
                 // 1

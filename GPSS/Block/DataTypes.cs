@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace GPSS
 {
+    public enum DataType
+    {
+        Math, Device, Label, BooleanAttitude, DeviceCondition, Priority,
+        PreemptRegime, FunavailRegime
+    }
+
     public enum BooleanAttitude
     {
         E, GE, G, LE, L, NE

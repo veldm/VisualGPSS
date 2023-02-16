@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSelecter.cs" />
     <Compile Include="Main Form\Main.Features.cs">
       <SubType>Form</SubType>
     </Compile>

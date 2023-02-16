@@ -125,27 +125,53 @@ namespace VisualGPSS
             // TODO:
             // Масссив типов данных аргументов, передаваемый как параметр
             // Валидатор, принимающий на вход типы данных агрументов и их обязательность
-            void SetParams(string s1, string s2 = "", string s3 = "", string s4 = "", string s5 = "")
+            void SetParams(string s1, string s2 = "", string s3 = "", string s4 = "",
+                string s5 = "", params GPSS.DataType[] dataTypes)
             {
                 // 1
                 Label1.Text = s1;
                 TextBox1.Enabled = s1 is not "";
+                if (TextBox1.Enabled)
+                {
+                    TextBox1.DataSource = dataTypes[0].GetDataSource(schema, out List<string> tag);
+                    if (tag.Count > 0) TextBox1.Tag = tag;
+                }
 
                 // 2
                 Label2.Text = s2;
                 TextBox2.Enabled = s2 is not "";
+                if (TextBox2.Enabled)
+                {
+                    TextBox2.DataSource = dataTypes[0].GetDataSource(schema, out List<string> tag);
+                    if (tag.Count > 0) TextBox2.Tag = tag;
+                }
 
                 // 3
                 Label3.Text = s3;
                 TextBox3.Enabled = s3 is not "";
+                if (TextBox3.Enabled)
+                {
+                    TextBox3.DataSource = dataTypes[0].GetDataSource(schema, out List<string> tag);
+                    if (tag.Count > 0) TextBox3.Tag = tag;
+                }
 
                 // 4
                 Label4.Text = s4;
                 TextBox4.Enabled = s4 is not "";
+                if (TextBox4.Enabled)
+                {
+                    TextBox4.DataSource = dataTypes[0].GetDataSource(schema, out List<string> tag);
+                    if (tag.Count > 0) TextBox4.Tag = tag;
+                }
 
                 // 5
                 Label5.Text = s5;
                 TextBox5.Enabled = s5 is not "";
+                if (TextBox5.Enabled)
+                {
+                    TextBox5.DataSource = dataTypes[0].GetDataSource(schema, out List<string> tag);
+                    if (tag.Count > 0) TextBox5.Tag = tag;
+                }
             }
         }
 

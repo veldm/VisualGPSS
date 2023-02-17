@@ -8,8 +8,8 @@ namespace GPSS
 {
     public enum DataType
     {
-        Math, Device, Label, BooleanAttitude, DeviceCondition, Priority,
-        PreemptRegime, FunavailRegime
+        Math, Device, Label, Queue, BooleanAttitude, DeviceCondition,
+        Priority, PreemptRegime, FunavailRegime, Action, None
     }
 
     public enum BooleanAttitude

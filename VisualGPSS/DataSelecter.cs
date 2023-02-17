@@ -16,17 +16,20 @@ namespace VisualGPSS
             Values = new();
             switch (dataType)
             {
+                case DataType.Math:
+                    res.AddRange(schema.Functions.Select(func => func.Name));
+                    Values.AddRange(schema.Functions.Select(func => func.NameToCall));
+                    res.AddRange(GPSS.PLUS.Base.DistribRulesHeaders);
+                    Values.AddRange(GPSS.PLUS.Base.DistribRules);
+                    break;
                 case DataType.Device:
                     res.AddRange(schema.Devices.Select(dev => dev.Name));
                     break;
                 case DataType.Label:
                     res.AddRange(schema.LabelsList);
                     break;
-                case DataType.Math:
-                    res.AddRange(schema.Functions.Select(func => func.Name));
-                    Values.AddRange(schema.Functions.Select(func => func.NameToCall));
-                    res.AddRange(GPSS.PLUS.Base.DistribRulesHeaders);
-                    Values.AddRange(GPSS.PLUS.Base.DistribRules);
+                case DataType.Queue:
+                    res.AddRange(schema.Devices.Select(device => device.QueueName));
                     break;
                 case DataType.BooleanAttitude:
                     foreach (var vs in Enum.GetValues(typeof(BooleanAttitude)))
@@ -46,6 +49,9 @@ namespace VisualGPSS
                     break;
                 case DataType.FunavailRegime:
                     res.AddRange(new string[] { "RE", "CO" });
+                    break;
+                case DataType.Action:
+                    res.AddRange(new string[] { "+", "-" });
                     break;
             }
             return res;

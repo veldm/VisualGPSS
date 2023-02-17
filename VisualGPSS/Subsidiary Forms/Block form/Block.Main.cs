@@ -1,4 +1,5 @@
-﻿using GPSS.Visualiztion;
+﻿using GPSS;
+using GPSS.Visualiztion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,16 +17,17 @@ namespace VisualGPSS
         private VisualBlock visualBlock;
         private readonly Point point;
         private readonly VisualGPSS_Schema schema;
+        private bool[] necessarity;
 
         //  GENERATE[〈интервал〉],[〈разброс〉],[〈задержка〉],[〈ограничение〉],[〈приоритет〉
-        //  TERMINATE [hвычитаемоеi]
-        //  ADVANCE[hинтервалi],[hразбросi]
-        //  SEIZE hимя устройстваi
-        //  RELEASE hимя устройстваi
-        //  QUEUE hимя очередиi[, hколичествоi]
-        //  DEPART hимя очередиi[, hколичествоi]
-        //  ENTER hимяi,[hколичествоi]
-        //  LEAVE hимяi,[hколичествоi]
+        //  TERMINATE [вычитаемое]
+        //  ADVANCE[интервал],[разброс]
+        //  SEIZE имя устройства
+        //  RELEASE имя устройства
+        //  QUEUE имя очереди[, количество]
+        //  DEPART имя очереди[, количество]
+        //  ENTER имя,[количество]
+        //  LEAVE имя,[количество]
 
         //  PREEMPT устройство,[режим приоритета],[назначение],[№ параметра],[режим]
         //  RETURN устройство
@@ -48,128 +50,200 @@ namespace VisualGPSS
         {
             switch (TypeCB.SelectedItem)
             {
+                // GENERATE[〈интервал〉],[〈разброс〉],[〈задержка〉],[〈ограничение〉],[〈приоритет〉]
                 case "GENERATE":
-                    SetParams("ИНТЕРВАЛ", "РАЗБРОС", "ЗАДЕРЖКА", "ОГРАНИЧЕНИЕ", "ПРИОРИТЕТ");
+                    SetParams(("ИНТЕРВАЛ", DataType.Math, false),
+                        ("РАЗБРОС", DataType.Math, false),
+                        ("ЗАДЕРЖКА", DataType.Math, false),
+                        ("ОГРАНИЧЕНИЕ", DataType.Math, false),
+                        ("ПРИОРИТЕТ", DataType.Math, false));
                     break;
+
+                // TERMINATE [вычитаемое]
                 case "TERMINATE":
-                    SetParams("ВЫЧИТАЕМОЕ");
+                    SetParams(("ВЫЧИТАЕМОЕ", DataType.Math, false));
                     break;
+
+                // ADVANCE[интервал],[разброс]
                 case "ADVANCE":
-                    SetParams("ИНТЕРВАЛ", "РАЗБРОС");
+                    SetParams(("ИНТЕРВАЛ", DataType.Math, false),
+                        ("РАЗБРОС", DataType.Math, false));
                     break;
+
+                //  SEIZE имя устройства
                 case "SEIZE":
-                    SetParams("УСТРОЙСТВО");
+                    SetParams(("УСТРОЙСТВО", DataType.Device, true));
                     break;
+
+                // RELEASE имя устройства
                 case "RELEASE":
-                    SetParams("УСТРОЙСТВО");
+                    SetParams(("УСТРОЙСТВО", DataType.Device, true));
                     break;
+
+                // QUEUE имя очереди[, количество]
                 case "QUEUE":
-                    SetParams("ОЧЕРЕДЬ", "КОЛИЧЕСТВО");
+                    SetParams(("ОЧЕРЕДЬ", DataType.Queue, true),
+                        ("КОЛИЧЕСТВО", DataType.Math, false));
                     break;
+
+                //  DEPART имя очереди[, количество]
                 case "DEPART":
-                    SetParams("ОЧЕРЕДЬ", "КОЛИЧЕСТВО");
+                    SetParams(("ОЧЕРЕДЬ", DataType.Queue, true),
+                        ("КОЛИЧЕСТВО", DataType.Math, false));
                     break;
+
+                // ENTER имя[,количество]
                 case "ENTER":
-                    SetParams("УСТРОЙСТВО", "КОЛИЧЕСТВО");
+                    SetParams(("УСТРОЙСТВО", DataType.Device, true),
+                        ("КОЛИЧЕСТВО", DataType.Math, false));
                     break;
+
+                // LEAVE имя,[количество]
                 case "LEAVE":
-                    SetParams("УСТРОЙСТВО", "КОЛИЧЕСТВО");
+                    SetParams(("УСТРОЙСТВО", DataType.Device, true),
+                        ("КОЛИЧЕСТВО", DataType.Math, false));
                     break;
+
                 case "SaveValue":
-                    SetParams("ИМЯ", "ДЕЙСТВИЕ", "ЗНАЧЕНИЕ");
+                    SetParams(("ИМЯ", DataType.None, true),
+                        ("ДЕЙСТВИЕ", DataType.Action, false),
+                        ("ЗНАЧЕНИЕ", DataType.Math, true));
                     break;
+
+                // PREEMPT устройство,[режим приоритета],[назначение],[№ параметра],[режим]
                 case "PREEMPT":
-                    SetParams("УСТРОЙСТВО", "ПРИОРИТЕТ", "НАЗНАЧЕНИЕ", "ПАРАМЕТР", "РЕЖИМ");
+                    SetParams(("УСТРОЙСТВО", DataType.Device, true),
+                        ("ПРИОРИТЕТ", DataType.Priority, false),
+                        ("НАЗНАЧЕНИЕ", DataType.Label, false),
+                        ("ПАРАМЕТР", DataType.None, false),
+                        ("РЕЖИМ", DataType.PreemptRegime, false));
                     break;
+
+                // RETURN устройство
                 case "RETURN":
-                    SetParams("УСТРОЙСТВО");
+                    SetParams(("УСТРОЙСТВО", DataType.Device, true));
                     break;
+
+                // FUNAVAIL имя,[режим1],[метка1],[№],[режим2],[метка2],[режим3],[метка3]
                 case "FUNAVAIL":
-                    SetParams("ИМЯ");
+                    SetParams(("ИМЯ", DataType.Device, true),
+                        ("РЕЖИМ 1", DataType.FunavailRegime, false),
+                        ("МЕТКА 1", DataType.Label, false),
+                        ("№", DataType.None, false),
+                        ("РЕЖИМ 2", DataType.FunavailRegime, false),
+                        ("МЕТКА 2", DataType.Label, false),
+                        ("РЕЖИМ 3", DataType.FunavailRegime, false),
+                        ("МЕТКА 3", DataType.Label, false));
                     break;
+
+                // FAVAIL имя
                 case "FAVAIL":
-                    SetParams("ИМЯ");
+                    SetParams(("ИМЯ", DataType.Device, true));
                     break;
+
+                // SUNAVAIL имя
                 case "SUNAVAIL":
-                    SetParams("ИМЯ");
+                    SetParams(("ИМЯ", DataType.Device, true));
                     break;
+
+                // SAVAIL имя
                 case "SAVAIL":
-                    SetParams("ИМЯ");
+                    SetParams(("ИМЯ", DataType.Device, true));
                     break;
+
+                // LOOP<№ параметра>[, метка]
                 case "LOOP":
-                    SetParams("ПАРАМЕТР", "МЕТКА");
+                    SetParams(("ПАРАМЕТР", DataType.None, true),
+                        ("МЕТКА", DataType.Label, true));
                     break;
+
+                // ASSIGN № параметра[суффикс],значение[, функция]
                 case "ASSIGN":
-                    SetParams("ПАРАМЕТР", "СУФФИКС", "ЗНАЧЕНИЕ", "ФУНКЦИЯ");
+                    SetParams(("ПАРАМЕТР", DataType.None, true),
+                        ("СУФФИКС", DataType.Action, false),
+                        ("ЗНАЧЕНИЕ", DataType.Math, true),
+                        ("ФУНКЦИЯ", DataType.Math, false));
                     break;
+
+                // MARK № параметра
                 case "MARK":
-                    SetParams("ПАРАМЕТР");
+                    SetParams(("ПАРАМЕТР", DataType.None, true));
                     break;
+
+                // SPLIT количество,[метка] [,№ параметра]
                 case "SPLIT":
-                    SetParams("КОЛИЧЕСТВО", "МЕТКА", "ПАРАМЕТР");
+                    SetParams(("КОЛИЧЕСТВО", DataType.Math, true),
+                        ("МЕТКА", DataType.Label, false),
+                        ("ПАРАМЕТР", DataType.None, false));
                     break;
+
+                // ASSEMBLE количество
                 case "ASSEMBLE":
-                    SetParams("КОЛИЧЕСТВО");
+                    SetParams(("КОЛИЧЕСТВО", DataType.Math, true));
                     break;
+
+                // GATHER количество
                 case "GATHER":
-                    SetParams("КОЛИЧЕСТВО");
+                    SetParams(("КОЛИЧЕСТВО", DataType.Math, true));
                     break;
+
+                // ADOPT № группы
                 case "ADOPT":
-                    SetParams("ГРУППА");
+                    SetParams(("ГРУППА", DataType.Math, true));
                     break;
+
+                // MATCH метка
                 case "MATCH":
-                    SetParams("МЕТКА");
+                    SetParams(("МЕТКА", DataType.Label, true));
                     break;
             }
 
-            // TODO:
-            // Масссив типов данных аргументов, передаваемый как параметр
-            // Валидатор, принимающий на вход типы данных агрументов и их обязательность
-            void SetParams(string s1, string s2 = "", string s3 = "", string s4 = "",
-                string s5 = "", params GPSS.DataType[] dataTypes)
+            void SetParams(params (string name, GPSS.DataType Type, bool necessarity)[] dataPattern)
             {
+                necessarity = dataPattern.Select(pattern => pattern.necessarity).ToArray();
+
                 // 1
-                Label1.Text = s1;
-                TextBox1.Enabled = s1 is not "";
+                Label1.Text = dataPattern[0].name;
+                TextBox1.Enabled = Label1.Text is not "";
                 if (TextBox1.Enabled)
                 {
-                    TextBox1.DataSource = dataTypes[0].GetDataSource(schema, out List<string> tag);
+                    TextBox1.DataSource = dataPattern[0].Type.GetDataSource(schema, out List<string> tag);
                     if (tag.Count > 0) TextBox1.Tag = tag;
                 }
 
                 // 2
-                Label2.Text = s2;
-                TextBox2.Enabled = s2 is not "";
+                Label2.Text = dataPattern.Length > 1 ? dataPattern[1].name : "";
+                TextBox2.Enabled = Label2.Text is not "";
                 if (TextBox2.Enabled)
                 {
-                    TextBox2.DataSource = dataTypes[0].GetDataSource(schema, out List<string> tag);
+                    TextBox2.DataSource = dataPattern[1].Type.GetDataSource(schema, out List<string> tag);
                     if (tag.Count > 0) TextBox2.Tag = tag;
                 }
 
                 // 3
-                Label3.Text = s3;
-                TextBox3.Enabled = s3 is not "";
+                Label3.Text = dataPattern.Length > 2 ? dataPattern[2].name : "";
+                TextBox3.Enabled = Label3.Text is not "";
                 if (TextBox3.Enabled)
                 {
-                    TextBox3.DataSource = dataTypes[0].GetDataSource(schema, out List<string> tag);
+                    TextBox3.DataSource = dataPattern[2].Type.GetDataSource(schema, out List<string> tag);
                     if (tag.Count > 0) TextBox3.Tag = tag;
                 }
 
                 // 4
-                Label4.Text = s4;
-                TextBox4.Enabled = s4 is not "";
+                Label4.Text = dataPattern.Length > 3 ? dataPattern[3].name : "";
+                TextBox4.Enabled = Label4.Text is not "";
                 if (TextBox4.Enabled)
                 {
-                    TextBox4.DataSource = dataTypes[0].GetDataSource(schema, out List<string> tag);
+                    TextBox4.DataSource = dataPattern[3].Type.GetDataSource(schema, out List<string> tag);
                     if (tag.Count > 0) TextBox4.Tag = tag;
                 }
 
                 // 5
-                Label5.Text = s5;
-                TextBox5.Enabled = s5 is not "";
+                Label5.Text = dataPattern.Length > 4 ? dataPattern[4].name : "";
+                TextBox5.Enabled = Label5.Text is not "";
                 if (TextBox5.Enabled)
                 {
-                    TextBox5.DataSource = dataTypes[0].GetDataSource(schema, out List<string> tag);
+                    TextBox5.DataSource = dataPattern[4].Type.GetDataSource(schema, out List<string> tag);
                     if (tag.Count > 0) TextBox5.Tag = tag;
                 }
             }

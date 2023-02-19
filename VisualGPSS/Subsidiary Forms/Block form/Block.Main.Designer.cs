@@ -40,11 +40,25 @@ namespace VisualGPSS
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.TypeCB = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.TextBox5 = new System.Windows.Forms.ComboBox();
-            this.TextBox4 = new System.Windows.Forms.ComboBox();
-            this.TextBox3 = new System.Windows.Forms.ComboBox();
-            this.TextBox2 = new System.Windows.Forms.ComboBox();
-            this.TextBox1 = new System.Windows.Forms.ComboBox();
+            this.materialSingleLineTextField8 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.ComboBox8 = new System.Windows.Forms.ComboBox();
+            this.Label8 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialSingleLineTextField7 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialSingleLineTextField6 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.ComboBox7 = new System.Windows.Forms.ComboBox();
+            this.ComboBox6 = new System.Windows.Forms.ComboBox();
+            this.Label7 = new MaterialSkin.Controls.MaterialLabel();
+            this.Label6 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialSingleLineTextField5 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialSingleLineTextField4 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialSingleLineTextField3 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialSingleLineTextField2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.ComboBox5 = new System.Windows.Forms.ComboBox();
+            this.ComboBox4 = new System.Windows.Forms.ComboBox();
+            this.ComboBox3 = new System.Windows.Forms.ComboBox();
+            this.ComboBox2 = new System.Windows.Forms.ComboBox();
+            this.ComboBox1 = new System.Windows.Forms.ComboBox();
             this.Label5 = new MaterialSkin.Controls.MaterialLabel();
             this.Label4 = new MaterialSkin.Controls.MaterialLabel();
             this.Label3 = new MaterialSkin.Controls.MaterialLabel();
@@ -206,11 +220,25 @@ namespace VisualGPSS
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox2.Controls.Add(this.TextBox5);
-            this.groupBox2.Controls.Add(this.TextBox4);
-            this.groupBox2.Controls.Add(this.TextBox3);
-            this.groupBox2.Controls.Add(this.TextBox2);
-            this.groupBox2.Controls.Add(this.TextBox1);
+            this.groupBox2.Controls.Add(this.materialSingleLineTextField8);
+            this.groupBox2.Controls.Add(this.ComboBox8);
+            this.groupBox2.Controls.Add(this.Label8);
+            this.groupBox2.Controls.Add(this.materialSingleLineTextField7);
+            this.groupBox2.Controls.Add(this.materialSingleLineTextField6);
+            this.groupBox2.Controls.Add(this.ComboBox7);
+            this.groupBox2.Controls.Add(this.ComboBox6);
+            this.groupBox2.Controls.Add(this.Label7);
+            this.groupBox2.Controls.Add(this.Label6);
+            this.groupBox2.Controls.Add(this.materialSingleLineTextField5);
+            this.groupBox2.Controls.Add(this.materialSingleLineTextField4);
+            this.groupBox2.Controls.Add(this.materialSingleLineTextField3);
+            this.groupBox2.Controls.Add(this.materialSingleLineTextField2);
+            this.groupBox2.Controls.Add(this.materialSingleLineTextField1);
+            this.groupBox2.Controls.Add(this.ComboBox5);
+            this.groupBox2.Controls.Add(this.ComboBox4);
+            this.groupBox2.Controls.Add(this.ComboBox3);
+            this.groupBox2.Controls.Add(this.ComboBox2);
+            this.groupBox2.Controls.Add(this.ComboBox1);
             this.groupBox2.Controls.Add(this.Label5);
             this.groupBox2.Controls.Add(this.Label4);
             this.groupBox2.Controls.Add(this.Label3);
@@ -218,59 +246,256 @@ namespace VisualGPSS
             this.groupBox2.Controls.Add(this.Label1);
             this.groupBox2.Location = new System.Drawing.Point(12, 218);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(481, 259);
+            this.groupBox2.Size = new System.Drawing.Size(481, 387);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
-            // TextBox5
+            // materialSingleLineTextField8
             // 
-            this.TextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TextBox5.FormattingEnabled = true;
-            this.TextBox5.Location = new System.Drawing.Point(150, 209);
-            this.TextBox5.Name = "TextBox5";
-            this.TextBox5.Size = new System.Drawing.Size(318, 28);
-            this.TextBox5.TabIndex = 37;
-            this.TextBox5.SelectedIndexChanged += new System.EventHandler(this.SelectedIndexChanged);
+            this.materialSingleLineTextField8.Depth = 0;
+            this.materialSingleLineTextField8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.materialSingleLineTextField8.Hint = "";
+            this.materialSingleLineTextField8.Location = new System.Drawing.Point(151, 345);
+            this.materialSingleLineTextField8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextField8.Name = "materialSingleLineTextField8";
+            this.materialSingleLineTextField8.PasswordChar = '\0';
+            this.materialSingleLineTextField8.SelectedText = "";
+            this.materialSingleLineTextField8.SelectionLength = 0;
+            this.materialSingleLineTextField8.SelectionStart = 0;
+            this.materialSingleLineTextField8.Size = new System.Drawing.Size(296, 23);
+            this.materialSingleLineTextField8.TabIndex = 45;
+            this.materialSingleLineTextField8.UseSystemPasswordChar = false;
             // 
-            // TextBox4
+            // ComboBox8
             // 
-            this.TextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TextBox4.FormattingEnabled = true;
-            this.TextBox4.Location = new System.Drawing.Point(150, 166);
-            this.TextBox4.Name = "TextBox4";
-            this.TextBox4.Size = new System.Drawing.Size(318, 28);
-            this.TextBox4.TabIndex = 36;
-            this.TextBox4.SelectedIndexChanged += new System.EventHandler(this.SelectedIndexChanged);
+            this.ComboBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ComboBox8.FormattingEnabled = true;
+            this.ComboBox8.Location = new System.Drawing.Point(150, 342);
+            this.ComboBox8.Name = "ComboBox8";
+            this.ComboBox8.Size = new System.Drawing.Size(318, 28);
+            this.ComboBox8.TabIndex = 40;
+            this.ComboBox8.SelectedIndexChanged += new System.EventHandler(this.ComboBox8_SelectedIndexChanged);
             // 
-            // TextBox3
+            // Label8
             // 
-            this.TextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TextBox3.FormattingEnabled = true;
-            this.TextBox3.Location = new System.Drawing.Point(150, 120);
-            this.TextBox3.Name = "TextBox3";
-            this.TextBox3.Size = new System.Drawing.Size(318, 28);
-            this.TextBox3.TabIndex = 35;
-            this.TextBox3.SelectedIndexChanged += new System.EventHandler(this.SelectedIndexChanged);
+            this.Label8.AutoSize = true;
+            this.Label8.Depth = 0;
+            this.Label8.Font = new System.Drawing.Font("Roboto", 11F);
+            this.Label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Label8.Location = new System.Drawing.Point(11, 346);
+            this.Label8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.Label8.Name = "Label8";
+            this.Label8.Size = new System.Drawing.Size(88, 19);
+            this.Label8.TabIndex = 47;
+            this.Label8.Text = "ИНТЕРВАЛ";
             // 
-            // TextBox2
+            // materialSingleLineTextField7
             // 
-            this.TextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TextBox2.FormattingEnabled = true;
-            this.TextBox2.Location = new System.Drawing.Point(150, 69);
-            this.TextBox2.Name = "TextBox2";
-            this.TextBox2.Size = new System.Drawing.Size(318, 28);
-            this.TextBox2.TabIndex = 34;
-            this.TextBox2.SelectedIndexChanged += new System.EventHandler(this.SelectedIndexChanged);
+            this.materialSingleLineTextField7.Depth = 0;
+            this.materialSingleLineTextField7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.materialSingleLineTextField7.Hint = "";
+            this.materialSingleLineTextField7.Location = new System.Drawing.Point(150, 301);
+            this.materialSingleLineTextField7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextField7.Name = "materialSingleLineTextField7";
+            this.materialSingleLineTextField7.PasswordChar = '\0';
+            this.materialSingleLineTextField7.SelectedText = "";
+            this.materialSingleLineTextField7.SelectionLength = 0;
+            this.materialSingleLineTextField7.SelectionStart = 0;
+            this.materialSingleLineTextField7.Size = new System.Drawing.Size(296, 23);
+            this.materialSingleLineTextField7.TabIndex = 44;
+            this.materialSingleLineTextField7.UseSystemPasswordChar = false;
             // 
-            // TextBox1
+            // materialSingleLineTextField6
             // 
-            this.TextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TextBox1.FormattingEnabled = true;
-            this.TextBox1.Location = new System.Drawing.Point(150, 23);
-            this.TextBox1.Name = "TextBox1";
-            this.TextBox1.Size = new System.Drawing.Size(318, 28);
-            this.TextBox1.TabIndex = 33;
-            this.TextBox1.SelectedIndexChanged += new System.EventHandler(this.SelectedIndexChanged);
+            this.materialSingleLineTextField6.Depth = 0;
+            this.materialSingleLineTextField6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.materialSingleLineTextField6.Hint = "";
+            this.materialSingleLineTextField6.Location = new System.Drawing.Point(150, 258);
+            this.materialSingleLineTextField6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextField6.Name = "materialSingleLineTextField6";
+            this.materialSingleLineTextField6.PasswordChar = '\0';
+            this.materialSingleLineTextField6.SelectedText = "";
+            this.materialSingleLineTextField6.SelectionLength = 0;
+            this.materialSingleLineTextField6.SelectionStart = 0;
+            this.materialSingleLineTextField6.Size = new System.Drawing.Size(296, 23);
+            this.materialSingleLineTextField6.TabIndex = 43;
+            this.materialSingleLineTextField6.UseSystemPasswordChar = false;
+            // 
+            // ComboBox7
+            // 
+            this.ComboBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ComboBox7.FormattingEnabled = true;
+            this.ComboBox7.Location = new System.Drawing.Point(149, 298);
+            this.ComboBox7.Name = "ComboBox7";
+            this.ComboBox7.Size = new System.Drawing.Size(318, 28);
+            this.ComboBox7.TabIndex = 39;
+            this.ComboBox7.SelectedIndexChanged += new System.EventHandler(this.ComboBox7_SelectedIndexChanged);
+            // 
+            // ComboBox6
+            // 
+            this.ComboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ComboBox6.FormattingEnabled = true;
+            this.ComboBox6.Location = new System.Drawing.Point(149, 255);
+            this.ComboBox6.Name = "ComboBox6";
+            this.ComboBox6.Size = new System.Drawing.Size(318, 28);
+            this.ComboBox6.TabIndex = 38;
+            this.ComboBox6.SelectedIndexChanged += new System.EventHandler(this.ComboBox6_SelectedIndexChanged);
+            // 
+            // Label7
+            // 
+            this.Label7.AutoSize = true;
+            this.Label7.Depth = 0;
+            this.Label7.Font = new System.Drawing.Font("Roboto", 11F);
+            this.Label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Label7.Location = new System.Drawing.Point(10, 302);
+            this.Label7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.Label7.Name = "Label7";
+            this.Label7.Size = new System.Drawing.Size(88, 19);
+            this.Label7.TabIndex = 44;
+            this.Label7.Text = "ИНТЕРВАЛ";
+            // 
+            // Label6
+            // 
+            this.Label6.AutoSize = true;
+            this.Label6.Depth = 0;
+            this.Label6.Font = new System.Drawing.Font("Roboto", 11F);
+            this.Label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Label6.Location = new System.Drawing.Point(12, 259);
+            this.Label6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.Label6.Name = "Label6";
+            this.Label6.Size = new System.Drawing.Size(88, 19);
+            this.Label6.TabIndex = 43;
+            this.Label6.Text = "ИНТЕРВАЛ";
+            // 
+            // materialSingleLineTextField5
+            // 
+            this.materialSingleLineTextField5.Depth = 0;
+            this.materialSingleLineTextField5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.materialSingleLineTextField5.Hint = "";
+            this.materialSingleLineTextField5.Location = new System.Drawing.Point(151, 212);
+            this.materialSingleLineTextField5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextField5.Name = "materialSingleLineTextField5";
+            this.materialSingleLineTextField5.PasswordChar = '\0';
+            this.materialSingleLineTextField5.SelectedText = "";
+            this.materialSingleLineTextField5.SelectionLength = 0;
+            this.materialSingleLineTextField5.SelectionStart = 0;
+            this.materialSingleLineTextField5.Size = new System.Drawing.Size(296, 23);
+            this.materialSingleLineTextField5.TabIndex = 42;
+            this.materialSingleLineTextField5.UseSystemPasswordChar = false;
+            // 
+            // materialSingleLineTextField4
+            // 
+            this.materialSingleLineTextField4.Depth = 0;
+            this.materialSingleLineTextField4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.materialSingleLineTextField4.Hint = "";
+            this.materialSingleLineTextField4.Location = new System.Drawing.Point(151, 169);
+            this.materialSingleLineTextField4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextField4.Name = "materialSingleLineTextField4";
+            this.materialSingleLineTextField4.PasswordChar = '\0';
+            this.materialSingleLineTextField4.SelectedText = "";
+            this.materialSingleLineTextField4.SelectionLength = 0;
+            this.materialSingleLineTextField4.SelectionStart = 0;
+            this.materialSingleLineTextField4.Size = new System.Drawing.Size(296, 23);
+            this.materialSingleLineTextField4.TabIndex = 41;
+            this.materialSingleLineTextField4.UseSystemPasswordChar = false;
+            // 
+            // materialSingleLineTextField3
+            // 
+            this.materialSingleLineTextField3.Depth = 0;
+            this.materialSingleLineTextField3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.materialSingleLineTextField3.Hint = "";
+            this.materialSingleLineTextField3.Location = new System.Drawing.Point(151, 123);
+            this.materialSingleLineTextField3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextField3.Name = "materialSingleLineTextField3";
+            this.materialSingleLineTextField3.PasswordChar = '\0';
+            this.materialSingleLineTextField3.SelectedText = "";
+            this.materialSingleLineTextField3.SelectionLength = 0;
+            this.materialSingleLineTextField3.SelectionStart = 0;
+            this.materialSingleLineTextField3.Size = new System.Drawing.Size(296, 23);
+            this.materialSingleLineTextField3.TabIndex = 40;
+            this.materialSingleLineTextField3.UseSystemPasswordChar = false;
+            // 
+            // materialSingleLineTextField2
+            // 
+            this.materialSingleLineTextField2.Depth = 0;
+            this.materialSingleLineTextField2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.materialSingleLineTextField2.Hint = "";
+            this.materialSingleLineTextField2.Location = new System.Drawing.Point(151, 72);
+            this.materialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextField2.Name = "materialSingleLineTextField2";
+            this.materialSingleLineTextField2.PasswordChar = '\0';
+            this.materialSingleLineTextField2.SelectedText = "";
+            this.materialSingleLineTextField2.SelectionLength = 0;
+            this.materialSingleLineTextField2.SelectionStart = 0;
+            this.materialSingleLineTextField2.Size = new System.Drawing.Size(296, 23);
+            this.materialSingleLineTextField2.TabIndex = 39;
+            this.materialSingleLineTextField2.UseSystemPasswordChar = false;
+            // 
+            // materialSingleLineTextField1
+            // 
+            this.materialSingleLineTextField1.Depth = 0;
+            this.materialSingleLineTextField1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.materialSingleLineTextField1.Hint = "";
+            this.materialSingleLineTextField1.Location = new System.Drawing.Point(151, 26);
+            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
+            this.materialSingleLineTextField1.PasswordChar = '\0';
+            this.materialSingleLineTextField1.SelectedText = "";
+            this.materialSingleLineTextField1.SelectionLength = 0;
+            this.materialSingleLineTextField1.SelectionStart = 0;
+            this.materialSingleLineTextField1.Size = new System.Drawing.Size(296, 23);
+            this.materialSingleLineTextField1.TabIndex = 38;
+            this.materialSingleLineTextField1.UseSystemPasswordChar = false;
+            // 
+            // ComboBox5
+            // 
+            this.ComboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ComboBox5.FormattingEnabled = true;
+            this.ComboBox5.Location = new System.Drawing.Point(150, 209);
+            this.ComboBox5.Name = "ComboBox5";
+            this.ComboBox5.Size = new System.Drawing.Size(318, 28);
+            this.ComboBox5.TabIndex = 37;
+            this.ComboBox5.SelectedIndexChanged += new System.EventHandler(this.ComboBox5_SelectedIndexChanged);
+            // 
+            // ComboBox4
+            // 
+            this.ComboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ComboBox4.FormattingEnabled = true;
+            this.ComboBox4.Location = new System.Drawing.Point(150, 166);
+            this.ComboBox4.Name = "ComboBox4";
+            this.ComboBox4.Size = new System.Drawing.Size(318, 28);
+            this.ComboBox4.TabIndex = 36;
+            this.ComboBox4.SelectedIndexChanged += new System.EventHandler(this.ComboBox4_SelectedIndexChanged);
+            // 
+            // ComboBox3
+            // 
+            this.ComboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ComboBox3.FormattingEnabled = true;
+            this.ComboBox3.Location = new System.Drawing.Point(150, 120);
+            this.ComboBox3.Name = "ComboBox3";
+            this.ComboBox3.Size = new System.Drawing.Size(318, 28);
+            this.ComboBox3.TabIndex = 35;
+            this.ComboBox3.SelectedIndexChanged += new System.EventHandler(this.ComboBox3_SelectedIndexChanged);
+            // 
+            // ComboBox2
+            // 
+            this.ComboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ComboBox2.FormattingEnabled = true;
+            this.ComboBox2.Location = new System.Drawing.Point(150, 69);
+            this.ComboBox2.Name = "ComboBox2";
+            this.ComboBox2.Size = new System.Drawing.Size(318, 28);
+            this.ComboBox2.TabIndex = 34;
+            this.ComboBox2.SelectedIndexChanged += new System.EventHandler(this.ComboBox2_SelectedIndexChanged);
+            // 
+            // ComboBox1
+            // 
+            this.ComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ComboBox1.FormattingEnabled = true;
+            this.ComboBox1.Location = new System.Drawing.Point(150, 23);
+            this.ComboBox1.Name = "ComboBox1";
+            this.ComboBox1.Size = new System.Drawing.Size(318, 28);
+            this.ComboBox1.TabIndex = 33;
+            this.ComboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
             // Label5
             // 
@@ -339,9 +564,9 @@ namespace VisualGPSS
             // 
             // propertyGrid
             // 
-            this.propertyGrid.Location = new System.Drawing.Point(512, 80);
+            this.propertyGrid.Location = new System.Drawing.Point(512, 75);
             this.propertyGrid.Name = "propertyGrid";
-            this.propertyGrid.Size = new System.Drawing.Size(222, 442);
+            this.propertyGrid.Size = new System.Drawing.Size(222, 575);
             this.propertyGrid.TabIndex = 2;
             // 
             // DeleteButton
@@ -351,7 +576,7 @@ namespace VisualGPSS
             this.DeleteButton.BackColor = System.Drawing.Color.Transparent;
             this.DeleteButton.Depth = 0;
             this.DeleteButton.ForeColor = System.Drawing.Color.Red;
-            this.DeleteButton.Location = new System.Drawing.Point(16, 486);
+            this.DeleteButton.Location = new System.Drawing.Point(13, 614);
             this.DeleteButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.DeleteButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.DeleteButton.Name = "DeleteButton";
@@ -367,7 +592,7 @@ namespace VisualGPSS
             this.Cancelbutton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Cancelbutton.BackColor = System.Drawing.Color.Transparent;
             this.Cancelbutton.Depth = 0;
-            this.Cancelbutton.Location = new System.Drawing.Point(204, 486);
+            this.Cancelbutton.Location = new System.Drawing.Point(201, 614);
             this.Cancelbutton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Cancelbutton.MouseState = MaterialSkin.MouseState.HOVER;
             this.Cancelbutton.Name = "Cancelbutton";
@@ -383,7 +608,7 @@ namespace VisualGPSS
             this.SaveButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.SaveButton.BackColor = System.Drawing.Color.Transparent;
             this.SaveButton.Depth = 0;
-            this.SaveButton.Location = new System.Drawing.Point(402, 486);
+            this.SaveButton.Location = new System.Drawing.Point(399, 614);
             this.SaveButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.SaveButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.SaveButton.Name = "SaveButton";
@@ -398,7 +623,7 @@ namespace VisualGPSS
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(746, 535);
+            this.ClientSize = new System.Drawing.Size(746, 665);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.Cancelbutton);
             this.Controls.Add(this.SaveButton);
@@ -442,10 +667,24 @@ namespace VisualGPSS
         private MaterialSkin.Controls.MaterialLabel Label2;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private System.Windows.Forms.ComboBox numberComboBox;
-        private System.Windows.Forms.ComboBox TextBox5;
-        private System.Windows.Forms.ComboBox TextBox4;
-        private System.Windows.Forms.ComboBox TextBox3;
-        private System.Windows.Forms.ComboBox TextBox2;
-        private System.Windows.Forms.ComboBox TextBox1;
+        private System.Windows.Forms.ComboBox ComboBox5;
+        private System.Windows.Forms.ComboBox ComboBox4;
+        private System.Windows.Forms.ComboBox ComboBox3;
+        private System.Windows.Forms.ComboBox ComboBox2;
+        private System.Windows.Forms.ComboBox ComboBox1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField5;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField4;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField3;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField2;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField7;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField6;
+        private System.Windows.Forms.ComboBox ComboBox7;
+        private System.Windows.Forms.ComboBox ComboBox6;
+        private MaterialSkin.Controls.MaterialLabel Label7;
+        private MaterialSkin.Controls.MaterialLabel Label6;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField8;
+        private System.Windows.Forms.ComboBox ComboBox8;
+        private MaterialSkin.Controls.MaterialLabel Label8;
     }
 }

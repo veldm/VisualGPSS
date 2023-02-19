@@ -34,16 +34,16 @@ namespace VisualGPSS
 
             SaveButton.Click += CreateNewBlock;
 
-            TextBox1.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
-                (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
-            TextBox2.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
-                (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
-            TextBox3.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
-                (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
-            TextBox4.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
-                (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
-            TextBox5.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
-                (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
+            //TextBox1.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
+            //    (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
+            //TextBox2.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
+            //    (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
+            //TextBox3.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
+            //    (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
+            //TextBox4.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
+            //    (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
+            //TextBox5.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
+            //    (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
         }
 
         private void CreateNewBlock(object sender, EventArgs e)

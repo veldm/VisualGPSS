@@ -91,11 +91,14 @@ namespace VisualGPSS
                 List<string> args = new List<string>();
                 foreach (var control in from Control control in groupBox2.Controls
                                         where (control
-                                        is MaterialSingleLineTextField) && control.Enabled
+                                        is MaterialSingleLineTextField) && control.Visible
                                         select control)
+                {
                     //visualBlock.essence.Arguments[i++] = control.Text;
                     if (control.Text is not "")
                         args.Add(control.Text);
+                }
+                args.Reverse();
                 visualBlock.Essence.Arguments = args.ToArray();
                 schema.Refresh();
                 GC.Collect();

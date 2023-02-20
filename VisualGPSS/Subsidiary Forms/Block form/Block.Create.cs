@@ -1,4 +1,5 @@
 ﻿using GPSS.Visualiztion;
+using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -55,11 +56,13 @@ namespace VisualGPSS
                 label = LabelTextBox.Text is "" ? null : LabelTextBox.Text;
                 List<string> arguments = new List<string>();
                 foreach (var control in from Control control in groupBox2.Controls
-                                        where control
-                                        is MaterialSkin.Controls.MaterialSingleLineTextField
-                                        or ComboBox
+                                        where (control
+                                        is MaterialSingleLineTextField) && control.Visible
                                         select control)
-                    arguments.Add(control.Text);
+                {
+                    if (control.Text is not "")
+                        arguments.Add(control.Text);
+                }
                 arguments.Reverse();
                 string[] args = arguments.ToArray();
                 // TODO: Валидация аргументов здесь

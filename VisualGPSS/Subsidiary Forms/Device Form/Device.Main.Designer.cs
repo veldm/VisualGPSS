@@ -36,8 +36,10 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.ScatterTextBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            this.ScatterComboBox = new System.Windows.Forms.ComboBox();
             this.DelayTextBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.DelayComboBox = new System.Windows.Forms.ComboBox();
+            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.QueueTextBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
@@ -55,8 +57,6 @@
             this.ChanellCountCB = new System.Windows.Forms.NumericUpDown();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.DelayComboBox = new System.Windows.Forms.ComboBox();
-            this.ScatterComboBox = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -180,18 +180,14 @@
             this.ScatterTextBox.TabIndex = 7;
             this.ScatterTextBox.UseSystemPasswordChar = false;
             // 
-            // materialLabel4
+            // ScatterComboBox
             // 
-            this.materialLabel4.AutoSize = true;
-            this.materialLabel4.Depth = 0;
-            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel4.Location = new System.Drawing.Point(6, 178);
-            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(75, 19);
-            this.materialLabel4.TabIndex = 6;
-            this.materialLabel4.Text = "РАЗБРОС";
+            this.ScatterComboBox.FormattingEnabled = true;
+            this.ScatterComboBox.Location = new System.Drawing.Point(146, 174);
+            this.ScatterComboBox.Name = "ScatterComboBox";
+            this.ScatterComboBox.Size = new System.Drawing.Size(322, 28);
+            this.ScatterComboBox.TabIndex = 9;
+            this.ScatterComboBox.SelectedIndexChanged += new System.EventHandler(this.ScatterComboBox_SelectedIndexChanged);
             // 
             // DelayTextBox
             // 
@@ -207,6 +203,28 @@
             this.DelayTextBox.Size = new System.Drawing.Size(299, 23);
             this.DelayTextBox.TabIndex = 5;
             this.DelayTextBox.UseSystemPasswordChar = false;
+            // 
+            // DelayComboBox
+            // 
+            this.DelayComboBox.FormattingEnabled = true;
+            this.DelayComboBox.Location = new System.Drawing.Point(146, 118);
+            this.DelayComboBox.Name = "DelayComboBox";
+            this.DelayComboBox.Size = new System.Drawing.Size(322, 28);
+            this.DelayComboBox.TabIndex = 8;
+            this.DelayComboBox.SelectedIndexChanged += new System.EventHandler(this.DelayComboBox_SelectedIndexChanged);
+            // 
+            // materialLabel4
+            // 
+            this.materialLabel4.AutoSize = true;
+            this.materialLabel4.Depth = 0;
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel4.Location = new System.Drawing.Point(6, 178);
+            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel4.Name = "materialLabel4";
+            this.materialLabel4.Size = new System.Drawing.Size(75, 19);
+            this.materialLabel4.TabIndex = 6;
+            this.materialLabel4.Text = "РАЗБРОС";
             // 
             // materialLabel3
             // 
@@ -419,7 +437,7 @@
             this.ChanellCountCB.Size = new System.Drawing.Size(54, 26);
             this.ChanellCountCB.TabIndex = 1;
             this.ChanellCountCB.Value = new decimal(new int[] {
-            1,
+            2,
             0,
             0,
             0});
@@ -443,24 +461,6 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(488, 384);
             this.listBox1.TabIndex = 0;
-            // 
-            // DelayComboBox
-            // 
-            this.DelayComboBox.FormattingEnabled = true;
-            this.DelayComboBox.Location = new System.Drawing.Point(146, 118);
-            this.DelayComboBox.Name = "DelayComboBox";
-            this.DelayComboBox.Size = new System.Drawing.Size(322, 28);
-            this.DelayComboBox.TabIndex = 8;
-            this.DelayComboBox.SelectedIndexChanged += new System.EventHandler(this.DelayComboBox_SelectedIndexChanged);
-            // 
-            // ScatterComboBox
-            // 
-            this.ScatterComboBox.FormattingEnabled = true;
-            this.ScatterComboBox.Location = new System.Drawing.Point(146, 174);
-            this.ScatterComboBox.Name = "ScatterComboBox";
-            this.ScatterComboBox.Size = new System.Drawing.Size(322, 28);
-            this.ScatterComboBox.TabIndex = 9;
-            this.ScatterComboBox.SelectedIndexChanged += new System.EventHandler(this.ScatterComboBox_SelectedIndexChanged);
             // 
             // Device
             // 

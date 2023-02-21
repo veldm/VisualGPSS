@@ -28,6 +28,14 @@ namespace VisualGPSS
             numberComboBox.SelectedIndex = numberComboBox.Items.IndexOf(
                 (schema.GetPlace(center) + 1).ToString());
 
+            DelayComboBox.DataSource =
+                GPSS.DataType.Math.GetDataSource(schema, out List<string> delayTag);
+            DelayComboBox.Tag = delayTag;
+            ScatterComboBox.DataSource =
+                GPSS.DataType.Math.GetDataSource(schema, out List<string> scatterTag);
+            ScatterComboBox.Tag = scatterTag;
+            DelayComboBox.SelectedIndex = ScatterComboBox.SelectedIndex = -1;
+
             SaveButton.Click += CreateNewDevice + onSave;
         }
 

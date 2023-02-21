@@ -44,6 +44,8 @@
             this.NameTextBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
+            this.transactSizeCB = new System.Windows.Forms.NumericUpDown();
             this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
             this.multiChanellCB = new MaterialSkin.Controls.MaterialCheckBox();
             this.numberComboBox = new System.Windows.Forms.ComboBox();
@@ -53,20 +55,20 @@
             this.ChanellCountCB = new System.Windows.Forms.NumericUpDown();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
-            this.transactSizeCB = new System.Windows.Forms.NumericUpDown();
+            this.DelayComboBox = new System.Windows.Forms.ComboBox();
+            this.ScatterComboBox = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.transactSizeCB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChanellCountCB)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.transactSizeCB)).BeginInit();
             this.SuspendLayout();
             // 
             // propertyGrid
             // 
-            this.propertyGrid.Location = new System.Drawing.Point(526, 72);
+            this.propertyGrid.Location = new System.Drawing.Point(555, 72);
             this.propertyGrid.Name = "propertyGrid";
             this.propertyGrid.Size = new System.Drawing.Size(223, 486);
             this.propertyGrid.TabIndex = 1;
@@ -148,8 +150,10 @@
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
             this.groupBox2.Controls.Add(this.ScatterTextBox);
-            this.groupBox2.Controls.Add(this.materialLabel4);
+            this.groupBox2.Controls.Add(this.ScatterComboBox);
             this.groupBox2.Controls.Add(this.DelayTextBox);
+            this.groupBox2.Controls.Add(this.DelayComboBox);
+            this.groupBox2.Controls.Add(this.materialLabel4);
             this.groupBox2.Controls.Add(this.materialLabel3);
             this.groupBox2.Controls.Add(this.QueueTextBox);
             this.groupBox2.Controls.Add(this.materialLabel2);
@@ -165,14 +169,14 @@
             // 
             this.ScatterTextBox.Depth = 0;
             this.ScatterTextBox.Hint = "";
-            this.ScatterTextBox.Location = new System.Drawing.Point(146, 178);
+            this.ScatterTextBox.Location = new System.Drawing.Point(149, 177);
             this.ScatterTextBox.MouseState = MaterialSkin.MouseState.HOVER;
             this.ScatterTextBox.Name = "ScatterTextBox";
             this.ScatterTextBox.PasswordChar = '\0';
             this.ScatterTextBox.SelectedText = "";
             this.ScatterTextBox.SelectionLength = 0;
             this.ScatterTextBox.SelectionStart = 0;
-            this.ScatterTextBox.Size = new System.Drawing.Size(324, 23);
+            this.ScatterTextBox.Size = new System.Drawing.Size(299, 23);
             this.ScatterTextBox.TabIndex = 7;
             this.ScatterTextBox.UseSystemPasswordChar = false;
             // 
@@ -193,14 +197,14 @@
             // 
             this.DelayTextBox.Depth = 0;
             this.DelayTextBox.Hint = "";
-            this.DelayTextBox.Location = new System.Drawing.Point(146, 122);
+            this.DelayTextBox.Location = new System.Drawing.Point(149, 121);
             this.DelayTextBox.MouseState = MaterialSkin.MouseState.HOVER;
             this.DelayTextBox.Name = "DelayTextBox";
             this.DelayTextBox.PasswordChar = '\0';
             this.DelayTextBox.SelectedText = "";
             this.DelayTextBox.SelectionLength = 0;
             this.DelayTextBox.SelectionStart = 0;
-            this.DelayTextBox.Size = new System.Drawing.Size(324, 23);
+            this.DelayTextBox.Size = new System.Drawing.Size(299, 23);
             this.DelayTextBox.TabIndex = 5;
             this.DelayTextBox.UseSystemPasswordChar = false;
             // 
@@ -290,6 +294,37 @@
             this.groupBox1.Size = new System.Drawing.Size(486, 200);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
+            // 
+            // materialLabel8
+            // 
+            this.materialLabel8.AutoSize = true;
+            this.materialLabel8.Depth = 0;
+            this.materialLabel8.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel8.Location = new System.Drawing.Point(109, 110);
+            this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel8.Name = "materialLabel8";
+            this.materialLabel8.Size = new System.Drawing.Size(159, 19);
+            this.materialLabel8.TabIndex = 35;
+            this.materialLabel8.Text = "РАЗМЕР ТРАНЗАКТА";
+            // 
+            // transactSizeCB
+            // 
+            this.transactSizeCB.Enabled = false;
+            this.transactSizeCB.Location = new System.Drawing.Point(36, 107);
+            this.transactSizeCB.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.transactSizeCB.Name = "transactSizeCB";
+            this.transactSizeCB.Size = new System.Drawing.Size(54, 26);
+            this.transactSizeCB.TabIndex = 34;
+            this.transactSizeCB.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // materialLabel7
             // 
@@ -395,7 +430,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(500, 401);
+            this.tabPage2.Size = new System.Drawing.Size(500, 433);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Блоки";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -409,36 +444,23 @@
             this.listBox1.Size = new System.Drawing.Size(488, 384);
             this.listBox1.TabIndex = 0;
             // 
-            // materialLabel8
+            // DelayComboBox
             // 
-            this.materialLabel8.AutoSize = true;
-            this.materialLabel8.Depth = 0;
-            this.materialLabel8.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel8.Location = new System.Drawing.Point(109, 110);
-            this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel8.Name = "materialLabel8";
-            this.materialLabel8.Size = new System.Drawing.Size(159, 19);
-            this.materialLabel8.TabIndex = 35;
-            this.materialLabel8.Text = "РАЗМЕР ТРАНЗАКТА";
+            this.DelayComboBox.FormattingEnabled = true;
+            this.DelayComboBox.Location = new System.Drawing.Point(146, 118);
+            this.DelayComboBox.Name = "DelayComboBox";
+            this.DelayComboBox.Size = new System.Drawing.Size(322, 28);
+            this.DelayComboBox.TabIndex = 8;
+            this.DelayComboBox.SelectedIndexChanged += new System.EventHandler(this.DelayComboBox_SelectedIndexChanged);
             // 
-            // transactSizeCB
+            // ScatterComboBox
             // 
-            this.transactSizeCB.Enabled = false;
-            this.transactSizeCB.Location = new System.Drawing.Point(36, 107);
-            this.transactSizeCB.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.transactSizeCB.Name = "transactSizeCB";
-            this.transactSizeCB.Size = new System.Drawing.Size(54, 26);
-            this.transactSizeCB.TabIndex = 34;
-            this.transactSizeCB.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.ScatterComboBox.FormattingEnabled = true;
+            this.ScatterComboBox.Location = new System.Drawing.Point(146, 174);
+            this.ScatterComboBox.Name = "ScatterComboBox";
+            this.ScatterComboBox.Size = new System.Drawing.Size(322, 28);
+            this.ScatterComboBox.TabIndex = 9;
+            this.ScatterComboBox.SelectedIndexChanged += new System.EventHandler(this.ScatterComboBox_SelectedIndexChanged);
             // 
             // Device
             // 
@@ -460,9 +482,9 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.transactSizeCB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChanellCountCB)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.transactSizeCB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -496,5 +518,7 @@
         private System.Windows.Forms.ListBox listBox1;
         private MaterialSkin.Controls.MaterialLabel materialLabel8;
         private System.Windows.Forms.NumericUpDown transactSizeCB;
+        private System.Windows.Forms.ComboBox ScatterComboBox;
+        private System.Windows.Forms.ComboBox DelayComboBox;
     }
 }

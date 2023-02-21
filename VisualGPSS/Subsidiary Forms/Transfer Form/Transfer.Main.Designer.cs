@@ -46,13 +46,13 @@
             this.CommentTextbox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.functionAddButton = new System.Windows.Forms.Button();
             this.label2AddButton = new System.Windows.Forms.Button();
             this.label1AddButton = new System.Windows.Forms.Button();
             this.addNewElement_CMS = new MaterialSkin.Controls.MaterialContextMenuStrip();
             this.добавитьБлокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.добавитьУстройствоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.добавитьВетвлениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.FuncComboBox = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.addNewElement_CMS.SuspendLayout();
@@ -192,14 +192,14 @@
             // 
             this.TextBox.Depth = 0;
             this.TextBox.Hint = "";
-            this.TextBox.Location = new System.Drawing.Point(130, 128);
+            this.TextBox.Location = new System.Drawing.Point(132, 127);
             this.TextBox.MouseState = MaterialSkin.MouseState.HOVER;
             this.TextBox.Name = "TextBox";
             this.TextBox.PasswordChar = '\0';
             this.TextBox.SelectedText = "";
             this.TextBox.SelectionLength = 0;
             this.TextBox.SelectionStart = 0;
-            this.TextBox.Size = new System.Drawing.Size(274, 23);
+            this.TextBox.Size = new System.Drawing.Size(250, 23);
             this.TextBox.TabIndex = 16;
             this.TextBox.UseSystemPasswordChar = false;
             // 
@@ -289,9 +289,9 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.TextBox);
+            this.groupBox2.Controls.Add(this.FuncComboBox);
             this.groupBox2.Controls.Add(this.comboBox2);
             this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.functionAddButton);
             this.groupBox2.Controls.Add(this.label2AddButton);
             this.groupBox2.Controls.Add(this.label1AddButton);
             this.groupBox2.Controls.Add(this.Label3);
@@ -302,20 +302,6 @@
             this.groupBox2.Size = new System.Drawing.Size(414, 170);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
-            // 
-            // functionAddButton
-            // 
-            this.functionAddButton.BackColor = System.Drawing.SystemColors.Control;
-            this.functionAddButton.BackgroundImage = global::VisualGPSS.Properties.Resources.add_insert_1193;
-            this.functionAddButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.functionAddButton.Location = new System.Drawing.Point(378, 121);
-            this.functionAddButton.Margin = new System.Windows.Forms.Padding(2);
-            this.functionAddButton.Name = "functionAddButton";
-            this.functionAddButton.Size = new System.Drawing.Size(26, 27);
-            this.functionAddButton.TabIndex = 19;
-            this.functionAddButton.UseVisualStyleBackColor = false;
-            this.functionAddButton.Visible = false;
-            this.functionAddButton.Click += new System.EventHandler(this.labelAddButton_Click);
             // 
             // label2AddButton
             // 
@@ -353,7 +339,7 @@
             this.добавитьВетвлениеToolStripMenuItem});
             this.addNewElement_CMS.MouseState = MaterialSkin.MouseState.HOVER;
             this.addNewElement_CMS.Name = "materialContextMenuStrip1";
-            this.addNewElement_CMS.Size = new System.Drawing.Size(192, 92);
+            this.addNewElement_CMS.Size = new System.Drawing.Size(192, 70);
             // 
             // добавитьБлокToolStripMenuItem
             // 
@@ -375,6 +361,16 @@
             this.добавитьВетвлениеToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.добавитьВетвлениеToolStripMenuItem.Text = "Добавить ветвление";
             this.добавитьВетвлениеToolStripMenuItem.Click += new System.EventHandler(this.добавитьВетвлениеToolStripMenuItem_Click);
+            // 
+            // FuncComboBox
+            // 
+            this.FuncComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FuncComboBox.FormattingEnabled = true;
+            this.FuncComboBox.Location = new System.Drawing.Point(131, 124);
+            this.FuncComboBox.Name = "FuncComboBox";
+            this.FuncComboBox.Size = new System.Drawing.Size(273, 28);
+            this.FuncComboBox.TabIndex = 19;
+            this.FuncComboBox.SelectedIndexChanged += new System.EventHandler(this.FuncComboBox_SelectedIndexChanged);
             // 
             // Transfer
             // 
@@ -425,10 +421,10 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private System.Windows.Forms.Button label2AddButton;
         private System.Windows.Forms.Button label1AddButton;
-        private System.Windows.Forms.Button functionAddButton;
         private MaterialSkin.Controls.MaterialContextMenuStrip addNewElement_CMS;
         private System.Windows.Forms.ToolStripMenuItem добавитьБлокToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem добавитьУстройствоToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem добавитьВетвлениеToolStripMenuItem;
+        private System.Windows.Forms.ComboBox FuncComboBox;
     }
 }

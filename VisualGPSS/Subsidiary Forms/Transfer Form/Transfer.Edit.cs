@@ -1,4 +1,5 @@
-﻿using GPSS.Visualiztion;
+﻿using GPSS;
+using GPSS.Visualiztion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,6 +39,9 @@ namespace VisualGPSS
             DeleteButton.Enabled = true;
             SaveButton.Click += SaveChanges;
             propertyGrid.SelectedObject = transfer;
+            FuncComboBox.DataSource = DataType.Math.GetDataSource(schema, out List<string> tag);
+            FuncComboBox.Tag = tag;
+            FuncComboBox.SelectedIndex = -1;
         }
 
         private void SaveChanges(object sender, EventArgs e)

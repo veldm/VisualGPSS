@@ -1,4 +1,5 @@
-﻿using GPSS.Visualiztion;
+﻿using GPSS;
+using GPSS.Visualiztion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,9 @@ namespace VisualGPSS
             DeleteButton.Enabled = false;
             TypeCB.SelectedIndex = 0;
             SaveButton.Click += CreateNewTransfer;
+            FuncComboBox.DataSource = DataType.Math.GetDataSource(schema, out List<string> tag);
+            FuncComboBox.Tag = tag;
+            FuncComboBox.SelectedIndex = -1;
         }
 
         private void CreateNewTransfer(object sender, EventArgs e)

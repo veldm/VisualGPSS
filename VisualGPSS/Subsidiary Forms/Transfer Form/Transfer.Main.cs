@@ -25,16 +25,16 @@ namespace VisualGPSS
             {
                 case 0:
                     // UNCON
-                    Label2.Enabled = comboBox2.Enabled =
-                    Label3.Enabled = TextBox.Enabled = false;
+                    Label2.Visible = comboBox2.Visible = label2AddButton.Visible =
+                    Label3.Visible = FuncComboBox.Visible = TextBox.Visible = false;
                     Label2.Text = Label3.Text = "";
                     if (comboBox1.Items.Count > schema.LabelsList.Count)
                         comboBox1.Items.RemoveAt(0);
                     break;
                 case 1:
                     // BOTH
-                    Label2.Enabled = comboBox2.Enabled = true;
-                    Label3.Enabled = TextBox.Enabled = false;
+                    Label2.Visible = comboBox2.Visible = label2AddButton.Visible = true;
+                    Label3.Visible = FuncComboBox.Visible = TextBox.Visible = false;
                     Label2.Text = "МЕТКА №2";
                     Label3.Text = "";
                     if (comboBox1.Items.Count > schema.LabelsList.Count)
@@ -43,8 +43,8 @@ namespace VisualGPSS
                     break;
                 case 2:
                     // VAR
-                    Label2.Enabled = comboBox2.Enabled = 
-                    Label3.Enabled = TextBox.Enabled = true;
+                    Label2.Visible = comboBox2.Visible = label2AddButton.Visible =
+                    Label3.Visible = FuncComboBox.Visible = TextBox.Visible = true;
                     Label2.Text = "МЕТКА №2";
                     Label3.Text = "ВЕРОЯТНОСТЬ";
                     if (comboBox1.Items.Count > schema.LabelsList.Count)
@@ -53,8 +53,8 @@ namespace VisualGPSS
                     break;
                 case 3:
                     // ALL
-                    Label2.Enabled = comboBox2.Enabled =
-                    Label3.Enabled = TextBox.Enabled = true;
+                    Label2.Visible = comboBox2.Visible = label2AddButton.Visible =
+                    Label3.Visible = FuncComboBox.Visible = TextBox.Visible = true;
                     Label2.Text = "МЕТКА №2";
                     Label3.Text = "ДИАПАЗОН";
                     if (comboBox1.Items.Count > schema.LabelsList.Count)
@@ -63,8 +63,8 @@ namespace VisualGPSS
                     break;
                 case 4:
                     // PICK
-                    Label2.Enabled = comboBox2.Enabled = true;
-                    Label3.Enabled = TextBox.Enabled = false;
+                    Label2.Visible = comboBox2.Visible = label2AddButton.Visible = true;
+                    Label3.Visible = FuncComboBox.Visible = TextBox.Visible = false;
                     Label2.Text = "МЕТКА №2";
                     Label3.Text = "";
                     if (comboBox1.Items.Count > schema.LabelsList.Count)
@@ -137,6 +137,15 @@ namespace VisualGPSS
                 buf.cb.SelectedItem = blockForm.label;
             };
             blockForm.Show();
+        }
+
+        private void FuncComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (FuncComboBox.Tag is not null && FuncComboBox.SelectedIndex is not -1)
+            {
+                TextBox.Text = ((List<string>)FuncComboBox.Tag)[FuncComboBox.SelectedIndex];
+                TextBox.Select();
+            }
         }
     }
 }

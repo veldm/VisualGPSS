@@ -12,6 +12,8 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
+using VisualGPSS.Properties;
 
 namespace VisualGPSS
 {
@@ -249,5 +251,55 @@ namespace VisualGPSS
             Table table = new Table(schema);
             table.Show();
         }
+
+        #region Интеграция с GPSS World
+
+        private string codeFilePath;
+        private string compilerFilePath;
+
+        private void запускСимуляцииToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (codeFilePath is null)
+                if (codeSaveFileDialog.ShowDialog() is DialogResult.OK)
+                    codeFilePath = codeSaveFileDialog.FileName;
+
+            if (codeFilePath is not null) try
+                {
+                    StreamWriter writer = new(codeFilePath);
+                    foreach (string codeLine in schema.FullCode)
+                    {
+                        writer.Write(Resources.specialFileHeader);
+                        writer.Write(codeLine.Replace('\n'.ToString(), "\\par") + "\\par");
+                        writer.Close();
+                        RunSimulation();
+                    }
+                }
+                catch (Exception exc)
+                {
+                    MessageBox.Show(exc.Message, "Ошибка",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+        }
+
+        private void RunSimulation()
+        {
+            if (File.Exists(compilerFilePath)) try
+                {
+
+                }
+                catch
+                {
+
+                }
+            else
+            {
+                if (CompilerFileDalog.ShowDialog() is DialogResult.OK)
+                {
+                    
+                }
+            }
+        }
+
+        #endregion
     }
 }

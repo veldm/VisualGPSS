@@ -91,6 +91,8 @@
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.LabelPictureBox = new System.Windows.Forms.PictureBox();
+            this.codeSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.CompilerFileDalog = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip.SuspendLayout();
             this.BlockOrElementCMS.SuspendLayout();
             this.FieldCMS.SuspendLayout();
@@ -260,6 +262,7 @@
             this.запускСимуляцииToolStripMenuItem.Name = "запускСимуляцииToolStripMenuItem";
             this.запускСимуляцииToolStripMenuItem.Size = new System.Drawing.Size(135, 21);
             this.запускСимуляцииToolStripMenuItem.Text = "Запуск симуляции";
+            this.запускСимуляцииToolStripMenuItem.Click += new System.EventHandler(this.запускСимуляцииToolStripMenuItem_Click);
             // 
             // settingsButton
             // 
@@ -270,7 +273,7 @@
             this.settingsButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.settingsButton.Location = new System.Drawing.Point(885, 23);
             this.settingsButton.Name = "settingsButton";
-            this.settingsButton.Size = new System.Drawing.Size(38, 37);
+            this.settingsButton.Size = new System.Drawing.Size(55, 37);
             this.settingsButton.TabIndex = 5;
             this.settingsButton.Text = "⚙";
             this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
@@ -806,6 +809,14 @@
             this.LabelPictureBox.TabIndex = 11;
             this.LabelPictureBox.TabStop = false;
             // 
+            // codeSaveFileDialog
+            // 
+            this.codeSaveFileDialog.Filter = "Файлы GPSS моделей|*.gps";
+            // 
+            // CompilerFileDalog
+            // 
+            this.CompilerFileDalog.Filter = "Исполняемые файлы|*.exe";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -905,6 +916,8 @@
         private System.Windows.Forms.Button sunavailButton;
         private System.Windows.Forms.Button funavailButton;
         private System.Windows.Forms.Button loopButton;
+        private System.Windows.Forms.SaveFileDialog codeSaveFileDialog;
+        private System.Windows.Forms.OpenFileDialog CompilerFileDalog;
     }
 }
 

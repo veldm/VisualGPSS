@@ -354,5 +354,8 @@
   <ItemGroup>
     <None Include="Resources\Savail1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\compilerFilePath.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

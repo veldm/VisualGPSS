@@ -221,6 +221,15 @@ namespace VisualGPSS.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на .
+        /// </summary>
+        internal static string compilerFilePath {
+            get {
+                return ResourceManager.GetString("compilerFilePath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap creation_date_sort_icon_155568 {
@@ -471,6 +480,15 @@ namespace VisualGPSS.Properties {
             get {
                 object obj = ResourceManager.GetObject("settings", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на .
+        /// </summary>
+        internal static string specialFileHeader {
+            get {
+                return ResourceManager.GetString("specialFileHeader", resourceCulture);
             }
         }
         

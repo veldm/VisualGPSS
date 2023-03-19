@@ -143,6 +143,7 @@ namespace VisualGPSS
                     });
                 }
             }
+            if(!File.Exists(Resources.CompilerFilePath)) tryGetCompilerPath();
         }
 
         #region Отрисовка
@@ -255,7 +256,6 @@ namespace VisualGPSS
         #region Интеграция с GPSS World
 
         private string codeFilePath;
-        private string compilerFilePath;
 
         private void запускСимуляцииToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -265,14 +265,15 @@ namespace VisualGPSS
 
             if (codeFilePath is not null) try
                 {
-                    StreamWriter writer = new(codeFilePath);
+                    StreamWriter writer = new(codeFilePath, false, Encoding.ASCII);
+                    writer.Write(Resources.SpecialFileHeader);
                     foreach (string codeLine in schema.FullCode)
                     {
-                        writer.Write(Resources.specialFileHeader);
-                        writer.Write(codeLine.Replace('\n'.ToString(), "\\par") + "\\par");
-                        writer.Close();
-                        RunSimulation();
+                        writer.Write(codeLine.Replace('\n'.ToString(), "\\par\r\n") + "\\par\r\n");
                     }
+                    writer.Write(Resources.SpecialFileEnding);
+                    writer.Close();
+                    RunSimulation();
                 }
                 catch (Exception exc)
                 {
@@ -283,21 +284,46 @@ namespace VisualGPSS
 
         private void RunSimulation()
         {
-            if (File.Exists(compilerFilePath)) try
+            if (File.Exists(Resources.CompilerFilePath)) try
                 {
-
+                    ProcessStartInfo startInfo = new(Resources.CompilerFilePath, codeFilePath);
+                    Process.Start(startInfo);
                 }
-                catch
+                catch (Exception exc)
                 {
-
+                    MessageBox.Show($"Ошибка: {exc.Message}", "",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             else
             {
+                if (tryGetCompilerPath()) try
+                    {
+                        ProcessStartInfo startInfo = new(Resources.CompilerFilePath, codeFilePath);
+                        Process.Start(startInfo);
+                    }
+                    catch (Exception exc)
+                    {
+                        MessageBox.Show($"Ошибка: {exc.Message}", "",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+            }
+        }
+
+        private bool tryGetCompilerPath()
+        {
+            if (MessageBox.Show("Не удаётся найти компилятор GPSS по умолчанию.\n" +
+                "Выбрать другую программу?", "", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Exclamation) is DialogResult.Yes)
+            {
                 if (CompilerFileDalog.ShowDialog() is DialogResult.OK)
                 {
-                    
+                    StreamWriter writer = new("..\\..\\Properties\\compilerFilePath.txt");
+                    writer.Write(CompilerFileDalog.FileName);
+                    writer.Close();
+                    return true;
                 }
             }
+            return false;
         }
 
         #endregion

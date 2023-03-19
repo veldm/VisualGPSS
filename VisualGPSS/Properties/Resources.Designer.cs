@@ -221,11 +221,11 @@ namespace VisualGPSS.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на C:\Program Files (x86)\Minuteman Software\GPSS World Student Version\GPSS World Student.exe.
         /// </summary>
-        internal static string compilerFilePath {
+        internal static string CompilerFilePath {
             get {
-                return ResourceManager.GetString("compilerFilePath", resourceCulture);
+                return ResourceManager.GetString("CompilerFilePath", resourceCulture);
             }
         }
         
@@ -486,9 +486,18 @@ namespace VisualGPSS.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на .
         /// </summary>
-        internal static string specialFileHeader {
+        internal static string SpecialFileEnding {
             get {
-                return ResourceManager.GetString("specialFileHeader", resourceCulture);
+                return ResourceManager.GetString("SpecialFileEnding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на У  Ї                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           [остаток строки не уместился]&quot;;.
+        /// </summary>
+        internal static string SpecialFileHeader {
+            get {
+                return ResourceManager.GetString("SpecialFileHeader", resourceCulture);
             }
         }
         

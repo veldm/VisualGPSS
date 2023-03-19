@@ -357,5 +357,11 @@
   <ItemGroup>
     <None Include="Properties\compilerFilePath.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\SpecialFileHeader.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\SpecialFileEnding.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

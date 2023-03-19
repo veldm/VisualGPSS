@@ -740,7 +740,7 @@
             // 
             // schemaSaveFileDialog
             // 
-            this.schemaSaveFileDialog.Filter = "Все файлы|*.*|Файлы VisualGPSS схем|*.vgsch";
+            this.schemaSaveFileDialog.Filter = "Файлы VisualGPSS схем|*.vgsch|Все файлы|*.*";
             // 
             // hScrollBar1
             // 

@@ -1,0 +1,706 @@
+{
+  "Elements": [
+    {
+      "$type": "GPSS.Visualiztion.VisualBlock, GPSS.Visualiztion",
+      "number": 0,
+      "center": "439, 102",
+      "width": 170,
+      "heigth": 85,
+      "BlockColor": "White",
+      "Code": "GENERATE 10.0,1.0; Создание транзакций",
+      "Label": null,
+      "Name": "GENERATE",
+      "ExtendedParams": null,
+      "MainColor": "SandyBrown",
+      "FontColor": "Black",
+      "Font": "Microsoft Sans Serif, 8.25pt",
+      "LinesColor": "MediumBlue",
+      "Essence": {
+        "$type": "GPSS.Block, GPSS",
+        "Type": 0,
+        "Code": "GENERATE 10.0,1.0; Создание транзакций",
+        "Label": null,
+        "Name": "GENERATE",
+        "Arguments": [
+          "10.0",
+          "1.0"
+        ],
+        "Comment": "Создание транзакций"
+      }
+    },
+    {
+      "$type": "GPSS.Visualiztion.VisualTransfer, GPSS.Visualiztion",
+      "number": 1,
+      "center": "439, 274",
+      "width": 120,
+      "heigth": 60,
+      "Transfer": {
+        "Type": 10,
+        "Code": "TRANSFER_BOTH label1,label2",
+        "Label": null,
+        "Name": "TRANSFER_BOTH",
+        "Arguments": [
+          "label1",
+          "label2"
+        ],
+        "Comment": null
+      },
+      "StartBlockNumber": 0,
+      "Block1": {
+        "$type": "GPSS.Visualiztion.Device, GPSS.Visualiztion",
+        "number": 2,
+        "center": "277, 446",
+        "width": 170,
+        "heigth": 170,
+        "IsMultiChanell": false,
+        "Code": "label1 QUEUE queue\nSEIZE dev1\nDEPART queue\nADVANCE Exponential(Генератор, Сдвиг, Сжатие),Weibull(Генератор, Сдвиг, Форма)\nRELEASE dev1\n",
+        "ExtendedParams": [
+          {
+            "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
+            "$values": [
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 5,
+                "Code": "label1 QUEUE queue",
+                "Label": "label1",
+                "Name": "QUEUE",
+                "Arguments": [
+                  "queue"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 3,
+                "Code": "SEIZE dev1",
+                "Label": null,
+                "Name": "SEIZE",
+                "Arguments": [
+                  "dev1"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 6,
+                "Code": "DEPART queue",
+                "Label": null,
+                "Name": "DEPART",
+                "Arguments": [
+                  "queue"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 2,
+                "Code": "ADVANCE Exponential(Генератор, Сдвиг, Сжатие),Weibull(Генератор, Сдвиг, Форма)",
+                "Label": null,
+                "Name": "ADVANCE",
+                "Arguments": [
+                  "Exponential(Генератор, Сдвиг, Сжатие)",
+                  "Weibull(Генератор, Сдвиг, Форма)"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 4,
+                "Code": "RELEASE dev1",
+                "Label": null,
+                "Name": "RELEASE",
+                "Arguments": [
+                  "dev1"
+                ],
+                "Comment": null
+              }
+            ]
+          },
+          "queue",
+          "Exponential(Генератор, Сдвиг, Сжатие)",
+          "Weibull(Генератор, Сдвиг, Форма)",
+          1,
+          1
+        ],
+        "Name": "dev1",
+        "Label": "label1",
+        "BlockColor": "White",
+        "MainColor": "SandyBrown",
+        "FontColor": "Black",
+        "Font": "Microsoft Sans Serif, 8.25pt",
+        "LinesColor": "MediumBlue",
+        "Essence": null
+      },
+      "Block2": {
+        "$type": "GPSS.Visualiztion.Device, GPSS.Visualiztion",
+        "number": 4,
+        "center": "649, 438",
+        "width": 170,
+        "heigth": 170,
+        "IsMultiChanell": false,
+        "Code": "label2 QUEUE queue2\nSEIZE dev2\nDEPART queue2\nADVANCE Exponential(Генератор, Сдвиг, Сжатие),Normal(Генератор, Значение, Отклонение)\nRELEASE dev2\n",
+        "ExtendedParams": [
+          {
+            "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
+            "$values": [
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 5,
+                "Code": "label2 QUEUE queue2",
+                "Label": "label2",
+                "Name": "QUEUE",
+                "Arguments": [
+                  "queue2"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 3,
+                "Code": "SEIZE dev2",
+                "Label": null,
+                "Name": "SEIZE",
+                "Arguments": [
+                  "dev2"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 6,
+                "Code": "DEPART queue2",
+                "Label": null,
+                "Name": "DEPART",
+                "Arguments": [
+                  "queue2"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 2,
+                "Code": "ADVANCE Exponential(Генератор, Сдвиг, Сжатие),Normal(Генератор, Значение, Отклонение)",
+                "Label": null,
+                "Name": "ADVANCE",
+                "Arguments": [
+                  "Exponential(Генератор, Сдвиг, Сжатие)",
+                  "Normal(Генератор, Значение, Отклонение)"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 4,
+                "Code": "RELEASE dev2",
+                "Label": null,
+                "Name": "RELEASE",
+                "Arguments": [
+                  "dev2"
+                ],
+                "Comment": null
+              }
+            ]
+          },
+          "queue2",
+          "Exponential(Генератор, Сдвиг, Сжатие)",
+          "Normal(Генератор, Значение, Отклонение)",
+          1,
+          1
+        ],
+        "Name": "dev2",
+        "Label": "label2",
+        "BlockColor": "White",
+        "MainColor": "SandyBrown",
+        "FontColor": "Black",
+        "Font": "Microsoft Sans Serif, 8.25pt",
+        "LinesColor": "MediumBlue",
+        "Essence": null
+      },
+      "Digit": 0.0,
+      "ExtendedParams": [
+        {
+          "$type": "GPSS.Visualiztion.Device, GPSS.Visualiztion",
+          "number": 2,
+          "center": "277, 446",
+          "width": 170,
+          "heigth": 170,
+          "IsMultiChanell": false,
+          "Code": "label1 QUEUE queue\nSEIZE dev1\nDEPART queue\nADVANCE Exponential(Генератор, Сдвиг, Сжатие),Weibull(Генератор, Сдвиг, Форма)\nRELEASE dev1\n",
+          "ExtendedParams": [
+            {
+              "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
+              "$values": [
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 5,
+                  "Code": "label1 QUEUE queue",
+                  "Label": "label1",
+                  "Name": "QUEUE",
+                  "Arguments": [
+                    "queue"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 3,
+                  "Code": "SEIZE dev1",
+                  "Label": null,
+                  "Name": "SEIZE",
+                  "Arguments": [
+                    "dev1"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 6,
+                  "Code": "DEPART queue",
+                  "Label": null,
+                  "Name": "DEPART",
+                  "Arguments": [
+                    "queue"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 2,
+                  "Code": "ADVANCE Exponential(Генератор, Сдвиг, Сжатие),Weibull(Генератор, Сдвиг, Форма)",
+                  "Label": null,
+                  "Name": "ADVANCE",
+                  "Arguments": [
+                    "Exponential(Генератор, Сдвиг, Сжатие)",
+                    "Weibull(Генератор, Сдвиг, Форма)"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 4,
+                  "Code": "RELEASE dev1",
+                  "Label": null,
+                  "Name": "RELEASE",
+                  "Arguments": [
+                    "dev1"
+                  ],
+                  "Comment": null
+                }
+              ]
+            },
+            "queue",
+            "Exponential(Генератор, Сдвиг, Сжатие)",
+            "Weibull(Генератор, Сдвиг, Форма)",
+            1,
+            1
+          ],
+          "Name": "dev1",
+          "Label": "label1",
+          "BlockColor": "White",
+          "MainColor": "SandyBrown",
+          "FontColor": "Black",
+          "Font": "Microsoft Sans Serif, 8.25pt",
+          "LinesColor": "MediumBlue",
+          "Essence": null
+        },
+        {
+          "$type": "GPSS.Visualiztion.Device, GPSS.Visualiztion",
+          "number": 4,
+          "center": "649, 438",
+          "width": 170,
+          "heigth": 170,
+          "IsMultiChanell": false,
+          "Code": "label2 QUEUE queue2\nSEIZE dev2\nDEPART queue2\nADVANCE Exponential(Генератор, Сдвиг, Сжатие),Normal(Генератор, Значение, Отклонение)\nRELEASE dev2\n",
+          "ExtendedParams": [
+            {
+              "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
+              "$values": [
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 5,
+                  "Code": "label2 QUEUE queue2",
+                  "Label": "label2",
+                  "Name": "QUEUE",
+                  "Arguments": [
+                    "queue2"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 3,
+                  "Code": "SEIZE dev2",
+                  "Label": null,
+                  "Name": "SEIZE",
+                  "Arguments": [
+                    "dev2"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 6,
+                  "Code": "DEPART queue2",
+                  "Label": null,
+                  "Name": "DEPART",
+                  "Arguments": [
+                    "queue2"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 2,
+                  "Code": "ADVANCE Exponential(Генератор, Сдвиг, Сжатие),Normal(Генератор, Значение, Отклонение)",
+                  "Label": null,
+                  "Name": "ADVANCE",
+                  "Arguments": [
+                    "Exponential(Генератор, Сдвиг, Сжатие)",
+                    "Normal(Генератор, Значение, Отклонение)"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 4,
+                  "Code": "RELEASE dev2",
+                  "Label": null,
+                  "Name": "RELEASE",
+                  "Arguments": [
+                    "dev2"
+                  ],
+                  "Comment": null
+                }
+              ]
+            },
+            "queue2",
+            "Exponential(Генератор, Сдвиг, Сжатие)",
+            "Normal(Генератор, Значение, Отклонение)",
+            1,
+            1
+          ],
+          "Name": "dev2",
+          "Label": "label2",
+          "BlockColor": "White",
+          "MainColor": "SandyBrown",
+          "FontColor": "Black",
+          "Font": "Microsoft Sans Serif, 8.25pt",
+          "LinesColor": "MediumBlue",
+          "Essence": null
+        }
+      ],
+      "Code": "TRANSFER_BOTH label1,label2",
+      "Label": null,
+      "Name": "TRANSFER_BOTH",
+      "MainColor": "SandyBrown",
+      "FontColor": "Black",
+      "Font": "Microsoft Sans Serif, 8.25pt",
+      "LinesColor": "MediumBlue",
+      "Essence": {
+        "$type": "GPSS.Block, GPSS",
+        "Type": 10,
+        "Code": "TRANSFER_BOTH label1,label2",
+        "Label": null,
+        "Name": "TRANSFER_BOTH",
+        "Arguments": [
+          "label1",
+          "label2"
+        ],
+        "Comment": null
+      }
+    },
+    {
+      "$type": "GPSS.Visualiztion.Device, GPSS.Visualiztion",
+      "number": 2,
+      "center": "277, 446",
+      "width": 170,
+      "heigth": 170,
+      "IsMultiChanell": false,
+      "Code": "label1 QUEUE queue\nSEIZE dev1\nDEPART queue\nADVANCE Exponential(Генератор, Сдвиг, Сжатие),Weibull(Генератор, Сдвиг, Форма)\nRELEASE dev1\n",
+      "ExtendedParams": [
+        {
+          "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
+          "$values": [
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 5,
+              "Code": "label1 QUEUE queue",
+              "Label": "label1",
+              "Name": "QUEUE",
+              "Arguments": [
+                "queue"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 3,
+              "Code": "SEIZE dev1",
+              "Label": null,
+              "Name": "SEIZE",
+              "Arguments": [
+                "dev1"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 6,
+              "Code": "DEPART queue",
+              "Label": null,
+              "Name": "DEPART",
+              "Arguments": [
+                "queue"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 2,
+              "Code": "ADVANCE Exponential(Генератор, Сдвиг, Сжатие),Weibull(Генератор, Сдвиг, Форма)",
+              "Label": null,
+              "Name": "ADVANCE",
+              "Arguments": [
+                "Exponential(Генератор, Сдвиг, Сжатие)",
+                "Weibull(Генератор, Сдвиг, Форма)"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 4,
+              "Code": "RELEASE dev1",
+              "Label": null,
+              "Name": "RELEASE",
+              "Arguments": [
+                "dev1"
+              ],
+              "Comment": null
+            }
+          ]
+        },
+        "queue",
+        "Exponential(Генератор, Сдвиг, Сжатие)",
+        "Weibull(Генератор, Сдвиг, Форма)",
+        1,
+        1
+      ],
+      "Name": "dev1",
+      "Label": "label1",
+      "BlockColor": "White",
+      "MainColor": "SandyBrown",
+      "FontColor": "Black",
+      "Font": "Microsoft Sans Serif, 8.25pt",
+      "LinesColor": "MediumBlue",
+      "Essence": null
+    },
+    {
+      "$type": "GPSS.Visualiztion.VisualTransfer, GPSS.Visualiztion",
+      "number": 3,
+      "center": "0, 0",
+      "width": 120,
+      "heigth": 60,
+      "Transfer": {
+        "Type": 11,
+        "Code": "TRANSFER ,labelEnd",
+        "Label": null,
+        "Name": "TRANSFER_UNCON",
+        "Arguments": [
+          "labelEnd"
+        ],
+        "Comment": null
+      },
+      "StartBlockNumber": 2,
+      "Block1": {
+        "$type": "GPSS.Visualiztion.VisualBlock, GPSS.Visualiztion",
+        "number": 5,
+        "center": "465, 729",
+        "width": 170,
+        "heigth": 85,
+        "BlockColor": "White",
+        "Code": "labelEnd TERMINATE ; Уничтожение транзакций",
+        "Label": "labelEnd",
+        "Name": "TERMINATE",
+        "ExtendedParams": null,
+        "MainColor": "SandyBrown",
+        "FontColor": "Black",
+        "Font": "Microsoft Sans Serif, 8.25pt",
+        "LinesColor": "MediumBlue",
+        "Essence": {
+          "$type": "GPSS.Block, GPSS",
+          "Type": 1,
+          "Code": "labelEnd TERMINATE ; Уничтожение транзакций",
+          "Label": "labelEnd",
+          "Name": "TERMINATE",
+          "Arguments": [],
+          "Comment": "Уничтожение транзакций"
+        }
+      },
+      "Block2": null,
+      "Digit": 0.0,
+      "ExtendedParams": [
+        {
+          "$type": "GPSS.Visualiztion.VisualBlock, GPSS.Visualiztion",
+          "number": 5,
+          "center": "465, 729",
+          "width": 170,
+          "heigth": 85,
+          "BlockColor": "White",
+          "Code": "labelEnd TERMINATE ; Уничтожение транзакций",
+          "Label": "labelEnd",
+          "Name": "TERMINATE",
+          "ExtendedParams": null,
+          "MainColor": "SandyBrown",
+          "FontColor": "Black",
+          "Font": "Microsoft Sans Serif, 8.25pt",
+          "LinesColor": "MediumBlue",
+          "Essence": {
+            "$type": "GPSS.Block, GPSS",
+            "Type": 1,
+            "Code": "labelEnd TERMINATE ; Уничтожение транзакций",
+            "Label": "labelEnd",
+            "Name": "TERMINATE",
+            "Arguments": [],
+            "Comment": "Уничтожение транзакций"
+          }
+        },
+        null
+      ],
+      "Code": "TRANSFER ,labelEnd",
+      "Label": null,
+      "Name": "TRANSFER_UNCON",
+      "MainColor": "SandyBrown",
+      "FontColor": "Black",
+      "Font": "Microsoft Sans Serif, 8.25pt",
+      "LinesColor": "MediumBlue",
+      "Essence": {
+        "$type": "GPSS.Block, GPSS",
+        "Type": 11,
+        "Code": "TRANSFER ,labelEnd",
+        "Label": null,
+        "Name": "TRANSFER_UNCON",
+        "Arguments": [
+          "labelEnd"
+        ],
+        "Comment": null
+      }
+    },
+    {
+      "$type": "GPSS.Visualiztion.Device, GPSS.Visualiztion",
+      "number": 4,
+      "center": "649, 438",
+      "width": 170,
+      "heigth": 170,
+      "IsMultiChanell": false,
+      "Code": "label2 QUEUE queue2\nSEIZE dev2\nDEPART queue2\nADVANCE Exponential(Генератор, Сдвиг, Сжатие),Normal(Генератор, Значение, Отклонение)\nRELEASE dev2\n",
+      "ExtendedParams": [
+        {
+          "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
+          "$values": [
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 5,
+              "Code": "label2 QUEUE queue2",
+              "Label": "label2",
+              "Name": "QUEUE",
+              "Arguments": [
+                "queue2"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 3,
+              "Code": "SEIZE dev2",
+              "Label": null,
+              "Name": "SEIZE",
+              "Arguments": [
+                "dev2"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 6,
+              "Code": "DEPART queue2",
+              "Label": null,
+              "Name": "DEPART",
+              "Arguments": [
+                "queue2"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 2,
+              "Code": "ADVANCE Exponential(Генератор, Сдвиг, Сжатие),Normal(Генератор, Значение, Отклонение)",
+              "Label": null,
+              "Name": "ADVANCE",
+              "Arguments": [
+                "Exponential(Генератор, Сдвиг, Сжатие)",
+                "Normal(Генератор, Значение, Отклонение)"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 4,
+              "Code": "RELEASE dev2",
+              "Label": null,
+              "Name": "RELEASE",
+              "Arguments": [
+                "dev2"
+              ],
+              "Comment": null
+            }
+          ]
+        },
+        "queue2",
+        "Exponential(Генератор, Сдвиг, Сжатие)",
+        "Normal(Генератор, Значение, Отклонение)",
+        1,
+        1
+      ],
+      "Name": "dev2",
+      "Label": "label2",
+      "BlockColor": "White",
+      "MainColor": "SandyBrown",
+      "FontColor": "Black",
+      "Font": "Microsoft Sans Serif, 8.25pt",
+      "LinesColor": "MediumBlue",
+      "Essence": null
+    },
+    {
+      "$type": "GPSS.Visualiztion.VisualBlock, GPSS.Visualiztion",
+      "number": 5,
+      "center": "465, 729",
+      "width": 170,
+      "heigth": 85,
+      "BlockColor": "White",
+      "Code": "labelEnd TERMINATE ; Уничтожение транзакций",
+      "Label": "labelEnd",
+      "Name": "TERMINATE",
+      "ExtendedParams": null,
+      "MainColor": "SandyBrown",
+      "FontColor": "Black",
+      "Font": "Microsoft Sans Serif, 8.25pt",
+      "LinesColor": "MediumBlue",
+      "Essence": {
+        "$type": "GPSS.Block, GPSS",
+        "Type": 1,
+        "Code": "labelEnd TERMINATE ; Уничтожение транзакций",
+        "Label": "labelEnd",
+        "Name": "TERMINATE",
+        "Arguments": [],
+        "Comment": "Уничтожение транзакций"
+      }
+    }
+  ],
+  "DefaultFont": "Microsoft Sans Serif, 8.25pt",
+  "DefaultFontColor": "Black",
+  "BackgroundColor": "188, 213, 231",
+  "DefaultElementsColor": "SandyBrown",
+  "DefaultElementsLinesColor": "MediumBlue",
+  "Functions": [],
+  "Tables": []
+}

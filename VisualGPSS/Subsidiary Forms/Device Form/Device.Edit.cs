@@ -33,9 +33,12 @@ namespace VisualGPSS
             numberComboBox.SelectedIndex = numberComboBox.Items.Count - 1;
             numberComboBox.SelectedItem = device.number;
 
-            DelayComboBox.DataSource = ScatterComboBox.DataSource =
-                GPSS.DataType.Math.GetDataSource(schema, out List<string> newTag);
-            DelayComboBox.Tag = ScatterComboBox.Tag = newTag;
+            DelayComboBox.DataSource =
+               GPSS.DataType.Math.GetDataSource(schema, out List<string> delayTag);
+            DelayComboBox.Tag = delayTag;
+            ScatterComboBox.DataSource =
+                GPSS.DataType.Math.GetDataSource(schema, out List<string> scatterTag);
+            ScatterComboBox.Tag = scatterTag;
             DelayComboBox.SelectedIndex = ScatterComboBox.SelectedIndex = -1;
 
             NameTextBox.Text = device.Name;

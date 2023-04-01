@@ -11,7 +11,7 @@
       "Label": null,
       "Name": "GENERATE",
       "ExtendedParams": null,
-      "MainColor": "SandyBrown",
+      "MainColor": "LimeGreen",
       "FontColor": "Black",
       "Font": "Microsoft Sans Serif, 8.25pt",
       "LinesColor": "MediumBlue",
@@ -138,7 +138,7 @@
         "width": 170,
         "heigth": 170,
         "IsMultiChanell": true,
-        "Code": "dev2 STORAGE 3\nQUEUE queue2\nENTER dev2,1\nDEPART queue2\nADVANCE Normal(1, 80, 15)\nLEAVE dev2,1\n",
+        "Code": "dev2 STORAGE 3\nQUEUE queue2\nENTER dev2,1\nDEPART Normal(1, 80, 15)\nADVANCE Normal(1, 80, 15)\nLEAVE dev2,1\n",
         "ExtendedParams": [
           {
             "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -181,11 +181,11 @@
               {
                 "$type": "GPSS.Block, GPSS",
                 "Type": 6,
-                "Code": "DEPART queue2",
+                "Code": "DEPART Normal(1, 80, 15)",
                 "Label": null,
                 "Name": "DEPART",
                 "Arguments": [
-                  "queue2"
+                  "Normal(1, 80, 15)"
                 ],
                 "Comment": null
               },
@@ -322,7 +322,7 @@
           "width": 170,
           "heigth": 170,
           "IsMultiChanell": true,
-          "Code": "dev2 STORAGE 3\nQUEUE queue2\nENTER dev2,1\nDEPART queue2\nADVANCE Normal(1, 80, 15)\nLEAVE dev2,1\n",
+          "Code": "dev2 STORAGE 3\nQUEUE queue2\nENTER dev2,1\nDEPART Normal(1, 80, 15)\nADVANCE Normal(1, 80, 15)\nLEAVE dev2,1\n",
           "ExtendedParams": [
             {
               "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -365,11 +365,11 @@
                 {
                   "$type": "GPSS.Block, GPSS",
                   "Type": 6,
-                  "Code": "DEPART queue2",
+                  "Code": "DEPART Normal(1, 80, 15)",
                   "Label": null,
                   "Name": "DEPART",
                   "Arguments": [
-                    "queue2"
+                    "Normal(1, 80, 15)"
                   ],
                   "Comment": null
                 },
@@ -417,7 +417,7 @@
       "Code": "TRANSFER .75,label1,label2",
       "Label": null,
       "Name": "TRANSFER_VARIABLE",
-      "MainColor": "SandyBrown",
+      "MainColor": "CornflowerBlue",
       "FontColor": "Black",
       "Font": "Microsoft Sans Serif, 8.25pt",
       "LinesColor": "MediumBlue",
@@ -547,7 +547,7 @@
         "Label": "finish",
         "Name": "TERMINATE",
         "ExtendedParams": null,
-        "MainColor": "SandyBrown",
+        "MainColor": "Firebrick",
         "FontColor": "Black",
         "Font": "Microsoft Sans Serif, 8.25pt",
         "LinesColor": "MediumBlue",
@@ -575,7 +575,7 @@
           "Label": "finish",
           "Name": "TERMINATE",
           "ExtendedParams": null,
-          "MainColor": "SandyBrown",
+          "MainColor": "Firebrick",
           "FontColor": "Black",
           "Font": "Microsoft Sans Serif, 8.25pt",
           "LinesColor": "MediumBlue",
@@ -617,7 +617,7 @@
       "width": 170,
       "heigth": 170,
       "IsMultiChanell": true,
-      "Code": "dev2 STORAGE 3\nQUEUE queue2\nENTER dev2,1\nDEPART queue2\nADVANCE Normal(1, 80, 15)\nLEAVE dev2,1\n",
+      "Code": "dev2 STORAGE 3\nQUEUE queue2\nENTER dev2,1\nDEPART Normal(1, 80, 15)\nADVANCE Normal(1, 80, 15)\nLEAVE dev2,1\n",
       "ExtendedParams": [
         {
           "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -660,11 +660,11 @@
             {
               "$type": "GPSS.Block, GPSS",
               "Type": 6,
-              "Code": "DEPART queue2",
+              "Code": "DEPART Normal(1, 80, 15)",
               "Label": null,
               "Name": "DEPART",
               "Arguments": [
-                "queue2"
+                "Normal(1, 80, 15)"
               ],
               "Comment": null
             },
@@ -719,7 +719,7 @@
       "Label": "finish",
       "Name": "TERMINATE",
       "ExtendedParams": null,
-      "MainColor": "SandyBrown",
+      "MainColor": "Firebrick",
       "FontColor": "Black",
       "Font": "Microsoft Sans Serif, 8.25pt",
       "LinesColor": "MediumBlue",
@@ -736,7 +736,7 @@
   ],
   "DefaultFont": "Microsoft Sans Serif, 8.25pt",
   "DefaultFontColor": "Black",
-  "BackgroundColor": "188, 213, 231",
+  "BackgroundColor": "GhostWhite",
   "DefaultElementsColor": "SandyBrown",
   "DefaultElementsLinesColor": "MediumBlue",
   "Functions": [],

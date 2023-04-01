@@ -165,7 +165,7 @@ namespace GPSS.Visualiztion
                 Point rp3 = new Point(center.X + width / 2, center.Y);
                 Point rp4 = new Point(center.X, center.Y - heigth / 2);
                 Point[] points = { rp1, rp2, rp3, rp4 };
-                Brush brush = new SolidBrush(Color.SandyBrown);
+                Brush brush = new SolidBrush(MainColor);
                 lock(graphics)
                 {
                     graphics.FillPolygon(brush, points);

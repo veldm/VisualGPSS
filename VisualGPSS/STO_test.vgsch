@@ -1,0 +1,714 @@
+{
+  "Elements": [
+    {
+      "$type": "GPSS.Visualiztion.VisualBlock, GPSS.Visualiztion",
+      "number": 0,
+      "center": "403, 85",
+      "width": 170,
+      "heigth": 85,
+      "BlockColor": "White",
+      "Code": "GENERATE 25,10; Transactions creating",
+      "Label": "",
+      "Name": "GENERATE",
+      "ExtendedParams": null,
+      "MainColor": "SandyBrown",
+      "FontColor": "Black",
+      "Font": "Microsoft Sans Serif, 8.25pt",
+      "LinesColor": "MediumBlue",
+      "Essence": {
+        "$type": "GPSS.Block, GPSS",
+        "Type": 0,
+        "Code": "GENERATE 25,10; Transactions creating",
+        "Label": "",
+        "Name": "GENERATE",
+        "Arguments": [
+          "25",
+          "10"
+        ],
+        "Comment": "Transactions creating"
+      }
+    },
+    {
+      "$type": "GPSS.Visualiztion.VisualTransfer, GPSS.Visualiztion",
+      "number": 1,
+      "center": "403, 242",
+      "width": 120,
+      "heigth": 60,
+      "Transfer": {
+        "Type": 9,
+        "Code": "TRANSFER .73,label1,label2",
+        "Label": null,
+        "Name": "TRANSFER_VARIABLE",
+        "Arguments": [
+          "0,73",
+          "label1",
+          "label2"
+        ],
+        "Comment": null
+      },
+      "StartBlockNumber": 0,
+      "Block1": {
+        "$type": "GPSS.Visualiztion.Device, GPSS.Visualiztion",
+        "number": 2,
+        "center": "203, 485",
+        "width": 170,
+        "heigth": 170,
+        "IsMultiChanell": false,
+        "Code": "label1 QUEUE Ocher_Osmotr\nSEIZE Osmotr\nDEPART Ocher_Osmotr\nADVANCE 17,8\nRELEASE Osmotr\n",
+        "ExtendedParams": [
+          {
+            "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
+            "$values": [
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 5,
+                "Code": "label1 QUEUE Ocher_Osmotr",
+                "Label": "label1",
+                "Name": "QUEUE",
+                "Arguments": [
+                  "Ocher_Osmotr"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 3,
+                "Code": "SEIZE Osmotr",
+                "Label": null,
+                "Name": "SEIZE",
+                "Arguments": [
+                  "Osmotr"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 6,
+                "Code": "DEPART Ocher_Osmotr",
+                "Label": null,
+                "Name": "DEPART",
+                "Arguments": [
+                  "Ocher_Osmotr"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 2,
+                "Code": "ADVANCE 17,8",
+                "Label": null,
+                "Name": "ADVANCE",
+                "Arguments": [
+                  "17",
+                  "8"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 4,
+                "Code": "RELEASE Osmotr",
+                "Label": null,
+                "Name": "RELEASE",
+                "Arguments": [
+                  "Osmotr"
+                ],
+                "Comment": null
+              }
+            ]
+          },
+          "Ocher_Osmotr",
+          "17",
+          "8",
+          1,
+          1
+        ],
+        "Name": "Osmotr",
+        "Label": "label1",
+        "BlockColor": "White",
+        "MainColor": "SandyBrown",
+        "FontColor": "Black",
+        "Font": "Microsoft Sans Serif, 8.25pt",
+        "LinesColor": "MediumBlue",
+        "Essence": null
+      },
+      "Block2": {
+        "$type": "GPSS.Visualiztion.Device, GPSS.Visualiztion",
+        "number": 4,
+        "center": "603, 485",
+        "width": 170,
+        "heigth": 170,
+        "IsMultiChanell": false,
+        "Code": "label2 QUEUE Ocher_Remont\nSEIZE Remont\nDEPART Ocher_Remont\nADVANCE 45,10\nRELEASE Remont\n",
+        "ExtendedParams": [
+          {
+            "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
+            "$values": [
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 5,
+                "Code": "label2 QUEUE Ocher_Remont",
+                "Label": "label2",
+                "Name": "QUEUE",
+                "Arguments": [
+                  "Ocher_Remont"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 3,
+                "Code": "SEIZE Remont",
+                "Label": null,
+                "Name": "SEIZE",
+                "Arguments": [
+                  "Remont"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 6,
+                "Code": "DEPART Ocher_Remont",
+                "Label": null,
+                "Name": "DEPART",
+                "Arguments": [
+                  "Ocher_Remont"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 2,
+                "Code": "ADVANCE 45,10",
+                "Label": null,
+                "Name": "ADVANCE",
+                "Arguments": [
+                  "45",
+                  "10"
+                ],
+                "Comment": null
+              },
+              {
+                "$type": "GPSS.Block, GPSS",
+                "Type": 4,
+                "Code": "RELEASE Remont",
+                "Label": null,
+                "Name": "RELEASE",
+                "Arguments": [
+                  "Remont"
+                ],
+                "Comment": null
+              }
+            ]
+          },
+          "Ocher_Remont",
+          "45",
+          "10",
+          1,
+          1
+        ],
+        "Name": "Remont",
+        "Label": "label2",
+        "BlockColor": "White",
+        "MainColor": "SandyBrown",
+        "FontColor": "Black",
+        "Font": "Microsoft Sans Serif, 8.25pt",
+        "LinesColor": "MediumBlue",
+        "Essence": null
+      },
+      "Digit": 0.73,
+      "ExtendedParams": [
+        {
+          "$type": "GPSS.Visualiztion.Device, GPSS.Visualiztion",
+          "number": 2,
+          "center": "203, 485",
+          "width": 170,
+          "heigth": 170,
+          "IsMultiChanell": false,
+          "Code": "label1 QUEUE Ocher_Osmotr\nSEIZE Osmotr\nDEPART Ocher_Osmotr\nADVANCE 17,8\nRELEASE Osmotr\n",
+          "ExtendedParams": [
+            {
+              "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
+              "$values": [
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 5,
+                  "Code": "label1 QUEUE Ocher_Osmotr",
+                  "Label": "label1",
+                  "Name": "QUEUE",
+                  "Arguments": [
+                    "Ocher_Osmotr"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 3,
+                  "Code": "SEIZE Osmotr",
+                  "Label": null,
+                  "Name": "SEIZE",
+                  "Arguments": [
+                    "Osmotr"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 6,
+                  "Code": "DEPART Ocher_Osmotr",
+                  "Label": null,
+                  "Name": "DEPART",
+                  "Arguments": [
+                    "Ocher_Osmotr"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 2,
+                  "Code": "ADVANCE 17,8",
+                  "Label": null,
+                  "Name": "ADVANCE",
+                  "Arguments": [
+                    "17",
+                    "8"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 4,
+                  "Code": "RELEASE Osmotr",
+                  "Label": null,
+                  "Name": "RELEASE",
+                  "Arguments": [
+                    "Osmotr"
+                  ],
+                  "Comment": null
+                }
+              ]
+            },
+            "Ocher_Osmotr",
+            "17",
+            "8",
+            1,
+            1
+          ],
+          "Name": "Osmotr",
+          "Label": "label1",
+          "BlockColor": "White",
+          "MainColor": "SandyBrown",
+          "FontColor": "Black",
+          "Font": "Microsoft Sans Serif, 8.25pt",
+          "LinesColor": "MediumBlue",
+          "Essence": null
+        },
+        {
+          "$type": "GPSS.Visualiztion.Device, GPSS.Visualiztion",
+          "number": 4,
+          "center": "603, 485",
+          "width": 170,
+          "heigth": 170,
+          "IsMultiChanell": false,
+          "Code": "label2 QUEUE Ocher_Remont\nSEIZE Remont\nDEPART Ocher_Remont\nADVANCE 45,10\nRELEASE Remont\n",
+          "ExtendedParams": [
+            {
+              "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
+              "$values": [
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 5,
+                  "Code": "label2 QUEUE Ocher_Remont",
+                  "Label": "label2",
+                  "Name": "QUEUE",
+                  "Arguments": [
+                    "Ocher_Remont"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 3,
+                  "Code": "SEIZE Remont",
+                  "Label": null,
+                  "Name": "SEIZE",
+                  "Arguments": [
+                    "Remont"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 6,
+                  "Code": "DEPART Ocher_Remont",
+                  "Label": null,
+                  "Name": "DEPART",
+                  "Arguments": [
+                    "Ocher_Remont"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 2,
+                  "Code": "ADVANCE 45,10",
+                  "Label": null,
+                  "Name": "ADVANCE",
+                  "Arguments": [
+                    "45",
+                    "10"
+                  ],
+                  "Comment": null
+                },
+                {
+                  "$type": "GPSS.Block, GPSS",
+                  "Type": 4,
+                  "Code": "RELEASE Remont",
+                  "Label": null,
+                  "Name": "RELEASE",
+                  "Arguments": [
+                    "Remont"
+                  ],
+                  "Comment": null
+                }
+              ]
+            },
+            "Ocher_Remont",
+            "45",
+            "10",
+            1,
+            1
+          ],
+          "Name": "Remont",
+          "Label": "label2",
+          "BlockColor": "White",
+          "MainColor": "SandyBrown",
+          "FontColor": "Black",
+          "Font": "Microsoft Sans Serif, 8.25pt",
+          "LinesColor": "MediumBlue",
+          "Essence": null
+        }
+      ],
+      "Code": "TRANSFER .73,label1,label2",
+      "Label": null,
+      "Name": "TRANSFER_VARIABLE",
+      "MainColor": "SandyBrown",
+      "FontColor": "Black",
+      "Font": "Microsoft Sans Serif, 8.25pt",
+      "LinesColor": "MediumBlue",
+      "Essence": {
+        "$type": "GPSS.Block, GPSS",
+        "Type": 9,
+        "Code": "TRANSFER .73,label1,label2",
+        "Label": null,
+        "Name": "TRANSFER_VARIABLE",
+        "Arguments": [
+          "0,73",
+          "label1",
+          "label2"
+        ],
+        "Comment": null
+      }
+    },
+    {
+      "$type": "GPSS.Visualiztion.Device, GPSS.Visualiztion",
+      "number": 2,
+      "center": "203, 485",
+      "width": 170,
+      "heigth": 170,
+      "IsMultiChanell": false,
+      "Code": "label1 QUEUE Ocher_Osmotr\nSEIZE Osmotr\nDEPART Ocher_Osmotr\nADVANCE 17,8\nRELEASE Osmotr\n",
+      "ExtendedParams": [
+        {
+          "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
+          "$values": [
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 5,
+              "Code": "label1 QUEUE Ocher_Osmotr",
+              "Label": "label1",
+              "Name": "QUEUE",
+              "Arguments": [
+                "Ocher_Osmotr"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 3,
+              "Code": "SEIZE Osmotr",
+              "Label": null,
+              "Name": "SEIZE",
+              "Arguments": [
+                "Osmotr"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 6,
+              "Code": "DEPART Ocher_Osmotr",
+              "Label": null,
+              "Name": "DEPART",
+              "Arguments": [
+                "Ocher_Osmotr"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 2,
+              "Code": "ADVANCE 17,8",
+              "Label": null,
+              "Name": "ADVANCE",
+              "Arguments": [
+                "17",
+                "8"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 4,
+              "Code": "RELEASE Osmotr",
+              "Label": null,
+              "Name": "RELEASE",
+              "Arguments": [
+                "Osmotr"
+              ],
+              "Comment": null
+            }
+          ]
+        },
+        "Ocher_Osmotr",
+        "17",
+        "8",
+        1,
+        1
+      ],
+      "Name": "Osmotr",
+      "Label": "label1",
+      "BlockColor": "White",
+      "MainColor": "SandyBrown",
+      "FontColor": "Black",
+      "Font": "Microsoft Sans Serif, 8.25pt",
+      "LinesColor": "MediumBlue",
+      "Essence": null
+    },
+    {
+      "$type": "GPSS.Visualiztion.VisualTransfer, GPSS.Visualiztion",
+      "number": 3,
+      "center": "0, 0",
+      "width": 120,
+      "heigth": 60,
+      "Transfer": {
+        "Type": 11,
+        "Code": "TRANSFER ,finish",
+        "Label": null,
+        "Name": "TRANSFER_UNCON",
+        "Arguments": [
+          "finish"
+        ],
+        "Comment": null
+      },
+      "StartBlockNumber": 2,
+      "Block1": {
+        "$type": "GPSS.Visualiztion.VisualBlock, GPSS.Visualiztion",
+        "number": 5,
+        "center": "379, 758",
+        "width": 170,
+        "heigth": 85,
+        "BlockColor": "White",
+        "Code": "finish TERMINATE 1; Transactions terminating",
+        "Label": "finish",
+        "Name": "TERMINATE",
+        "ExtendedParams": null,
+        "MainColor": "SandyBrown",
+        "FontColor": "Black",
+        "Font": "Microsoft Sans Serif, 8.25pt",
+        "LinesColor": "MediumBlue",
+        "Essence": {
+          "$type": "GPSS.Block, GPSS",
+          "Type": 1,
+          "Code": "finish TERMINATE 1; Transactions terminating",
+          "Label": "finish",
+          "Name": "TERMINATE",
+          "Arguments": [
+            "1"
+          ],
+          "Comment": "Transactions terminating"
+        }
+      },
+      "Block2": null,
+      "Digit": 0.0,
+      "ExtendedParams": [
+        {
+          "$type": "GPSS.Visualiztion.VisualBlock, GPSS.Visualiztion",
+          "number": 5,
+          "center": "379, 758",
+          "width": 170,
+          "heigth": 85,
+          "BlockColor": "White",
+          "Code": "finish TERMINATE 1; Transactions terminating",
+          "Label": "finish",
+          "Name": "TERMINATE",
+          "ExtendedParams": null,
+          "MainColor": "SandyBrown",
+          "FontColor": "Black",
+          "Font": "Microsoft Sans Serif, 8.25pt",
+          "LinesColor": "MediumBlue",
+          "Essence": {
+            "$type": "GPSS.Block, GPSS",
+            "Type": 1,
+            "Code": "finish TERMINATE 1; Transactions terminating",
+            "Label": "finish",
+            "Name": "TERMINATE",
+            "Arguments": [
+              "1"
+            ],
+            "Comment": "Transactions terminating"
+          }
+        },
+        null
+      ],
+      "Code": "TRANSFER ,finish",
+      "Label": null,
+      "Name": "TRANSFER_UNCON",
+      "MainColor": "SandyBrown",
+      "FontColor": "Black",
+      "Font": "Microsoft Sans Serif, 8.25pt",
+      "LinesColor": "MediumBlue",
+      "Essence": {
+        "$type": "GPSS.Block, GPSS",
+        "Type": 11,
+        "Code": "TRANSFER ,finish",
+        "Label": null,
+        "Name": "TRANSFER_UNCON",
+        "Arguments": [
+          "finish"
+        ],
+        "Comment": null
+      }
+    },
+    {
+      "$type": "GPSS.Visualiztion.Device, GPSS.Visualiztion",
+      "number": 4,
+      "center": "603, 485",
+      "width": 170,
+      "heigth": 170,
+      "IsMultiChanell": false,
+      "Code": "label2 QUEUE Ocher_Remont\nSEIZE Remont\nDEPART Ocher_Remont\nADVANCE 45,10\nRELEASE Remont\n",
+      "ExtendedParams": [
+        {
+          "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
+          "$values": [
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 5,
+              "Code": "label2 QUEUE Ocher_Remont",
+              "Label": "label2",
+              "Name": "QUEUE",
+              "Arguments": [
+                "Ocher_Remont"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 3,
+              "Code": "SEIZE Remont",
+              "Label": null,
+              "Name": "SEIZE",
+              "Arguments": [
+                "Remont"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 6,
+              "Code": "DEPART Ocher_Remont",
+              "Label": null,
+              "Name": "DEPART",
+              "Arguments": [
+                "Ocher_Remont"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 2,
+              "Code": "ADVANCE 45,10",
+              "Label": null,
+              "Name": "ADVANCE",
+              "Arguments": [
+                "45",
+                "10"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 4,
+              "Code": "RELEASE Remont",
+              "Label": null,
+              "Name": "RELEASE",
+              "Arguments": [
+                "Remont"
+              ],
+              "Comment": null
+            }
+          ]
+        },
+        "Ocher_Remont",
+        "45",
+        "10",
+        1,
+        1
+      ],
+      "Name": "Remont",
+      "Label": "label2",
+      "BlockColor": "White",
+      "MainColor": "SandyBrown",
+      "FontColor": "Black",
+      "Font": "Microsoft Sans Serif, 8.25pt",
+      "LinesColor": "MediumBlue",
+      "Essence": null
+    },
+    {
+      "$type": "GPSS.Visualiztion.VisualBlock, GPSS.Visualiztion",
+      "number": 5,
+      "center": "379, 758",
+      "width": 170,
+      "heigth": 85,
+      "BlockColor": "White",
+      "Code": "finish TERMINATE 1; Transactions terminating",
+      "Label": "finish",
+      "Name": "TERMINATE",
+      "ExtendedParams": null,
+      "MainColor": "SandyBrown",
+      "FontColor": "Black",
+      "Font": "Microsoft Sans Serif, 8.25pt",
+      "LinesColor": "MediumBlue",
+      "Essence": {
+        "$type": "GPSS.Block, GPSS",
+        "Type": 1,
+        "Code": "finish TERMINATE 1; Transactions terminating",
+        "Label": "finish",
+        "Name": "TERMINATE",
+        "Arguments": [
+          "1"
+        ],
+        "Comment": "Transactions terminating"
+      }
+    }
+  ],
+  "DefaultFont": "Microsoft Sans Serif, 8.25pt",
+  "DefaultFontColor": "Black",
+  "BackgroundColor": "White",
+  "DefaultElementsColor": "SandyBrown",
+  "DefaultElementsLinesColor": "MediumBlue",
+  "Functions": [],
+  "Tables": []
+}

@@ -1,0 +1,163 @@
+{
+  "Elements": [
+    {
+      "$type": "GPSS.Visualiztion.VisualBlock, GPSS.Visualiztion",
+      "number": 0,
+      "center": "199, 74",
+      "width": 170,
+      "heigth": 85,
+      "BlockColor": "White",
+      "Code": "GENERATE 20,5",
+      "Label": null,
+      "Name": "GENERATE",
+      "ExtendedParams": null,
+      "MainColor": "SandyBrown",
+      "FontColor": "Black",
+      "Font": "Microsoft Sans Serif, 8.25pt",
+      "LinesColor": "MediumBlue",
+      "Essence": {
+        "$type": "GPSS.Block, GPSS",
+        "Type": 0,
+        "Code": "GENERATE 20,5",
+        "Label": null,
+        "Name": "GENERATE",
+        "Arguments": [
+          "20",
+          "5"
+        ],
+        "Comment": null
+      }
+    },
+    {
+      "$type": "GPSS.Visualiztion.Device, GPSS.Visualiztion",
+      "number": 1,
+      "center": "190, 333",
+      "width": 170,
+      "heigth": 170,
+      "IsMultiChanell": true,
+      "Code": "port STORAGE 10\nQUEUE ocher_port\nENTER port,3\nDEPART ocher_port\nADVANCE 10,3\nLEAVE port,3\n",
+      "ExtendedParams": [
+        {
+          "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
+          "$values": [
+            {
+              "$type": "GPSS.Comand, GPSS",
+              "Type": 1,
+              "Code": "port STORAGE 10",
+              "Label": "",
+              "Name": "STORAGE",
+              "Arguments": [
+                "port",
+                "10"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 5,
+              "Code": "QUEUE ocher_port",
+              "Label": null,
+              "Name": "QUEUE",
+              "Arguments": [
+                "ocher_port"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 7,
+              "Code": "ENTER port,3",
+              "Label": null,
+              "Name": "ENTER",
+              "Arguments": [
+                "port",
+                "3"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 6,
+              "Code": "DEPART ocher_port",
+              "Label": null,
+              "Name": "DEPART",
+              "Arguments": [
+                "ocher_port"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 2,
+              "Code": "ADVANCE 10,3",
+              "Label": null,
+              "Name": "ADVANCE",
+              "Arguments": [
+                "10",
+                "3"
+              ],
+              "Comment": null
+            },
+            {
+              "$type": "GPSS.Block, GPSS",
+              "Type": 8,
+              "Code": "LEAVE port,3",
+              "Label": null,
+              "Name": "LEAVE",
+              "Arguments": [
+                "port",
+                "3"
+              ],
+              "Comment": null
+            }
+          ]
+        },
+        "ocher_port",
+        10.0,
+        3.0,
+        10,
+        3
+      ],
+      "Name": "port",
+      "Label": "",
+      "BlockColor": "White",
+      "MainColor": "SandyBrown",
+      "FontColor": "Black",
+      "Font": "Microsoft Sans Serif, 8.25pt",
+      "LinesColor": "MediumBlue",
+      "Essence": null
+    },
+    {
+      "$type": "GPSS.Visualiztion.VisualBlock, GPSS.Visualiztion",
+      "number": 2,
+      "center": "199, 602",
+      "width": 170,
+      "heigth": 85,
+      "BlockColor": "White",
+      "Code": "TERMINATE 1",
+      "Label": null,
+      "Name": "TERMINATE",
+      "ExtendedParams": null,
+      "MainColor": "SandyBrown",
+      "FontColor": "Black",
+      "Font": "Microsoft Sans Serif, 8.25pt",
+      "LinesColor": "MediumBlue",
+      "Essence": {
+        "$type": "GPSS.Block, GPSS",
+        "Type": 1,
+        "Code": "TERMINATE 1",
+        "Label": null,
+        "Name": "TERMINATE",
+        "Arguments": [
+          "1"
+        ],
+        "Comment": null
+      }
+    }
+  ],
+  "DefaultFont": "Microsoft Sans Serif, 8.25pt",
+  "DefaultFontColor": "Black",
+  "BackgroundColor": "188, 213, 231",
+  "DefaultElementsColor": "SandyBrown",
+  "DefaultElementsLinesColor": "MediumBlue"
+}

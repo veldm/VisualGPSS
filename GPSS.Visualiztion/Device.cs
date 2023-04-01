@@ -67,7 +67,8 @@ namespace GPSS.Visualiztion
             set
             {
                 delay = value;
-                Operators[IsMultiChanell ? 4 : 3].Arguments[0] = delay;
+                if (Operators is not null && Operators.Count is not 0)
+                    Operators[IsMultiChanell ? 4 : 3].Arguments[0] = delay;
             } }
 
         [Browsable(false), JsonIgnore] public string Scatter
@@ -75,8 +76,9 @@ namespace GPSS.Visualiztion
             set
             {
                 scatter = value;
-                if (scatter is not "")
-                    Operators[IsMultiChanell ? 4 : 3].Arguments[1] = scatter;
+                if (Operators is not null && Operators.Count is not 0)
+                    if (scatter is not "")
+                        Operators[IsMultiChanell ? 4 : 3].Arguments[1] = scatter;
             }
         }
 

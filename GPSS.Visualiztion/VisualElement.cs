@@ -29,10 +29,18 @@ namespace GPSS.Visualiztion
         public virtual string Code => Essence.Code;
 
         [Browsable(false)]
-        public virtual string Label => Essence is not null ? Essence.Label : null;
+        public virtual string Label
+        {
+            get => Essence is not null ? Essence.Label : null;
+            set => Essence.Label = value;
+        }
 
         [Browsable(false)]
-        public virtual string Name => Essence is not null ? Essence.Name : null;
+        public virtual string Name
+        {
+            get => Essence is not null ? Essence.Name : null;
+            set => Essence.Name = value;
+        }
 
         [Browsable(false)]
         public virtual object[] ExtendedParams { get; set; }

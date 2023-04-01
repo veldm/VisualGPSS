@@ -403,9 +403,9 @@ namespace GPSS.Visualiztion
                 defaultElementsColor, defaultLinesColor);
 
             string[] args = { "10.0", "1.0" };            
-            schema.AddBlock(0, new Point(100, 50), "GENERATE", null, args, "Создание транзакций");
+            schema.AddBlock(0, new Point(100, 50), "GENERATE", null, args, "Transactions creating");
             args = new string[] { "1" };
-            schema.AddBlock(1, new Point(100, 250), "TERMINATE", null, args, "Уничтожение транзакций");
+            schema.AddBlock(1, new Point(100, 250), "TERMINATE", null, args, "Transactions terminating");
 
             return schema;
         }

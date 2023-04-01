@@ -71,6 +71,25 @@ namespace VisualGPSS
 
         public VisualGPSS_Schema schema;
         private string filePath;
+        private string CompilerFilePath
+        {
+            get
+            {
+                try
+                {
+                    using (StreamReader reader = new("compilerPath"))
+                    {
+                        string buf = reader.ReadLine();
+                        if (!File.Exists(buf)) throw new Exception();
+                        return buf;
+                    }                    
+                }
+                catch (Exception)
+                {
+                    return tryGetCompilerPath() ? CompilerFilePath : string.Empty;
+                }
+            }
+        }
         #endregion Поля
 
         public Main(string openFileName = null)
@@ -143,7 +162,7 @@ namespace VisualGPSS
                     });
                 }
             }
-            if(!File.Exists(Resources.CompilerFilePath)) tryGetCompilerPath();
+            if(!File.Exists(CompilerFilePath)) tryGetCompilerPath();
         }
 
         #region Отрисовка
@@ -151,6 +170,8 @@ namespace VisualGPSS
         public void graphicsRefresh(object sender, EventArgs e)
         {
             if (schema is null || pictureBox.Width is 0 || pictureBox.Height is 0) return;
+
+            pictureBox.BackColor = schema.BackgroundColor;
 
             double m = scale < 1 ? 1 / scale : 1;
             using (bitmap = new Bitmap((int)((pictureBox.Width + hScrollBar1.Value) * m),
@@ -284,9 +305,9 @@ namespace VisualGPSS
 
         private void RunSimulation()
         {
-            if (File.Exists(Resources.CompilerFilePath)) try
+            if (File.Exists(CompilerFilePath)) try
                 {
-                    ProcessStartInfo startInfo = new(Resources.CompilerFilePath, codeFilePath);
+                    ProcessStartInfo startInfo = new(CompilerFilePath, codeFilePath);
                     Process.Start(startInfo);
                 }
                 catch (Exception exc)
@@ -294,30 +315,30 @@ namespace VisualGPSS
                     MessageBox.Show($"Ошибка: {exc.Message}", "",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            else
-            {
-                if (tryGetCompilerPath()) try
-                    {
-                        ProcessStartInfo startInfo = new(Resources.CompilerFilePath, codeFilePath);
-                        Process.Start(startInfo);
-                    }
-                    catch (Exception exc)
-                    {
-                        MessageBox.Show($"Ошибка: {exc.Message}", "",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-            }
+            //else
+            //{
+            //    if (tryGetCompilerPath()) try
+            //        {
+            //            ProcessStartInfo startInfo = new(CompilerFilePath, codeFilePath);
+            //            Process.Start(startInfo);
+            //        }
+            //        catch (Exception exc)
+            //        {
+            //            MessageBox.Show($"Ошибка: {exc.Message}", "",
+            //                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        }
+            //}
         }
 
         private bool tryGetCompilerPath()
         {
             if (MessageBox.Show("Не удаётся найти компилятор GPSS по умолчанию.\n" +
-                "Выбрать другую программу?", "", MessageBoxButtons.YesNo,
-                MessageBoxIcon.Exclamation) is DialogResult.Yes)
+                        "Выбрать другую программу?", "", MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Exclamation) is DialogResult.Yes)
             {
                 if (CompilerFileDalog.ShowDialog() is DialogResult.OK)
                 {
-                    StreamWriter writer = new("..\\..\\Properties\\compilerFilePath.txt");
+                    StreamWriter writer = new("compilerPath");
                     writer.Write(CompilerFileDalog.FileName);
                     writer.Close();
                     return true;

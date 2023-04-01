@@ -90,9 +90,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox = new System.Windows.Forms.PictureBox();
-            this.LabelPictureBox = new System.Windows.Forms.PictureBox();
             this.codeSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.CompilerFileDalog = new System.Windows.Forms.OpenFileDialog();
+            this.LabelPictureBox = new System.Windows.Forms.PictureBox();
             this.menuStrip.SuspendLayout();
             this.BlockOrElementCMS.SuspendLayout();
             this.FieldCMS.SuspendLayout();
@@ -276,6 +276,7 @@
             this.settingsButton.Size = new System.Drawing.Size(55, 37);
             this.settingsButton.TabIndex = 5;
             this.settingsButton.Text = "⚙";
+            this.settingsButton.Visible = false;
             this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
             this.settingsButton.MouseEnter += new System.EventHandler(this.settingsButton_MouseEnter);
             this.settingsButton.MouseLeave += new System.EventHandler(this.settingsButton_MouseLeave);
@@ -292,6 +293,7 @@
             this.helpButton.Size = new System.Drawing.Size(30, 31);
             this.helpButton.TabIndex = 6;
             this.helpButton.Text = "?";
+            this.helpButton.Visible = false;
             this.helpButton.Click += new System.EventHandler(this.helpButton_Click);
             this.helpButton.MouseEnter += new System.EventHandler(this.helpButton_MouseEnter);
             this.helpButton.MouseLeave += new System.EventHandler(this.helpButton_MouseLeave);
@@ -409,6 +411,7 @@
             this.savailButton.BackColor = System.Drawing.Color.White;
             this.savailButton.BackgroundImage = global::VisualGPSS.Properties.Resources.Savail1;
             this.savailButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.savailButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.savailButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savailButton.Location = new System.Drawing.Point(73, 97);
             this.savailButton.Name = "savailButton";
@@ -422,6 +425,7 @@
             this.favailButton.BackColor = System.Drawing.Color.White;
             this.favailButton.BackgroundImage = global::VisualGPSS.Properties.Resources.Favail;
             this.favailButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.favailButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.favailButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.favailButton.Location = new System.Drawing.Point(137, 27);
             this.favailButton.Name = "favailButton";
@@ -435,6 +439,7 @@
             this.sunavailButton.BackColor = System.Drawing.Color.White;
             this.sunavailButton.BackgroundImage = global::VisualGPSS.Properties.Resources.sunavail1;
             this.sunavailButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.sunavailButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sunavailButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sunavailButton.Location = new System.Drawing.Point(10, 97);
             this.sunavailButton.Name = "sunavailButton";
@@ -448,6 +453,7 @@
             this.funavailButton.BackColor = System.Drawing.Color.White;
             this.funavailButton.BackgroundImage = global::VisualGPSS.Properties.Resources.funavail;
             this.funavailButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.funavailButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.funavailButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.funavailButton.Location = new System.Drawing.Point(73, 27);
             this.funavailButton.Name = "funavailButton";
@@ -461,6 +467,7 @@
             this.loopButton.BackColor = System.Drawing.Color.White;
             this.loopButton.BackgroundImage = global::VisualGPSS.Properties.Resources.цикл;
             this.loopButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.loopButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.loopButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loopButton.Location = new System.Drawing.Point(10, 27);
             this.loopButton.Name = "loopButton";
@@ -485,6 +492,7 @@
             this.tableButton.BackColor = System.Drawing.Color.White;
             this.tableButton.BackgroundImage = global::VisualGPSS.Properties.Resources._31276;
             this.tableButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tableButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tableButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tableButton.Location = new System.Drawing.Point(73, 25);
             this.tableButton.Name = "tableButton";
@@ -498,6 +506,7 @@
             this.functionButton.BackColor = System.Drawing.Color.Transparent;
             this.functionButton.BackgroundImage = global::VisualGPSS.Properties.Resources.kisspng_mathematical_notation_mathematics_functional_predi_analytic_function_5b18e71a7efec21;
             this.functionButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.functionButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.functionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.functionButton.Location = new System.Drawing.Point(10, 27);
             this.functionButton.Name = "functionButton";
@@ -527,6 +536,7 @@
             this.matchButton.BackColor = System.Drawing.Color.Transparent;
             this.matchButton.BackgroundImage = global::VisualGPSS.Properties.Resources.match;
             this.matchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.matchButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.matchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.matchButton.Location = new System.Drawing.Point(10, 164);
             this.matchButton.Name = "matchButton";
@@ -540,6 +550,7 @@
             this.adoptButton.BackColor = System.Drawing.Color.Transparent;
             this.adoptButton.BackgroundImage = global::VisualGPSS.Properties.Resources.adopt;
             this.adoptButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.adoptButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.adoptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.adoptButton.Location = new System.Drawing.Point(137, 97);
             this.adoptButton.Name = "adoptButton";
@@ -553,6 +564,7 @@
             this.gatherButton.BackColor = System.Drawing.Color.Transparent;
             this.gatherButton.BackgroundImage = global::VisualGPSS.Properties.Resources.gather;
             this.gatherButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gatherButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gatherButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gatherButton.Location = new System.Drawing.Point(73, 97);
             this.gatherButton.Name = "gatherButton";
@@ -566,6 +578,7 @@
             this.splitButton.BackColor = System.Drawing.Color.Transparent;
             this.splitButton.BackgroundImage = global::VisualGPSS.Properties.Resources.split;
             this.splitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.splitButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.splitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.splitButton.Location = new System.Drawing.Point(137, 27);
             this.splitButton.Name = "splitButton";
@@ -579,6 +592,7 @@
             this.assembleButton.BackColor = System.Drawing.Color.Transparent;
             this.assembleButton.BackgroundImage = global::VisualGPSS.Properties.Resources.assemble;
             this.assembleButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.assembleButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.assembleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.assembleButton.Location = new System.Drawing.Point(10, 97);
             this.assembleButton.Name = "assembleButton";
@@ -592,6 +606,7 @@
             this.gateButton.BackColor = System.Drawing.Color.Transparent;
             this.gateButton.BackgroundImage = global::VisualGPSS.Properties.Resources.gate;
             this.gateButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gateButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gateButton.Location = new System.Drawing.Point(73, 27);
             this.gateButton.Name = "gateButton";
@@ -605,6 +620,7 @@
             this.testButton.BackColor = System.Drawing.Color.Transparent;
             this.testButton.BackgroundImage = global::VisualGPSS.Properties.Resources.test;
             this.testButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.testButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.testButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.testButton.Location = new System.Drawing.Point(10, 27);
             this.testButton.Name = "testButton";
@@ -631,6 +647,7 @@
             this.multiChannelDeviceButton.BackColor = System.Drawing.Color.White;
             this.multiChannelDeviceButton.BackgroundImage = global::VisualGPSS.Properties.Resources.устройствоN;
             this.multiChannelDeviceButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.multiChannelDeviceButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.multiChannelDeviceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.multiChannelDeviceButton.Location = new System.Drawing.Point(73, 27);
             this.multiChannelDeviceButton.Name = "multiChannelDeviceButton";
@@ -644,6 +661,7 @@
             this.singleChannelDeviceButton.BackColor = System.Drawing.Color.White;
             this.singleChannelDeviceButton.BackgroundImage = global::VisualGPSS.Properties.Resources.устройство1;
             this.singleChannelDeviceButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.singleChannelDeviceButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.singleChannelDeviceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.singleChannelDeviceButton.Location = new System.Drawing.Point(10, 27);
             this.singleChannelDeviceButton.Name = "singleChannelDeviceButton";
@@ -673,6 +691,7 @@
             this.saveValueButton.BackColor = System.Drawing.Color.White;
             this.saveValueButton.BackgroundImage = global::VisualGPSS.Properties.Resources._91_916310_save_png_clipart_save_icon;
             this.saveValueButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.saveValueButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.saveValueButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveValueButton.Location = new System.Drawing.Point(73, 97);
             this.saveValueButton.Name = "saveValueButton";
@@ -686,6 +705,7 @@
             this.tabulateButton.BackColor = System.Drawing.Color.White;
             this.tabulateButton.BackgroundImage = global::VisualGPSS.Properties.Resources.vector_screening_svg_3;
             this.tabulateButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabulateButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tabulateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tabulateButton.Location = new System.Drawing.Point(137, 28);
             this.tabulateButton.Name = "tabulateButton";
@@ -699,6 +719,7 @@
             this.terminateButton.BackColor = System.Drawing.Color.White;
             this.terminateButton.BackgroundImage = global::VisualGPSS.Properties.Resources._4115235_exit_logout_sign_out_114030;
             this.terminateButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.terminateButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.terminateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.terminateButton.Location = new System.Drawing.Point(73, 28);
             this.terminateButton.Name = "terminateButton";
@@ -712,6 +733,7 @@
             this.generateButton.BackColor = System.Drawing.Color.White;
             this.generateButton.BackgroundImage = global::VisualGPSS.Properties.Resources.creation_date_sort_icon_155568;
             this.generateButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.generateButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.generateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.generateButton.Location = new System.Drawing.Point(9, 28);
             this.generateButton.Name = "generateButton";
@@ -725,6 +747,7 @@
             this.uncertainButton.BackColor = System.Drawing.Color.White;
             this.uncertainButton.BackgroundImage = global::VisualGPSS.Properties.Resources.Pustoy_block;
             this.uncertainButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.uncertainButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uncertainButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uncertainButton.Location = new System.Drawing.Point(9, 97);
             this.uncertainButton.Name = "uncertainButton";
@@ -799,16 +822,6 @@
             this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseMove);
             this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseUp);
             // 
-            // LabelPictureBox
-            // 
-            this.LabelPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.LabelPictureBox.Image = global::VisualGPSS.Properties.Resources.VisualGPSS_Label1;
-            this.LabelPictureBox.Location = new System.Drawing.Point(12, 31);
-            this.LabelPictureBox.Name = "LabelPictureBox";
-            this.LabelPictureBox.Size = new System.Drawing.Size(100, 29);
-            this.LabelPictureBox.TabIndex = 11;
-            this.LabelPictureBox.TabStop = false;
-            // 
             // codeSaveFileDialog
             // 
             this.codeSaveFileDialog.Filter = "Файлы GPSS моделей|*.gps";
@@ -816,6 +829,17 @@
             // CompilerFileDalog
             // 
             this.CompilerFileDalog.Filter = "Исполняемые файлы|*.exe";
+            // 
+            // LabelPictureBox
+            // 
+            this.LabelPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.LabelPictureBox.Image = global::VisualGPSS.Properties.Resources.VisualGPSS_Label1;
+            this.LabelPictureBox.Location = new System.Drawing.Point(9, 30);
+            this.LabelPictureBox.Name = "LabelPictureBox";
+            this.LabelPictureBox.Size = new System.Drawing.Size(100, 29);
+            this.LabelPictureBox.TabIndex = 11;
+            this.LabelPictureBox.TabStop = false;
+            this.LabelPictureBox.Visible = false;
             // 
             // Main
             // 
@@ -878,7 +902,6 @@
         private System.Windows.Forms.ToolStripMenuItem элементToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem блокToolStripMenuItem;
         private System.Windows.Forms.Panel ToolBox;
-        private System.Windows.Forms.PictureBox LabelPictureBox;
         private System.Windows.Forms.SaveFileDialog imageSaveFileDialog;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button uncertainButton;
@@ -918,6 +941,7 @@
         private System.Windows.Forms.Button loopButton;
         private System.Windows.Forms.SaveFileDialog codeSaveFileDialog;
         private System.Windows.Forms.OpenFileDialog CompilerFileDalog;
+        private System.Windows.Forms.PictureBox LabelPictureBox;
     }
 }
 

@@ -355,9 +355,6 @@
     <None Include="Resources\Savail1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\compilerFilePath.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Properties\SpecialFileHeader.txt" />
   </ItemGroup>
   <ItemGroup>

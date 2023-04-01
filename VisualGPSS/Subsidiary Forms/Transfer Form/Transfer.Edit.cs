@@ -30,12 +30,17 @@ namespace VisualGPSS
                 GPSS.Block.BlockType.TRANSFER_PICK => 4,
                 _ => throw new ArgumentException(nameof(transfer.Essence)),
             };
-            if (comboBox1.Enabled) comboBox1.SelectedItem = transfer.Block1.Label;
-            if (comboBox2.Enabled) comboBox2.SelectedItem = transfer.Block2.Label;
-            if (TextBox.Enabled) TextBox.Text = transfer.Digit.ToString();
-
             comboBox1.Items.AddRange(schema.LabelsList.ToArray());
+            if (comboBox1.Enabled) comboBox1.SelectedItem = transfer.Block1.Label;
             comboBox2.Items.AddRange(schema.LabelsList.ToArray());
+            if (comboBox2.Enabled) comboBox2.SelectedItem = transfer.Block2.Label;
+            if (TextBox.Enabled)
+            {
+                if (transfer.Digit is not 0) TextBox.Text = transfer.Digit.ToString();
+                else TextBox.Text = transfer.Essence.Arguments
+                        [TypeCB.SelectedIndex is 2 ? 0 : 2];
+            }
+
             DeleteButton.Enabled = true;
             SaveButton.Click += SaveChanges;
             propertyGrid.SelectedObject = transfer;

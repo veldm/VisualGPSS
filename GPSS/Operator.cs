@@ -23,7 +23,7 @@ namespace GPSS
         /// <summary>
         /// Имя оператора
         /// </summary>
-        public string Name { get => GetName(); }
+        public string Name { get => GetName(); set { } }
 
         internal abstract string GetName();
 

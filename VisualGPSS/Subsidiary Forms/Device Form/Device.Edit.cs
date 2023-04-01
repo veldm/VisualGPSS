@@ -51,27 +51,42 @@ namespace VisualGPSS
         {
             //if (multiChanellCB.Checked == device.IsMultiChanell)
             //{
-                //if (ChanellCountCB.Enabled)
-                    //device.ChanellCount = (int)ChanellCountCB.Value;
+            //if (ChanellCountCB.Enabled)
+            //device.ChanellCount = (int)ChanellCountCB.Value;
 
+            if (LabelTextBox.Text != device.Label)
+            {
                 if (schema.Labels.TryGetValue
-                       (LabelTextBox.Text, out VisualElement visualElement))
+                    (LabelTextBox.Text, out VisualElement visualElement))
                 {
-                    if (schema.LabelsList.Contains(LabelTextBox.Text))
-                        throw new Exception($"Метка {LabelTextBox.Text} уже занята" +
-                            $" блоком №{visualElement.number} ({visualElement.Name})");
+                    throw new Exception($"Метка {LabelTextBox.Text} уже занята" +
+                        $" блоком №{visualElement.number} ({visualElement.Name})");
                 }
+                else device.Essence.Label = LabelTextBox.Text;
+            }
 
-                //device.number = uint.Parse(numberComboBox.Text);
+            device.number = uint.Parse(numberComboBox.Text) - 1;
+            device.Label = LabelTextBox.Text;
+            device.Name = NameTextBox.Text;
+            device.QueueName = QueueTextBox.Text;
+            device.Delay = DelayTextBox.Text;
+            device.Scatter = ScatterTextBox.Text;
+            if (ChanellCountCB.Enabled)
+            {
+                device.ChanellCount = (int)ChanellCountCB.Value;
+                device.TransactSize = (int)transactSizeCB.Value;
+            }
 
-                //device.Name = NameTextBox.Text;
+            //device.number = uint.Parse(numberComboBox.Text);
+
+            //device.Name = NameTextBox.Text;
             //}
             //else
             //{
-                schema.Remove(device);
-                SaveButton.Click += CreateNewDevice;
-                SaveButton.Click -= SaveChanges;
-                CreateNewDevice(sender, e);
+            //schema.Remove(device);
+            //SaveButton.Click += CreateNewDevice;
+            //SaveButton.Click -= SaveChanges;
+            //CreateNewDevice(sender, e);
             //}
         }
     }

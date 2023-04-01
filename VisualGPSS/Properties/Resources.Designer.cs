@@ -221,15 +221,6 @@ namespace VisualGPSS.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на C:\Program Files (x86)\Minuteman Software\GPSS World Student Version\GPSS World Student.exe.
-        /// </summary>
-        internal static string CompilerFilePath {
-            get {
-                return ResourceManager.GetString("CompilerFilePath", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap creation_date_sort_icon_155568 {
@@ -484,7 +475,9 @@ namespace VisualGPSS.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на \pard\tx1200\tx2400\tx4440\tx5280\tx6000\b0\f1\fs20\par
+        ///}
+        ///.
         /// </summary>
         internal static string SpecialFileEnding {
             get {
@@ -493,7 +486,7 @@ namespace VisualGPSS.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на У  Ї                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           [остаток строки не уместился]&quot;;.
+        ///   Ищет локализованную строку, похожую на УЇ [остаток строки не уместился]&quot;;.
         /// </summary>
         internal static string SpecialFileHeader {
             get {

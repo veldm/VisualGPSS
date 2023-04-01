@@ -46,13 +46,13 @@
             this.CommentTextbox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.FuncComboBox = new System.Windows.Forms.ComboBox();
             this.label2AddButton = new System.Windows.Forms.Button();
             this.label1AddButton = new System.Windows.Forms.Button();
             this.addNewElement_CMS = new MaterialSkin.Controls.MaterialContextMenuStrip();
             this.добавитьБлокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.добавитьУстройствоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.добавитьВетвлениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.FuncComboBox = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.addNewElement_CMS.SuspendLayout();
@@ -303,6 +303,16 @@
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             // 
+            // FuncComboBox
+            // 
+            this.FuncComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FuncComboBox.FormattingEnabled = true;
+            this.FuncComboBox.Location = new System.Drawing.Point(131, 124);
+            this.FuncComboBox.Name = "FuncComboBox";
+            this.FuncComboBox.Size = new System.Drawing.Size(273, 28);
+            this.FuncComboBox.TabIndex = 19;
+            this.FuncComboBox.SelectedIndexChanged += new System.EventHandler(this.FuncComboBox_SelectedIndexChanged);
+            // 
             // label2AddButton
             // 
             this.label2AddButton.BackColor = System.Drawing.SystemColors.Control;
@@ -361,16 +371,6 @@
             this.добавитьВетвлениеToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.добавитьВетвлениеToolStripMenuItem.Text = "Добавить ветвление";
             this.добавитьВетвлениеToolStripMenuItem.Click += new System.EventHandler(this.добавитьВетвлениеToolStripMenuItem_Click);
-            // 
-            // FuncComboBox
-            // 
-            this.FuncComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FuncComboBox.FormattingEnabled = true;
-            this.FuncComboBox.Location = new System.Drawing.Point(131, 124);
-            this.FuncComboBox.Name = "FuncComboBox";
-            this.FuncComboBox.Size = new System.Drawing.Size(273, 28);
-            this.FuncComboBox.TabIndex = 19;
-            this.FuncComboBox.SelectedIndexChanged += new System.EventHandler(this.FuncComboBox_SelectedIndexChanged);
             // 
             // Transfer
             // 

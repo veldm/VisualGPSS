@@ -89,8 +89,12 @@ namespace VisualGPSS
                         arguments[2] = label2;
 
                         // Digit
-                        Digit = double.Parse(TextBox.Text.Replace('.', ','));
-                        arguments[0] = Digit.ToString();
+                        if (FuncComboBox.SelectedIndex is -1)
+                        {
+                            Digit = double.Parse(TextBox.Text.Replace('.', ','));
+                            arguments[0] = Digit.ToString();
+                        }
+                        else arguments[0] = TextBox.Text;
                         break;
                     case 1:
                         // Block1
@@ -134,8 +138,13 @@ namespace VisualGPSS
                         arguments[1] = label1 == label2 ? "" : label2;
 
                         // Digit
-                        Digit = int.Parse(TextBox.Text);
-                        arguments[2] = Digit is 1 ? "" : Digit.ToString();
+
+                        if (FuncComboBox.SelectedIndex is -1)
+                        {
+                            Digit = double.Parse(TextBox.Text.Replace('.', ','));
+                            arguments[2] = Digit.ToString();
+                        }
+                        else arguments[2] = TextBox.Text;
                         break;
                     case 4:
                         // Block1

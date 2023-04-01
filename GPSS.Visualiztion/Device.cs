@@ -57,16 +57,28 @@ namespace GPSS.Visualiztion
 
         //#pragma warning disable CS0114
         // Член скрывает унаследованный член: отсутствует ключевое слово переопределения
-        [Browsable(false)] public override string Name { get => name; }
+        [Browsable(false)] public override string Name { get => name; set => name = value; }
 
-        [Browsable(false)] public override string Label { get => label; }
+        [Browsable(false)] public override string Label { get => label; set => label = value; }
         //#pragma warning restore CS0114
         // Член скрывает унаследованный член: отсутствует ключевое слово переопределения
 
-        [Browsable(false), JsonIgnore] public string Delay { get => delay; set => delay = value; }
+        [Browsable(false), JsonIgnore] public string Delay { get => delay;
+            set
+            {
+                delay = value;
+                Operators[IsMultiChanell ? 4 : 3].Arguments[0] = delay;
+            } }
 
         [Browsable(false), JsonIgnore] public string Scatter
-            { get => scatter; set => scatter = value; }
+            { get => scatter;
+            set
+            {
+                scatter = value;
+                if (scatter is not "")
+                    Operators[IsMultiChanell ? 4 : 3].Arguments[1] = scatter;
+            }
+        }
 
         [Browsable(false), JsonIgnore] public int ChanellCount
             { get => chanellCount; set => chanellCount = value; }

@@ -313,15 +313,29 @@ namespace VisualGPSS
             if (visualBlock is not null)
             {
                 int i = 0;
-                foreach (var control in from Control control in groupBox2.Controls
-                                        where (control
-                                        is MaterialSingleLineTextField)
-                                        select control)
+                List<Control> controls = (from Control _control in groupBox2.Controls
+                                where (_control
+                                is MaterialSingleLineTextField && _control.Visible)
+                                select _control).ToList();
+                controls.Reverse();
+                foreach (var control in controls)
                     control.Text = i < visualBlock.Essence.Arguments.Length ?
                         visualBlock.Essence.Arguments[i++] : "";
             }
             ComboBox1.SelectedIndex = ComboBox2.SelectedIndex = ComboBox3.SelectedIndex =
                 ComboBox4.SelectedIndex = ComboBox5.SelectedIndex = -1;
+
+            //int k = 0;
+            //List<string> args = visualBlock.Essence.Arguments.ToList();
+            //args.Reverse();
+            //foreach (var control in from Control control in groupBox2.Controls
+            //                        where (control
+            //                        is MaterialSingleLineTextField)
+            //                        select control)
+            //{
+            //    if (k < args.Count)
+            //        control.Text = args[k];
+            //}
         }
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)

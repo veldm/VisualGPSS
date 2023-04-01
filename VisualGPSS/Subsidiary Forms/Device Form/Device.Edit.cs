@@ -45,6 +45,8 @@ namespace VisualGPSS
             QueueTextBox.Text = device.QueueName;
             DelayTextBox.Text = device.Delay.ToString();
             ScatterTextBox.Text = device.Scatter.ToString();
+
+            propertyGrid.SelectedObject = device;
         }
 
         private void SaveChanges(object sender, EventArgs e)

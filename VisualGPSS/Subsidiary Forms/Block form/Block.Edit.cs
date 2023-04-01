@@ -37,27 +37,27 @@ namespace VisualGPSS
             CommentTextbox.Text = visualBlock.Essence.Comment;
             for (int ii = 1; ii != schema.Elements.Count + 1; ii++)
                 numberComboBox.Items.Add(ii.ToString());
-            numberComboBox.SelectedItem = (visualBlock.number + 1).ToString();
+            numberComboBox.SelectedItem = (visualBlock.number + 1).ToString();                
 
-            //TextBox1.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
-            //    (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
-            //TextBox2.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
-            //    (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
-            //TextBox3.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
-            //    (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
-            //TextBox4.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
-            //    (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
-            //TextBox5.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
-            //    (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
+                //TextBox1.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
+                //    (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
+                //TextBox2.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
+                //    (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
+                //TextBox3.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
+                //    (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
+                //TextBox4.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
+                //    (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
+                //TextBox5.DataSource = GPSS.PLUS.Base.Functions/*Headers*/.Concat
+                //    (from GPSS.PLUS.Function function in schema.Functions select function.NameToCall).ToList();
 
-            //int i = visualBlock.essence.Arguments.Length - 1;
-            //foreach (var control in from Control control in groupBox2.Controls
-            //                        where control
-            //                        is MaterialSkin.Controls.MaterialSingleLineTextField
-            //                        select control)
-            //    if (i >= 0) control.Text = visualBlock.essence.Arguments[i--];
+                //int i = visualBlock.essence.Arguments.Length - 1;
+                //foreach (var control in from Control control in groupBox2.Controls
+                //                        where control
+                //                        is MaterialSkin.Controls.MaterialSingleLineTextField
+                //                        select control)
+                //    if (i >= 0) control.Text = visualBlock.essence.Arguments[i--];
 
-            propertyGrid.SelectedObject = visualBlock;
+                propertyGrid.SelectedObject = visualBlock;
             DeleteButton.Enabled = false;
         }
 

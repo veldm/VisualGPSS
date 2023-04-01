@@ -1,0 +1,66 @@
+{
+  "Elements": [
+    {
+      "$type": "GPSS.Visualiztion.VisualBlock, GPSS.Visualiztion",
+      "number": 0,
+      "center": "100, 50",
+      "width": 170,
+      "heigth": 85,
+      "BlockColor": "White",
+      "Code": "GENERATE 10.0,1.0; Transactions creating",
+      "Label": null,
+      "Name": "GENERATE",
+      "ExtendedParams": null,
+      "MainColor": "SandyBrown",
+      "FontColor": "Black",
+      "Font": "Microsoft Sans Serif, 8.25pt",
+      "LinesColor": "MediumBlue",
+      "Essence": {
+        "$type": "GPSS.Block, GPSS",
+        "Type": 0,
+        "Code": "GENERATE 10.0,1.0; Transactions creating",
+        "Label": null,
+        "Name": "GENERATE",
+        "Arguments": [
+          "10.0",
+          "1.0"
+        ],
+        "Comment": "Transactions creating"
+      }
+    },
+    {
+      "$type": "GPSS.Visualiztion.VisualBlock, GPSS.Visualiztion",
+      "number": 1,
+      "center": "100, 250",
+      "width": 170,
+      "heigth": 85,
+      "BlockColor": "White",
+      "Code": "TERMINATE 1; Transactions terminating",
+      "Label": null,
+      "Name": "TERMINATE",
+      "ExtendedParams": null,
+      "MainColor": "SandyBrown",
+      "FontColor": "Black",
+      "Font": "Microsoft Sans Serif, 8.25pt",
+      "LinesColor": "MediumBlue",
+      "Essence": {
+        "$type": "GPSS.Block, GPSS",
+        "Type": 1,
+        "Code": "TERMINATE 1; Transactions terminating",
+        "Label": null,
+        "Name": "TERMINATE",
+        "Arguments": [
+          "1"
+        ],
+        "Comment": "Transactions terminating"
+      }
+    }
+  ],
+  "DefaultFont": "Microsoft Sans Serif, 8.25pt",
+  "DefaultFontColor": "Black",
+  "BackgroundColor": "188, 213, 231",
+  "DefaultElementsColor": "SandyBrown",
+  "DefaultElementsLinesColor": "MediumBlue",
+  "Functions": [],
+  "Tables": []
+}

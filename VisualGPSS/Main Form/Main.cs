@@ -71,25 +71,27 @@ namespace VisualGPSS
 
         public VisualGPSS_Schema schema;
         private string filePath;
-        private string CompilerFilePath
-        {
-            get
-            {
-                try
-                {
-                    using (StreamReader reader = new("compilerPath"))
-                    {
-                        string buf = reader.ReadLine();
-                        if (!File.Exists(buf)) throw new Exception();
-                        return buf;
-                    }                    
-                }
-                catch (Exception)
-                {
-                    return tryGetCompilerPath() ? CompilerFilePath : string.Empty;
-                }
-            }
-        }
+        private string CompilerFilePath =>
+            File.Exists(Settings.Default.CompilerPath) ? Settings.Default.CompilerPath :
+            (tryGetCompilerPath() ? Properties.Settings.Default.CompilerPath : string.Empty);
+        //{
+        //    get
+        //    {
+        //        try
+        //        {
+        //            using (StreamReader reader = new("compilerPath"))
+        //            {
+        //                string buf = reader.ReadLine();
+        //                if (!File.Exists(buf)) throw new Exception();
+        //                return buf;
+        //            }                    
+        //        }
+        //        catch (Exception)
+        //        {
+        //            return tryGetCompilerPath() ? CompilerFilePath : string.Empty;
+        //        }
+        //    }
+        //}
         #endregion Поля
 
         public Main(string openFileName = null)
@@ -338,9 +340,10 @@ namespace VisualGPSS
             {
                 if (CompilerFileDalog.ShowDialog() is DialogResult.OK)
                 {
-                    StreamWriter writer = new("compilerPath");
-                    writer.Write(CompilerFileDalog.FileName);
-                    writer.Close();
+                    Settings.Default.CompilerPath = CompilerFileDalog.FileName;
+                    //StreamWriter writer = new("compilerPath");
+                    //writer.Write(CompilerFileDalog.FileName);
+                    //writer.Close();
                     return true;
                 }
             }

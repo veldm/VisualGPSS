@@ -15,26 +15,14 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_0E0EB4F43B85485F95988D38487A7A7E"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_0E365CDC476B4BF585146AD84B8F1738"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_1435740C0510409BA325B6F4FFB39C5D"
+        "MsmKey" = "8:_046E13957B13439BB1EB4782F5F5A04C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_186B565C716D96B4F017C04D6E9CA1AA"
-        "OwnerKey" = "8:_0E0EB4F43B85485F95988D38487A7A7E"
+        "OwnerKey" = "8:_FDA16ADCFBD2483D9DEBB9A39DC09458"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -46,13 +34,13 @@
         "Entry"
         {
         "MsmKey" = "8:_186B565C716D96B4F017C04D6E9CA1AA"
-        "OwnerKey" = "8:_8230991149B24E1BBE1644EBA191CDEA"
+        "OwnerKey" = "8:_ED6D0E93704A47E1B3F63755D6A7F12D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_197119F6E4CE8102EFA0596F8A256689"
-        "OwnerKey" = "8:_0E0EB4F43B85485F95988D38487A7A7E"
+        "OwnerKey" = "8:_FDA16ADCFBD2483D9DEBB9A39DC09458"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -64,37 +52,31 @@
         "Entry"
         {
         "MsmKey" = "8:_197119F6E4CE8102EFA0596F8A256689"
-        "OwnerKey" = "8:_8230991149B24E1BBE1644EBA191CDEA"
+        "OwnerKey" = "8:_ED6D0E93704A47E1B3F63755D6A7F12D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_2A2B54E724F24CC49118B3A6757F322B"
+        "MsmKey" = "8:_3EFCC2A9CF0E4B64982BC48502FF4534"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_308E7CA47C474D94B85A9D947F0C724C"
+        "MsmKey" = "8:_46FFACCEB3E649989EEAE73A1529ECFD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_3F649CA9284A41609D2A108D690CA3F4"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_4CD28A5ECF4147D692779FDB1CE09BA5"
+        "MsmKey" = "8:_5647BE510D3E4EFCBB78E65D9C4D876A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_5FC20780A517A9D9F05CDABFA520A2B7"
-        "OwnerKey" = "8:_0E0EB4F43B85485F95988D38487A7A7E"
+        "OwnerKey" = "8:_FDA16ADCFBD2483D9DEBB9A39DC09458"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -106,61 +88,73 @@
         "Entry"
         {
         "MsmKey" = "8:_64D17E788AEF615BB8115F054C9C6F41"
-        "OwnerKey" = "8:_8230991149B24E1BBE1644EBA191CDEA"
+        "OwnerKey" = "8:_ED6D0E93704A47E1B3F63755D6A7F12D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_71C3B4F6B3B54EF4BF4BA48A45FD94A5"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_8230991149B24E1BBE1644EBA191CDEA"
+        "MsmKey" = "8:_6AC2AE229420462FAA9C4A931D8FE74D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_9E3A0B88A261DB54150A40D89E537A70"
-        "OwnerKey" = "8:_8230991149B24E1BBE1644EBA191CDEA"
+        "OwnerKey" = "8:_ED6D0E93704A47E1B3F63755D6A7F12D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_A0C59B788781402EA76504198054AF40"
+        "MsmKey" = "8:_BEE607DAEAB94DC7931B5B1484BFF4AD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_A667CCB448B54ED3954FEB95BE07A9C1"
+        "MsmKey" = "8:_C3D915C9F7964AC994EBDC32A5742312"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_AA7A52D9EAE341CFAA3D0BE8B2F565C4"
+        "MsmKey" = "8:_D4F8A49C46DE4752A8B3D64FECFE6F93"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_EA1D2949026B4903A8AA06ED8461E8B7"
+        "MsmKey" = "8:_DC105BF6A9394D6B99B6462AC84D2205"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E112F13B28E642AAAE638DB47B911D92"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_ED6D0E93704A47E1B3F63755D6A7F12D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FDA16ADCFBD2483D9DEBB9A39DC09458"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_1435740C0510409BA325B6F4FFB39C5D"
+        "OwnerKey" = "8:_046E13957B13439BB1EB4782F5F5A04C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_8230991149B24E1BBE1644EBA191CDEA"
+        "OwnerKey" = "8:_ED6D0E93704A47E1B3F63755D6A7F12D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -178,19 +172,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3F649CA9284A41609D2A108D690CA3F4"
+        "OwnerKey" = "8:_D4F8A49C46DE4752A8B3D64FECFE6F93"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_EA1D2949026B4903A8AA06ED8461E8B7"
+        "OwnerKey" = "8:_BEE607DAEAB94DC7931B5B1484BFF4AD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0E0EB4F43B85485F95988D38487A7A7E"
+        "OwnerKey" = "8:_FDA16ADCFBD2483D9DEBB9A39DC09458"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -214,7 +208,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A667CCB448B54ED3954FEB95BE07A9C1"
+        "OwnerKey" = "8:_5647BE510D3E4EFCBB78E65D9C4D876A"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -235,6 +229,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -301,65 +303,14 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0E0EB4F43B85485F95988D38487A7A7E"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:GPSS.Visualiztion, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_0E0EB4F43B85485F95988D38487A7A7E"
-                    {
-                    "Name" = "8:GPSS.Visualiztion.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\VisualGPSS\\bin\\Release\\GPSS.Visualiztion.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_DCFB9154DC924468BF39DC0C4923DC99"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0E365CDC476B4BF585146AD84B8F1738"
-            {
-            "SourcePath" = "8:..\\VisualGPSS\\bin\\Release\\GPSS.PLUS.pdb"
-            "TargetName" = "8:GPSS.PLUS.pdb"
-            "Tag" = "8:"
-            "Folder" = "8:_DCFB9154DC924468BF39DC0C4923DC99"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1435740C0510409BA325B6F4FFB39C5D"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_046E13957B13439BB1EB4782F5F5A04C"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:GPSS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_1435740C0510409BA325B6F4FFB39C5D"
+                    "_046E13957B13439BB1EB4782F5F5A04C"
                     {
                     "Name" = "8:GPSS.dll"
                     "Attributes" = "3:512"
@@ -445,10 +396,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2A2B54E724F24CC49118B3A6757F322B"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3EFCC2A9CF0E4B64982BC48502FF4534"
             {
-            "SourcePath" = "8:..\\VisualGPSS\\bin\\Release\\compilerPath"
-            "TargetName" = "8:compilerPath"
+            "SourcePath" = "8:..\\VisualGPSS\\bin\\Release\\GPSS.PLUS.pdb"
+            "TargetName" = "8:GPSS.PLUS.pdb"
             "Tag" = "8:"
             "Folder" = "8:_DCFB9154DC924468BF39DC0C4923DC99"
             "Condition" = "8:"
@@ -465,10 +416,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_308E7CA47C474D94B85A9D947F0C724C"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_46FFACCEB3E649989EEAE73A1529ECFD"
             {
-            "SourcePath" = "8:..\\VisualGPSS\\bin\\Release\\GPSS.Visualiztion.pdb"
-            "TargetName" = "8:GPSS.Visualiztion.pdb"
+            "SourcePath" = "8:..\\VisualGPSS\\bin\\Release\\VisualGPSS.pdb"
+            "TargetName" = "8:VisualGPSS.pdb"
             "Tag" = "8:"
             "Folder" = "8:_DCFB9154DC924468BF39DC0C4923DC99"
             "Condition" = "8:"
@@ -485,41 +436,21 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3F649CA9284A41609D2A108D690CA3F4"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5647BE510D3E4EFCBB78E65D9C4D876A"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:GPSS.PLUS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_3F649CA9284A41609D2A108D690CA3F4"
+                    "_5647BE510D3E4EFCBB78E65D9C4D876A"
                     {
-                    "Name" = "8:Newtonsoft.Json.dll"
+                    "Name" = "8:GPSS.PLUS.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:..\\VisualGPSS\\bin\\Release\\Newtonsoft.Json.dll"
+            "SourcePath" = "8:..\\VisualGPSS\\bin\\Release\\GPSS.PLUS.dll"
             "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_DCFB9154DC924468BF39DC0C4923DC99"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4CD28A5ECF4147D692779FDB1CE09BA5"
-            {
-            "SourcePath" = "8:..\\VisualGPSS\\bin\\Release\\Newtonsoft.Json.xml"
-            "TargetName" = "8:Newtonsoft.Json.xml"
             "Tag" = "8:"
             "Folder" = "8:_DCFB9154DC924468BF39DC0C4923DC99"
             "Condition" = "8:"
@@ -598,41 +529,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_71C3B4F6B3B54EF4BF4BA48A45FD94A5"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6AC2AE229420462FAA9C4A931D8FE74D"
             {
             "SourcePath" = "8:..\\VisualGPSS\\bin\\Release\\GPSS.pdb"
             "TargetName" = "8:GPSS.pdb"
-            "Tag" = "8:"
-            "Folder" = "8:_DCFB9154DC924468BF39DC0C4923DC99"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8230991149B24E1BBE1644EBA191CDEA"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:VisualGPSS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_8230991149B24E1BBE1644EBA191CDEA"
-                    {
-                    "Name" = "8:VisualGPSS.exe"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\VisualGPSS\\bin\\Release\\VisualGPSS.exe"
-            "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_DCFB9154DC924468BF39DC0C4923DC99"
             "Condition" = "8:"
@@ -680,7 +580,109 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A0C59B788781402EA76504198054AF40"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BEE607DAEAB94DC7931B5B1484BFF4AD"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_BEE607DAEAB94DC7931B5B1484BFF4AD"
+                    {
+                    "Name" = "8:MaterialSkin.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\VisualGPSS\\bin\\Release\\MaterialSkin.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_DCFB9154DC924468BF39DC0C4923DC99"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C3D915C9F7964AC994EBDC32A5742312"
+            {
+            "SourcePath" = "8:..\\VisualGPSS\\bin\\Release\\Newtonsoft.Json.xml"
+            "TargetName" = "8:Newtonsoft.Json.xml"
+            "Tag" = "8:"
+            "Folder" = "8:_DCFB9154DC924468BF39DC0C4923DC99"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D4F8A49C46DE4752A8B3D64FECFE6F93"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_D4F8A49C46DE4752A8B3D64FECFE6F93"
+                    {
+                    "Name" = "8:Newtonsoft.Json.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\VisualGPSS\\bin\\Release\\Newtonsoft.Json.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_DCFB9154DC924468BF39DC0C4923DC99"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DC105BF6A9394D6B99B6462AC84D2205"
+            {
+            "SourcePath" = "8:..\\VisualGPSS\\bin\\Release\\GPSS.Visualiztion.pdb"
+            "TargetName" = "8:GPSS.Visualiztion.pdb"
+            "Tag" = "8:"
+            "Folder" = "8:_DCFB9154DC924468BF39DC0C4923DC99"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E112F13B28E642AAAE638DB47B911D92"
             {
             "SourcePath" = "8:..\\VisualGPSS\\bin\\Release\\VisualGPSS.exe.config"
             "TargetName" = "8:VisualGPSS.exe.config"
@@ -700,20 +702,20 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A667CCB448B54ED3954FEB95BE07A9C1"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_ED6D0E93704A47E1B3F63755D6A7F12D"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:GPSS.PLUS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:VisualGPSS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_A667CCB448B54ED3954FEB95BE07A9C1"
+                    "_ED6D0E93704A47E1B3F63755D6A7F12D"
                     {
-                    "Name" = "8:GPSS.PLUS.dll"
+                    "Name" = "8:VisualGPSS.exe"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:..\\VisualGPSS\\bin\\Release\\GPSS.PLUS.dll"
+            "SourcePath" = "8:..\\VisualGPSS\\bin\\Release\\VisualGPSS.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_DCFB9154DC924468BF39DC0C4923DC99"
@@ -731,40 +733,20 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AA7A52D9EAE341CFAA3D0BE8B2F565C4"
-            {
-            "SourcePath" = "8:..\\VisualGPSS\\bin\\Release\\VisualGPSS.pdb"
-            "TargetName" = "8:VisualGPSS.pdb"
-            "Tag" = "8:"
-            "Folder" = "8:_DCFB9154DC924468BF39DC0C4923DC99"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_EA1D2949026B4903A8AA06ED8461E8B7"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FDA16ADCFBD2483D9DEBB9A39DC09458"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:GPSS.Visualiztion, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_EA1D2949026B4903A8AA06ED8461E8B7"
+                    "_FDA16ADCFBD2483D9DEBB9A39DC09458"
                     {
-                    "Name" = "8:MaterialSkin.dll"
+                    "Name" = "8:GPSS.Visualiztion.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:..\\VisualGPSS\\bin\\Release\\MaterialSkin.dll"
+            "SourcePath" = "8:..\\VisualGPSS\\bin\\Release\\GPSS.Visualiztion.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_DCFB9154DC924468BF39DC0C4923DC99"
@@ -795,7 +777,7 @@
             "IconIndex" = "3:0"
                 "Command"
                 {
-                "Command" = "8:_8230991149B24E1BBE1644EBA191CDEA"
+                "Command" = "8:_ED6D0E93704A47E1B3F63755D6A7F12D"
                 }
                 "Verbs"
                 {
@@ -860,22 +842,22 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:VGPSS_Setup"
-        "ProductCode" = "8:{56020BF9-4846-4B9D-A6BF-A64B8F64DF56}"
-        "PackageCode" = "8:{FB5355A3-060D-4F9D-B92B-4F6437ABB5AE}"
+        "ProductName" = "8:VisualGPSS"
+        "ProductCode" = "8:{61D4DB2E-D4EB-4DCB-BBE4-61B2AF8297F0}"
+        "PackageCode" = "8:{D8617EDA-D815-4FB4-849E-C2FB6D92807A}"
         "UpgradeCode" = "8:{48719E5C-AC97-47CA-AF1D-0FE8F59225B7}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
+        "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:Default Company Name"
+        "ProductVersion" = "8:2.1.7"
+        "Manufacturer" = "8:Dmitry"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:VGPSS_Setup"
+        "Title" = "8:VisualGPSS Installer"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:Default Company Name"
+        "ARPCONTACT" = "8:Dmitry"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
@@ -982,7 +964,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_4C7D2F6131F64880A74A8521A1CFC223"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_7602F3D53391455380C3C2B534804FD3"
             {
             "Name" = "8:VisualGPSS"
             "Arguments" = "8:"
@@ -990,13 +972,13 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_8230991149B24E1BBE1644EBA191CDEA"
+            "Target" = "8:_ED6D0E93704A47E1B3F63755D6A7F12D"
             "Folder" = "8:_8912BA09BBE941E18F011B9023742090"
             "WorkingFolder" = "8:_DCFB9154DC924468BF39DC0C4923DC99"
             "Icon" = "8:"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_BBCBED4A39BE40DFB8C4EC30222320E9"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_B98682E53A3A429C88CBC66E3825B7B6"
             {
             "Name" = "8:VisualGPSS"
             "Arguments" = "8:"
@@ -1004,7 +986,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_8230991149B24E1BBE1644EBA191CDEA"
+            "Target" = "8:_ED6D0E93704A47E1B3F63755D6A7F12D"
             "Folder" = "8:_BA2886B3523C4D3F8EFEC49B98EA595E"
             "WorkingFolder" = "8:_DCFB9154DC924468BF39DC0C4923DC99"
             "Icon" = "8:"
@@ -1057,7 +1039,7 @@
                     }
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_B0C2A3895C534A03B89EA4E0D30234A6"
                     {
-                    "Sequence" = "3:100"
+                    "Sequence" = "3:110"
                     "DisplayName" = "8:Добро пожаловать!"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
@@ -1096,8 +1078,8 @@
                             "Type" = "3:3"
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
-                            "Setting" = "3:1"
-                            "Value" = "8:#1203"
+                            "Setting" = "3:2"
+                            "Value" = "8:The installer will guide you through the steps required to install [ProductName] on your computer."
                             "DefaultValue" = "8:#1203"
                             "UsePlugInResources" = "11:TRUE"
                             }
@@ -1372,8 +1354,8 @@
                             "Type" = "3:3"
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
-                            "Setting" = "3:1"
-                            "Value" = "8:#1203"
+                            "Setting" = "3:2"
+                            "Value" = "8:The installer will guide you through the steps required to install [ProductName] on your computer."
                             "DefaultValue" = "8:#1203"
                             "UsePlugInResources" = "11:TRUE"
                             }

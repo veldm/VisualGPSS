@@ -330,7 +330,7 @@ namespace VisualGPSS
             //                MessageBoxButtons.OK, MessageBoxIcon.Error);
             //        }
             //}
-        }
+        } 
 
         private bool tryGetCompilerPath()
         {
@@ -348,6 +348,15 @@ namespace VisualGPSS
                 }
             }
             return false;
+        }
+
+        private void компиляторToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show($"Компиляция осуществляется {CompilerFilePath}." +
+                $"\nВыбрать другую программу?", "Компиляция", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) is DialogResult.Yes && CompilerFileDalog.ShowDialog()
+                is DialogResult.OK && File.Exists(CompilerFileDalog.FileName))
+                        Settings.Default.CompilerPath = CompilerFileDalog.FileName;
         }
 
         #endregion

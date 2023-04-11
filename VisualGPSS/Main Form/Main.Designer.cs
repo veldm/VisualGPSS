@@ -37,6 +37,7 @@
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.средстваToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.генерацияКодаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.компиляторToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.печатьСхемыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сохранитьКакИзображениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -93,7 +94,6 @@
             this.codeSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.CompilerFileDalog = new System.Windows.Forms.OpenFileDialog();
             this.LabelPictureBox = new System.Windows.Forms.PictureBox();
-            this.компиляторToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.BlockOrElementCMS.SuspendLayout();
             this.FieldCMS.SuspendLayout();
@@ -201,6 +201,13 @@
             this.генерацияКодаToolStripMenuItem.Size = new System.Drawing.Size(262, 26);
             this.генерацияКодаToolStripMenuItem.Text = "Генерация кода";
             this.генерацияКодаToolStripMenuItem.Click += new System.EventHandler(this.генерацияКодаToolStripMenuItem_Click);
+            // 
+            // компиляторToolStripMenuItem
+            // 
+            this.компиляторToolStripMenuItem.Name = "компиляторToolStripMenuItem";
+            this.компиляторToolStripMenuItem.Size = new System.Drawing.Size(262, 26);
+            this.компиляторToolStripMenuItem.Text = "Компилятор...";
+            this.компиляторToolStripMenuItem.Click += new System.EventHandler(this.компиляторToolStripMenuItem_Click);
             // 
             // печатьСхемыToolStripMenuItem
             // 
@@ -842,13 +849,6 @@
             this.LabelPictureBox.TabIndex = 11;
             this.LabelPictureBox.TabStop = false;
             this.LabelPictureBox.Visible = false;
-            // 
-            // компиляторToolStripMenuItem
-            // 
-            this.компиляторToolStripMenuItem.Name = "компиляторToolStripMenuItem";
-            this.компиляторToolStripMenuItem.Size = new System.Drawing.Size(262, 26);
-            this.компиляторToolStripMenuItem.Text = "Компилятор...";
-            this.компиляторToolStripMenuItem.Click += new System.EventHandler(this.компиляторToolStripMenuItem_Click);
             // 
             // Main
             // 

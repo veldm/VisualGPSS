@@ -28,7 +28,7 @@ namespace VisualGPSS
             if (saveFileDialog1.ShowDialog() is DialogResult.OK) try
             {
                 StreamWriter writer = new StreamWriter(saveFileDialog1.FileName);
-                writer.Write(saveFileDialog1.FilterIndex is 0 ? richTextBox1.Text :
+                writer.Write(saveFileDialog1.FilterIndex is 1 ? richTextBox1.Text :
                     Resources.SpecialFileHeader + richTextBox1.Text.Replace('\n'.ToString(), "\\par"));
                 writer.Close();
                 MessageBox.Show($"Файл {saveFileDialog1.FileName} успешно сохранён", "VisualGPSS",

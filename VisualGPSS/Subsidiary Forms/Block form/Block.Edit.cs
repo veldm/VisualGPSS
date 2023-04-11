@@ -67,8 +67,18 @@ namespace VisualGPSS
             {
                 if (numberComboBox.Text != (visualBlock.number + 1).ToString())
                 {
-                    schema.Remove(visualBlock);
-                    CreateNewBlock(sender, e);
+                    if (uint.TryParse(numberComboBox.Text, out uint n))
+                    {
+                        var buf = visualBlock;
+                        schema.Elements.Remove(visualBlock);
+                        if (n < schema.Elements.Count)
+                            schema.Elements.Insert
+                                ((int)(n < visualBlock.number ? n + 2 : n + 1), visualBlock);
+                        else schema.Elements.Add(visualBlock);
+                        visualBlock.number = n;
+                    }
+                    //schema.Remove(visualBlock);
+                    //CreateNewBlock(sender, e);
                     return;
                 }
 

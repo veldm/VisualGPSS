@@ -15,7 +15,7 @@ namespace VisualGPSS
         public string label;
 
         public Block(VisualGPSS_Schema _schema, Point _point,
-            string type = null, string label = null)
+            string type = null, string label = null, int? _num = null)
         {
             InitializeComponent();
             schema = _schema;
@@ -30,8 +30,12 @@ namespace VisualGPSS
             for (int ii = 0; !(ii > schema.Elements.Count); ii++)
                 numberComboBox.Items.Add((ii + 1).ToString());
             //numberComboBox.SelectedIndex = numberComboBox.Items.Count - 1;
-            numberComboBox.SelectedIndex = numberComboBox.Items.IndexOf(
-                (schema.GetPlace(point) + 1).ToString());
+            if (_num is null)
+                numberComboBox.SelectedIndex = numberComboBox.Items.IndexOf(
+                    (schema.GetPlace(point) + 1).ToString());
+            else numberComboBox.SelectedIndex = _num.Value - 1;
+            //numberComboBox.SelectedIndex = numberComboBox.Items.IndexOf(
+            //    (schema.GetPlace(point) + 1).ToString());
 
             SaveButton.Click += CreateNewBlock;
 

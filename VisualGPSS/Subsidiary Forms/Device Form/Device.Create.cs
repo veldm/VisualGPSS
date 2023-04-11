@@ -13,7 +13,7 @@ namespace VisualGPSS
         public string label;
 
         public Device(VisualGPSS_Schema schema, Point center,
-            bool isMultiChanell = false, string label = null)
+            bool isMultiChanell = false, string label = null, int? _num = null)
         {
             InitializeComponent();
             this.schema = schema;
@@ -25,8 +25,10 @@ namespace VisualGPSS
             for (int ii = 0; !(ii > schema.Elements.Count); ii++)
                 numberComboBox.Items.Add((ii + 1).ToString());
             //numberComboBox.SelectedIndex = numberComboBox.Items.Count - 1;
-            numberComboBox.SelectedIndex = numberComboBox.Items.IndexOf(
-                (schema.GetPlace(center) + 1).ToString());
+            if (_num is null)
+                numberComboBox.SelectedIndex = numberComboBox.Items.IndexOf(
+                    (schema.GetPlace(center) + 1).ToString());
+            else numberComboBox.SelectedIndex = _num.Value - 1;
 
             DelayComboBox.DataSource =
                 GPSS.DataType.Math.GetDataSource(schema, out List<string> delayTag);

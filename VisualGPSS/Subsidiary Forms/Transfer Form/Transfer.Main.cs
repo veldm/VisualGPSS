@@ -82,8 +82,8 @@ namespace VisualGPSS
         private void добавитьВетвлениеToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //if (transfer is null) transfer = new VisualTransfer() { number = startBlock.number + 1 };
-            Transfer transferForm = new Transfer
-                (transfer, schema, $"label{schema.ElementsWithLabelsList.Count + 1}");
+            Transfer transferForm = new (transfer, schema,
+                $"label{schema.ElementsWithLabelsList.Count + 1}");
             ComboBox cb = ((ToolStripMenuItem)sender).Owner.Tag switch
             {
                 "label1AddButton" => comboBox1,
@@ -101,7 +101,7 @@ namespace VisualGPSS
 
         private void добавитьУстройствоToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            (ComboBox cb, Point center) buf = ((ToolStripMenuItem)sender).Owner.Tag switch
+            (ComboBox cb, Point center) = ((ToolStripMenuItem)sender).Owner.Tag switch
             {
                 "label1AddButton" => (comboBox1,
                     new Point(startBlock.center.X - 200, startBlock.center.Y + 400)),
@@ -109,19 +109,21 @@ namespace VisualGPSS
                     new Point(startBlock.center.X + 200, startBlock.center.Y + 400)),
                 _ => throw new NotImplementedException()
             };
-            Device deviceForm = new Device(schema, buf.center,
-                label: $"label{schema.ElementsWithLabelsList.Count + 1}");
+            Device deviceForm = new(schema, center,
+                label: $"label{schema.ElementsWithLabelsList.Count + 1}", 
+                _num: (int)startBlock.number + 2);
             deviceForm.SaveButton.Click += (object sender, EventArgs e) =>
             {
-                buf.cb.Items.Add(deviceForm.label);
-                buf.cb.SelectedItem = deviceForm.label;
+                cb.Items.Add(deviceForm.label);
+                cb.SelectedItem = deviceForm.label;
+                //SlideDown(startBlock);
             };
             deviceForm.Show();
         }
 
         private void добавитьБлокToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            (ComboBox cb, Point center) buf = ((ToolStripMenuItem)sender).Owner.Tag switch
+            (ComboBox cb, Point center) = ((ToolStripMenuItem)sender).Owner.Tag switch
             {
                 "label1AddButton" => (comboBox1,
                     new Point(startBlock.center.X - 200, startBlock.center.Y + 400)),
@@ -129,14 +131,27 @@ namespace VisualGPSS
                     new Point(startBlock.center.X + 200, startBlock.center.Y + 400)),
                 _ => throw new NotImplementedException()
             };
-            Block blockForm = new Block(schema, buf.center,
-                label: $"label{schema.ElementsWithLabelsList.Count + 1}");
+            Block blockForm = new(schema, center,
+                label: $"label{schema.ElementsWithLabelsList.Count + 1}",
+                _num: (int)startBlock.number + 2);
             blockForm.SaveButton.Click += (object sender, EventArgs e) =>
             {
-                buf.cb.Items.Add(blockForm.label);
-                buf.cb.SelectedItem = blockForm.label;
+                cb.Items.Add(blockForm.label);
+                cb.SelectedItem = blockForm.label;
+                //SlideDown(startBlock);
             };
             blockForm.Show();
+        }
+
+        private void SlideDown(VisualElement topBlock)
+        {
+            foreach (VisualElement item in from item in
+                                 schema.Elements.Where(a => a.center.Y > topBlock.center.Y)
+                                 where item.center.Y - topBlock.center.Y < 500
+                                 select item)
+            {
+                item.center.Y += 500;
+            }
         }
 
         private void FuncComboBox_SelectedIndexChanged(object sender, EventArgs e)

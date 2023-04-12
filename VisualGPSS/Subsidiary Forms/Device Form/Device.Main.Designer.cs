@@ -178,6 +178,7 @@
             this.ScatterTextBox.SelectionStart = 0;
             this.ScatterTextBox.Size = new System.Drawing.Size(299, 23);
             this.ScatterTextBox.TabIndex = 7;
+            this.ScatterTextBox.Text = "0";
             this.ScatterTextBox.UseSystemPasswordChar = false;
             // 
             // ScatterComboBox
@@ -202,6 +203,7 @@
             this.DelayTextBox.SelectionStart = 0;
             this.DelayTextBox.Size = new System.Drawing.Size(299, 23);
             this.DelayTextBox.TabIndex = 5;
+            this.DelayTextBox.Text = "0";
             this.DelayTextBox.UseSystemPasswordChar = false;
             // 
             // DelayComboBox
@@ -281,6 +283,7 @@
             this.NameTextBox.Size = new System.Drawing.Size(324, 23);
             this.NameTextBox.TabIndex = 1;
             this.NameTextBox.UseSystemPasswordChar = false;
+            this.NameTextBox.TextChanged += new System.EventHandler(this.NameTextBox_TextChanged);
             // 
             // materialLabel1
             // 

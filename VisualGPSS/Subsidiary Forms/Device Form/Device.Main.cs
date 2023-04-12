@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GPSS.Visualiztion;
@@ -39,6 +40,43 @@ namespace VisualGPSS
                 ScatterTextBox.Text = ((List<string>)ScatterComboBox.Tag)[ScatterComboBox.SelectedIndex];
                 ScatterTextBox.Select();
             }
+        }
+
+        private bool Validate(params string[] args)
+        {
+            if (args[0] is "" || args[1] is "")
+            {
+                if (MessageBox.Show($"Не задано имя " +
+                    $"{(args[0] is "" && args[1] is "" ? "устройства и очереди" : (args[0] is "устройства" ? "" : "очереди"))}" +
+                     $"\nВсё равно продолжить?", "Предупреждение", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Exclamation) is DialogResult.No) return false;
+            }
+            else if (args[0] == args[1])
+                if (MessageBox.Show("Имя устройства совпадает с именем  очереди" +
+                     $"\nВсё равно продолжить?", "Предупреждение", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Exclamation) is DialogResult.No) return false;
+
+            foreach (var arg in args)
+                if (Regex.IsMatch(arg, @"^\w{1}\d{1}$"))
+                    if (MessageBox.Show($"Некорректно задан параметр: " +
+                        $"имя \"{arg}\" совпадает с именем системного регистра" +
+                            $"\nВсё равно продолжить?", "Предупреждение",
+                            MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation)
+                            is DialogResult.No) return false;
+
+            return true;
+        }
+
+        private string LastName;
+        private void NameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if ((QueueTextBox.Text is "" && NameTextBox.Text is not "") 
+                || QueueTextBox.Text == $"q{LastName}")
+            {
+                QueueTextBox.Text = $"q{NameTextBox.Text}";
+            }
+            LastName = NameTextBox.Text;
+            if (NameTextBox.Text is "") QueueTextBox.Text = "";
         }
     }
 }

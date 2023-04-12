@@ -227,6 +227,14 @@ namespace GPSS.Visualiztion
         #region Методы
         public void Draw(Graphics graphics)
         {
+            foreach (VisualElement element in elements.Where(a => a.center.X < 0 || a.center.Y < 0))
+            {
+                if (element.center.X < 0)
+                    element.center.X = 0;
+                if (element.center.Y < 0)
+                    element.center.Y = 0;
+            }
+
             ////Parallel.Invoke
             ////(
             /*() => */
@@ -378,13 +386,13 @@ namespace GPSS.Visualiztion
             for (int i = 0; i < Elements.Count; i++)
                 Elements[i].number = (uint)i;
 
-            foreach (VisualElement element in elements.Where(a => a.center.X < 0 || a.center.Y < 0))
-            {
-                if (element.center.X < 0)
-                    element.center.X = 0;
-                if (element.center.Y < 0)
-                    element.center.Y = 0;
-            }
+            //foreach (VisualElement element in elements.Where(a => a.center.X < 0 || a.center.Y < 0))
+            //{
+            //    if (element.center.X < 0)
+            //        element.center.X = 0;
+            //    if (element.center.Y < 0)
+            //        element.center.Y = 0;
+            //}
         }
 
         public void Remove(VisualElement visualElement)

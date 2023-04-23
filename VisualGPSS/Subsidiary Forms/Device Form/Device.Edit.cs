@@ -64,7 +64,7 @@ namespace VisualGPSS
                     throw new Exception($"Метка {LabelTextBox.Text} уже занята" +
                         $" блоком №{visualElement.number} ({visualElement.Name})");
                 }
-                else device.Essence.Label = LabelTextBox.Text;
+                else device.Label = LabelTextBox.Text;
             }
 
             device.number = uint.Parse(numberComboBox.Text) - 1;

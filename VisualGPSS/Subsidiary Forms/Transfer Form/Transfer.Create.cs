@@ -29,6 +29,8 @@ namespace VisualGPSS
             FuncComboBox.DataSource = DataType.Math.GetDataSource(schema, out List<string> tag);
             FuncComboBox.Tag = tag;
             FuncComboBox.SelectedIndex = -1;
+            добавитьБлокToolStripMenuItem.Enabled = добавитьУстройствоToolStripMenuItem.Enabled =
+                startBlock is not null;
         }
 
         private void CreateNewTransfer(object sender, EventArgs e)

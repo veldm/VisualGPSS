@@ -30,8 +30,7 @@ namespace VisualGPSS
 
             for (int ii = 0; !(ii > schema.Elements.Count); ii++)
                 numberComboBox.Items.Add((ii + 1).ToString());
-            numberComboBox.SelectedIndex = numberComboBox.Items.Count - 1;
-            numberComboBox.SelectedItem = device.number;
+            numberComboBox.SelectedItem = (device.number + 1).ToString();
 
             DelayComboBox.DataSource =
                GPSS.DataType.Math.GetDataSource(schema, out List<string> delayTag);

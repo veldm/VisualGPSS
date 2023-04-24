@@ -59,14 +59,15 @@ namespace VisualGPSS
             if (Validate(name, queue))
             {
                 if (chanellCount is null)
-                    schema.AddDevice(number - 1, center, schema, label, queue, name, delay, scatter);
-                else schema.AddDevice(number - 1, center, schema, label, queue, name, delay, scatter,
-                    chanellCount.Value, transactSize.Value);
+                    device = schema.AddDevice(number - 1, center, schema,
+                        label, queue, name, delay, scatter);
+                else device = schema.AddDevice(number - 1, center, schema, label,
+                    queue, name, delay, scatter, chanellCount.Value, transactSize.Value);
 
                 DeleteButton.Enabled = true;
                 SaveButton.Click -= CreateNewDevice;
-                //SaveButton += 
-                device = (GPSS.Visualiztion.Device)schema.Elements[(int)number - 1];
+                SaveButton.Click += SaveChanges;
+                //device = (GPSS.Visualiztion.Device)schema.Elements[(int)number - 1];
                 propertyGrid.SelectedObject = device;
             }
         }

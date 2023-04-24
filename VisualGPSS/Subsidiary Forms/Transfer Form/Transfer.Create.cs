@@ -2,6 +2,7 @@
 using GPSS.Visualiztion;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,11 +16,14 @@ namespace VisualGPSS
         /// Открытие формы <see cref="Transfer"/> для создания нового перенаправления
         /// </summary>
         /// <param name="_startBlock"></param>
-        public Transfer(VisualElement _startBlock, VisualGPSS_Schema _schema, string label = null)
+        public Transfer(VisualElement _startBlock, VisualGPSS_Schema _schema,
+            string label = null, uint? pn= null, Point? pc = null)
         {
             InitializeComponent();
             startBlock = _startBlock;
             schema = _schema;
+            parentNumber = pn;
+            parentCenter = pc;
             if (label is not null) LabelTextBox.Text = label;
             comboBox1.Items.AddRange(schema.LabelsList.ToArray());
             comboBox2.Items.AddRange(schema.LabelsList.ToArray());
@@ -29,8 +33,8 @@ namespace VisualGPSS
             FuncComboBox.DataSource = DataType.Math.GetDataSource(schema, out List<string> tag);
             FuncComboBox.Tag = tag;
             FuncComboBox.SelectedIndex = -1;
-            добавитьБлокToolStripMenuItem.Enabled = добавитьУстройствоToolStripMenuItem.Enabled =
-                startBlock is not null;
+            //добавитьБлокToolStripMenuItem.Enabled = добавитьУстройствоToolStripMenuItem.Enabled =
+            //    startBlock is not null;
         }
 
         private void CreateNewTransfer(object sender, EventArgs e)

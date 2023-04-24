@@ -277,7 +277,7 @@ namespace GPSS.Visualiztion
             });
         }
 
-        public void AddBlock(uint number, Point center, string type,
+        public VisualBlock AddBlock(uint number, Point center, string type,
             string label, string[] args, string comment)
         {
             Block.BlockType blockType = (Block.BlockType)Enum.Parse(typeof(Block.BlockType), type);
@@ -293,6 +293,7 @@ namespace GPSS.Visualiztion
                 //    LabelsList.Add(block.Label);
                 //}
                 Refresh();
+                return visualBlock;
             }
             else
             {
@@ -324,7 +325,7 @@ namespace GPSS.Visualiztion
             }
         }
 
-        public void AddDevice(uint number, Point center, VisualGPSS_Schema schema, string label, 
+        public Device AddDevice(uint number, Point center, VisualGPSS_Schema schema, string label, 
             string queue, string name, string delay, string scatter,
             int chanellCount = 1, int transactCount = 1)
         {
@@ -332,6 +333,7 @@ namespace GPSS.Visualiztion
                 name, delay, scatter, chanellCount, transactCount);
             schema.Elements.Insert((int)number, device);
             Refresh();
+            return device;
         }
 
         public void AddFunction(string name, string operand1, string operand2,

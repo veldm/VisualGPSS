@@ -17,7 +17,11 @@ namespace VisualGPSS
         readonly VisualGPSS_Schema schema;
         readonly VisualElement startBlock;
         string label;
+        readonly uint? parentNumber;
+        readonly Point? parentCenter;
 
+        private uint ParentNumber => startBlock is null ? parentNumber.Value : startBlock.number;
+        private Point ParentCenter => startBlock is null ? parentCenter.Value : startBlock.center;
 
         private void TypeCB_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -82,14 +86,15 @@ namespace VisualGPSS
         private void добавитьВетвлениеToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //if (transfer is null) transfer = new VisualTransfer() { number = startBlock.number + 1 };
-            Transfer transferForm = new (transfer, schema,
-                $"label{schema.ElementsWithLabelsList.Count + 1}");
-            ComboBox cb = ((ToolStripMenuItem)sender).Owner.Tag switch
+            (ComboBox cb, Point newCenter) = ((ToolStripMenuItem)sender).Owner.Tag switch
             {
-                "label1AddButton" => comboBox1,
-                "label2AddButton" => comboBox2,
+                "label1AddButton" => (comboBox1, new Point(ParentCenter.X - 200, ParentCenter.Y + 400)),
+                "label2AddButton" => (comboBox2, new Point(ParentCenter.X + 200, ParentCenter.Y + 400)),
                 _ => throw new NotImplementedException()
             };
+            Transfer transferForm = new (transfer, schema,
+                $"transfer{schema.Transfers.Count + 1}",
+                ParentNumber, newCenter);
             transferForm.SaveButton.Click += (object sender, EventArgs e) => 
             {
                 cb.Items.Add(transferForm.label);
@@ -104,14 +109,14 @@ namespace VisualGPSS
             (ComboBox cb, Point center) = ((ToolStripMenuItem)sender).Owner.Tag switch
             {
                 "label1AddButton" => (comboBox1,
-                    new Point(startBlock.center.X - 200, startBlock.center.Y + 400)),
+                    new Point(ParentCenter.X - 200, ParentCenter.Y + 400)),
                 "label2AddButton" => (comboBox2,
-                    new Point(startBlock.center.X + 200, startBlock.center.Y + 400)),
+                    new Point(ParentCenter.X + 200, ParentCenter.Y + 400)),
                 _ => throw new NotImplementedException()
             };
             Device deviceForm = new(schema, center,
-                label: $"label{schema.ElementsWithLabelsList.Count + 1}", 
-                _num: (int)startBlock.number + 2);
+                label: $"device{schema.Devices.Count + 1}", 
+                _num: (int)ParentNumber + 2);
             deviceForm.SaveButton.Click += (object sender, EventArgs e) =>
             {
                 cb.Items.Add(deviceForm.label);
@@ -126,14 +131,14 @@ namespace VisualGPSS
             (ComboBox cb, Point center) = ((ToolStripMenuItem)sender).Owner.Tag switch
             {
                 "label1AddButton" => (comboBox1,
-                    new Point(startBlock.center.X - 200, startBlock.center.Y + 400)),
+                    new Point(ParentCenter.X - 200, ParentCenter.Y + 400)),
                 "label2AddButton" => (comboBox2,
-                    new Point(startBlock.center.X + 200, startBlock.center.Y + 400)),
+                    new Point(ParentCenter.X + 200, ParentCenter.Y + 400)),
                 _ => throw new NotImplementedException()
             };
             Block blockForm = new(schema, center,
-                label: $"label{schema.ElementsWithLabelsList.Count + 1}",
-                _num: (int)startBlock.number + 2);
+                label: $"block{schema.Blocks.Count + 1}",
+                _num: (int)ParentNumber + 2);
             blockForm.SaveButton.Click += (object sender, EventArgs e) =>
             {
                 cb.Items.Add(blockForm.label);

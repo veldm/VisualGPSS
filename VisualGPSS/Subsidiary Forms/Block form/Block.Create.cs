@@ -72,9 +72,8 @@ namespace VisualGPSS
                 // TODO: Валидация аргументов здесь
                 string comment = CommentTextbox.Text is "" ? null : LabelTextBox.Text;
 
-                schema.AddBlock(number - 1, point, type, label, args, comment);
+                visualBlock = schema.AddBlock(number - 1, point, type, label, args, comment);
 
-                visualBlock = (VisualBlock)schema.Elements[(int)(number - 1)];
                 SaveButton.Click -= CreateNewBlock;
                 SaveButton.Click += SaveChanges;
                 propertyGrid.SelectedObject = visualBlock;

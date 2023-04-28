@@ -369,21 +369,67 @@ namespace GPSS.Visualiztion
             Elements.Sort(new Comparison<VisualElement>((e1, e2)
                 => e1.number.CompareTo(e2.number)));
 
-            List<VisualTransfer> elems = (from VisualElement elem in Elements
-                                          where elem is VisualTransfer
-                                          select (VisualTransfer)elem).ToList();
-
-            for (int i = 0; i < elems.Count(); i++)
+            foreach (VisualTransfer transfer in Transfers.Where
+                (t => t.StartBlock is not VisualTransfer))
             {
-                int index1 = Elements.IndexOf(elems[i]);
-                int index2 = Elements.IndexOf(((VisualTransfer)elems[i]).StartBlock);
+                int index1 = Elements.IndexOf(transfer);
+                int index2 = Elements.IndexOf(transfer.StartBlock);
                 if (index2 != index1 - 1)
                 {
-                    VisualElement buf = elems[i];
-                    Elements.Remove(elems[i]);
+                    VisualElement buf = transfer;
+                    Elements.Remove(transfer);
+                    index2 = Elements.IndexOf(transfer.StartBlock);
                     Elements.Insert(index2 + 1, buf);
                 }
             }
+
+            bool changed;
+            do
+            {
+                changed = false;
+                foreach (VisualTransfer transfer in Transfers.Where
+                    (t => t.Block1 is VisualTransfer || t.Block2 is VisualTransfer))
+                {
+                    if (transfer.Block1 is VisualTransfer)
+                    {
+                        if (Elements.IndexOf(transfer.Block1) != Elements.IndexOf(transfer) + 1)
+                        {
+                            VisualElement buf = transfer.Block1;
+                            Elements.Remove(transfer.Block1);
+                            Elements.Insert(Elements.IndexOf(transfer) + 1, buf);
+                            changed = true;
+                        }
+                    }
+                    if (transfer.Block2 is VisualTransfer)
+                    {
+                        int seed = transfer.Block1 is VisualTransfer ? 2 : 1;
+                        if (Elements.IndexOf(transfer.Block2) != Elements.IndexOf(transfer) + seed)
+                        {
+                            VisualElement buf = transfer.Block2;
+                            Elements.Remove(transfer.Block2);
+                            Elements.Insert(Elements.IndexOf(transfer) + seed, buf);
+                            changed = true;
+                        }
+                    }
+                }
+            }
+            while (!changed);
+
+            //List<VisualTransfer> elems = (from VisualElement elem in Elements
+            //                              where elem is VisualTransfer
+            //                              select (VisualTransfer)elem).ToList();
+
+            //for (int i = 0; i < elems.Count(); i++)
+            //{
+            //    int index1 = Elements.IndexOf(elems[i]);
+            //    int index2 = Elements.IndexOf(((VisualTransfer)elems[i]).StartBlock);
+            //    if (index2 != index1 - 1)
+            //    {
+            //        VisualElement buf = elems[i];
+            //        Elements.Remove(elems[i]);
+            //        Elements.Insert(index2 + 1, buf);
+            //    }
+            //}
 
             for (int i = 0; i < Elements.Count; i++)
                 Elements[i].number = (uint)i;

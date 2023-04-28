@@ -63,29 +63,33 @@ namespace VisualGPSS
                         // Block1
                         if (comboBox1.SelectedIndex is 0)
                         {
-                            label1 = (string)comboBox1.Items[comboBox1.SelectedIndex];
-                            if (!schema.Labels.TryGetValue(label1, out Block1))
-                                throw new Exception($"Метки {label1} не существует");
+                            label1 = "";
+                            Block1 = schema.Elements[(int)(transfer.StartBlock.number + 2)];
                         }
                         else
                         {
-                            label1 = "";
-                            Block1 = schema.Elements[(int)(transfer.StartBlock.number + 2)];
+                            label1 = (string)comboBox1.Items[comboBox1.SelectedIndex];
+                            if (!schema.Labels.TryGetValue(label1, out Block1))
+                                throw new Exception($"Метки {label1} не существует");
                         }
                         transfer.Block1 = Block1;
                         transfer.Essence.Arguments[1] = label1;
 
                         // Block2
                         label2 = (string)comboBox2.Items[comboBox2.SelectedIndex];
-                        if (!schema.Labels.TryGetValue(label1, out Block2))
+                        if (!schema.Labels.TryGetValue(label2, out Block2))
                             throw new Exception($"Метки {label2} не существует");
                         transfer.Block2 = Block2;
                         transfer.Essence.Arguments[2] = label2;
 
                         // Digit
-                        Digit = double.Parse(TextBox.Text);
-                        transfer.Digit = Digit;
-                        transfer.Essence.Arguments[0] = Digit.ToString();
+                        if (FuncComboBox.SelectedIndex is -1)
+                        {
+                            Digit = double.Parse(TextBox.Text.Replace('.', ','));
+                            transfer.Digit = Digit;
+                            transfer.Essence.Arguments[0] = Digit.ToString();
+                        }
+                        else transfer.Essence.Arguments[0] = TextBox.Text;
                         break;
                     case "TRANSFER_BOTH":
                         // Block1
@@ -134,9 +138,12 @@ namespace VisualGPSS
                         transfer.Essence.Arguments[1] = label1 == label2 ? "" : label2;
 
                         // Digit
-                        Digit = int.Parse(TextBox.Text);
-                        transfer.Digit = Digit;
-                        transfer.Essence.Arguments[2] = Digit is 1 ? "" : Digit.ToString();
+                        if (FuncComboBox.SelectedIndex is -1)
+                        {
+                            Digit = double.Parse(TextBox.Text.Replace('.', ','));
+                            transfer.Essence.Arguments[2] = Digit.ToString();
+                        }
+                        else transfer.Essence.Arguments[2] = TextBox.Text;
                         break;
                     case "TRANSFER_PICK":
                         // Block1
@@ -148,7 +155,7 @@ namespace VisualGPSS
 
                         // Block2
                         label2 = (string)comboBox2.Items[comboBox2.SelectedIndex];
-                        if (!schema.Labels.TryGetValue(label1, out Block2))
+                        if (!schema.Labels.TryGetValue(label2, out Block2))
                             throw new Exception($"Метки {label2} не существует");
                         transfer.Block2 = Block2;
                         transfer.Essence.Arguments[1] = label2;

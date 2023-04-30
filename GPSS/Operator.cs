@@ -45,7 +45,7 @@ namespace GPSS
         {
             get
             {
-                string result = $"{(label is null or "" ? string.Empty : $"{label} ")}{Name} ";
+                string result = $"{(label is null or "" ? "" : $"{label} ")}{Name} ";
                 //for (int i = arguments.Length - 1; i > 0; i--)
                 //{
                 //    if (arguments[i] is not "")
@@ -58,8 +58,9 @@ namespace GPSS
 
                 foreach (var item in from string item in arguments
                                      where item is not "" select item)
-                    result += item != arguments.Last() ? $"{item}," : $"{item}";
+                    result += /*item != arguments.Last() ?*/ $"{item}," /*: $"{item}"*/;
 
+                if (result.Last() is ',') result.Remove(result.Length - 1);
                 //result += arguments.Last();
                 result += comment is null or "" ? "" : $"; {comment}";
                 return result;

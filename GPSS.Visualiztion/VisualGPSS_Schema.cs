@@ -386,7 +386,7 @@ namespace GPSS.Visualiztion
             bool changed;
             do
             {
-                changed = false;
+                changed = Transfers.Count is 0;
                 foreach (VisualTransfer transfer in Transfers.Where
                     (t => t.Block1 is VisualTransfer || t.Block2 is VisualTransfer))
                 {
@@ -469,7 +469,7 @@ namespace GPSS.Visualiztion
             string[] args = { "10.0", "1.0" };            
             schema.AddBlock(0, new Point(100, 50), "GENERATE", null, args, "Transactions creating");
             args = new string[] { "1" };
-            schema.AddBlock(1, new Point(100, 250), "TERMINATE", null, args, "Transactions terminating");
+            schema.AddBlock(1, new Point(100, 250), "TERMINATE", "finish", args, "Transactions terminating");
 
             return schema;
         }

@@ -21,12 +21,13 @@ namespace GPSS
         {
             get
             {
+                string cLabel = Label is null or "" ? string.Empty : $"{Label} ";
                 return type switch
                 {
-                    BlockType.TRANSFER_UNCON => $"TRANSFER ,{Arguments[0]}",
-                    BlockType.TRANSFER_VARIABLE => $"TRANSFER " +
+                    BlockType.TRANSFER_UNCON => $"{cLabel}TRANSFER ,{Arguments[0]}",
+                    BlockType.TRANSFER_VARIABLE => $"{cLabel}TRANSFER " +
                         $".{Arguments[0].Substring(2)},{Arguments[1]},{Arguments[2]}",
-                    BlockType.SaveValue => $"SaveValue {Arguments[0]}" +
+                    BlockType.SaveValue => $"{cLabel}SaveValue {Arguments[0]}" +
                         $"{(Arguments[1] is "+" or "-" ? Arguments[1] : "")}," +
                         $"{(Arguments.Length is 3 ? Arguments[2] : "")}",
                     _ => base.Code

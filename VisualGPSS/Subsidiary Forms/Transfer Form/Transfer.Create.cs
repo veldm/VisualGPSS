@@ -196,6 +196,7 @@ namespace VisualGPSS
                 propertyGrid.SelectedObject = transfer =
                     schema.AddTransfer(typeString, startBlock, Block1,
                         Block2, Digit, labelSelf, arguments, comment, false);
+                if (parentCenter is not null) transfer.center = parentCenter.Value;
 
                 if (comboBox1.Tag is VisualTransfer transfer1)
                     if (schema.LabelsList.Contains(transfer1.Label))

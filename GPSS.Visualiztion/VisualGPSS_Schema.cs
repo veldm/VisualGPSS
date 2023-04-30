@@ -386,9 +386,10 @@ namespace GPSS.Visualiztion
             bool changed;
             do
             {
-                changed = Transfers.Count is 0;
-                foreach (VisualTransfer transfer in Transfers.Where
-                    (t => t.Block1 is VisualTransfer || t.Block2 is VisualTransfer))
+                List<VisualTransfer> _trs = Transfers.Where
+                    (t => t.Block1 is VisualTransfer || t.Block2 is VisualTransfer).ToList();
+                changed = _trs.Count is 0;
+                foreach (VisualTransfer transfer in _trs)
                 {
                     if (transfer.Block1 is VisualTransfer)
                     {

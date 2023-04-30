@@ -88,8 +88,10 @@ namespace VisualGPSS
             //if (transfer is null) transfer = new VisualTransfer() { number = startBlock.number + 1 };
             (ComboBox cb, Point newCenter) = ((ToolStripMenuItem)sender).Owner.Tag switch
             {
-                "label1AddButton" => (comboBox1, new Point(ParentCenter.X - 200, ParentCenter.Y + 400)),
-                "label2AddButton" => (comboBox2, new Point(ParentCenter.X + 200, ParentCenter.Y + 400)),
+                "label1AddButton" => (comboBox1,
+                    new Point(ParentCenter.X - 200, ParentCenter.Y + 300)),
+                "label2AddButton" => (comboBox2,
+                    new Point(ParentCenter.X + 200, ParentCenter.Y + 300)),
                 _ => throw new NotImplementedException()
             };
             Transfer transferForm = new (transfer, schema,
@@ -109,9 +111,9 @@ namespace VisualGPSS
             (ComboBox cb, Point center) = ((ToolStripMenuItem)sender).Owner.Tag switch
             {
                 "label1AddButton" => (comboBox1,
-                    new Point(ParentCenter.X - 200, ParentCenter.Y + 400)),
+                    new Point(ParentCenter.X - 200, ParentCenter.Y + 300)),
                 "label2AddButton" => (comboBox2,
-                    new Point(ParentCenter.X + 200, ParentCenter.Y + 400)),
+                    new Point(ParentCenter.X + 200, ParentCenter.Y + 300)),
                 _ => throw new NotImplementedException()
             };
             Device deviceForm = new(schema, center,
@@ -131,9 +133,9 @@ namespace VisualGPSS
             (ComboBox cb, Point center) = ((ToolStripMenuItem)sender).Owner.Tag switch
             {
                 "label1AddButton" => (comboBox1,
-                    new Point(ParentCenter.X - 200, ParentCenter.Y + 400)),
+                    new Point(ParentCenter.X - 200, ParentCenter.Y + 300)),
                 "label2AddButton" => (comboBox2,
-                    new Point(ParentCenter.X + 200, ParentCenter.Y + 400)),
+                    new Point(ParentCenter.X + 200, ParentCenter.Y + 300)),
                 _ => throw new NotImplementedException()
             };
             Block blockForm = new(schema, center,

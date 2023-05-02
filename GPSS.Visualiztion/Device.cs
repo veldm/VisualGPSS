@@ -38,7 +38,27 @@ namespace GPSS.Visualiztion
         { get => essence; set => essence = value; }
 
         [Browsable(false), JsonIgnore] public string QueueName
-        { get => queueName; set => queueName = value; }
+        {
+            get => queueName;
+            set
+            {
+                queueName = value;
+                if (Operators is not null && Operators.Count is not 0)
+                {
+                    if (IsMultiChanell)
+                    {
+                        Operators[0].Arguments[0] = value;
+                        Operators[2].Arguments[0] = value;
+                        Operators[5].Arguments[0] = value;
+                    }
+                    else
+                    {
+                        Operators[0].Arguments[0] = value;
+                        Operators[4].Arguments[0] = value;
+                    }
+                }
+            }
+        }
 
         [Browsable(false), JsonIgnore] private Point[] Points => new Point[] 
         {
@@ -57,9 +77,38 @@ namespace GPSS.Visualiztion
 
         //#pragma warning disable CS0114
         // Член скрывает унаследованный член: отсутствует ключевое слово переопределения
-        [Browsable(false)] public override string Name { get => name; set => name = value; }
+        [Browsable(false)] public override string Name
+        {
+            get => name;
+            set 
+            {
+                name = value;
+                if (Operators is not null && Operators.Count is not 0)
+                {
+                    if (IsMultiChanell)
+                    {
+                        Operators[1].Arguments[0] = value;
+                        Operators[3].Arguments[0] = value;
+                    }
+                    else
+                    {
+                        Operators[0].Arguments[0] = value;
+                        Operators[2].Arguments[0] = value;
+                    }
+                }
+            }
+        }
 
-        [Browsable(false)] public override string Label { get => label; set => label = value; }
+        [Browsable(false)] public override string Label
+        {
+            get => label;
+            set
+            {
+                label = value;
+                if (Operators is not null && Operators.Count is not 0)
+                    Operators[0].Label = value;
+            }
+        }
         //#pragma warning restore CS0114
         // Член скрывает унаследованный член: отсутствует ключевое слово переопределения
 
@@ -96,13 +145,13 @@ namespace GPSS.Visualiztion
             heigth = 170;
 
             Operators = new List<Operator>();
-            QueueName = _queueName;
+            queueName = _queueName;
             name = _name;
             this.label = label;
-            Delay = _delay;
-            Scatter = _scatter;
-            ChanellCount = _chanellCount;
-            TransactSize = _transactSize;
+            delay = _delay;
+            scatter = _scatter;
+            chanellCount = _chanellCount;
+            transactSize = _transactSize;
             string[] args1 = { QueueName };
             string[] args3 = { Delay.ToString(), Scatter.ToString() };
             if (IsMultiChanell)
@@ -138,13 +187,13 @@ namespace GPSS.Visualiztion
                 _mainColor, _linesColor, Font, _fontColor)
         { 
             this.Operators = (List<Operator>)(essence ?? ExtendedParams[0]);
-            this.QueueName = (string)(queueName ?? ExtendedParams[1]);
+            this.queueName = (string)(queueName ?? ExtendedParams[1]);
             this.name = Name;
             this.label = Label;
-            this.Delay = (string)ExtendedParams[2];
-            this.Scatter = (string)ExtendedParams[3];
-            this.ChanellCount = int.Parse(ExtendedParams[4].ToString());
-            this.TransactSize = int.Parse(ExtendedParams[5].ToString());
+            this.delay = (string)ExtendedParams[2];
+            this.scatter = (string)ExtendedParams[3];
+            this.chanellCount = int.Parse(ExtendedParams[4].ToString());
+            this.transactSize = int.Parse(ExtendedParams[5].ToString());
         }
 
         public override void Draw(Graphics graphics, List<VisualElement> otherElements)

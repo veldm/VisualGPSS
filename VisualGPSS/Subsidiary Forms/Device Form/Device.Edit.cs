@@ -66,16 +66,41 @@ namespace VisualGPSS
                 else device.Label = LabelTextBox.Text;
             }
 
-            device.number = uint.Parse(numberComboBox.Text) - 1;
-            device.Label = LabelTextBox.Text;
-            device.Name = NameTextBox.Text;
-            device.QueueName = QueueTextBox.Text;
-            device.Delay = DelayTextBox.Text;
-            device.Scatter = ScatterTextBox.Text;
-            if (ChanellCountCB.Enabled)
+            try
             {
-                device.ChanellCount = (int)ChanellCountCB.Value;
-                device.TransactSize = (int)transactSizeCB.Value;
+                device.number = uint.Parse(numberComboBox.Text) - 1;
+                device.Label = LabelTextBox.Text;
+                device.Name = NameTextBox.Text;
+                device.QueueName = QueueTextBox.Text;
+                device.Delay = DelayTextBox.Text;
+                device.Scatter = ScatterTextBox.Text;
+                if (ChanellCountCB.Enabled)
+                {
+                    device.ChanellCount = (int)ChanellCountCB.Value;
+                    device.TransactSize = (int)transactSizeCB.Value;
+                }
+            }
+            catch (IndexOutOfRangeException)
+            {
+                var index = schema.Elements.IndexOf(device);
+                var newDevice = new GPSS.Visualiztion.Device(
+                    uint.Parse(numberComboBox.Text) - 1, device.center, schema,
+                    LabelTextBox.Text, QueueTextBox.Text, NameTextBox.Text, DelayTextBox.Text,
+                    ScatterTextBox.Text, ChanellCountCB.Enabled ? (int)ChanellCountCB.Value : 1,
+                    ChanellCountCB.Enabled ? (int)transactSizeCB.Value : 1);
+                schema.Elements[index] = newDevice;
+                foreach (var trs in schema.Transfers.Where(t => t.StartBlock == device))
+                    trs.StartBlock = newDevice;
+                foreach (var trs in schema.Transfers.Where(t => t.Block1 == device))
+                    trs.Block1 = newDevice;
+                foreach (var trs in schema.Transfers.Where(t => t.Block2 == device))
+                    trs.Block2 = newDevice;
+                newDevice.BlockColor = device.BlockColor;
+                newDevice.MainColor = device.MainColor;
+                newDevice.FontColor = device.FontColor;
+                newDevice.Font = device.Font;
+                newDevice.LinesColor = device.LinesColor;
+                propertyGrid.SelectedObject = device = newDevice;
             }
 
             //device.number = uint.Parse(numberComboBox.Text);

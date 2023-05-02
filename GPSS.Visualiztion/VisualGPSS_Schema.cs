@@ -383,12 +383,12 @@ namespace GPSS.Visualiztion
                 }
             }
 
-            bool changed;
-            do
-            {
+            //bool changed;
+            //do
+            //{
                 List<VisualTransfer> _trs = Transfers.Where
                     (t => t.Block1 is VisualTransfer || t.Block2 is VisualTransfer).ToList();
-                changed = _trs.Count is 0;
+                //changed = _trs.Count is 0;
                 foreach (VisualTransfer transfer in _trs)
                 {
                     if (transfer.Block1 is VisualTransfer)
@@ -398,7 +398,7 @@ namespace GPSS.Visualiztion
                             VisualElement buf = transfer.Block1;
                             Elements.Remove(transfer.Block1);
                             Elements.Insert(Elements.IndexOf(transfer) + 1, buf);
-                            changed = true;
+                            //changed = true;
                         }
                     }
                     if (transfer.Block2 is VisualTransfer)
@@ -409,12 +409,12 @@ namespace GPSS.Visualiztion
                             VisualElement buf = transfer.Block2;
                             Elements.Remove(transfer.Block2);
                             Elements.Insert(Elements.IndexOf(transfer) + seed, buf);
-                            changed = true;
+                            //changed = true;
                         }
                     }
                 }
-            }
-            while (!changed);
+            //}
+            //while (!changed);
 
             //List<VisualTransfer> elems = (from VisualElement elem in Elements
             //                              where elem is VisualTransfer

@@ -60,7 +60,7 @@ namespace GPSS
                                      where item is not "" select item)
                     result += /*item != arguments.Last() ?*/ $"{item}," /*: $"{item}"*/;
 
-                if (result.Last() is ',') result.Remove(result.Length - 1);
+                if (result.Last() is ',') result = result.Remove(result.Length - 1);
                 //result += arguments.Last();
                 result += comment is null or "" ? "" : $"; {comment}";
                 return result;

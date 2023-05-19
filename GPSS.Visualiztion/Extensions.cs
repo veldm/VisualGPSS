@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GPSS.Visualiztion
 {
-    static class Extensions
+    public static class Extensions
     {
         public static void DrawArrowNear(this Graphics graphics, Pen pen,
             Color bodyColor, Point start, Point destination)

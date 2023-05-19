@@ -12,8 +12,17 @@ namespace VisualGPSS
     public partial class Main : MaterialSkin.Controls.MaterialForm
     {
         #region Мышь
+        private VisualElement activeElement;
+        private VisualBlock resizedBlock;
+        private bool resizing;
+        private (bool isGoing, int xc, int yc) moving;
+        private (bool isGoing, VisualElement startElement) makingTransit;
+
         private void pictureBox_MouseMove(object sender, MouseEventArgs e)
         {
+            //Graphics.FromImage(pictureBox.Image).DrawDashLine
+            //        (new Pen(schema.DefaultElementsLinesColor, 3),
+            //        new Point(0, 0), CursorPosition);
             if (resizing)
             {
                 if (Cursor.Current.Handle == Cursors.SizeNESW.Handle ||
@@ -158,6 +167,13 @@ namespace VisualGPSS
         private void pictureBox_MouseUp(object sender, MouseEventArgs e)
         {
             resizing = moving.isGoing = false;
+            if (makingTransit.isGoing && activeElement is not null)
+            {
+                schema.AddTransfer("TRANSFER_UNCON", makingTransit.startElement,
+                    activeElement, null, 0, null, new string[]
+                    { activeElement.Label is not null ? activeElement.Label :
+                    activeElement.number.ToString() }, null);
+            }
             timer.Stop();
             timer.Enabled = false;
             if (/*Cursor.Current == Cursors.Cross &&*/ creatingOperator is not null)

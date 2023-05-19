@@ -59,11 +59,7 @@ namespace VisualGPSS
             }
         }
 
-        private VisualElement activeElement;
-        private VisualBlock resizedBlock;
-        private bool resizing;
-        private (bool isGoing, int xc, int yc) moving;
-        private Bitmap bitmap;
+        private Bitmap bitmap = null;
         double scale = 1;
 
         private delegate void Creator(object param, Point point);
@@ -180,6 +176,20 @@ namespace VisualGPSS
                 (int)((pictureBox.Height + vScrollBar1.Value) * m)))
             {
                 Graphics graphics = Graphics.FromImage(bitmap);
+
+                if (makingTransit.isGoing)
+                {
+                    if (activeElement is null or VisualTransfer &&
+                        activeElement != makingTransit.startElement)
+                            graphics.DrawDashLine(new Pen(schema.DefaultElementsLinesColor, 3),
+                                makingTransit.startElement.center, CursorPosition);
+                    else graphics.DrawArrowMid(new Pen(schema.DefaultElementsLinesColor, 3),
+                        schema.DefaultFont, schema.DefaultFontColor,
+                        (int)makingTransit.startElement.number + 2,
+                        schema.DefaultElementsColor, makingTransit.startElement.center,
+                        activeElement.center);
+                }
+
                 if (timer.Enabled)
                 {
                     timer.Stop();
@@ -360,5 +370,12 @@ namespace VisualGPSS
         }
 
         #endregion
+
+        private void добавитьПереходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            makingTransit = (true, activeElement);
+            timer.Start();
+            timer.Enabled = true;
+        }
     }
 }

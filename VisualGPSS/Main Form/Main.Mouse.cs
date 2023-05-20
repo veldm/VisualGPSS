@@ -173,6 +173,8 @@ namespace VisualGPSS
                     activeElement, null, 0, null, new string[]
                     { activeElement.Label is not null ? activeElement.Label :
                     activeElement.number.ToString() }, null);
+                graphicsRefresh(sender, e);
+                makingTransit = (false, null);
             }
             timer.Stop();
             timer.Enabled = false;

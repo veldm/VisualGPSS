@@ -90,7 +90,12 @@ namespace VisualGPSS
                         throw new Exception($"Метка {LabelTextBox.Text} уже занята" +
                             $" блоком №{visualElement.number} ({visualElement.Name})");
                     }
-                    else visualBlock.Essence.Label = LabelTextBox.Text;
+                    else
+                    {
+                        string oldLabel = visualBlock.Label;
+                        visualBlock.Label = LabelTextBox.Text;
+                        schema.Elements.UpdateLinks(oldLabel, visualBlock.Label);
+                    }
                 }
 
                 if (CommentTextbox.Text != visualBlock.Essence.Comment)

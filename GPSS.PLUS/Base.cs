@@ -14,7 +14,7 @@ namespace GPSS.PLUS
         }
 
         public static List<string> Functions =>
-            (from item in ps.ToList() select $"{item.name}{item.paramsSignature}").ToList();
+            (from item in ps.ToList() select $"({item.name}{item.paramsSignature})").ToList();
 
         public static List<string> FunctionsHeaders =>
             (from item in ps.ToList() select item.name).ToList();

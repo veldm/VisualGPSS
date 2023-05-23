@@ -208,5 +208,19 @@ namespace GPSS.Visualiztion
             double R = Math.Sqrt(Math.Pow(dx, 2) + Math.Pow(dy, 2));
             return R <= admit;
         }
+
+        public static void UpdateLinks(this List<VisualElement> elements,
+            string oldName, string newName)
+        {
+            foreach (var element in elements.Where(e => e is not Device))
+            {
+                for (int i = 0; i < element.Essence.Arguments.Length; i++)
+                {
+                    string arg = element.Essence.Arguments[i];
+                    if (arg == oldName)
+                        arg = newName;
+                }
+            }
+        }
     }
 }

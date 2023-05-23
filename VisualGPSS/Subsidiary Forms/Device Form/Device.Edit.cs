@@ -63,7 +63,12 @@ namespace VisualGPSS
                     throw new Exception($"Метка {LabelTextBox.Text} уже занята" +
                         $" блоком №{visualElement.number} ({visualElement.Name})");
                 }
-                else device.Label = LabelTextBox.Text;
+                else
+                {
+                    string oldLabel = device.Label;
+                    device.Label = LabelTextBox.Text;
+                    schema.Elements.UpdateLinks(oldLabel, device.Label);
+                }
             }
 
             try

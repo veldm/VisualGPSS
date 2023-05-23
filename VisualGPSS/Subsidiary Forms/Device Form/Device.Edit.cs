@@ -75,8 +75,14 @@ namespace VisualGPSS
             {
                 device.number = uint.Parse(numberComboBox.Text) - 1;
                 device.Label = LabelTextBox.Text;
+
+                string old = device.Name;
                 device.Name = NameTextBox.Text;
+                schema.Elements.UpdateLinks(old, device.Name);
+                old = device.QueueName;
                 device.QueueName = QueueTextBox.Text;
+                schema.Elements.UpdateLinks(old, device.QueueName);
+
                 device.Delay = DelayTextBox.Text;
                 device.Scatter = ScatterTextBox.Text;
                 if (ChanellCountCB.Enabled)

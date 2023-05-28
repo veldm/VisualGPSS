@@ -92,7 +92,7 @@
             "width": 170,
             "heigth": 170,
             "IsMultiChanell": false,
-            "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART qMelkElectrica\nADVANCE Normal(1, 30, 6)\nRELEASE MelkElectrica\n",
+            "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART MelkElectrica\nADVANCE (Normal(1, 30, 6))\nRELEASE qMelkElectrica\n",
             "ExtendedParams": [
               {
                 "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -122,40 +122,40 @@
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 6,
-                    "Code": "DEPART qMelkElectrica",
+                    "Code": "DEPART MelkElectrica",
                     "Label": null,
                     "Name": "DEPART",
                     "Arguments": [
-                      "qMelkElectrica"
+                      "MelkElectrica"
                     ],
                     "Comment": null
                   },
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 2,
-                    "Code": "ADVANCE Normal(1, 30, 6)",
+                    "Code": "ADVANCE (Normal(1, 30, 6))",
                     "Label": null,
                     "Name": "ADVANCE",
                     "Arguments": [
-                      "Normal(1, 30, 6)"
+                      "(Normal(1, 30, 6))"
                     ],
                     "Comment": null
                   },
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 4,
-                    "Code": "RELEASE MelkElectrica",
+                    "Code": "RELEASE qMelkElectrica",
                     "Label": null,
                     "Name": "RELEASE",
                     "Arguments": [
-                      "MelkElectrica"
+                      "qMelkElectrica"
                     ],
                     "Comment": null
                   }
                 ]
               },
               "qMelkElectrica",
-              "Normal(1, 30, 6)",
+              "(Normal(1, 30, 6))",
               "",
               1,
               1
@@ -176,7 +176,7 @@
             "width": 170,
             "heigth": 170,
             "IsMultiChanell": false,
-            "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART qKrupnElectrica\nADVANCE Normal(1, 180, 30)\nRELEASE KrupnElectrica\n",
+            "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART KrupnElectrica\nADVANCE (Normal(1, 180, 30))\nRELEASE qKrupnElectrica\n",
             "ExtendedParams": [
               {
                 "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -206,40 +206,40 @@
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 6,
-                    "Code": "DEPART qKrupnElectrica",
+                    "Code": "DEPART KrupnElectrica",
                     "Label": null,
                     "Name": "DEPART",
                     "Arguments": [
-                      "qKrupnElectrica"
+                      "KrupnElectrica"
                     ],
                     "Comment": null
                   },
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 2,
-                    "Code": "ADVANCE Normal(1, 180, 30)",
+                    "Code": "ADVANCE (Normal(1, 180, 30))",
                     "Label": null,
                     "Name": "ADVANCE",
                     "Arguments": [
-                      "Normal(1, 180, 30)"
+                      "(Normal(1, 180, 30))"
                     ],
                     "Comment": null
                   },
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 4,
-                    "Code": "RELEASE KrupnElectrica",
+                    "Code": "RELEASE qKrupnElectrica",
                     "Label": null,
                     "Name": "RELEASE",
                     "Arguments": [
-                      "KrupnElectrica"
+                      "qKrupnElectrica"
                     ],
                     "Comment": null
                   }
                 ]
               },
               "qKrupnElectrica",
-              "Normal(1, 180, 30)",
+              "(Normal(1, 180, 30))",
               "",
               1,
               1
@@ -262,7 +262,7 @@
               "width": 170,
               "heigth": 170,
               "IsMultiChanell": false,
-              "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART qMelkElectrica\nADVANCE Normal(1, 30, 6)\nRELEASE MelkElectrica\n",
+              "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART MelkElectrica\nADVANCE (Normal(1, 30, 6))\nRELEASE qMelkElectrica\n",
               "ExtendedParams": [
                 {
                   "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -292,40 +292,40 @@
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 6,
-                      "Code": "DEPART qMelkElectrica",
+                      "Code": "DEPART MelkElectrica",
                       "Label": null,
                       "Name": "DEPART",
                       "Arguments": [
-                        "qMelkElectrica"
+                        "MelkElectrica"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 2,
-                      "Code": "ADVANCE Normal(1, 30, 6)",
+                      "Code": "ADVANCE (Normal(1, 30, 6))",
                       "Label": null,
                       "Name": "ADVANCE",
                       "Arguments": [
-                        "Normal(1, 30, 6)"
+                        "(Normal(1, 30, 6))"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 4,
-                      "Code": "RELEASE MelkElectrica",
+                      "Code": "RELEASE qMelkElectrica",
                       "Label": null,
                       "Name": "RELEASE",
                       "Arguments": [
-                        "MelkElectrica"
+                        "qMelkElectrica"
                       ],
                       "Comment": null
                     }
                   ]
                 },
                 "qMelkElectrica",
-                "Normal(1, 30, 6)",
+                "(Normal(1, 30, 6))",
                 "",
                 1,
                 1
@@ -346,7 +346,7 @@
               "width": 170,
               "heigth": 170,
               "IsMultiChanell": false,
-              "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART qKrupnElectrica\nADVANCE Normal(1, 180, 30)\nRELEASE KrupnElectrica\n",
+              "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART KrupnElectrica\nADVANCE (Normal(1, 180, 30))\nRELEASE qKrupnElectrica\n",
               "ExtendedParams": [
                 {
                   "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -376,40 +376,40 @@
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 6,
-                      "Code": "DEPART qKrupnElectrica",
+                      "Code": "DEPART KrupnElectrica",
                       "Label": null,
                       "Name": "DEPART",
                       "Arguments": [
-                        "qKrupnElectrica"
+                        "KrupnElectrica"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 2,
-                      "Code": "ADVANCE Normal(1, 180, 30)",
+                      "Code": "ADVANCE (Normal(1, 180, 30))",
                       "Label": null,
                       "Name": "ADVANCE",
                       "Arguments": [
-                        "Normal(1, 180, 30)"
+                        "(Normal(1, 180, 30))"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 4,
-                      "Code": "RELEASE KrupnElectrica",
+                      "Code": "RELEASE qKrupnElectrica",
                       "Label": null,
                       "Name": "RELEASE",
                       "Arguments": [
-                        "KrupnElectrica"
+                        "qKrupnElectrica"
                       ],
                       "Comment": null
                     }
                   ]
                 },
                 "qKrupnElectrica",
-                "Normal(1, 180, 30)",
+                "(Normal(1, 180, 30))",
                 "",
                 1,
                 1
@@ -471,7 +471,7 @@
             "width": 170,
             "heigth": 170,
             "IsMultiChanell": false,
-            "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART qKuzov\nADVANCE Normal(1, 90, 36)\nRELEASE Kuzov\n",
+            "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART Kuzov\nADVANCE (Normal(1, 90, 36))\nRELEASE qKuzov\n",
             "ExtendedParams": [
               {
                 "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -501,40 +501,40 @@
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 6,
-                    "Code": "DEPART qKuzov",
+                    "Code": "DEPART Kuzov",
                     "Label": null,
                     "Name": "DEPART",
                     "Arguments": [
-                      "qKuzov"
+                      "Kuzov"
                     ],
                     "Comment": null
                   },
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 2,
-                    "Code": "ADVANCE Normal(1, 90, 36)",
+                    "Code": "ADVANCE (Normal(1, 90, 36))",
                     "Label": null,
                     "Name": "ADVANCE",
                     "Arguments": [
-                      "Normal(1, 90, 36)"
+                      "(Normal(1, 90, 36))"
                     ],
                     "Comment": null
                   },
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 4,
-                    "Code": "RELEASE Kuzov",
+                    "Code": "RELEASE qKuzov",
                     "Label": null,
                     "Name": "RELEASE",
                     "Arguments": [
-                      "Kuzov"
+                      "qKuzov"
                     ],
                     "Comment": null
                   }
                 ]
               },
               "qKuzov",
-              "Normal(1, 90, 36)",
+              "(Normal(1, 90, 36))",
               "",
               1,
               1
@@ -555,7 +555,7 @@
             "width": 170,
             "heigth": 170,
             "IsMultiChanell": false,
-            "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART qSlesarn\nADVANCE Normal(1, 130, 40)\nRELEASE Slesarn\n",
+            "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART Slesarn\nADVANCE (Normal(1, 130, 40))\nRELEASE qSlesarn\n",
             "ExtendedParams": [
               {
                 "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -585,40 +585,40 @@
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 6,
-                    "Code": "DEPART qSlesarn",
+                    "Code": "DEPART Slesarn",
                     "Label": null,
                     "Name": "DEPART",
                     "Arguments": [
-                      "qSlesarn"
+                      "Slesarn"
                     ],
                     "Comment": null
                   },
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 2,
-                    "Code": "ADVANCE Normal(1, 130, 40)",
+                    "Code": "ADVANCE (Normal(1, 130, 40))",
                     "Label": null,
                     "Name": "ADVANCE",
                     "Arguments": [
-                      "Normal(1, 130, 40)"
+                      "(Normal(1, 130, 40))"
                     ],
                     "Comment": null
                   },
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 4,
-                    "Code": "RELEASE Slesarn",
+                    "Code": "RELEASE qSlesarn",
                     "Label": null,
                     "Name": "RELEASE",
                     "Arguments": [
-                      "Slesarn"
+                      "qSlesarn"
                     ],
                     "Comment": null
                   }
                 ]
               },
               "qSlesarn",
-              "Normal(1, 130, 40)",
+              "(Normal(1, 130, 40))",
               "",
               1,
               1
@@ -641,7 +641,7 @@
               "width": 170,
               "heigth": 170,
               "IsMultiChanell": false,
-              "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART qKuzov\nADVANCE Normal(1, 90, 36)\nRELEASE Kuzov\n",
+              "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART Kuzov\nADVANCE (Normal(1, 90, 36))\nRELEASE qKuzov\n",
               "ExtendedParams": [
                 {
                   "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -671,40 +671,40 @@
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 6,
-                      "Code": "DEPART qKuzov",
+                      "Code": "DEPART Kuzov",
                       "Label": null,
                       "Name": "DEPART",
                       "Arguments": [
-                        "qKuzov"
+                        "Kuzov"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 2,
-                      "Code": "ADVANCE Normal(1, 90, 36)",
+                      "Code": "ADVANCE (Normal(1, 90, 36))",
                       "Label": null,
                       "Name": "ADVANCE",
                       "Arguments": [
-                        "Normal(1, 90, 36)"
+                        "(Normal(1, 90, 36))"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 4,
-                      "Code": "RELEASE Kuzov",
+                      "Code": "RELEASE qKuzov",
                       "Label": null,
                       "Name": "RELEASE",
                       "Arguments": [
-                        "Kuzov"
+                        "qKuzov"
                       ],
                       "Comment": null
                     }
                   ]
                 },
                 "qKuzov",
-                "Normal(1, 90, 36)",
+                "(Normal(1, 90, 36))",
                 "",
                 1,
                 1
@@ -725,7 +725,7 @@
               "width": 170,
               "heigth": 170,
               "IsMultiChanell": false,
-              "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART qSlesarn\nADVANCE Normal(1, 130, 40)\nRELEASE Slesarn\n",
+              "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART Slesarn\nADVANCE (Normal(1, 130, 40))\nRELEASE qSlesarn\n",
               "ExtendedParams": [
                 {
                   "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -755,40 +755,40 @@
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 6,
-                      "Code": "DEPART qSlesarn",
+                      "Code": "DEPART Slesarn",
                       "Label": null,
                       "Name": "DEPART",
                       "Arguments": [
-                        "qSlesarn"
+                        "Slesarn"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 2,
-                      "Code": "ADVANCE Normal(1, 130, 40)",
+                      "Code": "ADVANCE (Normal(1, 130, 40))",
                       "Label": null,
                       "Name": "ADVANCE",
                       "Arguments": [
-                        "Normal(1, 130, 40)"
+                        "(Normal(1, 130, 40))"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 4,
-                      "Code": "RELEASE Slesarn",
+                      "Code": "RELEASE qSlesarn",
                       "Label": null,
                       "Name": "RELEASE",
                       "Arguments": [
-                        "Slesarn"
+                        "qSlesarn"
                       ],
                       "Comment": null
                     }
                   ]
                 },
                 "qSlesarn",
-                "Normal(1, 130, 40)",
+                "(Normal(1, 130, 40))",
                 "",
                 1,
                 1
@@ -852,7 +852,7 @@
               "width": 170,
               "heigth": 170,
               "IsMultiChanell": false,
-              "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART qMelkElectrica\nADVANCE Normal(1, 30, 6)\nRELEASE MelkElectrica\n",
+              "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART MelkElectrica\nADVANCE (Normal(1, 30, 6))\nRELEASE qMelkElectrica\n",
               "ExtendedParams": [
                 {
                   "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -882,40 +882,40 @@
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 6,
-                      "Code": "DEPART qMelkElectrica",
+                      "Code": "DEPART MelkElectrica",
                       "Label": null,
                       "Name": "DEPART",
                       "Arguments": [
-                        "qMelkElectrica"
+                        "MelkElectrica"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 2,
-                      "Code": "ADVANCE Normal(1, 30, 6)",
+                      "Code": "ADVANCE (Normal(1, 30, 6))",
                       "Label": null,
                       "Name": "ADVANCE",
                       "Arguments": [
-                        "Normal(1, 30, 6)"
+                        "(Normal(1, 30, 6))"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 4,
-                      "Code": "RELEASE MelkElectrica",
+                      "Code": "RELEASE qMelkElectrica",
                       "Label": null,
                       "Name": "RELEASE",
                       "Arguments": [
-                        "MelkElectrica"
+                        "qMelkElectrica"
                       ],
                       "Comment": null
                     }
                   ]
                 },
                 "qMelkElectrica",
-                "Normal(1, 30, 6)",
+                "(Normal(1, 30, 6))",
                 "",
                 1,
                 1
@@ -936,7 +936,7 @@
               "width": 170,
               "heigth": 170,
               "IsMultiChanell": false,
-              "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART qKrupnElectrica\nADVANCE Normal(1, 180, 30)\nRELEASE KrupnElectrica\n",
+              "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART KrupnElectrica\nADVANCE (Normal(1, 180, 30))\nRELEASE qKrupnElectrica\n",
               "ExtendedParams": [
                 {
                   "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -966,40 +966,40 @@
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 6,
-                      "Code": "DEPART qKrupnElectrica",
+                      "Code": "DEPART KrupnElectrica",
                       "Label": null,
                       "Name": "DEPART",
                       "Arguments": [
-                        "qKrupnElectrica"
+                        "KrupnElectrica"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 2,
-                      "Code": "ADVANCE Normal(1, 180, 30)",
+                      "Code": "ADVANCE (Normal(1, 180, 30))",
                       "Label": null,
                       "Name": "ADVANCE",
                       "Arguments": [
-                        "Normal(1, 180, 30)"
+                        "(Normal(1, 180, 30))"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 4,
-                      "Code": "RELEASE KrupnElectrica",
+                      "Code": "RELEASE qKrupnElectrica",
                       "Label": null,
                       "Name": "RELEASE",
                       "Arguments": [
-                        "KrupnElectrica"
+                        "qKrupnElectrica"
                       ],
                       "Comment": null
                     }
                   ]
                 },
                 "qKrupnElectrica",
-                "Normal(1, 180, 30)",
+                "(Normal(1, 180, 30))",
                 "",
                 1,
                 1
@@ -1022,7 +1022,7 @@
                 "width": 170,
                 "heigth": 170,
                 "IsMultiChanell": false,
-                "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART qMelkElectrica\nADVANCE Normal(1, 30, 6)\nRELEASE MelkElectrica\n",
+                "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART MelkElectrica\nADVANCE (Normal(1, 30, 6))\nRELEASE qMelkElectrica\n",
                 "ExtendedParams": [
                   {
                     "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -1052,40 +1052,40 @@
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 6,
-                        "Code": "DEPART qMelkElectrica",
+                        "Code": "DEPART MelkElectrica",
                         "Label": null,
                         "Name": "DEPART",
                         "Arguments": [
-                          "qMelkElectrica"
+                          "MelkElectrica"
                         ],
                         "Comment": null
                       },
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 2,
-                        "Code": "ADVANCE Normal(1, 30, 6)",
+                        "Code": "ADVANCE (Normal(1, 30, 6))",
                         "Label": null,
                         "Name": "ADVANCE",
                         "Arguments": [
-                          "Normal(1, 30, 6)"
+                          "(Normal(1, 30, 6))"
                         ],
                         "Comment": null
                       },
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 4,
-                        "Code": "RELEASE MelkElectrica",
+                        "Code": "RELEASE qMelkElectrica",
                         "Label": null,
                         "Name": "RELEASE",
                         "Arguments": [
-                          "MelkElectrica"
+                          "qMelkElectrica"
                         ],
                         "Comment": null
                       }
                     ]
                   },
                   "qMelkElectrica",
-                  "Normal(1, 30, 6)",
+                  "(Normal(1, 30, 6))",
                   "",
                   1,
                   1
@@ -1106,7 +1106,7 @@
                 "width": 170,
                 "heigth": 170,
                 "IsMultiChanell": false,
-                "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART qKrupnElectrica\nADVANCE Normal(1, 180, 30)\nRELEASE KrupnElectrica\n",
+                "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART KrupnElectrica\nADVANCE (Normal(1, 180, 30))\nRELEASE qKrupnElectrica\n",
                 "ExtendedParams": [
                   {
                     "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -1136,40 +1136,40 @@
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 6,
-                        "Code": "DEPART qKrupnElectrica",
+                        "Code": "DEPART KrupnElectrica",
                         "Label": null,
                         "Name": "DEPART",
                         "Arguments": [
-                          "qKrupnElectrica"
+                          "KrupnElectrica"
                         ],
                         "Comment": null
                       },
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 2,
-                        "Code": "ADVANCE Normal(1, 180, 30)",
+                        "Code": "ADVANCE (Normal(1, 180, 30))",
                         "Label": null,
                         "Name": "ADVANCE",
                         "Arguments": [
-                          "Normal(1, 180, 30)"
+                          "(Normal(1, 180, 30))"
                         ],
                         "Comment": null
                       },
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 4,
-                        "Code": "RELEASE KrupnElectrica",
+                        "Code": "RELEASE qKrupnElectrica",
                         "Label": null,
                         "Name": "RELEASE",
                         "Arguments": [
-                          "KrupnElectrica"
+                          "qKrupnElectrica"
                         ],
                         "Comment": null
                       }
                     ]
                   },
                   "qKrupnElectrica",
-                  "Normal(1, 180, 30)",
+                  "(Normal(1, 180, 30))",
                   "",
                   1,
                   1
@@ -1231,7 +1231,7 @@
               "width": 170,
               "heigth": 170,
               "IsMultiChanell": false,
-              "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART qKuzov\nADVANCE Normal(1, 90, 36)\nRELEASE Kuzov\n",
+              "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART Kuzov\nADVANCE (Normal(1, 90, 36))\nRELEASE qKuzov\n",
               "ExtendedParams": [
                 {
                   "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -1261,40 +1261,40 @@
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 6,
-                      "Code": "DEPART qKuzov",
+                      "Code": "DEPART Kuzov",
                       "Label": null,
                       "Name": "DEPART",
                       "Arguments": [
-                        "qKuzov"
+                        "Kuzov"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 2,
-                      "Code": "ADVANCE Normal(1, 90, 36)",
+                      "Code": "ADVANCE (Normal(1, 90, 36))",
                       "Label": null,
                       "Name": "ADVANCE",
                       "Arguments": [
-                        "Normal(1, 90, 36)"
+                        "(Normal(1, 90, 36))"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 4,
-                      "Code": "RELEASE Kuzov",
+                      "Code": "RELEASE qKuzov",
                       "Label": null,
                       "Name": "RELEASE",
                       "Arguments": [
-                        "Kuzov"
+                        "qKuzov"
                       ],
                       "Comment": null
                     }
                   ]
                 },
                 "qKuzov",
-                "Normal(1, 90, 36)",
+                "(Normal(1, 90, 36))",
                 "",
                 1,
                 1
@@ -1315,7 +1315,7 @@
               "width": 170,
               "heigth": 170,
               "IsMultiChanell": false,
-              "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART qSlesarn\nADVANCE Normal(1, 130, 40)\nRELEASE Slesarn\n",
+              "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART Slesarn\nADVANCE (Normal(1, 130, 40))\nRELEASE qSlesarn\n",
               "ExtendedParams": [
                 {
                   "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -1345,40 +1345,40 @@
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 6,
-                      "Code": "DEPART qSlesarn",
+                      "Code": "DEPART Slesarn",
                       "Label": null,
                       "Name": "DEPART",
                       "Arguments": [
-                        "qSlesarn"
+                        "Slesarn"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 2,
-                      "Code": "ADVANCE Normal(1, 130, 40)",
+                      "Code": "ADVANCE (Normal(1, 130, 40))",
                       "Label": null,
                       "Name": "ADVANCE",
                       "Arguments": [
-                        "Normal(1, 130, 40)"
+                        "(Normal(1, 130, 40))"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 4,
-                      "Code": "RELEASE Slesarn",
+                      "Code": "RELEASE qSlesarn",
                       "Label": null,
                       "Name": "RELEASE",
                       "Arguments": [
-                        "Slesarn"
+                        "qSlesarn"
                       ],
                       "Comment": null
                     }
                   ]
                 },
                 "qSlesarn",
-                "Normal(1, 130, 40)",
+                "(Normal(1, 130, 40))",
                 "",
                 1,
                 1
@@ -1401,7 +1401,7 @@
                 "width": 170,
                 "heigth": 170,
                 "IsMultiChanell": false,
-                "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART qKuzov\nADVANCE Normal(1, 90, 36)\nRELEASE Kuzov\n",
+                "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART Kuzov\nADVANCE (Normal(1, 90, 36))\nRELEASE qKuzov\n",
                 "ExtendedParams": [
                   {
                     "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -1431,40 +1431,40 @@
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 6,
-                        "Code": "DEPART qKuzov",
+                        "Code": "DEPART Kuzov",
                         "Label": null,
                         "Name": "DEPART",
                         "Arguments": [
-                          "qKuzov"
+                          "Kuzov"
                         ],
                         "Comment": null
                       },
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 2,
-                        "Code": "ADVANCE Normal(1, 90, 36)",
+                        "Code": "ADVANCE (Normal(1, 90, 36))",
                         "Label": null,
                         "Name": "ADVANCE",
                         "Arguments": [
-                          "Normal(1, 90, 36)"
+                          "(Normal(1, 90, 36))"
                         ],
                         "Comment": null
                       },
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 4,
-                        "Code": "RELEASE Kuzov",
+                        "Code": "RELEASE qKuzov",
                         "Label": null,
                         "Name": "RELEASE",
                         "Arguments": [
-                          "Kuzov"
+                          "qKuzov"
                         ],
                         "Comment": null
                       }
                     ]
                   },
                   "qKuzov",
-                  "Normal(1, 90, 36)",
+                  "(Normal(1, 90, 36))",
                   "",
                   1,
                   1
@@ -1485,7 +1485,7 @@
                 "width": 170,
                 "heigth": 170,
                 "IsMultiChanell": false,
-                "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART qSlesarn\nADVANCE Normal(1, 130, 40)\nRELEASE Slesarn\n",
+                "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART Slesarn\nADVANCE (Normal(1, 130, 40))\nRELEASE qSlesarn\n",
                 "ExtendedParams": [
                   {
                     "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -1515,40 +1515,40 @@
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 6,
-                        "Code": "DEPART qSlesarn",
+                        "Code": "DEPART Slesarn",
                         "Label": null,
                         "Name": "DEPART",
                         "Arguments": [
-                          "qSlesarn"
+                          "Slesarn"
                         ],
                         "Comment": null
                       },
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 2,
-                        "Code": "ADVANCE Normal(1, 130, 40)",
+                        "Code": "ADVANCE (Normal(1, 130, 40))",
                         "Label": null,
                         "Name": "ADVANCE",
                         "Arguments": [
-                          "Normal(1, 130, 40)"
+                          "(Normal(1, 130, 40))"
                         ],
                         "Comment": null
                       },
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 4,
-                        "Code": "RELEASE Slesarn",
+                        "Code": "RELEASE qSlesarn",
                         "Label": null,
                         "Name": "RELEASE",
                         "Arguments": [
-                          "Slesarn"
+                          "qSlesarn"
                         ],
                         "Comment": null
                       }
                     ]
                   },
                   "qSlesarn",
-                  "Normal(1, 130, 40)",
+                  "(Normal(1, 130, 40))",
                   "",
                   1,
                   1
@@ -1609,11 +1609,11 @@
       "Block2": {
         "$type": "GPSS.Visualiztion.Device, GPSS.Visualiztion",
         "number": 5,
-        "center": "1826, 1060",
+        "center": "1836, 1008",
         "width": 170,
         "heigth": 170,
         "IsMultiChanell": false,
-        "Code": "\ndiagnostica QUEUE qDiagnostica\nSEIZE Diagnostica\nDEPART qDiagnostica\nADVANCE Normal(1, 20, 4)\nRELEASE Diagnostica\n",
+        "Code": "\ndiagnostica QUEUE qDiagnostica\nSEIZE Diagnostica\nDEPART Diagnostica\nADVANCE (Normal(1, 20, 4))\nRELEASE qDiagnostica\n",
         "ExtendedParams": [
           {
             "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -1643,40 +1643,40 @@
               {
                 "$type": "GPSS.Block, GPSS",
                 "Type": 6,
-                "Code": "DEPART qDiagnostica",
+                "Code": "DEPART Diagnostica",
                 "Label": null,
                 "Name": "DEPART",
                 "Arguments": [
-                  "qDiagnostica"
+                  "Diagnostica"
                 ],
                 "Comment": null
               },
               {
                 "$type": "GPSS.Block, GPSS",
                 "Type": 2,
-                "Code": "ADVANCE Normal(1, 20, 4)",
+                "Code": "ADVANCE (Normal(1, 20, 4))",
                 "Label": null,
                 "Name": "ADVANCE",
                 "Arguments": [
-                  "Normal(1, 20, 4)"
+                  "(Normal(1, 20, 4))"
                 ],
                 "Comment": null
               },
               {
                 "$type": "GPSS.Block, GPSS",
                 "Type": 4,
-                "Code": "RELEASE Diagnostica",
+                "Code": "RELEASE qDiagnostica",
                 "Label": null,
                 "Name": "RELEASE",
                 "Arguments": [
-                  "Diagnostica"
+                  "qDiagnostica"
                 ],
                 "Comment": null
               }
             ]
           },
           "qDiagnostica",
-          "Normal(1, 20, 4)",
+          "(Normal(1, 20, 4))",
           "",
           1,
           1
@@ -1737,7 +1737,7 @@
               "width": 170,
               "heigth": 170,
               "IsMultiChanell": false,
-              "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART qMelkElectrica\nADVANCE Normal(1, 30, 6)\nRELEASE MelkElectrica\n",
+              "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART MelkElectrica\nADVANCE (Normal(1, 30, 6))\nRELEASE qMelkElectrica\n",
               "ExtendedParams": [
                 {
                   "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -1767,40 +1767,40 @@
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 6,
-                      "Code": "DEPART qMelkElectrica",
+                      "Code": "DEPART MelkElectrica",
                       "Label": null,
                       "Name": "DEPART",
                       "Arguments": [
-                        "qMelkElectrica"
+                        "MelkElectrica"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 2,
-                      "Code": "ADVANCE Normal(1, 30, 6)",
+                      "Code": "ADVANCE (Normal(1, 30, 6))",
                       "Label": null,
                       "Name": "ADVANCE",
                       "Arguments": [
-                        "Normal(1, 30, 6)"
+                        "(Normal(1, 30, 6))"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 4,
-                      "Code": "RELEASE MelkElectrica",
+                      "Code": "RELEASE qMelkElectrica",
                       "Label": null,
                       "Name": "RELEASE",
                       "Arguments": [
-                        "MelkElectrica"
+                        "qMelkElectrica"
                       ],
                       "Comment": null
                     }
                   ]
                 },
                 "qMelkElectrica",
-                "Normal(1, 30, 6)",
+                "(Normal(1, 30, 6))",
                 "",
                 1,
                 1
@@ -1821,7 +1821,7 @@
               "width": 170,
               "heigth": 170,
               "IsMultiChanell": false,
-              "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART qKrupnElectrica\nADVANCE Normal(1, 180, 30)\nRELEASE KrupnElectrica\n",
+              "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART KrupnElectrica\nADVANCE (Normal(1, 180, 30))\nRELEASE qKrupnElectrica\n",
               "ExtendedParams": [
                 {
                   "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -1851,40 +1851,40 @@
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 6,
-                      "Code": "DEPART qKrupnElectrica",
+                      "Code": "DEPART KrupnElectrica",
                       "Label": null,
                       "Name": "DEPART",
                       "Arguments": [
-                        "qKrupnElectrica"
+                        "KrupnElectrica"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 2,
-                      "Code": "ADVANCE Normal(1, 180, 30)",
+                      "Code": "ADVANCE (Normal(1, 180, 30))",
                       "Label": null,
                       "Name": "ADVANCE",
                       "Arguments": [
-                        "Normal(1, 180, 30)"
+                        "(Normal(1, 180, 30))"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 4,
-                      "Code": "RELEASE KrupnElectrica",
+                      "Code": "RELEASE qKrupnElectrica",
                       "Label": null,
                       "Name": "RELEASE",
                       "Arguments": [
-                        "KrupnElectrica"
+                        "qKrupnElectrica"
                       ],
                       "Comment": null
                     }
                   ]
                 },
                 "qKrupnElectrica",
-                "Normal(1, 180, 30)",
+                "(Normal(1, 180, 30))",
                 "",
                 1,
                 1
@@ -1907,7 +1907,7 @@
                 "width": 170,
                 "heigth": 170,
                 "IsMultiChanell": false,
-                "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART qMelkElectrica\nADVANCE Normal(1, 30, 6)\nRELEASE MelkElectrica\n",
+                "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART MelkElectrica\nADVANCE (Normal(1, 30, 6))\nRELEASE qMelkElectrica\n",
                 "ExtendedParams": [
                   {
                     "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -1937,40 +1937,40 @@
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 6,
-                        "Code": "DEPART qMelkElectrica",
+                        "Code": "DEPART MelkElectrica",
                         "Label": null,
                         "Name": "DEPART",
                         "Arguments": [
-                          "qMelkElectrica"
+                          "MelkElectrica"
                         ],
                         "Comment": null
                       },
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 2,
-                        "Code": "ADVANCE Normal(1, 30, 6)",
+                        "Code": "ADVANCE (Normal(1, 30, 6))",
                         "Label": null,
                         "Name": "ADVANCE",
                         "Arguments": [
-                          "Normal(1, 30, 6)"
+                          "(Normal(1, 30, 6))"
                         ],
                         "Comment": null
                       },
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 4,
-                        "Code": "RELEASE MelkElectrica",
+                        "Code": "RELEASE qMelkElectrica",
                         "Label": null,
                         "Name": "RELEASE",
                         "Arguments": [
-                          "MelkElectrica"
+                          "qMelkElectrica"
                         ],
                         "Comment": null
                       }
                     ]
                   },
                   "qMelkElectrica",
-                  "Normal(1, 30, 6)",
+                  "(Normal(1, 30, 6))",
                   "",
                   1,
                   1
@@ -1991,7 +1991,7 @@
                 "width": 170,
                 "heigth": 170,
                 "IsMultiChanell": false,
-                "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART qKrupnElectrica\nADVANCE Normal(1, 180, 30)\nRELEASE KrupnElectrica\n",
+                "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART KrupnElectrica\nADVANCE (Normal(1, 180, 30))\nRELEASE qKrupnElectrica\n",
                 "ExtendedParams": [
                   {
                     "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -2021,40 +2021,40 @@
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 6,
-                        "Code": "DEPART qKrupnElectrica",
+                        "Code": "DEPART KrupnElectrica",
                         "Label": null,
                         "Name": "DEPART",
                         "Arguments": [
-                          "qKrupnElectrica"
+                          "KrupnElectrica"
                         ],
                         "Comment": null
                       },
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 2,
-                        "Code": "ADVANCE Normal(1, 180, 30)",
+                        "Code": "ADVANCE (Normal(1, 180, 30))",
                         "Label": null,
                         "Name": "ADVANCE",
                         "Arguments": [
-                          "Normal(1, 180, 30)"
+                          "(Normal(1, 180, 30))"
                         ],
                         "Comment": null
                       },
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 4,
-                        "Code": "RELEASE KrupnElectrica",
+                        "Code": "RELEASE qKrupnElectrica",
                         "Label": null,
                         "Name": "RELEASE",
                         "Arguments": [
-                          "KrupnElectrica"
+                          "qKrupnElectrica"
                         ],
                         "Comment": null
                       }
                     ]
                   },
                   "qKrupnElectrica",
-                  "Normal(1, 180, 30)",
+                  "(Normal(1, 180, 30))",
                   "",
                   1,
                   1
@@ -2116,7 +2116,7 @@
               "width": 170,
               "heigth": 170,
               "IsMultiChanell": false,
-              "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART qKuzov\nADVANCE Normal(1, 90, 36)\nRELEASE Kuzov\n",
+              "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART Kuzov\nADVANCE (Normal(1, 90, 36))\nRELEASE qKuzov\n",
               "ExtendedParams": [
                 {
                   "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -2146,40 +2146,40 @@
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 6,
-                      "Code": "DEPART qKuzov",
+                      "Code": "DEPART Kuzov",
                       "Label": null,
                       "Name": "DEPART",
                       "Arguments": [
-                        "qKuzov"
+                        "Kuzov"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 2,
-                      "Code": "ADVANCE Normal(1, 90, 36)",
+                      "Code": "ADVANCE (Normal(1, 90, 36))",
                       "Label": null,
                       "Name": "ADVANCE",
                       "Arguments": [
-                        "Normal(1, 90, 36)"
+                        "(Normal(1, 90, 36))"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 4,
-                      "Code": "RELEASE Kuzov",
+                      "Code": "RELEASE qKuzov",
                       "Label": null,
                       "Name": "RELEASE",
                       "Arguments": [
-                        "Kuzov"
+                        "qKuzov"
                       ],
                       "Comment": null
                     }
                   ]
                 },
                 "qKuzov",
-                "Normal(1, 90, 36)",
+                "(Normal(1, 90, 36))",
                 "",
                 1,
                 1
@@ -2200,7 +2200,7 @@
               "width": 170,
               "heigth": 170,
               "IsMultiChanell": false,
-              "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART qSlesarn\nADVANCE Normal(1, 130, 40)\nRELEASE Slesarn\n",
+              "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART Slesarn\nADVANCE (Normal(1, 130, 40))\nRELEASE qSlesarn\n",
               "ExtendedParams": [
                 {
                   "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -2230,40 +2230,40 @@
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 6,
-                      "Code": "DEPART qSlesarn",
+                      "Code": "DEPART Slesarn",
                       "Label": null,
                       "Name": "DEPART",
                       "Arguments": [
-                        "qSlesarn"
+                        "Slesarn"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 2,
-                      "Code": "ADVANCE Normal(1, 130, 40)",
+                      "Code": "ADVANCE (Normal(1, 130, 40))",
                       "Label": null,
                       "Name": "ADVANCE",
                       "Arguments": [
-                        "Normal(1, 130, 40)"
+                        "(Normal(1, 130, 40))"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 4,
-                      "Code": "RELEASE Slesarn",
+                      "Code": "RELEASE qSlesarn",
                       "Label": null,
                       "Name": "RELEASE",
                       "Arguments": [
-                        "Slesarn"
+                        "qSlesarn"
                       ],
                       "Comment": null
                     }
                   ]
                 },
                 "qSlesarn",
-                "Normal(1, 130, 40)",
+                "(Normal(1, 130, 40))",
                 "",
                 1,
                 1
@@ -2286,7 +2286,7 @@
                 "width": 170,
                 "heigth": 170,
                 "IsMultiChanell": false,
-                "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART qKuzov\nADVANCE Normal(1, 90, 36)\nRELEASE Kuzov\n",
+                "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART Kuzov\nADVANCE (Normal(1, 90, 36))\nRELEASE qKuzov\n",
                 "ExtendedParams": [
                   {
                     "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -2316,40 +2316,40 @@
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 6,
-                        "Code": "DEPART qKuzov",
+                        "Code": "DEPART Kuzov",
                         "Label": null,
                         "Name": "DEPART",
                         "Arguments": [
-                          "qKuzov"
+                          "Kuzov"
                         ],
                         "Comment": null
                       },
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 2,
-                        "Code": "ADVANCE Normal(1, 90, 36)",
+                        "Code": "ADVANCE (Normal(1, 90, 36))",
                         "Label": null,
                         "Name": "ADVANCE",
                         "Arguments": [
-                          "Normal(1, 90, 36)"
+                          "(Normal(1, 90, 36))"
                         ],
                         "Comment": null
                       },
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 4,
-                        "Code": "RELEASE Kuzov",
+                        "Code": "RELEASE qKuzov",
                         "Label": null,
                         "Name": "RELEASE",
                         "Arguments": [
-                          "Kuzov"
+                          "qKuzov"
                         ],
                         "Comment": null
                       }
                     ]
                   },
                   "qKuzov",
-                  "Normal(1, 90, 36)",
+                  "(Normal(1, 90, 36))",
                   "",
                   1,
                   1
@@ -2370,7 +2370,7 @@
                 "width": 170,
                 "heigth": 170,
                 "IsMultiChanell": false,
-                "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART qSlesarn\nADVANCE Normal(1, 130, 40)\nRELEASE Slesarn\n",
+                "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART Slesarn\nADVANCE (Normal(1, 130, 40))\nRELEASE qSlesarn\n",
                 "ExtendedParams": [
                   {
                     "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -2400,40 +2400,40 @@
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 6,
-                        "Code": "DEPART qSlesarn",
+                        "Code": "DEPART Slesarn",
                         "Label": null,
                         "Name": "DEPART",
                         "Arguments": [
-                          "qSlesarn"
+                          "Slesarn"
                         ],
                         "Comment": null
                       },
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 2,
-                        "Code": "ADVANCE Normal(1, 130, 40)",
+                        "Code": "ADVANCE (Normal(1, 130, 40))",
                         "Label": null,
                         "Name": "ADVANCE",
                         "Arguments": [
-                          "Normal(1, 130, 40)"
+                          "(Normal(1, 130, 40))"
                         ],
                         "Comment": null
                       },
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 4,
-                        "Code": "RELEASE Slesarn",
+                        "Code": "RELEASE qSlesarn",
                         "Label": null,
                         "Name": "RELEASE",
                         "Arguments": [
-                          "Slesarn"
+                          "qSlesarn"
                         ],
                         "Comment": null
                       }
                     ]
                   },
                   "qSlesarn",
-                  "Normal(1, 130, 40)",
+                  "(Normal(1, 130, 40))",
                   "",
                   1,
                   1
@@ -2497,7 +2497,7 @@
                 "width": 170,
                 "heigth": 170,
                 "IsMultiChanell": false,
-                "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART qMelkElectrica\nADVANCE Normal(1, 30, 6)\nRELEASE MelkElectrica\n",
+                "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART MelkElectrica\nADVANCE (Normal(1, 30, 6))\nRELEASE qMelkElectrica\n",
                 "ExtendedParams": [
                   {
                     "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -2527,40 +2527,40 @@
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 6,
-                        "Code": "DEPART qMelkElectrica",
+                        "Code": "DEPART MelkElectrica",
                         "Label": null,
                         "Name": "DEPART",
                         "Arguments": [
-                          "qMelkElectrica"
+                          "MelkElectrica"
                         ],
                         "Comment": null
                       },
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 2,
-                        "Code": "ADVANCE Normal(1, 30, 6)",
+                        "Code": "ADVANCE (Normal(1, 30, 6))",
                         "Label": null,
                         "Name": "ADVANCE",
                         "Arguments": [
-                          "Normal(1, 30, 6)"
+                          "(Normal(1, 30, 6))"
                         ],
                         "Comment": null
                       },
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 4,
-                        "Code": "RELEASE MelkElectrica",
+                        "Code": "RELEASE qMelkElectrica",
                         "Label": null,
                         "Name": "RELEASE",
                         "Arguments": [
-                          "MelkElectrica"
+                          "qMelkElectrica"
                         ],
                         "Comment": null
                       }
                     ]
                   },
                   "qMelkElectrica",
-                  "Normal(1, 30, 6)",
+                  "(Normal(1, 30, 6))",
                   "",
                   1,
                   1
@@ -2581,7 +2581,7 @@
                 "width": 170,
                 "heigth": 170,
                 "IsMultiChanell": false,
-                "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART qKrupnElectrica\nADVANCE Normal(1, 180, 30)\nRELEASE KrupnElectrica\n",
+                "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART KrupnElectrica\nADVANCE (Normal(1, 180, 30))\nRELEASE qKrupnElectrica\n",
                 "ExtendedParams": [
                   {
                     "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -2611,40 +2611,40 @@
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 6,
-                        "Code": "DEPART qKrupnElectrica",
+                        "Code": "DEPART KrupnElectrica",
                         "Label": null,
                         "Name": "DEPART",
                         "Arguments": [
-                          "qKrupnElectrica"
+                          "KrupnElectrica"
                         ],
                         "Comment": null
                       },
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 2,
-                        "Code": "ADVANCE Normal(1, 180, 30)",
+                        "Code": "ADVANCE (Normal(1, 180, 30))",
                         "Label": null,
                         "Name": "ADVANCE",
                         "Arguments": [
-                          "Normal(1, 180, 30)"
+                          "(Normal(1, 180, 30))"
                         ],
                         "Comment": null
                       },
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 4,
-                        "Code": "RELEASE KrupnElectrica",
+                        "Code": "RELEASE qKrupnElectrica",
                         "Label": null,
                         "Name": "RELEASE",
                         "Arguments": [
-                          "KrupnElectrica"
+                          "qKrupnElectrica"
                         ],
                         "Comment": null
                       }
                     ]
                   },
                   "qKrupnElectrica",
-                  "Normal(1, 180, 30)",
+                  "(Normal(1, 180, 30))",
                   "",
                   1,
                   1
@@ -2667,7 +2667,7 @@
                   "width": 170,
                   "heigth": 170,
                   "IsMultiChanell": false,
-                  "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART qMelkElectrica\nADVANCE Normal(1, 30, 6)\nRELEASE MelkElectrica\n",
+                  "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART MelkElectrica\nADVANCE (Normal(1, 30, 6))\nRELEASE qMelkElectrica\n",
                   "ExtendedParams": [
                     {
                       "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -2697,40 +2697,40 @@
                         {
                           "$type": "GPSS.Block, GPSS",
                           "Type": 6,
-                          "Code": "DEPART qMelkElectrica",
+                          "Code": "DEPART MelkElectrica",
                           "Label": null,
                           "Name": "DEPART",
                           "Arguments": [
-                            "qMelkElectrica"
+                            "MelkElectrica"
                           ],
                           "Comment": null
                         },
                         {
                           "$type": "GPSS.Block, GPSS",
                           "Type": 2,
-                          "Code": "ADVANCE Normal(1, 30, 6)",
+                          "Code": "ADVANCE (Normal(1, 30, 6))",
                           "Label": null,
                           "Name": "ADVANCE",
                           "Arguments": [
-                            "Normal(1, 30, 6)"
+                            "(Normal(1, 30, 6))"
                           ],
                           "Comment": null
                         },
                         {
                           "$type": "GPSS.Block, GPSS",
                           "Type": 4,
-                          "Code": "RELEASE MelkElectrica",
+                          "Code": "RELEASE qMelkElectrica",
                           "Label": null,
                           "Name": "RELEASE",
                           "Arguments": [
-                            "MelkElectrica"
+                            "qMelkElectrica"
                           ],
                           "Comment": null
                         }
                       ]
                     },
                     "qMelkElectrica",
-                    "Normal(1, 30, 6)",
+                    "(Normal(1, 30, 6))",
                     "",
                     1,
                     1
@@ -2751,7 +2751,7 @@
                   "width": 170,
                   "heigth": 170,
                   "IsMultiChanell": false,
-                  "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART qKrupnElectrica\nADVANCE Normal(1, 180, 30)\nRELEASE KrupnElectrica\n",
+                  "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART KrupnElectrica\nADVANCE (Normal(1, 180, 30))\nRELEASE qKrupnElectrica\n",
                   "ExtendedParams": [
                     {
                       "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -2781,40 +2781,40 @@
                         {
                           "$type": "GPSS.Block, GPSS",
                           "Type": 6,
-                          "Code": "DEPART qKrupnElectrica",
+                          "Code": "DEPART KrupnElectrica",
                           "Label": null,
                           "Name": "DEPART",
                           "Arguments": [
-                            "qKrupnElectrica"
+                            "KrupnElectrica"
                           ],
                           "Comment": null
                         },
                         {
                           "$type": "GPSS.Block, GPSS",
                           "Type": 2,
-                          "Code": "ADVANCE Normal(1, 180, 30)",
+                          "Code": "ADVANCE (Normal(1, 180, 30))",
                           "Label": null,
                           "Name": "ADVANCE",
                           "Arguments": [
-                            "Normal(1, 180, 30)"
+                            "(Normal(1, 180, 30))"
                           ],
                           "Comment": null
                         },
                         {
                           "$type": "GPSS.Block, GPSS",
                           "Type": 4,
-                          "Code": "RELEASE KrupnElectrica",
+                          "Code": "RELEASE qKrupnElectrica",
                           "Label": null,
                           "Name": "RELEASE",
                           "Arguments": [
-                            "KrupnElectrica"
+                            "qKrupnElectrica"
                           ],
                           "Comment": null
                         }
                       ]
                     },
                     "qKrupnElectrica",
-                    "Normal(1, 180, 30)",
+                    "(Normal(1, 180, 30))",
                     "",
                     1,
                     1
@@ -2876,7 +2876,7 @@
                 "width": 170,
                 "heigth": 170,
                 "IsMultiChanell": false,
-                "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART qKuzov\nADVANCE Normal(1, 90, 36)\nRELEASE Kuzov\n",
+                "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART Kuzov\nADVANCE (Normal(1, 90, 36))\nRELEASE qKuzov\n",
                 "ExtendedParams": [
                   {
                     "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -2906,40 +2906,40 @@
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 6,
-                        "Code": "DEPART qKuzov",
+                        "Code": "DEPART Kuzov",
                         "Label": null,
                         "Name": "DEPART",
                         "Arguments": [
-                          "qKuzov"
+                          "Kuzov"
                         ],
                         "Comment": null
                       },
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 2,
-                        "Code": "ADVANCE Normal(1, 90, 36)",
+                        "Code": "ADVANCE (Normal(1, 90, 36))",
                         "Label": null,
                         "Name": "ADVANCE",
                         "Arguments": [
-                          "Normal(1, 90, 36)"
+                          "(Normal(1, 90, 36))"
                         ],
                         "Comment": null
                       },
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 4,
-                        "Code": "RELEASE Kuzov",
+                        "Code": "RELEASE qKuzov",
                         "Label": null,
                         "Name": "RELEASE",
                         "Arguments": [
-                          "Kuzov"
+                          "qKuzov"
                         ],
                         "Comment": null
                       }
                     ]
                   },
                   "qKuzov",
-                  "Normal(1, 90, 36)",
+                  "(Normal(1, 90, 36))",
                   "",
                   1,
                   1
@@ -2960,7 +2960,7 @@
                 "width": 170,
                 "heigth": 170,
                 "IsMultiChanell": false,
-                "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART qSlesarn\nADVANCE Normal(1, 130, 40)\nRELEASE Slesarn\n",
+                "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART Slesarn\nADVANCE (Normal(1, 130, 40))\nRELEASE qSlesarn\n",
                 "ExtendedParams": [
                   {
                     "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -2990,40 +2990,40 @@
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 6,
-                        "Code": "DEPART qSlesarn",
+                        "Code": "DEPART Slesarn",
                         "Label": null,
                         "Name": "DEPART",
                         "Arguments": [
-                          "qSlesarn"
+                          "Slesarn"
                         ],
                         "Comment": null
                       },
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 2,
-                        "Code": "ADVANCE Normal(1, 130, 40)",
+                        "Code": "ADVANCE (Normal(1, 130, 40))",
                         "Label": null,
                         "Name": "ADVANCE",
                         "Arguments": [
-                          "Normal(1, 130, 40)"
+                          "(Normal(1, 130, 40))"
                         ],
                         "Comment": null
                       },
                       {
                         "$type": "GPSS.Block, GPSS",
                         "Type": 4,
-                        "Code": "RELEASE Slesarn",
+                        "Code": "RELEASE qSlesarn",
                         "Label": null,
                         "Name": "RELEASE",
                         "Arguments": [
-                          "Slesarn"
+                          "qSlesarn"
                         ],
                         "Comment": null
                       }
                     ]
                   },
                   "qSlesarn",
-                  "Normal(1, 130, 40)",
+                  "(Normal(1, 130, 40))",
                   "",
                   1,
                   1
@@ -3046,7 +3046,7 @@
                   "width": 170,
                   "heigth": 170,
                   "IsMultiChanell": false,
-                  "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART qKuzov\nADVANCE Normal(1, 90, 36)\nRELEASE Kuzov\n",
+                  "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART Kuzov\nADVANCE (Normal(1, 90, 36))\nRELEASE qKuzov\n",
                   "ExtendedParams": [
                     {
                       "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -3076,40 +3076,40 @@
                         {
                           "$type": "GPSS.Block, GPSS",
                           "Type": 6,
-                          "Code": "DEPART qKuzov",
+                          "Code": "DEPART Kuzov",
                           "Label": null,
                           "Name": "DEPART",
                           "Arguments": [
-                            "qKuzov"
+                            "Kuzov"
                           ],
                           "Comment": null
                         },
                         {
                           "$type": "GPSS.Block, GPSS",
                           "Type": 2,
-                          "Code": "ADVANCE Normal(1, 90, 36)",
+                          "Code": "ADVANCE (Normal(1, 90, 36))",
                           "Label": null,
                           "Name": "ADVANCE",
                           "Arguments": [
-                            "Normal(1, 90, 36)"
+                            "(Normal(1, 90, 36))"
                           ],
                           "Comment": null
                         },
                         {
                           "$type": "GPSS.Block, GPSS",
                           "Type": 4,
-                          "Code": "RELEASE Kuzov",
+                          "Code": "RELEASE qKuzov",
                           "Label": null,
                           "Name": "RELEASE",
                           "Arguments": [
-                            "Kuzov"
+                            "qKuzov"
                           ],
                           "Comment": null
                         }
                       ]
                     },
                     "qKuzov",
-                    "Normal(1, 90, 36)",
+                    "(Normal(1, 90, 36))",
                     "",
                     1,
                     1
@@ -3130,7 +3130,7 @@
                   "width": 170,
                   "heigth": 170,
                   "IsMultiChanell": false,
-                  "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART qSlesarn\nADVANCE Normal(1, 130, 40)\nRELEASE Slesarn\n",
+                  "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART Slesarn\nADVANCE (Normal(1, 130, 40))\nRELEASE qSlesarn\n",
                   "ExtendedParams": [
                     {
                       "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -3160,40 +3160,40 @@
                         {
                           "$type": "GPSS.Block, GPSS",
                           "Type": 6,
-                          "Code": "DEPART qSlesarn",
+                          "Code": "DEPART Slesarn",
                           "Label": null,
                           "Name": "DEPART",
                           "Arguments": [
-                            "qSlesarn"
+                            "Slesarn"
                           ],
                           "Comment": null
                         },
                         {
                           "$type": "GPSS.Block, GPSS",
                           "Type": 2,
-                          "Code": "ADVANCE Normal(1, 130, 40)",
+                          "Code": "ADVANCE (Normal(1, 130, 40))",
                           "Label": null,
                           "Name": "ADVANCE",
                           "Arguments": [
-                            "Normal(1, 130, 40)"
+                            "(Normal(1, 130, 40))"
                           ],
                           "Comment": null
                         },
                         {
                           "$type": "GPSS.Block, GPSS",
                           "Type": 4,
-                          "Code": "RELEASE Slesarn",
+                          "Code": "RELEASE qSlesarn",
                           "Label": null,
                           "Name": "RELEASE",
                           "Arguments": [
-                            "Slesarn"
+                            "qSlesarn"
                           ],
                           "Comment": null
                         }
                       ]
                     },
                     "qSlesarn",
-                    "Normal(1, 130, 40)",
+                    "(Normal(1, 130, 40))",
                     "",
                     1,
                     1
@@ -3254,11 +3254,11 @@
         {
           "$type": "GPSS.Visualiztion.Device, GPSS.Visualiztion",
           "number": 5,
-          "center": "1826, 1060",
+          "center": "1836, 1008",
           "width": 170,
           "heigth": 170,
           "IsMultiChanell": false,
-          "Code": "\ndiagnostica QUEUE qDiagnostica\nSEIZE Diagnostica\nDEPART qDiagnostica\nADVANCE Normal(1, 20, 4)\nRELEASE Diagnostica\n",
+          "Code": "\ndiagnostica QUEUE qDiagnostica\nSEIZE Diagnostica\nDEPART Diagnostica\nADVANCE (Normal(1, 20, 4))\nRELEASE qDiagnostica\n",
           "ExtendedParams": [
             {
               "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -3288,40 +3288,40 @@
                 {
                   "$type": "GPSS.Block, GPSS",
                   "Type": 6,
-                  "Code": "DEPART qDiagnostica",
+                  "Code": "DEPART Diagnostica",
                   "Label": null,
                   "Name": "DEPART",
                   "Arguments": [
-                    "qDiagnostica"
+                    "Diagnostica"
                   ],
                   "Comment": null
                 },
                 {
                   "$type": "GPSS.Block, GPSS",
                   "Type": 2,
-                  "Code": "ADVANCE Normal(1, 20, 4)",
+                  "Code": "ADVANCE (Normal(1, 20, 4))",
                   "Label": null,
                   "Name": "ADVANCE",
                   "Arguments": [
-                    "Normal(1, 20, 4)"
+                    "(Normal(1, 20, 4))"
                   ],
                   "Comment": null
                 },
                 {
                   "$type": "GPSS.Block, GPSS",
                   "Type": 4,
-                  "Code": "RELEASE Diagnostica",
+                  "Code": "RELEASE qDiagnostica",
                   "Label": null,
                   "Name": "RELEASE",
                   "Arguments": [
-                    "Diagnostica"
+                    "qDiagnostica"
                   ],
                   "Comment": null
                 }
               ]
             },
             "qDiagnostica",
-            "Normal(1, 20, 4)",
+            "(Normal(1, 20, 4))",
             "",
             1,
             1
@@ -3402,7 +3402,7 @@
           "width": 170,
           "heigth": 170,
           "IsMultiChanell": false,
-          "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART qMelkElectrica\nADVANCE Normal(1, 30, 6)\nRELEASE MelkElectrica\n",
+          "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART MelkElectrica\nADVANCE (Normal(1, 30, 6))\nRELEASE qMelkElectrica\n",
           "ExtendedParams": [
             {
               "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -3432,40 +3432,40 @@
                 {
                   "$type": "GPSS.Block, GPSS",
                   "Type": 6,
-                  "Code": "DEPART qMelkElectrica",
+                  "Code": "DEPART MelkElectrica",
                   "Label": null,
                   "Name": "DEPART",
                   "Arguments": [
-                    "qMelkElectrica"
+                    "MelkElectrica"
                   ],
                   "Comment": null
                 },
                 {
                   "$type": "GPSS.Block, GPSS",
                   "Type": 2,
-                  "Code": "ADVANCE Normal(1, 30, 6)",
+                  "Code": "ADVANCE (Normal(1, 30, 6))",
                   "Label": null,
                   "Name": "ADVANCE",
                   "Arguments": [
-                    "Normal(1, 30, 6)"
+                    "(Normal(1, 30, 6))"
                   ],
                   "Comment": null
                 },
                 {
                   "$type": "GPSS.Block, GPSS",
                   "Type": 4,
-                  "Code": "RELEASE MelkElectrica",
+                  "Code": "RELEASE qMelkElectrica",
                   "Label": null,
                   "Name": "RELEASE",
                   "Arguments": [
-                    "MelkElectrica"
+                    "qMelkElectrica"
                   ],
                   "Comment": null
                 }
               ]
             },
             "qMelkElectrica",
-            "Normal(1, 30, 6)",
+            "(Normal(1, 30, 6))",
             "",
             1,
             1
@@ -3486,7 +3486,7 @@
           "width": 170,
           "heigth": 170,
           "IsMultiChanell": false,
-          "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART qKrupnElectrica\nADVANCE Normal(1, 180, 30)\nRELEASE KrupnElectrica\n",
+          "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART KrupnElectrica\nADVANCE (Normal(1, 180, 30))\nRELEASE qKrupnElectrica\n",
           "ExtendedParams": [
             {
               "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -3516,40 +3516,40 @@
                 {
                   "$type": "GPSS.Block, GPSS",
                   "Type": 6,
-                  "Code": "DEPART qKrupnElectrica",
+                  "Code": "DEPART KrupnElectrica",
                   "Label": null,
                   "Name": "DEPART",
                   "Arguments": [
-                    "qKrupnElectrica"
+                    "KrupnElectrica"
                   ],
                   "Comment": null
                 },
                 {
                   "$type": "GPSS.Block, GPSS",
                   "Type": 2,
-                  "Code": "ADVANCE Normal(1, 180, 30)",
+                  "Code": "ADVANCE (Normal(1, 180, 30))",
                   "Label": null,
                   "Name": "ADVANCE",
                   "Arguments": [
-                    "Normal(1, 180, 30)"
+                    "(Normal(1, 180, 30))"
                   ],
                   "Comment": null
                 },
                 {
                   "$type": "GPSS.Block, GPSS",
                   "Type": 4,
-                  "Code": "RELEASE KrupnElectrica",
+                  "Code": "RELEASE qKrupnElectrica",
                   "Label": null,
                   "Name": "RELEASE",
                   "Arguments": [
-                    "KrupnElectrica"
+                    "qKrupnElectrica"
                   ],
                   "Comment": null
                 }
               ]
             },
             "qKrupnElectrica",
-            "Normal(1, 180, 30)",
+            "(Normal(1, 180, 30))",
             "",
             1,
             1
@@ -3572,7 +3572,7 @@
             "width": 170,
             "heigth": 170,
             "IsMultiChanell": false,
-            "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART qMelkElectrica\nADVANCE Normal(1, 30, 6)\nRELEASE MelkElectrica\n",
+            "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART MelkElectrica\nADVANCE (Normal(1, 30, 6))\nRELEASE qMelkElectrica\n",
             "ExtendedParams": [
               {
                 "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -3602,40 +3602,40 @@
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 6,
-                    "Code": "DEPART qMelkElectrica",
+                    "Code": "DEPART MelkElectrica",
                     "Label": null,
                     "Name": "DEPART",
                     "Arguments": [
-                      "qMelkElectrica"
+                      "MelkElectrica"
                     ],
                     "Comment": null
                   },
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 2,
-                    "Code": "ADVANCE Normal(1, 30, 6)",
+                    "Code": "ADVANCE (Normal(1, 30, 6))",
                     "Label": null,
                     "Name": "ADVANCE",
                     "Arguments": [
-                      "Normal(1, 30, 6)"
+                      "(Normal(1, 30, 6))"
                     ],
                     "Comment": null
                   },
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 4,
-                    "Code": "RELEASE MelkElectrica",
+                    "Code": "RELEASE qMelkElectrica",
                     "Label": null,
                     "Name": "RELEASE",
                     "Arguments": [
-                      "MelkElectrica"
+                      "qMelkElectrica"
                     ],
                     "Comment": null
                   }
                 ]
               },
               "qMelkElectrica",
-              "Normal(1, 30, 6)",
+              "(Normal(1, 30, 6))",
               "",
               1,
               1
@@ -3656,7 +3656,7 @@
             "width": 170,
             "heigth": 170,
             "IsMultiChanell": false,
-            "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART qKrupnElectrica\nADVANCE Normal(1, 180, 30)\nRELEASE KrupnElectrica\n",
+            "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART KrupnElectrica\nADVANCE (Normal(1, 180, 30))\nRELEASE qKrupnElectrica\n",
             "ExtendedParams": [
               {
                 "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -3686,40 +3686,40 @@
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 6,
-                    "Code": "DEPART qKrupnElectrica",
+                    "Code": "DEPART KrupnElectrica",
                     "Label": null,
                     "Name": "DEPART",
                     "Arguments": [
-                      "qKrupnElectrica"
+                      "KrupnElectrica"
                     ],
                     "Comment": null
                   },
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 2,
-                    "Code": "ADVANCE Normal(1, 180, 30)",
+                    "Code": "ADVANCE (Normal(1, 180, 30))",
                     "Label": null,
                     "Name": "ADVANCE",
                     "Arguments": [
-                      "Normal(1, 180, 30)"
+                      "(Normal(1, 180, 30))"
                     ],
                     "Comment": null
                   },
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 4,
-                    "Code": "RELEASE KrupnElectrica",
+                    "Code": "RELEASE qKrupnElectrica",
                     "Label": null,
                     "Name": "RELEASE",
                     "Arguments": [
-                      "KrupnElectrica"
+                      "qKrupnElectrica"
                     ],
                     "Comment": null
                   }
                 ]
               },
               "qKrupnElectrica",
-              "Normal(1, 180, 30)",
+              "(Normal(1, 180, 30))",
               "",
               1,
               1
@@ -3781,7 +3781,7 @@
           "width": 170,
           "heigth": 170,
           "IsMultiChanell": false,
-          "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART qKuzov\nADVANCE Normal(1, 90, 36)\nRELEASE Kuzov\n",
+          "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART Kuzov\nADVANCE (Normal(1, 90, 36))\nRELEASE qKuzov\n",
           "ExtendedParams": [
             {
               "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -3811,40 +3811,40 @@
                 {
                   "$type": "GPSS.Block, GPSS",
                   "Type": 6,
-                  "Code": "DEPART qKuzov",
+                  "Code": "DEPART Kuzov",
                   "Label": null,
                   "Name": "DEPART",
                   "Arguments": [
-                    "qKuzov"
+                    "Kuzov"
                   ],
                   "Comment": null
                 },
                 {
                   "$type": "GPSS.Block, GPSS",
                   "Type": 2,
-                  "Code": "ADVANCE Normal(1, 90, 36)",
+                  "Code": "ADVANCE (Normal(1, 90, 36))",
                   "Label": null,
                   "Name": "ADVANCE",
                   "Arguments": [
-                    "Normal(1, 90, 36)"
+                    "(Normal(1, 90, 36))"
                   ],
                   "Comment": null
                 },
                 {
                   "$type": "GPSS.Block, GPSS",
                   "Type": 4,
-                  "Code": "RELEASE Kuzov",
+                  "Code": "RELEASE qKuzov",
                   "Label": null,
                   "Name": "RELEASE",
                   "Arguments": [
-                    "Kuzov"
+                    "qKuzov"
                   ],
                   "Comment": null
                 }
               ]
             },
             "qKuzov",
-            "Normal(1, 90, 36)",
+            "(Normal(1, 90, 36))",
             "",
             1,
             1
@@ -3865,7 +3865,7 @@
           "width": 170,
           "heigth": 170,
           "IsMultiChanell": false,
-          "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART qSlesarn\nADVANCE Normal(1, 130, 40)\nRELEASE Slesarn\n",
+          "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART Slesarn\nADVANCE (Normal(1, 130, 40))\nRELEASE qSlesarn\n",
           "ExtendedParams": [
             {
               "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -3895,40 +3895,40 @@
                 {
                   "$type": "GPSS.Block, GPSS",
                   "Type": 6,
-                  "Code": "DEPART qSlesarn",
+                  "Code": "DEPART Slesarn",
                   "Label": null,
                   "Name": "DEPART",
                   "Arguments": [
-                    "qSlesarn"
+                    "Slesarn"
                   ],
                   "Comment": null
                 },
                 {
                   "$type": "GPSS.Block, GPSS",
                   "Type": 2,
-                  "Code": "ADVANCE Normal(1, 130, 40)",
+                  "Code": "ADVANCE (Normal(1, 130, 40))",
                   "Label": null,
                   "Name": "ADVANCE",
                   "Arguments": [
-                    "Normal(1, 130, 40)"
+                    "(Normal(1, 130, 40))"
                   ],
                   "Comment": null
                 },
                 {
                   "$type": "GPSS.Block, GPSS",
                   "Type": 4,
-                  "Code": "RELEASE Slesarn",
+                  "Code": "RELEASE qSlesarn",
                   "Label": null,
                   "Name": "RELEASE",
                   "Arguments": [
-                    "Slesarn"
+                    "qSlesarn"
                   ],
                   "Comment": null
                 }
               ]
             },
             "qSlesarn",
-            "Normal(1, 130, 40)",
+            "(Normal(1, 130, 40))",
             "",
             1,
             1
@@ -3951,7 +3951,7 @@
             "width": 170,
             "heigth": 170,
             "IsMultiChanell": false,
-            "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART qKuzov\nADVANCE Normal(1, 90, 36)\nRELEASE Kuzov\n",
+            "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART Kuzov\nADVANCE (Normal(1, 90, 36))\nRELEASE qKuzov\n",
             "ExtendedParams": [
               {
                 "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -3981,40 +3981,40 @@
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 6,
-                    "Code": "DEPART qKuzov",
+                    "Code": "DEPART Kuzov",
                     "Label": null,
                     "Name": "DEPART",
                     "Arguments": [
-                      "qKuzov"
+                      "Kuzov"
                     ],
                     "Comment": null
                   },
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 2,
-                    "Code": "ADVANCE Normal(1, 90, 36)",
+                    "Code": "ADVANCE (Normal(1, 90, 36))",
                     "Label": null,
                     "Name": "ADVANCE",
                     "Arguments": [
-                      "Normal(1, 90, 36)"
+                      "(Normal(1, 90, 36))"
                     ],
                     "Comment": null
                   },
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 4,
-                    "Code": "RELEASE Kuzov",
+                    "Code": "RELEASE qKuzov",
                     "Label": null,
                     "Name": "RELEASE",
                     "Arguments": [
-                      "Kuzov"
+                      "qKuzov"
                     ],
                     "Comment": null
                   }
                 ]
               },
               "qKuzov",
-              "Normal(1, 90, 36)",
+              "(Normal(1, 90, 36))",
               "",
               1,
               1
@@ -4035,7 +4035,7 @@
             "width": 170,
             "heigth": 170,
             "IsMultiChanell": false,
-            "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART qSlesarn\nADVANCE Normal(1, 130, 40)\nRELEASE Slesarn\n",
+            "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART Slesarn\nADVANCE (Normal(1, 130, 40))\nRELEASE qSlesarn\n",
             "ExtendedParams": [
               {
                 "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -4065,40 +4065,40 @@
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 6,
-                    "Code": "DEPART qSlesarn",
+                    "Code": "DEPART Slesarn",
                     "Label": null,
                     "Name": "DEPART",
                     "Arguments": [
-                      "qSlesarn"
+                      "Slesarn"
                     ],
                     "Comment": null
                   },
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 2,
-                    "Code": "ADVANCE Normal(1, 130, 40)",
+                    "Code": "ADVANCE (Normal(1, 130, 40))",
                     "Label": null,
                     "Name": "ADVANCE",
                     "Arguments": [
-                      "Normal(1, 130, 40)"
+                      "(Normal(1, 130, 40))"
                     ],
                     "Comment": null
                   },
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 4,
-                    "Code": "RELEASE Slesarn",
+                    "Code": "RELEASE qSlesarn",
                     "Label": null,
                     "Name": "RELEASE",
                     "Arguments": [
-                      "Slesarn"
+                      "qSlesarn"
                     ],
                     "Comment": null
                   }
                 ]
               },
               "qSlesarn",
-              "Normal(1, 130, 40)",
+              "(Normal(1, 130, 40))",
               "",
               1,
               1
@@ -4162,7 +4162,7 @@
             "width": 170,
             "heigth": 170,
             "IsMultiChanell": false,
-            "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART qMelkElectrica\nADVANCE Normal(1, 30, 6)\nRELEASE MelkElectrica\n",
+            "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART MelkElectrica\nADVANCE (Normal(1, 30, 6))\nRELEASE qMelkElectrica\n",
             "ExtendedParams": [
               {
                 "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -4192,40 +4192,40 @@
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 6,
-                    "Code": "DEPART qMelkElectrica",
+                    "Code": "DEPART MelkElectrica",
                     "Label": null,
                     "Name": "DEPART",
                     "Arguments": [
-                      "qMelkElectrica"
+                      "MelkElectrica"
                     ],
                     "Comment": null
                   },
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 2,
-                    "Code": "ADVANCE Normal(1, 30, 6)",
+                    "Code": "ADVANCE (Normal(1, 30, 6))",
                     "Label": null,
                     "Name": "ADVANCE",
                     "Arguments": [
-                      "Normal(1, 30, 6)"
+                      "(Normal(1, 30, 6))"
                     ],
                     "Comment": null
                   },
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 4,
-                    "Code": "RELEASE MelkElectrica",
+                    "Code": "RELEASE qMelkElectrica",
                     "Label": null,
                     "Name": "RELEASE",
                     "Arguments": [
-                      "MelkElectrica"
+                      "qMelkElectrica"
                     ],
                     "Comment": null
                   }
                 ]
               },
               "qMelkElectrica",
-              "Normal(1, 30, 6)",
+              "(Normal(1, 30, 6))",
               "",
               1,
               1
@@ -4246,7 +4246,7 @@
             "width": 170,
             "heigth": 170,
             "IsMultiChanell": false,
-            "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART qKrupnElectrica\nADVANCE Normal(1, 180, 30)\nRELEASE KrupnElectrica\n",
+            "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART KrupnElectrica\nADVANCE (Normal(1, 180, 30))\nRELEASE qKrupnElectrica\n",
             "ExtendedParams": [
               {
                 "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -4276,40 +4276,40 @@
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 6,
-                    "Code": "DEPART qKrupnElectrica",
+                    "Code": "DEPART KrupnElectrica",
                     "Label": null,
                     "Name": "DEPART",
                     "Arguments": [
-                      "qKrupnElectrica"
+                      "KrupnElectrica"
                     ],
                     "Comment": null
                   },
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 2,
-                    "Code": "ADVANCE Normal(1, 180, 30)",
+                    "Code": "ADVANCE (Normal(1, 180, 30))",
                     "Label": null,
                     "Name": "ADVANCE",
                     "Arguments": [
-                      "Normal(1, 180, 30)"
+                      "(Normal(1, 180, 30))"
                     ],
                     "Comment": null
                   },
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 4,
-                    "Code": "RELEASE KrupnElectrica",
+                    "Code": "RELEASE qKrupnElectrica",
                     "Label": null,
                     "Name": "RELEASE",
                     "Arguments": [
-                      "KrupnElectrica"
+                      "qKrupnElectrica"
                     ],
                     "Comment": null
                   }
                 ]
               },
               "qKrupnElectrica",
-              "Normal(1, 180, 30)",
+              "(Normal(1, 180, 30))",
               "",
               1,
               1
@@ -4332,7 +4332,7 @@
               "width": 170,
               "heigth": 170,
               "IsMultiChanell": false,
-              "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART qMelkElectrica\nADVANCE Normal(1, 30, 6)\nRELEASE MelkElectrica\n",
+              "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART MelkElectrica\nADVANCE (Normal(1, 30, 6))\nRELEASE qMelkElectrica\n",
               "ExtendedParams": [
                 {
                   "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -4362,40 +4362,40 @@
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 6,
-                      "Code": "DEPART qMelkElectrica",
+                      "Code": "DEPART MelkElectrica",
                       "Label": null,
                       "Name": "DEPART",
                       "Arguments": [
-                        "qMelkElectrica"
+                        "MelkElectrica"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 2,
-                      "Code": "ADVANCE Normal(1, 30, 6)",
+                      "Code": "ADVANCE (Normal(1, 30, 6))",
                       "Label": null,
                       "Name": "ADVANCE",
                       "Arguments": [
-                        "Normal(1, 30, 6)"
+                        "(Normal(1, 30, 6))"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 4,
-                      "Code": "RELEASE MelkElectrica",
+                      "Code": "RELEASE qMelkElectrica",
                       "Label": null,
                       "Name": "RELEASE",
                       "Arguments": [
-                        "MelkElectrica"
+                        "qMelkElectrica"
                       ],
                       "Comment": null
                     }
                   ]
                 },
                 "qMelkElectrica",
-                "Normal(1, 30, 6)",
+                "(Normal(1, 30, 6))",
                 "",
                 1,
                 1
@@ -4416,7 +4416,7 @@
               "width": 170,
               "heigth": 170,
               "IsMultiChanell": false,
-              "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART qKrupnElectrica\nADVANCE Normal(1, 180, 30)\nRELEASE KrupnElectrica\n",
+              "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART KrupnElectrica\nADVANCE (Normal(1, 180, 30))\nRELEASE qKrupnElectrica\n",
               "ExtendedParams": [
                 {
                   "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -4446,40 +4446,40 @@
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 6,
-                      "Code": "DEPART qKrupnElectrica",
+                      "Code": "DEPART KrupnElectrica",
                       "Label": null,
                       "Name": "DEPART",
                       "Arguments": [
-                        "qKrupnElectrica"
+                        "KrupnElectrica"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 2,
-                      "Code": "ADVANCE Normal(1, 180, 30)",
+                      "Code": "ADVANCE (Normal(1, 180, 30))",
                       "Label": null,
                       "Name": "ADVANCE",
                       "Arguments": [
-                        "Normal(1, 180, 30)"
+                        "(Normal(1, 180, 30))"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 4,
-                      "Code": "RELEASE KrupnElectrica",
+                      "Code": "RELEASE qKrupnElectrica",
                       "Label": null,
                       "Name": "RELEASE",
                       "Arguments": [
-                        "KrupnElectrica"
+                        "qKrupnElectrica"
                       ],
                       "Comment": null
                     }
                   ]
                 },
                 "qKrupnElectrica",
-                "Normal(1, 180, 30)",
+                "(Normal(1, 180, 30))",
                 "",
                 1,
                 1
@@ -4541,7 +4541,7 @@
             "width": 170,
             "heigth": 170,
             "IsMultiChanell": false,
-            "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART qKuzov\nADVANCE Normal(1, 90, 36)\nRELEASE Kuzov\n",
+            "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART Kuzov\nADVANCE (Normal(1, 90, 36))\nRELEASE qKuzov\n",
             "ExtendedParams": [
               {
                 "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -4571,40 +4571,40 @@
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 6,
-                    "Code": "DEPART qKuzov",
+                    "Code": "DEPART Kuzov",
                     "Label": null,
                     "Name": "DEPART",
                     "Arguments": [
-                      "qKuzov"
+                      "Kuzov"
                     ],
                     "Comment": null
                   },
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 2,
-                    "Code": "ADVANCE Normal(1, 90, 36)",
+                    "Code": "ADVANCE (Normal(1, 90, 36))",
                     "Label": null,
                     "Name": "ADVANCE",
                     "Arguments": [
-                      "Normal(1, 90, 36)"
+                      "(Normal(1, 90, 36))"
                     ],
                     "Comment": null
                   },
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 4,
-                    "Code": "RELEASE Kuzov",
+                    "Code": "RELEASE qKuzov",
                     "Label": null,
                     "Name": "RELEASE",
                     "Arguments": [
-                      "Kuzov"
+                      "qKuzov"
                     ],
                     "Comment": null
                   }
                 ]
               },
               "qKuzov",
-              "Normal(1, 90, 36)",
+              "(Normal(1, 90, 36))",
               "",
               1,
               1
@@ -4625,7 +4625,7 @@
             "width": 170,
             "heigth": 170,
             "IsMultiChanell": false,
-            "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART qSlesarn\nADVANCE Normal(1, 130, 40)\nRELEASE Slesarn\n",
+            "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART Slesarn\nADVANCE (Normal(1, 130, 40))\nRELEASE qSlesarn\n",
             "ExtendedParams": [
               {
                 "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -4655,40 +4655,40 @@
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 6,
-                    "Code": "DEPART qSlesarn",
+                    "Code": "DEPART Slesarn",
                     "Label": null,
                     "Name": "DEPART",
                     "Arguments": [
-                      "qSlesarn"
+                      "Slesarn"
                     ],
                     "Comment": null
                   },
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 2,
-                    "Code": "ADVANCE Normal(1, 130, 40)",
+                    "Code": "ADVANCE (Normal(1, 130, 40))",
                     "Label": null,
                     "Name": "ADVANCE",
                     "Arguments": [
-                      "Normal(1, 130, 40)"
+                      "(Normal(1, 130, 40))"
                     ],
                     "Comment": null
                   },
                   {
                     "$type": "GPSS.Block, GPSS",
                     "Type": 4,
-                    "Code": "RELEASE Slesarn",
+                    "Code": "RELEASE qSlesarn",
                     "Label": null,
                     "Name": "RELEASE",
                     "Arguments": [
-                      "Slesarn"
+                      "qSlesarn"
                     ],
                     "Comment": null
                   }
                 ]
               },
               "qSlesarn",
-              "Normal(1, 130, 40)",
+              "(Normal(1, 130, 40))",
               "",
               1,
               1
@@ -4711,7 +4711,7 @@
               "width": 170,
               "heigth": 170,
               "IsMultiChanell": false,
-              "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART qKuzov\nADVANCE Normal(1, 90, 36)\nRELEASE Kuzov\n",
+              "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART Kuzov\nADVANCE (Normal(1, 90, 36))\nRELEASE qKuzov\n",
               "ExtendedParams": [
                 {
                   "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -4741,40 +4741,40 @@
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 6,
-                      "Code": "DEPART qKuzov",
+                      "Code": "DEPART Kuzov",
                       "Label": null,
                       "Name": "DEPART",
                       "Arguments": [
-                        "qKuzov"
+                        "Kuzov"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 2,
-                      "Code": "ADVANCE Normal(1, 90, 36)",
+                      "Code": "ADVANCE (Normal(1, 90, 36))",
                       "Label": null,
                       "Name": "ADVANCE",
                       "Arguments": [
-                        "Normal(1, 90, 36)"
+                        "(Normal(1, 90, 36))"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 4,
-                      "Code": "RELEASE Kuzov",
+                      "Code": "RELEASE qKuzov",
                       "Label": null,
                       "Name": "RELEASE",
                       "Arguments": [
-                        "Kuzov"
+                        "qKuzov"
                       ],
                       "Comment": null
                     }
                   ]
                 },
                 "qKuzov",
-                "Normal(1, 90, 36)",
+                "(Normal(1, 90, 36))",
                 "",
                 1,
                 1
@@ -4795,7 +4795,7 @@
               "width": 170,
               "heigth": 170,
               "IsMultiChanell": false,
-              "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART qSlesarn\nADVANCE Normal(1, 130, 40)\nRELEASE Slesarn\n",
+              "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART Slesarn\nADVANCE (Normal(1, 130, 40))\nRELEASE qSlesarn\n",
               "ExtendedParams": [
                 {
                   "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -4825,40 +4825,40 @@
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 6,
-                      "Code": "DEPART qSlesarn",
+                      "Code": "DEPART Slesarn",
                       "Label": null,
                       "Name": "DEPART",
                       "Arguments": [
-                        "qSlesarn"
+                        "Slesarn"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 2,
-                      "Code": "ADVANCE Normal(1, 130, 40)",
+                      "Code": "ADVANCE (Normal(1, 130, 40))",
                       "Label": null,
                       "Name": "ADVANCE",
                       "Arguments": [
-                        "Normal(1, 130, 40)"
+                        "(Normal(1, 130, 40))"
                       ],
                       "Comment": null
                     },
                     {
                       "$type": "GPSS.Block, GPSS",
                       "Type": 4,
-                      "Code": "RELEASE Slesarn",
+                      "Code": "RELEASE qSlesarn",
                       "Label": null,
                       "Name": "RELEASE",
                       "Arguments": [
-                        "Slesarn"
+                        "qSlesarn"
                       ],
                       "Comment": null
                     }
                   ]
                 },
                 "qSlesarn",
-                "Normal(1, 130, 40)",
+                "(Normal(1, 130, 40))",
                 "",
                 1,
                 1
@@ -4942,7 +4942,7 @@
         "width": 170,
         "heigth": 170,
         "IsMultiChanell": false,
-        "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART qMelkElectrica\nADVANCE Normal(1, 30, 6)\nRELEASE MelkElectrica\n",
+        "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART MelkElectrica\nADVANCE (Normal(1, 30, 6))\nRELEASE qMelkElectrica\n",
         "ExtendedParams": [
           {
             "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -4972,40 +4972,40 @@
               {
                 "$type": "GPSS.Block, GPSS",
                 "Type": 6,
-                "Code": "DEPART qMelkElectrica",
+                "Code": "DEPART MelkElectrica",
                 "Label": null,
                 "Name": "DEPART",
                 "Arguments": [
-                  "qMelkElectrica"
+                  "MelkElectrica"
                 ],
                 "Comment": null
               },
               {
                 "$type": "GPSS.Block, GPSS",
                 "Type": 2,
-                "Code": "ADVANCE Normal(1, 30, 6)",
+                "Code": "ADVANCE (Normal(1, 30, 6))",
                 "Label": null,
                 "Name": "ADVANCE",
                 "Arguments": [
-                  "Normal(1, 30, 6)"
+                  "(Normal(1, 30, 6))"
                 ],
                 "Comment": null
               },
               {
                 "$type": "GPSS.Block, GPSS",
                 "Type": 4,
-                "Code": "RELEASE MelkElectrica",
+                "Code": "RELEASE qMelkElectrica",
                 "Label": null,
                 "Name": "RELEASE",
                 "Arguments": [
-                  "MelkElectrica"
+                  "qMelkElectrica"
                 ],
                 "Comment": null
               }
             ]
           },
           "qMelkElectrica",
-          "Normal(1, 30, 6)",
+          "(Normal(1, 30, 6))",
           "",
           1,
           1
@@ -5026,7 +5026,7 @@
         "width": 170,
         "heigth": 170,
         "IsMultiChanell": false,
-        "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART qKrupnElectrica\nADVANCE Normal(1, 180, 30)\nRELEASE KrupnElectrica\n",
+        "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART KrupnElectrica\nADVANCE (Normal(1, 180, 30))\nRELEASE qKrupnElectrica\n",
         "ExtendedParams": [
           {
             "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -5056,40 +5056,40 @@
               {
                 "$type": "GPSS.Block, GPSS",
                 "Type": 6,
-                "Code": "DEPART qKrupnElectrica",
+                "Code": "DEPART KrupnElectrica",
                 "Label": null,
                 "Name": "DEPART",
                 "Arguments": [
-                  "qKrupnElectrica"
+                  "KrupnElectrica"
                 ],
                 "Comment": null
               },
               {
                 "$type": "GPSS.Block, GPSS",
                 "Type": 2,
-                "Code": "ADVANCE Normal(1, 180, 30)",
+                "Code": "ADVANCE (Normal(1, 180, 30))",
                 "Label": null,
                 "Name": "ADVANCE",
                 "Arguments": [
-                  "Normal(1, 180, 30)"
+                  "(Normal(1, 180, 30))"
                 ],
                 "Comment": null
               },
               {
                 "$type": "GPSS.Block, GPSS",
                 "Type": 4,
-                "Code": "RELEASE KrupnElectrica",
+                "Code": "RELEASE qKrupnElectrica",
                 "Label": null,
                 "Name": "RELEASE",
                 "Arguments": [
-                  "KrupnElectrica"
+                  "qKrupnElectrica"
                 ],
                 "Comment": null
               }
             ]
           },
           "qKrupnElectrica",
-          "Normal(1, 180, 30)",
+          "(Normal(1, 180, 30))",
           "",
           1,
           1
@@ -5112,7 +5112,7 @@
           "width": 170,
           "heigth": 170,
           "IsMultiChanell": false,
-          "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART qMelkElectrica\nADVANCE Normal(1, 30, 6)\nRELEASE MelkElectrica\n",
+          "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART MelkElectrica\nADVANCE (Normal(1, 30, 6))\nRELEASE qMelkElectrica\n",
           "ExtendedParams": [
             {
               "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -5142,40 +5142,40 @@
                 {
                   "$type": "GPSS.Block, GPSS",
                   "Type": 6,
-                  "Code": "DEPART qMelkElectrica",
+                  "Code": "DEPART MelkElectrica",
                   "Label": null,
                   "Name": "DEPART",
                   "Arguments": [
-                    "qMelkElectrica"
+                    "MelkElectrica"
                   ],
                   "Comment": null
                 },
                 {
                   "$type": "GPSS.Block, GPSS",
                   "Type": 2,
-                  "Code": "ADVANCE Normal(1, 30, 6)",
+                  "Code": "ADVANCE (Normal(1, 30, 6))",
                   "Label": null,
                   "Name": "ADVANCE",
                   "Arguments": [
-                    "Normal(1, 30, 6)"
+                    "(Normal(1, 30, 6))"
                   ],
                   "Comment": null
                 },
                 {
                   "$type": "GPSS.Block, GPSS",
                   "Type": 4,
-                  "Code": "RELEASE MelkElectrica",
+                  "Code": "RELEASE qMelkElectrica",
                   "Label": null,
                   "Name": "RELEASE",
                   "Arguments": [
-                    "MelkElectrica"
+                    "qMelkElectrica"
                   ],
                   "Comment": null
                 }
               ]
             },
             "qMelkElectrica",
-            "Normal(1, 30, 6)",
+            "(Normal(1, 30, 6))",
             "",
             1,
             1
@@ -5196,7 +5196,7 @@
           "width": 170,
           "heigth": 170,
           "IsMultiChanell": false,
-          "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART qKrupnElectrica\nADVANCE Normal(1, 180, 30)\nRELEASE KrupnElectrica\n",
+          "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART KrupnElectrica\nADVANCE (Normal(1, 180, 30))\nRELEASE qKrupnElectrica\n",
           "ExtendedParams": [
             {
               "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -5226,40 +5226,40 @@
                 {
                   "$type": "GPSS.Block, GPSS",
                   "Type": 6,
-                  "Code": "DEPART qKrupnElectrica",
+                  "Code": "DEPART KrupnElectrica",
                   "Label": null,
                   "Name": "DEPART",
                   "Arguments": [
-                    "qKrupnElectrica"
+                    "KrupnElectrica"
                   ],
                   "Comment": null
                 },
                 {
                   "$type": "GPSS.Block, GPSS",
                   "Type": 2,
-                  "Code": "ADVANCE Normal(1, 180, 30)",
+                  "Code": "ADVANCE (Normal(1, 180, 30))",
                   "Label": null,
                   "Name": "ADVANCE",
                   "Arguments": [
-                    "Normal(1, 180, 30)"
+                    "(Normal(1, 180, 30))"
                   ],
                   "Comment": null
                 },
                 {
                   "$type": "GPSS.Block, GPSS",
                   "Type": 4,
-                  "Code": "RELEASE KrupnElectrica",
+                  "Code": "RELEASE qKrupnElectrica",
                   "Label": null,
                   "Name": "RELEASE",
                   "Arguments": [
-                    "KrupnElectrica"
+                    "qKrupnElectrica"
                   ],
                   "Comment": null
                 }
               ]
             },
             "qKrupnElectrica",
-            "Normal(1, 180, 30)",
+            "(Normal(1, 180, 30))",
             "",
             1,
             1
@@ -5321,7 +5321,7 @@
         "width": 170,
         "heigth": 170,
         "IsMultiChanell": false,
-        "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART qKuzov\nADVANCE Normal(1, 90, 36)\nRELEASE Kuzov\n",
+        "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART Kuzov\nADVANCE (Normal(1, 90, 36))\nRELEASE qKuzov\n",
         "ExtendedParams": [
           {
             "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -5351,40 +5351,40 @@
               {
                 "$type": "GPSS.Block, GPSS",
                 "Type": 6,
-                "Code": "DEPART qKuzov",
+                "Code": "DEPART Kuzov",
                 "Label": null,
                 "Name": "DEPART",
                 "Arguments": [
-                  "qKuzov"
+                  "Kuzov"
                 ],
                 "Comment": null
               },
               {
                 "$type": "GPSS.Block, GPSS",
                 "Type": 2,
-                "Code": "ADVANCE Normal(1, 90, 36)",
+                "Code": "ADVANCE (Normal(1, 90, 36))",
                 "Label": null,
                 "Name": "ADVANCE",
                 "Arguments": [
-                  "Normal(1, 90, 36)"
+                  "(Normal(1, 90, 36))"
                 ],
                 "Comment": null
               },
               {
                 "$type": "GPSS.Block, GPSS",
                 "Type": 4,
-                "Code": "RELEASE Kuzov",
+                "Code": "RELEASE qKuzov",
                 "Label": null,
                 "Name": "RELEASE",
                 "Arguments": [
-                  "Kuzov"
+                  "qKuzov"
                 ],
                 "Comment": null
               }
             ]
           },
           "qKuzov",
-          "Normal(1, 90, 36)",
+          "(Normal(1, 90, 36))",
           "",
           1,
           1
@@ -5405,7 +5405,7 @@
         "width": 170,
         "heigth": 170,
         "IsMultiChanell": false,
-        "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART qSlesarn\nADVANCE Normal(1, 130, 40)\nRELEASE Slesarn\n",
+        "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART Slesarn\nADVANCE (Normal(1, 130, 40))\nRELEASE qSlesarn\n",
         "ExtendedParams": [
           {
             "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -5435,40 +5435,40 @@
               {
                 "$type": "GPSS.Block, GPSS",
                 "Type": 6,
-                "Code": "DEPART qSlesarn",
+                "Code": "DEPART Slesarn",
                 "Label": null,
                 "Name": "DEPART",
                 "Arguments": [
-                  "qSlesarn"
+                  "Slesarn"
                 ],
                 "Comment": null
               },
               {
                 "$type": "GPSS.Block, GPSS",
                 "Type": 2,
-                "Code": "ADVANCE Normal(1, 130, 40)",
+                "Code": "ADVANCE (Normal(1, 130, 40))",
                 "Label": null,
                 "Name": "ADVANCE",
                 "Arguments": [
-                  "Normal(1, 130, 40)"
+                  "(Normal(1, 130, 40))"
                 ],
                 "Comment": null
               },
               {
                 "$type": "GPSS.Block, GPSS",
                 "Type": 4,
-                "Code": "RELEASE Slesarn",
+                "Code": "RELEASE qSlesarn",
                 "Label": null,
                 "Name": "RELEASE",
                 "Arguments": [
-                  "Slesarn"
+                  "qSlesarn"
                 ],
                 "Comment": null
               }
             ]
           },
           "qSlesarn",
-          "Normal(1, 130, 40)",
+          "(Normal(1, 130, 40))",
           "",
           1,
           1
@@ -5491,7 +5491,7 @@
           "width": 170,
           "heigth": 170,
           "IsMultiChanell": false,
-          "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART qKuzov\nADVANCE Normal(1, 90, 36)\nRELEASE Kuzov\n",
+          "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART Kuzov\nADVANCE (Normal(1, 90, 36))\nRELEASE qKuzov\n",
           "ExtendedParams": [
             {
               "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -5521,40 +5521,40 @@
                 {
                   "$type": "GPSS.Block, GPSS",
                   "Type": 6,
-                  "Code": "DEPART qKuzov",
+                  "Code": "DEPART Kuzov",
                   "Label": null,
                   "Name": "DEPART",
                   "Arguments": [
-                    "qKuzov"
+                    "Kuzov"
                   ],
                   "Comment": null
                 },
                 {
                   "$type": "GPSS.Block, GPSS",
                   "Type": 2,
-                  "Code": "ADVANCE Normal(1, 90, 36)",
+                  "Code": "ADVANCE (Normal(1, 90, 36))",
                   "Label": null,
                   "Name": "ADVANCE",
                   "Arguments": [
-                    "Normal(1, 90, 36)"
+                    "(Normal(1, 90, 36))"
                   ],
                   "Comment": null
                 },
                 {
                   "$type": "GPSS.Block, GPSS",
                   "Type": 4,
-                  "Code": "RELEASE Kuzov",
+                  "Code": "RELEASE qKuzov",
                   "Label": null,
                   "Name": "RELEASE",
                   "Arguments": [
-                    "Kuzov"
+                    "qKuzov"
                   ],
                   "Comment": null
                 }
               ]
             },
             "qKuzov",
-            "Normal(1, 90, 36)",
+            "(Normal(1, 90, 36))",
             "",
             1,
             1
@@ -5575,7 +5575,7 @@
           "width": 170,
           "heigth": 170,
           "IsMultiChanell": false,
-          "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART qSlesarn\nADVANCE Normal(1, 130, 40)\nRELEASE Slesarn\n",
+          "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART Slesarn\nADVANCE (Normal(1, 130, 40))\nRELEASE qSlesarn\n",
           "ExtendedParams": [
             {
               "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -5605,40 +5605,40 @@
                 {
                   "$type": "GPSS.Block, GPSS",
                   "Type": 6,
-                  "Code": "DEPART qSlesarn",
+                  "Code": "DEPART Slesarn",
                   "Label": null,
                   "Name": "DEPART",
                   "Arguments": [
-                    "qSlesarn"
+                    "Slesarn"
                   ],
                   "Comment": null
                 },
                 {
                   "$type": "GPSS.Block, GPSS",
                   "Type": 2,
-                  "Code": "ADVANCE Normal(1, 130, 40)",
+                  "Code": "ADVANCE (Normal(1, 130, 40))",
                   "Label": null,
                   "Name": "ADVANCE",
                   "Arguments": [
-                    "Normal(1, 130, 40)"
+                    "(Normal(1, 130, 40))"
                   ],
                   "Comment": null
                 },
                 {
                   "$type": "GPSS.Block, GPSS",
                   "Type": 4,
-                  "Code": "RELEASE Slesarn",
+                  "Code": "RELEASE qSlesarn",
                   "Label": null,
                   "Name": "RELEASE",
                   "Arguments": [
-                    "Slesarn"
+                    "qSlesarn"
                   ],
                   "Comment": null
                 }
               ]
             },
             "qSlesarn",
-            "Normal(1, 130, 40)",
+            "(Normal(1, 130, 40))",
             "",
             1,
             1
@@ -5677,11 +5677,11 @@
     {
       "$type": "GPSS.Visualiztion.Device, GPSS.Visualiztion",
       "number": 5,
-      "center": "1826, 1060",
+      "center": "1836, 1008",
       "width": 170,
       "heigth": 170,
       "IsMultiChanell": false,
-      "Code": "\ndiagnostica QUEUE qDiagnostica\nSEIZE Diagnostica\nDEPART qDiagnostica\nADVANCE Normal(1, 20, 4)\nRELEASE Diagnostica\n",
+      "Code": "\ndiagnostica QUEUE qDiagnostica\nSEIZE Diagnostica\nDEPART Diagnostica\nADVANCE (Normal(1, 20, 4))\nRELEASE qDiagnostica\n",
       "ExtendedParams": [
         {
           "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -5711,40 +5711,40 @@
             {
               "$type": "GPSS.Block, GPSS",
               "Type": 6,
-              "Code": "DEPART qDiagnostica",
+              "Code": "DEPART Diagnostica",
               "Label": null,
               "Name": "DEPART",
               "Arguments": [
-                "qDiagnostica"
+                "Diagnostica"
               ],
               "Comment": null
             },
             {
               "$type": "GPSS.Block, GPSS",
               "Type": 2,
-              "Code": "ADVANCE Normal(1, 20, 4)",
+              "Code": "ADVANCE (Normal(1, 20, 4))",
               "Label": null,
               "Name": "ADVANCE",
               "Arguments": [
-                "Normal(1, 20, 4)"
+                "(Normal(1, 20, 4))"
               ],
               "Comment": null
             },
             {
               "$type": "GPSS.Block, GPSS",
               "Type": 4,
-              "Code": "RELEASE Diagnostica",
+              "Code": "RELEASE qDiagnostica",
               "Label": null,
               "Name": "RELEASE",
               "Arguments": [
-                "Diagnostica"
+                "qDiagnostica"
               ],
               "Comment": null
             }
           ]
         },
         "qDiagnostica",
-        "Normal(1, 20, 4)",
+        "(Normal(1, 20, 4))",
         "",
         1,
         1
@@ -5860,7 +5860,7 @@
       "width": 170,
       "heigth": 170,
       "IsMultiChanell": false,
-      "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART qSlesarn\nADVANCE Normal(1, 130, 40)\nRELEASE Slesarn\n",
+      "Code": "\nslesarn QUEUE qSlesarn\nSEIZE Slesarn\nDEPART Slesarn\nADVANCE (Normal(1, 130, 40))\nRELEASE qSlesarn\n",
       "ExtendedParams": [
         {
           "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -5890,40 +5890,40 @@
             {
               "$type": "GPSS.Block, GPSS",
               "Type": 6,
-              "Code": "DEPART qSlesarn",
+              "Code": "DEPART Slesarn",
               "Label": null,
               "Name": "DEPART",
               "Arguments": [
-                "qSlesarn"
+                "Slesarn"
               ],
               "Comment": null
             },
             {
               "$type": "GPSS.Block, GPSS",
               "Type": 2,
-              "Code": "ADVANCE Normal(1, 130, 40)",
+              "Code": "ADVANCE (Normal(1, 130, 40))",
               "Label": null,
               "Name": "ADVANCE",
               "Arguments": [
-                "Normal(1, 130, 40)"
+                "(Normal(1, 130, 40))"
               ],
               "Comment": null
             },
             {
               "$type": "GPSS.Block, GPSS",
               "Type": 4,
-              "Code": "RELEASE Slesarn",
+              "Code": "RELEASE qSlesarn",
               "Label": null,
               "Name": "RELEASE",
               "Arguments": [
-                "Slesarn"
+                "qSlesarn"
               ],
               "Comment": null
             }
           ]
         },
         "qSlesarn",
-        "Normal(1, 130, 40)",
+        "(Normal(1, 130, 40))",
         "",
         1,
         1
@@ -6039,7 +6039,7 @@
       "width": 170,
       "heigth": 170,
       "IsMultiChanell": false,
-      "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART qKuzov\nADVANCE Normal(1, 90, 36)\nRELEASE Kuzov\n",
+      "Code": "\nkuzov QUEUE qKuzov\nSEIZE Kuzov\nDEPART Kuzov\nADVANCE (Normal(1, 90, 36))\nRELEASE qKuzov\n",
       "ExtendedParams": [
         {
           "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -6069,40 +6069,40 @@
             {
               "$type": "GPSS.Block, GPSS",
               "Type": 6,
-              "Code": "DEPART qKuzov",
+              "Code": "DEPART Kuzov",
               "Label": null,
               "Name": "DEPART",
               "Arguments": [
-                "qKuzov"
+                "Kuzov"
               ],
               "Comment": null
             },
             {
               "$type": "GPSS.Block, GPSS",
               "Type": 2,
-              "Code": "ADVANCE Normal(1, 90, 36)",
+              "Code": "ADVANCE (Normal(1, 90, 36))",
               "Label": null,
               "Name": "ADVANCE",
               "Arguments": [
-                "Normal(1, 90, 36)"
+                "(Normal(1, 90, 36))"
               ],
               "Comment": null
             },
             {
               "$type": "GPSS.Block, GPSS",
               "Type": 4,
-              "Code": "RELEASE Kuzov",
+              "Code": "RELEASE qKuzov",
               "Label": null,
               "Name": "RELEASE",
               "Arguments": [
-                "Kuzov"
+                "qKuzov"
               ],
               "Comment": null
             }
           ]
         },
         "qKuzov",
-        "Normal(1, 90, 36)",
+        "(Normal(1, 90, 36))",
         "",
         1,
         1
@@ -6218,7 +6218,7 @@
       "width": 170,
       "heigth": 170,
       "IsMultiChanell": false,
-      "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART qKrupnElectrica\nADVANCE Normal(1, 180, 30)\nRELEASE KrupnElectrica\n",
+      "Code": "\nkrupnElectrica QUEUE qKrupnElectrica\nSEIZE KrupnElectrica\nDEPART KrupnElectrica\nADVANCE (Normal(1, 180, 30))\nRELEASE qKrupnElectrica\n",
       "ExtendedParams": [
         {
           "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -6248,40 +6248,40 @@
             {
               "$type": "GPSS.Block, GPSS",
               "Type": 6,
-              "Code": "DEPART qKrupnElectrica",
+              "Code": "DEPART KrupnElectrica",
               "Label": null,
               "Name": "DEPART",
               "Arguments": [
-                "qKrupnElectrica"
+                "KrupnElectrica"
               ],
               "Comment": null
             },
             {
               "$type": "GPSS.Block, GPSS",
               "Type": 2,
-              "Code": "ADVANCE Normal(1, 180, 30)",
+              "Code": "ADVANCE (Normal(1, 180, 30))",
               "Label": null,
               "Name": "ADVANCE",
               "Arguments": [
-                "Normal(1, 180, 30)"
+                "(Normal(1, 180, 30))"
               ],
               "Comment": null
             },
             {
               "$type": "GPSS.Block, GPSS",
               "Type": 4,
-              "Code": "RELEASE KrupnElectrica",
+              "Code": "RELEASE qKrupnElectrica",
               "Label": null,
               "Name": "RELEASE",
               "Arguments": [
-                "KrupnElectrica"
+                "qKrupnElectrica"
               ],
               "Comment": null
             }
           ]
         },
         "qKrupnElectrica",
-        "Normal(1, 180, 30)",
+        "(Normal(1, 180, 30))",
         "",
         1,
         1
@@ -6397,7 +6397,7 @@
       "width": 170,
       "heigth": 170,
       "IsMultiChanell": false,
-      "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART qMelkElectrica\nADVANCE Normal(1, 30, 6)\nRELEASE MelkElectrica\n",
+      "Code": "\nmelkElectrica QUEUE qMelkElectrica\nSEIZE MelkElectrica\nDEPART MelkElectrica\nADVANCE (Normal(1, 30, 6))\nRELEASE qMelkElectrica\n",
       "ExtendedParams": [
         {
           "$type": "System.Collections.Generic.List`1[[GPSS.Operator, GPSS]], mscorlib",
@@ -6427,40 +6427,40 @@
             {
               "$type": "GPSS.Block, GPSS",
               "Type": 6,
-              "Code": "DEPART qMelkElectrica",
+              "Code": "DEPART MelkElectrica",
               "Label": null,
               "Name": "DEPART",
               "Arguments": [
-                "qMelkElectrica"
+                "MelkElectrica"
               ],
               "Comment": null
             },
             {
               "$type": "GPSS.Block, GPSS",
               "Type": 2,
-              "Code": "ADVANCE Normal(1, 30, 6)",
+              "Code": "ADVANCE (Normal(1, 30, 6))",
               "Label": null,
               "Name": "ADVANCE",
               "Arguments": [
-                "Normal(1, 30, 6)"
+                "(Normal(1, 30, 6))"
               ],
               "Comment": null
             },
             {
               "$type": "GPSS.Block, GPSS",
               "Type": 4,
-              "Code": "RELEASE MelkElectrica",
+              "Code": "RELEASE qMelkElectrica",
               "Label": null,
               "Name": "RELEASE",
               "Arguments": [
-                "MelkElectrica"
+                "qMelkElectrica"
               ],
               "Comment": null
             }
           ]
         },
         "qMelkElectrica",
-        "Normal(1, 30, 6)",
+        "(Normal(1, 30, 6))",
         "",
         1,
         1

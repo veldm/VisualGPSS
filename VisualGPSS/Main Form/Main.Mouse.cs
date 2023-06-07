@@ -176,6 +176,11 @@ namespace VisualGPSS
                 graphicsRefresh(sender, e);
                 makingTransit = (false, null);
             }
+            else
+            {
+                makingTransit = (false, null);
+                graphicsRefresh(sender, e);
+            }
             timer.Stop();
             timer.Enabled = false;
             if (/*Cursor.Current == Cursors.Cross &&*/ creatingOperator is not null)

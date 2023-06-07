@@ -163,6 +163,16 @@ namespace VisualGPSS.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _678594 {
+            get {
+                object obj = ResourceManager.GetObject("678594", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _91_916310_save_png_clipart_save_icon {
             get {
                 object obj = ResourceManager.GetObject("91-916310_save-png-clipart-save-icon", resourceCulture);

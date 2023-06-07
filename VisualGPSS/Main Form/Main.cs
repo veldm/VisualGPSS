@@ -377,5 +377,19 @@ namespace VisualGPSS
             timer.Start();
             timer.Enabled = true;
         }
+
+        private void новыйToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Загрузить схему по умолчанию?", "VisualGPSS",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) is DialogResult.Yes)
+            {
+                // Шаблон по умолчанию
+                schema = VisualGPSS_Schema.getDefaultSchema(Font, Color.Black,
+                    pictureBox.BackColor, Color.SandyBrown, Color.MediumBlue);
+            }
+            else schema = new VisualGPSS_Schema(Font, Color.Black,
+                    pictureBox.BackColor, Color.SandyBrown, Color.MediumBlue);
+            filePath = null;
+        }
     }
 }

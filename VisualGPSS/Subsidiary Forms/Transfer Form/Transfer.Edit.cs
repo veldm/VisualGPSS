@@ -30,6 +30,7 @@ namespace VisualGPSS
                 GPSS.Block.BlockType.TRANSFER_PICK => 4,
                 _ => throw new ArgumentException(nameof(transfer.Essence)),
             };
+            if (transfer.Label is not null or "") LabelTextBox.Text = transfer.Label;
             comboBox1.Items.AddRange(schema.LabelsList.ToArray());
             if (comboBox1.Enabled) comboBox1.SelectedItem = transfer.Block1.Label;
             comboBox2.Items.AddRange(schema.LabelsList.ToArray());

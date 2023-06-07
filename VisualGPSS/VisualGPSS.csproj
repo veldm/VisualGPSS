@@ -360,5 +360,8 @@
   <ItemGroup>
     <None Include="Properties\SpecialFileEnding.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\678594.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

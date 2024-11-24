@@ -19,6 +19,8 @@ namespace VisualGPSS
         private readonly Point center;
         public EventHandler onSave;
 
+        public GPSS.Visualiztion.Device Dev => device;
+
         private void multiChanellCB_CheckedChanged(object sender, EventArgs e)
         {
             ChanellCountCB.Enabled = transactSizeCB.Enabled = multiChanellCB.Checked;

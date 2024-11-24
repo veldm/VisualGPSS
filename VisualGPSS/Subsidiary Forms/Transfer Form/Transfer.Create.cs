@@ -35,6 +35,7 @@ namespace VisualGPSS
             FuncComboBox.SelectedIndex = -1;
             //добавитьБлокToolStripMenuItem.Enabled = добавитьУстройствоToolStripMenuItem.Enabled =
             //    startBlock is not null;
+            FormClosing += (sender, e) => CleanDependences();
         }
 
         private void CreateNewTransfer(object sender, EventArgs e)
@@ -207,6 +208,7 @@ namespace VisualGPSS
                 if (startBlock is not null) schema.Refresh();
                 SaveButton.Click -= CreateNewTransfer;
                 SaveButton.Click += SaveChanges;
+                Children.Add(transfer);
             }
             catch (Exception ex)
             {

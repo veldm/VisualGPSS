@@ -20,6 +20,8 @@ namespace VisualGPSS
         private readonly VisualGPSS_Schema schema;
         private bool[] necessarity;
 
+        public VisualBlock VisualBlock => visualBlock;
+
         //  +GENERATE[〈интервал〉],[〈разброс〉],[〈задержка〉],[〈ограничение〉],[〈приоритет〉
         //  +TERMINATE [вычитаемое]
         //  +ADVANCE[интервал],[разброс]

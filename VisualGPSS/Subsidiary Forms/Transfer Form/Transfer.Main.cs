@@ -19,6 +19,7 @@ namespace VisualGPSS
         string label;
         readonly uint? parentNumber;
         readonly Point? parentCenter;
+        public List<object> Children { get; } = new();
 
         private uint ParentNumber => startBlock is null ? parentNumber.Value : startBlock.number;
         private Point ParentCenter => startBlock is null ? parentCenter.Value : startBlock.center;
@@ -85,69 +86,71 @@ namespace VisualGPSS
 
         private void добавитьВетвлениеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //if (transfer is null) transfer = new VisualTransfer() { number = startBlock.number + 1 };
-            (ComboBox cb, Point newCenter) = ((ToolStripMenuItem)sender).Owner.Tag switch
-            {
-                "label1AddButton" => (comboBox1,
-                    new Point(ParentCenter.X - 200, ParentCenter.Y + 300)),
-                "label2AddButton" => (comboBox2,
-                    new Point(ParentCenter.X + 200, ParentCenter.Y + 300)),
-                _ => throw new NotImplementedException()
-            };
+            (ComboBox cb, Point newCenter, bool first) = GetParams(sender);
+
             Transfer transferForm = new (transfer, schema,
                 $"transfer{schema.Transfers.Count + 1}",
-                ParentNumber, newCenter);
+                ParentNumber + 1, newCenter);
             transferForm.SaveButton.Click += (object sender, EventArgs e) => 
             {
                 cb.Items.Add(transferForm.label);
                 cb.SelectedItem = transferForm.label;
                 cb.Tag = transferForm.transfer;
+
+                Children.Add(transferForm.Children);
             };
             transferForm.Show();
         }
 
         private void добавитьУстройствоToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            (ComboBox cb, Point center) = ((ToolStripMenuItem)sender).Owner.Tag switch
-            {
-                "label1AddButton" => (comboBox1,
-                    new Point(ParentCenter.X - 200, ParentCenter.Y + 300)),
-                "label2AddButton" => (comboBox2,
-                    new Point(ParentCenter.X + 200, ParentCenter.Y + 300)),
-                _ => throw new NotImplementedException()
-            };
+            (ComboBox cb, Point center, bool first) = GetParams(sender);
+
             Device deviceForm = new(schema, center,
                 label: $"device{schema.Devices.Count + 1}", 
-                _num: (int)ParentNumber + 2);
+                _num: (int)ParentNumber + (first ? 2 : 3));
             deviceForm.SaveButton.Click += (object sender, EventArgs e) =>
             {
                 cb.Items.Add(deviceForm.label);
                 cb.SelectedItem = deviceForm.label;
                 //SlideDown(startBlock);
+
+                Children.Add(deviceForm.Dev);
             };
             deviceForm.Show();
         }
 
         private void добавитьБлокToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            (ComboBox cb, Point center) = ((ToolStripMenuItem)sender).Owner.Tag switch
-            {
-                "label1AddButton" => (comboBox1,
-                    new Point(ParentCenter.X - 200, ParentCenter.Y + 300)),
-                "label2AddButton" => (comboBox2,
-                    new Point(ParentCenter.X + 200, ParentCenter.Y + 300)),
-                _ => throw new NotImplementedException()
-            };
+            (ComboBox cb, Point center, bool first) = GetParams(sender);
+
             Block blockForm = new(schema, center,
                 label: $"block{schema.Blocks.Count + 1}",
-                _num: (int)ParentNumber + 2);
+                _num: (int)ParentNumber + (first ? 2 : 3));
             blockForm.SaveButton.Click += (object sender, EventArgs e) =>
             {
                 cb.Items.Add(blockForm.label);
                 cb.SelectedItem = blockForm.label;
-                //SlideDown(startBlock);
+
+                Children.Add(blockForm.VisualBlock);
             };
             blockForm.Show();
+        }
+
+        private (ComboBox, Point, bool) GetParams(object sender)
+        {
+            object ownerTag = ((ToolStripMenuItem)sender).Owner.Tag;
+            bool first = ownerTag is "label1AddButton"
+                || (ownerTag is "label2AddButton" ? false
+                    : throw new NotImplementedException());
+
+            (ComboBox cb, Point center) = first
+                ? (comboBox1,
+                    new Point(ParentCenter.X - 200, ParentCenter.Y + 300))
+                : (comboBox2,
+                    new Point(ParentCenter.X + 200, ParentCenter.Y + 300));
+
+            return (cb, center, first);
         }
 
         private void SlideDown(VisualElement topBlock)
@@ -158,6 +161,35 @@ namespace VisualGPSS
                                  select item)
             {
                 item.center.Y += 500;
+            }
+        }
+
+        private void CleanDependences()
+        {
+            if (transfer is null || !schema.Elements.Contains(transfer))
+            {
+                if (MessageBox.Show("Удалить созданные элементы?", "",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                    is DialogResult.Yes)
+                {
+                    CleanList(Children);
+                }
+            }
+
+            void CleanList(List<object> ch)
+            {
+                foreach (var item in ch)
+                {
+                    if (item is VisualElement element 
+                        && schema.Elements.Contains(element))
+                    {
+                        schema.Remove(element);
+                    }
+                    else if (item is List<object> list)
+                    {
+                        CleanList(list);
+                    }
+                }
             }
         }
 

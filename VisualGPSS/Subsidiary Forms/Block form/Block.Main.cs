@@ -199,6 +199,21 @@ namespace VisualGPSS
                 case "MATCH":
                     SetParams(("МЕТКА", DataType.Label, true));
                     break;
+
+                // TEST отношение значение1, значение2[, метка]
+                case "TEST":
+                    SetParams(("УСЛОВИЕ", DataType.BooleanAttitude, true),
+                        ("ЗНАЧЕНИЕ 1", DataType.Math, true),
+                        ("ЗНАЧЕНИЕ 2", DataType.Math, true),
+                        ("МЕТКА", DataType.Label, false));
+                    break;
+
+                // GATE условие устройство[, метка]
+                case "GATE":
+                    SetParams(("УСЛОВИЕ", DataType.DeviceCondition, true),
+                        ("УСТРОЙСТВО", DataType.Device, true),
+                        ("МЕТКА", DataType.Label, true));
+                    break;
             }
 
             foreach (var control in from Control control in groupBox2.Controls

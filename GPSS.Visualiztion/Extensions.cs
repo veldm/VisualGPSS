@@ -79,7 +79,7 @@ namespace GPSS.Visualiztion
         }
 
         public static void DrawArrowMid(this Graphics graphics, Pen pen,
-            Color bodyColor, Point start, Point destination)
+            Color bodyColor, Point start, Point destination, bool dash = false)
         {
             double angle;
             angle = Math.Atan2(start.X - destination.X, start.Y - destination.Y);
@@ -104,7 +104,8 @@ namespace GPSS.Visualiztion
 
             using (Brush brush = new SolidBrush(bodyColor))
             {
-                graphics.DrawLine(pen, start, destination);
+                if (dash) graphics.DrawDashLine(pen, start, destination);
+                else graphics.DrawLine(pen, start, destination);
                 graphics.FillPolygon(brush, points);
                 graphics.DrawPolygon(pen, points);
             }

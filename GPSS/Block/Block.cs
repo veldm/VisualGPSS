@@ -30,6 +30,9 @@ namespace GPSS
                     BlockType.SaveValue => $"{cLabel}SaveValue {Arguments[0]}" +
                         $"{(Arguments[1] is "+" or "-" ? Arguments[1] : "")}," +
                         $"{(Arguments.Length is 3 ? Arguments[2] : "")}",
+                    BlockType.TEST => $"{cLabel}TEST {Arguments[0]} {Arguments[1]},{Arguments[2]}" +
+                        $"{(Arguments[3] is null or "" ? "" : $",{Arguments[3]}")}",
+                    BlockType.GATE => $"{cLabel}GATE {Arguments[0]} {Arguments[1]},{Arguments[2]}",
                     _ => base.Code
                 };
             }

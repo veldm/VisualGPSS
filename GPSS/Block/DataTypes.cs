@@ -29,7 +29,8 @@ namespace GPSS
 
     public enum DeviceCondition
     {
-        FV, FNV, I, NI, U, NU, SE, SNE, SF, SNF, SV, SNV, M, NM, LS, LR
+        FV, FNV, I, NI, U, NU,
+        SE, SNE, SF, SNF, LS, LR
     }
 
     public static class DeviceConditionExtexsions
@@ -41,6 +42,8 @@ namespace GPSS
         {
             "Устройство доступно", "Устройство недоступно", "Устройство прервано",
             "Устройство не прервано", "Устройство используется", "Устройство не используется",
+            "МКУ пусто", "МКУ не пусто", "МКУ заполнено",
+            "МКУ не заполнено", "ЛП включен", "ЛП выключен"
 
         };
     }

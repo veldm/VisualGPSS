@@ -251,8 +251,28 @@ namespace GPSS.Visualiztion
             //    /*() => */
             Parallel.For(0, Elements.Count, (i) =>
               {
-                  if (Elements[i] is VisualTransfer)
-                      Elements[i].Draw(graphics, this.Elements);
+                  if (Elements[i] is VisualTransfer) lock (graphics)
+                      {
+                          Elements[i].Draw(graphics, Elements);
+                      }
+                  else if (Elements[i] is VisualBlock { Essence: Block { Type: Block.BlockType.TEST } cb } vb)
+                  {
+                      VisualElement dest = Elements.SingleOrDefault(e => e.Label == cb.Arguments[3]);
+                      if (dest is not null) lock (graphics)
+                          {
+                              graphics.DrawArrowMid(new Pen(DefaultElementsLinesColor, 3), DefaultElementsColor,
+                                  vb.center, dest.center, true);
+                          }
+                  }
+                  else if (Elements[i] is VisualBlock { Essence: Block { Type: Block.BlockType.GATE } cb2 } vb2)
+                  {
+                      VisualElement dest = Elements.SingleOrDefault(e => e.Label == cb2.Arguments[2]);
+                      if (dest is not null) lock (graphics)
+                          {
+                              graphics.DrawArrowMid(new Pen(DefaultElementsLinesColor, 3), DefaultElementsColor,
+                                  vb2.center, dest.center, true);
+                          }
+                  }
               });
             ////);
 

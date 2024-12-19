@@ -30,6 +30,7 @@ namespace VisualGPSS
                     "generateButton" => new(CreateBlock, "GENERATE"),
                     "terminateButton" => new(CreateBlock, "TERMINATE"),
                     "saveValueButton" => new(CreateBlock, "SaveValue"),
+                    "tabulateButton" => new(CreateBlock, "ASSIGN"),
                     "testButton" => new(CreateBlock, "TEST"),
                     "gateButton" => new(CreateBlock, "GATE"),
                     "splitButton" => new(CreateBlock, "SPLIT"),

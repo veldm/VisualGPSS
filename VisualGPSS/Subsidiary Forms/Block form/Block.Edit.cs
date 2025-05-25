@@ -15,6 +15,7 @@ namespace VisualGPSS
         {
             InitializeComponent();
             visualBlock = _visualBlock;
+            visualBlock.EditForm = this;
             schema = _schema;
             SaveButton.Click += SaveChanges;
 
@@ -122,6 +123,11 @@ namespace VisualGPSS
             {
                 MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Block_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (visualBlock is not null) visualBlock.EditForm = null;
         }
     }
 }

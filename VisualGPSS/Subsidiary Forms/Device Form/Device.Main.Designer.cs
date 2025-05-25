@@ -479,6 +479,7 @@
             this.Name = "Device";
             this.Tag = "";
             this.Text = "Редактор устройств";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Device_FormClosed);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);

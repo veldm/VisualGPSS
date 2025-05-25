@@ -71,21 +71,27 @@ namespace VisualGPSS
             {
                 if (activeElement is GPSS.Visualiztion.Device device)
                 {
-                    Device deviceForm = new Device(device, schema);
+                    Device deviceForm = device.EditForm is null 
+                        ? new(device, schema) : (Device)device.EditForm;
                     deviceForm.Show();
+                    deviceForm.Focus();
                     deviceForm.SaveButton.Click += graphicsRefresh;
                 }
                 else if (activeElement is VisualBlock block)
                 {
-                    Block blockForm = new Block(block, schema);
+                    Block blockForm = block.EditForm is null 
+                        ? new(block, schema) : (Block)block.EditForm;
                     blockForm.Show();
+                    blockForm.Focus();
                     blockForm.SaveButton.Click += graphicsRefresh;
                 }
                 else if (activeElement is VisualTransfer transfer)
                 {
-                    Transfer transferForm = new Transfer(transfer, schema, this);
-                    transferForm.SaveButton.Click += graphicsRefresh;
+                    Transfer transferForm = transfer.EditForm is null
+                        ? new(transfer, schema, this) : (Transfer)transfer.EditForm;
                     transferForm.Show();
+                    transferForm.Focus();
+                    transferForm.SaveButton.Click += graphicsRefresh;
                 }
                 //else if (activeElement is VisualCommand command)
                 //{

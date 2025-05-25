@@ -636,6 +636,7 @@ namespace VisualGPSS
             this.ShowIcon = false;
             this.Sizable = false;
             this.Text = "Редактор блоков";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Block_FormClosed);
             this.Shown += new System.EventHandler(this.Block_Shown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

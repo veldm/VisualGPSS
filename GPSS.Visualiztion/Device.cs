@@ -70,7 +70,6 @@ namespace GPSS.Visualiztion
             new Point(center.X - width / 2, center.Y + heigth / 2)
         };
 
-
         [Browsable(false)]
         public override object[] ExtendedParams => new object[]
             { Operators, QueueName, Delay, Scatter, ChanellCount, TransactSize };

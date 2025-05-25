@@ -60,6 +60,9 @@ namespace GPSS.Visualiztion
 
         [Browsable(false)]
         public Operator Essence { get => essence; set => essence = value; }
+
+        public object EditForm { get; set; }
+
         #endregion Свойства
 
         protected VisualElement(Operator essence, uint number,

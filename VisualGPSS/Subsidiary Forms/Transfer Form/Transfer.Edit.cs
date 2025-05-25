@@ -19,6 +19,8 @@ namespace VisualGPSS
         {
             InitializeComponent();
             transfer = _transfer;
+            transfer.EditForm = this;
+            transfer.EditForm = this;
             schema = _schema;
 
             TypeCB.SelectedIndex = ((GPSS.Block)transfer.Essence).Type switch
@@ -186,5 +188,9 @@ namespace VisualGPSS
             }
         }
 
+        private void Transfer_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (transfer is not null) transfer.EditForm = null;
+        }
     }
 }

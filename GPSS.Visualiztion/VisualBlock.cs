@@ -137,8 +137,6 @@ namespace GPSS.Visualiztion
             }
         }
 
-        
-
         public override void GetProperties()
         {
             throw new NotImplementedException();

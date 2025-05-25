@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using GPSS.Visualiztion;
 
 namespace VisualGPSS
@@ -13,6 +14,7 @@ namespace VisualGPSS
         {
             InitializeComponent();
             device = _device;
+            device.EditForm = this;
             schema = _schema;
             SaveButton.Click += SaveChanges + onSave;
 
@@ -125,6 +127,11 @@ namespace VisualGPSS
             //SaveButton.Click -= SaveChanges;
             //CreateNewDevice(sender, e);
             //}
+        }
+
+        private void Device_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (device is not null) device.EditForm = null;
         }
     }
 }

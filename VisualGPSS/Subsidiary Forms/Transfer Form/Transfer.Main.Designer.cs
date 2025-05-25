@@ -390,6 +390,7 @@
             this.ShowIcon = false;
             this.Sizable = false;
             this.Text = "Редактор перенаправлений";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Transfer_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
